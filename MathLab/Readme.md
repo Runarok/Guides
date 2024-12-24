@@ -1054,8 +1054,221 @@ end
   </table>
 </details>
 
-
 </details>
 
 ---
 
+<details>
+  <summary>MATLAB for Python Users</summary><br>
+<details>
+  <summary>General Behavior</summary><br>
+  <table>
+    <tr>
+      <th>Python Syntax</th>
+      <th>MATLAB Syntax</th>
+      <th>Purpose</th>
+    </tr>
+    <tr>
+      <td><code>#</code></td>
+      <td><code>%</code></td>
+      <td>Comment</td>
+    </tr>
+    <tr>
+      <td><code>print</code></td>
+      <td><code>disp</code></td>
+      <td>Print output</td>
+    </tr>
+    <tr>
+      <td><code>/ ...</code></td>
+      <td><code>... </code></td>
+      <td>Continue to next line</td>
+    </tr>
+    <tr>
+      <td><code>x = 1+...2;</code></td>
+      <td><code>x = 1+2;</code></td>
+      <td>Mathematical operators</td>
+    </tr>
+    <tr>
+      <td><code>os !</code></td>
+      <td><code>!</code></td>
+      <td>Operating system command</td>
+    </tr>
+    <tr>
+      <td><code>+ - * /</code></td>
+      <td><code>+ - * /</code></td>
+      <td>Mathematical operators</td>
+    </tr>
+    <tr>
+      <td><code>**</code></td>
+      <td><code>^</code></td>
+      <td>Exponent</td>
+    </tr>
+    <tr>
+      <td><code>* / **</code></td>
+      <td><code>.* ./ .^</code></td>
+      <td>Element-wise operators</td>
+    </tr>
+    <tr>
+      <td><code>not, and, or</code></td>
+      <td><code>~ & |</code></td>
+      <td>Logical operators</td>
+    </tr>
+    <tr>
+      <td><code>del</code></td>
+      <td><code>clear</code></td>
+      <td>Clear variable from memory</td>
+    </tr>
+    <tr>
+      <td><code>os.clear()</code></td>
+      <td><code>clear x y</code></td>
+      <td>Clear specific variables</td>
+    </tr>
+    <tr>
+      <td><code>clear()</code></td>
+      <td><code>clear clc</code></td>
+      <td>Clear command window</td>
+    </tr>
+  </table>
+</details>
+
+  ---
+
+<details>
+  <summary>Referencing</summary><br>
+  <table>
+    <tr>
+      <th>MATLAB Syntax</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td><code>( )</code></td>
+      <td>Index (copy-on-write)</td>
+      <td><code>x(1,1)</code></td>
+    </tr>
+    <tr>
+      <td><code>[ ]</code></td>
+      <td>Create array</td>
+      <td><code>x = [1 2 3]</code></td>
+    </tr>
+    <tr>
+      <td><code>[ ; ]</code></td>
+      <td>Join arrays</td>
+      <td><code>z = [x ; y]</code></td>
+    </tr>
+    <tr>
+      <td><code>{ }</code></td>
+      <td>Create cell arrays</td>
+      <td><code>x = {42; "hello world"}</code></td>
+    </tr>
+    <tr>
+      <td><code>x{1,1}</code></td>
+      <td>Extract contents from a container</td>
+      <td><code>x{1,1}</code></td>
+    </tr>
+    <tr>
+      <td><code>.</code></td>
+      <td>Access class property or method</td>
+      <td><code>obj.Data</code></td>
+    </tr>
+    <tr>
+      <td><code>t.FieldName</code></td>
+      <td>Reference table or struct field</td>
+      <td><code>t.FieldName</code></td>
+    </tr>
+  </table>
+  <p><strong>Notes:</strong></p>
+  <ul>
+    <li>Beginning element has an index of 1.</li>
+    <li>Indexing is left and right inclusive.</li>
+    <li>Indexing options include N-D indexing (row, col), linear indexing (element number), and logical indexing (conditional statement).</li>
+  </ul>
+</details>
+
+---
+
+<details>
+  <summary>Functions</summary><br>
+  <table>
+    <tr>
+      <th>MATLAB Syntax</th>
+      <th>Purpose</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td><code>function z = foo(x,y)</code></td>
+      <td>Create function with input arguments</td>
+      <td><code>function z = foo(x,y) ... end</code></td>
+    </tr>
+    <tr>
+      <td><code>function [a,b] = foo(x,y)</code></td>
+      <td>Create function with multiple outputs</td>
+      <td><code>function [a,b] = foo(x,y) ... end</code></td>
+    </tr>
+    <tr>
+      <td><code>y = foo(x,y,"Name",Value)</code></td>
+      <td>Call function with input arguments and name-value pairs</td>
+      <td><code>y = foo(x,y,"Name",Value)</code></td>
+    </tr>
+  </table>
+</details>
+
+  ---
+
+  <details>
+  <summary>Data Types</summary><br>
+  <table>
+    <tr>
+      <th>Python</th>
+      <th>MATLAB</th>
+    </tr>
+    <tr>
+      <td><code>float</code></td>
+      <td><code>double, single</code></td>
+    </tr>
+    <tr>
+      <td><code>complex</code></td>
+      <td><code>complex single, complex double</code></td>
+    </tr>
+    <tr>
+      <td><code>int</code></td>
+      <td><code>(u)int8, (u)int16, (u)int32, (u)int64</code></td>
+    </tr>
+    <tr>
+      <td><code>float(nan)</code></td>
+      <td><code>NaN</code></td>
+    </tr>
+    <tr>
+      <td><code>float(inf)</code></td>
+      <td><code>inf</code></td>
+    </tr>
+    <tr>
+      <td><code>str</code></td>
+      <td><code>str, char</code></td>
+    </tr>
+    <tr>
+      <td><code>bool</code></td>
+      <td><code>logical</code></td>
+    </tr>
+    <tr>
+      <td><code>dict</code></td>
+      <td><code>struct</code></td>
+    </tr>
+    <tr>
+      <td><code>list, tuple</code></td>
+      <td><code>cell</code></td>
+    </tr>
+    <tr>
+      <td><code>pandas.dataframe</code></td>
+      <td><code>table</code></td>
+    </tr>
+  </table>
+  <p><strong>Notes:</strong></p>
+  <ul>
+    <li>MATLAB defaults to store all numeric values as double-precision floating-point numbers.</li>
+    <li>Python stores some numbers as integers and others as floating-point numbers.</li>
+    <li>In MATLAB, for <code>x=4</code> and <code>y=4.0</code>, <code>x</code> is always equal to <code>y</code>.</li>
+  </ul>
+</details>
+
+</details>
