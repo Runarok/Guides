@@ -770,6 +770,289 @@ end
   </table>
 </details>
 
+---
+
+<details>
+  <summary>Matrices and Arrays</summary><br>
+  <table>
+    <tr>
+      <th>Function</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>length(A)</code></td>
+      <td>Length of largest array dimension</td>
+    </tr>
+    <tr>
+      <td><code>size(A)</code></td>
+      <td>Array dimensions</td>
+    </tr>
+    <tr>
+      <td><code>numel(A)</code></td>
+      <td>Number of elements in array</td>
+    </tr>
+    <tr>
+      <td><code>sort(A)</code></td>
+      <td>Sort array elements</td>
+    </tr>
+    <tr>
+      <td><code>sortrows(A)</code></td>
+      <td>Sort rows of array or table</td>
+    </tr>
+    <tr>
+      <td><code>flip(A)</code></td>
+      <td>Flip order of elements in array</td>
+    </tr>
+    <tr>
+      <td><code>squeeze(A)</code></td>
+      <td>Remove dimensions of length 1</td>
+    </tr>
+    <tr>
+      <td><code>reshape(A, sz)</code></td>
+      <td>Reshape array</td>
+    </tr>
+    <tr>
+      <td><code>repmat(A, n)</code></td>
+      <td>Repeat copies of array</td>
+    </tr>
+    <tr>
+      <td><code>any(A), all</code></td>
+      <td>Check if any/all elements are nonzero</td>
+    </tr>
+    <tr>
+      <td><code>nnz(A)</code></td>
+      <td>Number of nonzero array elements</td>
+    </tr>
+    <tr>
+      <td><code>find(A)</code></td>
+      <td>Indices and values of nonzero elements</td>
+    </tr>
+  </table>
+</details>
+
+---
+
+<details>
+  <summary>Descriptive Statistics</summary><br>
+  <table>
+    <tr>
+      <th>Function</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>sum(A), prod</code></td>
+      <td>Sum or product (along columns)</td>
+    </tr>
+    <tr>
+      <td><code>max(A), min, bounds</code></td>
+      <td>Largest and smallest element</td>
+    </tr>
+    <tr>
+      <td><code>mean(A), median, mode</code></td>
+      <td>Statistical operations</td>
+    </tr>
+    <tr>
+      <td><code>std(A), var</code></td>
+      <td>Standard deviation and variance</td>
+    </tr>
+    <tr>
+      <td><code>movsum(A, n), movprod, movmax, movmin, movmean, movmedian, movstd, movvar</code></td>
+      <td>Moving statistical functions (n = length of moving window)</td>
+    </tr>
+    <tr>
+      <td><code>cumsum(A), cumprod, cummax, cummin</code></td>
+      <td>Cumulative statistical functions</td>
+    </tr>
+    <tr>
+      <td><code>smoothdata(A)</code></td>
+      <td>Smooth noisy data</td>
+    </tr>
+    <tr>
+      <td><code>histcounts(X)</code></td>
+      <td>Calculate histogram bin counts</td>
+    </tr>
+    <tr>
+      <td><code>corrcoef(A), cov</code></td>
+      <td>Correlation coefficients, covariance</td>
+    </tr>
+    <tr>
+      <td><code>xcorr(x, y), xcov</code></td>
+      <td>Cross-correlation, cross-covariance</td>
+    </tr>
+    <tr>
+      <td><code>normalize(A)</code></td>
+      <td>Normalize data</td>
+    </tr>
+    <tr>
+      <td><code>detrend(x)</code></td>
+      <td>Remove polynomial trend</td>
+    </tr>
+    <tr>
+      <td><code>isoutlier(A)</code></td>
+      <td>Find outliers in data</td>
+    </tr>
+  </table>
+</details>
+
+---
+
+<details>
+  <summary>Linear Algebra</summary><br>
+  <table>
+    <tr>
+      <th>Function</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>rank(A)</code></td>
+      <td>Rank of matrix</td>
+    </tr>
+    <tr>
+      <td><code>trace(A)</code></td>
+      <td>Sum of diagonal elements of matrix</td>
+    </tr>
+    <tr>
+      <td><code>det(A)</code></td>
+      <td>Determinant of matrix</td>
+    </tr>
+    <tr>
+      <td><code>poly(A)</code></td>
+      <td>Characteristic polynomial of matrix</td>
+    </tr>
+    <tr>
+      <td><code>eig(A), eigs</code></td>
+      <td>Eigenvalues and vectors of matrix (subset)</td>
+    </tr>
+    <tr>
+      <td><code>inv(A), pinv</code></td>
+      <td>Inverse and pseudo inverse of matrix</td>
+    </tr>
+    <tr>
+      <td><code>norm(x)</code></td>
+      <td>Norm of vector or matrix</td>
+    </tr>
+    <tr>
+      <td><code>expm(A), logm</code></td>
+      <td>Matrix exponential and logarithm</td>
+    </tr>
+    <tr>
+      <td><code>cross(A, B)</code></td>
+      <td>Cross product</td>
+    </tr>
+    <tr>
+      <td><code>dot(A, B)</code></td>
+      <td>Dot product</td>
+    </tr>
+    <tr>
+      <td><code>kron(A, B)</code></td>
+      <td>Kronecker tensor product</td>
+    </tr>
+    <tr>
+      <td><code>null(A)</code></td>
+      <td>Null space of matrix</td>
+    </tr>
+    <tr>
+      <td><code>orth(A)</code></td>
+      <td>Orthonormal basis for matrix range</td>
+    </tr>
+    <tr>
+      <td><code>tril(A), triu</code></td>
+      <td>Lower and upper triangular part of matrix</td>
+    </tr>
+    <tr>
+      <td><code>linsolve(A, B)</code></td>
+      <td>Solve linear system of the form AX = B</td>
+    </tr>
+    <tr>
+      <td><code>lsqminnorm(A, B)</code></td>
+      <td>Least-squares solution to linear equation</td>
+    </tr>
+    <tr>
+      <td><code>qr(A), lu, chol</code></td>
+      <td>Matrix decompositions</td>
+    </tr>
+    <tr>
+      <td><code>svd(A)</code></td>
+      <td>Singular value decomposition</td>
+    </tr>
+    <tr>
+      <td><code>gsvd(A, B)</code></td>
+      <td>Generalized SVD</td>
+    </tr>
+    <tr>
+      <td><code>rref(A)</code></td>
+      <td>Reduced row echelon form of matrix</td>
+    </tr>
+  </table>
+</details>
+
+---
+
+<details>
+  <summary>Symbolic Math</summary><br>
+  <table>
+    <tr>
+      <th>Function</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>sym x, syms x y z</code></td>
+      <td>Declare symbolic variables</td>
+    </tr>
+    <tr>
+      <td><code>eqn = y == 2*a + b</code></td>
+      <td>Define a symbolic equation</td>
+    </tr>
+    <tr>
+      <td><code>solve(eqns, vars)</code></td>
+      <td>Solve symbolic expression for variable</td>
+    </tr>
+    <tr>
+      <td><code>subs(expr, var, val)</code></td>
+      <td>Substitute variable in expression</td>
+    </tr>
+    <tr>
+      <td><code>expand(expr)</code></td>
+      <td>Expand symbolic expression</td>
+    </tr>
+    <tr>
+      <td><code>factor(expr)</code></td>
+      <td>Factorize symbolic expression</td>
+    </tr>
+    <tr>
+      <td><code>simplify(expr)</code></td>
+      <td>Simplify symbolic expression</td>
+    </tr>
+    <tr>
+      <td><code>assume(var, assumption)</code></td>
+      <td>Make assumption for variable</td>
+    </tr>
+    <tr>
+      <td><code>assumptions(z)</code></td>
+      <td>Show assumptions for symbolic object</td>
+    </tr>
+    <tr>
+      <td><code>fplot(expr), fcontour, fsurf, fmesh, fimplicit</code></td>
+      <td>Plotting functions for symbolic expressions</td>
+    </tr>
+    <tr>
+      <td><code>diff(expr, var, n)</code></td>
+      <td>Differentiate symbolic expression</td>
+    </tr>
+    <tr>
+      <td><code>dsolve(deqn, cond)</code></td>
+      <td>Solve differential equation symbolically</td>
+    </tr>
+    <tr>
+      <td><code>int(expr, var, [a, b])</code></td>
+      <td>Integrate symbolic expression</td>
+    </tr>
+    <tr>
+      <td><code>taylor(fun, var, z0)</code></td>
+      <td>Taylor expansion of function</td>
+    </tr>
+  </table>
+</details>
 
 
 </details>
