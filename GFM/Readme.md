@@ -377,41 +377,6 @@
   ```
      **Output**:  <embed src="file.pdf" width="500" height="375">
   
-
-### **Meta and Header Tags**
-- **Meta (`<meta>`)**: Defines metadata for the document, like author or description.
-  ```html
-  <meta name="description" content="GitHub Flavored Markdown Example">
-  ```
-     **Output**:  <meta name="description" content="GitHub Flavored Markdown Example">
-  
-- **Title (`<title>`)**: Defines the title of the page (appears in the browser tab).
-  ```html
-  <title>GitHub Flavored Markdown</title>
-  ```
-     **Output**:  <title>GitHub Flavored Markdown</title>
-  
-- **Link (`<link>`)**: Specifies relationships between a document and external resources, typically used for CSS links.
-  ```html
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  ```
-     **Output**:  <link rel="stylesheet" type="text/css" href="styles.css">
-  
-  
-### **HTML5 Tags (Additional)**
-- **Section (`<section>`)**: Represents a section in a document.
-  ```html
-  <section>
-    <h2>Introduction</h2>
-    <p>This is the introduction section.</p>
-  </section>
-  ```
-     **Output**:
-  <section>
-    <h2>Introduction</h2>
-    <p>This is the introduction section.</p>
-  </section>
-  
 - **Article (`<article>`)**: Represents an independent, self-contained piece of content.
   ```html
   <article>
@@ -480,7 +445,10 @@
   </section>
   ```
      **Output**:
-  
+  <section>
+    <h2>Introduction</h2>
+    <p>This is the introduction section.</p>
+  </section>
 
 - **Article (`<article>`)**: Represents an independent piece of content.
   ```html
@@ -490,62 +458,17 @@
   </article>
   ```
      **Output**:
-  
-
-- **Aside (`<aside>`)**: Represents content that is tangentially related to the rest of the content.
-  ```html
-  <aside>
-    <h3>Related Information</h3>
-    <p>This is some related content.</p>
-  </aside>
-   ```
-     **Output**:
-  
-
-- **Header (`<header>`)**: Represents introductory content.
-  ```html
-  <header>
-    <h1>Main Heading</h1>
-    <nav>Navigation Links</nav>
-  </header>
-  ```
-     **Output**:
-  
-
-- **Footer (`<footer>`)**: Represents footer content for a document or section.
-  ```html
-  <footer>
-    <p>&copy; 2024 GitHub</p>
-  </footer>
-  ```
-     **Output**:
-  
-
-
-### **Form Elements**
-- **Form (`<form>`)**: Defines an HTML form for user input.
-  ```html
-  <form action="/submit">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" />
-    <input type="submit" value="Submit" />
-  </form>
-  ```
-     **Output**:
+    <article>
+    <h2>Article Title</h2>
+    <p>This is an article content.</p>
+  </article>
   
 
 - **Input (`<input>`)**: Defines an input field.
   ```html
   <input type="text" name="username" />
   ```
-     **Output**:
-  
-
-- **Button (`<button>`)**: Represents a clickable button.
-  ```html
-  <button type="button">Click Me</button>
-  ```
-     **Output**:
+     **Output**:  <input type="text" name="username" />
   
 
 - **Select (`<select>`)**: Creates a drop-down list.
@@ -557,13 +480,17 @@
   </select>
   ```
      **Output**:
-  
+  <select name="cars">
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="mercedes">Mercedes</option>
+  </select>  
 
 - **Textarea (`<textarea>`)**: Defines a multi-line text input control.
   ```html
   <textarea rows="4" cols="50">Enter your comments here.</textarea>
   ```
-     **Output**:
+     **Output**:  <textarea rows="4" cols="50">Enter your comments here.</textarea>
   
 
 
