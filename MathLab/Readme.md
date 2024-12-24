@@ -1345,6 +1345,9 @@ end
 
 <details>
   <summary>MATLAB Live Editor Quick Start Guide</summary><br>
+
+<details>
+  <summary>Introduction</summary><br> 
   <p>MATLAB Live Editor allows you to combine code, output, and formatted text in one interactive environment. Live Scripts provide an interactive way to write and test code while incorporating explanations, visualizations, and outputs.</p>
   
   <h4>Features:</h4>
@@ -1578,5 +1581,6 @@ end
   </code></pre>
 </details>
 
+</details>
 
 ---
