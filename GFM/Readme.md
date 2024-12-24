@@ -159,7 +159,7 @@
 - **Audio (`<audio>`)**: Embed audio files.
   ```html
   <audio controls>
-    <source src="Etra/audio.mp3" type="audio/mpeg">
+    <source src="EXTRA/audio.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
   GitHub supports .mp3, .ogg, and .wav
@@ -167,21 +167,21 @@
   
      **Output**:
    <audio controls>
-    <source src="Etra/audio.mp3" type="audio/mpeg">
+    <source src="EXTRA/audio.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
   
 - **Video (`<video>`)**: Embed video files.
   ```html
   <video controls>
-    <source src="Etra/movie.mp4" type="video/mp4">
+    <source src="EXTRA/movie.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
     GitHub supports .mp4, .webm, and .ogg
   ```
      **Output**:
   <video controls>
-    <source src="Etra/movie.mp4" type="video/mp4">
+    <source src="EXTRA/movie.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   
@@ -223,13 +223,13 @@
 - **Figure and Caption (`<figure>` and `<figcaption>`)**: Used for images with captions.
   ```html
   <figure>
-    <img src="Etra/image.jpg" alt="Image">
+    <img src="EXTRA/image.jpg" alt="Image">
     <figcaption>Figure 1: This is an image.</figcaption>
   </figure>
   ```
      **Output**:
   <figure>
-    <img src="Etra/image.jpg" alt="Image">
+    <img src="EXTRA/image.jpg" alt="Image">
     <figcaption>Figure 1: This is an image.</figcaption>
   </figure>
   
@@ -371,19 +371,19 @@
     
 - **Image (`<img>`)**: Embeds an image.
   ```html
-  <img src="Etra/image.jpg" alt="Alt Text" />
+  <img src="EXTRA/image.jpg" alt="Alt Text" />
   ```
-     **Output**:  <img src="Etra/image.jpg" alt="Alt Text" />
+     **Output**:  <img src="EXTRA/image.jpg" alt="Alt Text" />
   
 - **Picture (`<picture>`)**: Provides multiple image sources for responsive images (may not work well in GFM).
   ```html
   <picture>
-    <source srcset="Etra/image.webp" type="image/webp">
+    <source srcset="EXTRA/image.webp" type="image/webp">
     <img src="image.jpg" alt="Image" />
   </picture>
   ```
   **Output**:
     <picture>
-    <source srcset="Etra/image.webp" type="image/webp">
+    <source srcset="EXTRA/image.webp" type="image/webp">
     <img src="image.jpg" alt="Image" />
   </picture>
