@@ -13,12 +13,6 @@
   ```
    **Output**:  <i>Italic Text</i>
   
-- **Underlined (`<u>`)**: Underlined text.
-  ```html
-  <u>Underlined Text</u>
-  ```
-     **Output**: <u>Underlined Text</u>
-  
 - **Strikethrough (`<strike>`)**: Strikethrough text.
   ```html
   <strike>Strikethrough Text</strike>
