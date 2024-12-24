@@ -83,9 +83,10 @@
 
 ---
 
-
 <details>
-  <summary>MATLAB® Basic Functions Reference</summary>
+    <summary>MATLAB® Basic Functions Reference</summary>
+<details>
+  <summary>MATLAB Environment</summary>
   <table border="1" cellpadding="5" cellspacing="0">
     <thead>
       <tr>
@@ -272,4 +273,81 @@
       </tr>
     </tbody>
   </table>
+</details>
+
+<details>
+  <summary>Special Variables and Constants</summary>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Variable/Constant</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ans</td>
+        <td>Most recent answer</td>
+      </tr>
+      <tr>
+        <td>pi</td>
+        <td>π = 3.141592654…</td>
+      </tr>
+      <tr>
+        <td>i, j, 1i, 1j</td>
+        <td>Imaginary unit</td>
+      </tr>
+      <tr>
+        <td>NaN, nan</td>
+        <td>Not a number (e.g., division by zero)</td>
+      </tr>
+      <tr>
+        <td>Inf, inf</td>
+        <td>Infinity</td>
+      </tr>
+      <tr>
+        <td>eps</td>
+        <td>Floating-point relative accuracy</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+<details>
+  <summary>Complex Numbers</summary>
+  <table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Command</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>i, j, 1i, 1j</td>
+        <td>Imaginary unit</td>
+      </tr>
+      <tr>
+        <td>real(z)</td>
+        <td>Real part of a complex number</td>
+      </tr>
+      <tr>
+        <td>imag(z)</td>
+        <td>Imaginary part of a complex number</td>
+      </tr>
+      <tr>
+        <td>angle(z)</td>
+        <td>Phase angle in radians</td>
+      </tr>
+      <tr>
+        <td>conj(z)</td>
+        <td>Element-wise complex conjugate</td>
+      </tr>
+      <tr>
+        <td>isreal(z)</td>
+        <td>Determine whether an array is real</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
 </details>
