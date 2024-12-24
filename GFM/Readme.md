@@ -246,35 +246,6 @@
   ```
      **Output**:  <mark>Highlighted Text</mark>
   
-- **Progress (`<progress>`)**: Represents the progress of a task.
-  ```html
-  <progress value="70" max="100">70%</progress>
-  ```
-     **Output**:  <progress value="70" max="100">70%</progress>
-  
-- **Meter (`<meter>`)**: Represents a scalar measurement within a known range.
-  ```html
-  <meter value="3" min="0" max="10">3/10</meter>
-  ```
-     **Output**:   <meter value="3" min="0" max="10">3/10</meter>
-  
-- **WBR (`<wbr>`)**: Suggests a word break opportunity.
-  ```html
-  Hello<wbr>World
-  ```
-     **Output**:  Hello<wbr>World
-  
-- **Bidirectional Isolation (`<bdi>`)**: Isolates a section of text from surrounding text direction.
-  ```html
-  <bdi>Some text</bdi>
-  ```
-     **Output**:  <bdi>Some text</bdi>
-  
-- **Bidirectional Override (`<bdo>`)**: Specifies the directionality of text.
-  ```html
-  <bdo dir="rtl">This text is right-to-left</bdo>
-  ```
-     **Output**:  <bdo dir="rtl">This text is right-to-left</bdo>
   
 - **Definition (`<dfn>`)**: Represents the definition of a term.
   ```html
