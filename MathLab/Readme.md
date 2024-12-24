@@ -85,8 +85,8 @@
 
 <details>
     <summary>MATLAB® Basic Functions Reference</summary>
-<details><br>
-  <summary>MATLAB Environment</summary>
+<details>
+  <summary><br>MATLAB Environment</summary>
   <table border="1" cellpadding="5" cellspacing="0">
     <thead>
       <tr>
