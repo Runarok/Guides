@@ -1271,4 +1271,74 @@ end
   </ul>
 </details>
 
+---
+
+<details>
+  <summary>Control Flow</summary><br>
+  <table>
+    <tr>
+      <th>Statement</th>
+      <th>Example</th>
+    </tr>
+    <tr>
+      <td><code>for</code></td>
+      <td><code>for i = 1:10 ... end</code></td>
+    </tr>
+    <tr>
+      <td><code>if</code></td>
+      <td><code>if x<3 ... elseif x == 2 ... else ... end</code></td>
+    </tr>
+    <tr>
+      <td><code>while</code></td>
+      <td><code>while x<3 ... end</code></td>
+    </tr>
+    <tr>
+      <td><code>switch-case</code></td>
+      <td><code>switch _ arg ... case _ arg ... end</code></td>
+    </tr>
+    <tr>
+      <td><code>try-catch</code></td>
+      <td><code>try ... catch ... end</code></td>
+    </tr>
+  </table>
 </details>
+
+---
+
+<details>
+  <summary>Objects</summary><br>
+  <table>
+    <tr>
+      <th>Action</th>
+      <th>MATLAB Code</th>
+    </tr>
+    <tr>
+      <td>Define a class</td>
+      <td><code>classdef MyClass<br>properties<br>MyProp<br>end<br>methods<br>function obj = MyClass(val)<br>end<br>function y = MyMethod(obj,x)<br>end<br>end<br>end</code></td>
+    </tr>
+    <tr>
+      <td>Save the class definition</td>
+      <td><code>MyClass.m</code></td>
+    </tr>
+    <tr>
+      <td>Create an object of the class</td>
+      <td><code>a = MyClass</code></td>
+    </tr>
+    <tr>
+      <td>Access the properties</td>
+      <td><code>a.MyProp</code></td>
+    </tr>
+    <tr>
+      <td>Call methods to perform operations</td>
+      <td><code>b = MyMethod(a,val)</code></td>
+    </tr>
+    <tr>
+      <td>Create a handle class for pass-by-reference</td>
+      <td><code>classdef myclass &lt; handle<br>...</code></td>
+    </tr>
+  </table>
+</details>
+
+</details>
+
+---
