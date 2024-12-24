@@ -154,38 +154,6 @@
     San Francisco, CA 94107
   </address>
   
-
-### **Media Elements**
-- **Audio (`<audio>`)**: Embed audio files.
-  ```html
-  <audio controls>
-    <source src="EXTRA/audio.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  GitHub supports .mp3, .ogg, and .wav
-  ```
-  
-     **Output**:
-   <audio controls>
-    <source src="EXTRA/audio.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  
-- **Video (`<video>`)**: Embed video files.
-  ```html
-  <video controls>
-    <source src="EXTRA/movie.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-    GitHub supports .mp4, .webm, and .ogg
-  ```
-     **Output**:
-  <video controls>
-    <source src="EXTRA/movie.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  
-
 ### **Time, Citation, and Variables**
 - **Time (`<time>`)**: Represents a specific time or date.
   ```html
@@ -224,13 +192,13 @@
   ```html
   <figure>
     <img src="EXTRA/image.jpg" alt="Image">
-    <figcaption>Figure 1: This is an image.</figcaption>
+    <figcaption><br>Figure 1: This is an image.</figcaption>
   </figure>
   ```
      **Output**:
   <figure>
     <img src="EXTRA/image.jpg" alt="Image">
-    <figcaption>Figure 1: This is an image.</figcaption>
+    <figcaption><br>Figure 1: This is an image.</figcaption>
   </figure>
   
   
@@ -373,17 +341,7 @@
   ```html
   <img src="EXTRA/image.jpg" alt="Alt Text" />
   ```
-     **Output**:  <img src="EXTRA/image.jpg" alt="Alt Text" />
+     **Output**:
+
+  <img src="EXTRA/image.jpg" alt="Alt Text" />
   
-- **Picture (`<picture>`)**: Provides multiple image sources for responsive images (may not work well in GFM).
-  ```html
-  <picture>
-    <source srcset="EXTRA/image.webp" type="image/webp">
-    <img src="image.jpg" alt="Image" />
-  </picture>
-  ```
-  **Output**:
-    <picture>
-    <source srcset="EXTRA/image.webp" type="image/webp">
-    <img src="image.jpg" alt="Image" />
-  </picture>
