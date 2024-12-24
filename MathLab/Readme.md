@@ -1685,7 +1685,7 @@ end
 
 
 <details>
-<summary><b>Low-Level I/O</b></summary>
+<summary><b>Low-Level I/O</b></summary><br>
 
 <p>Low-level functions such as <code>fgetl</code> and <code>fscanf</code> allow the most control over I/O.</p>
 
@@ -1745,7 +1745,7 @@ end
 </details>
 
 <details>
-<summary><b>Web Data</b></summary>
+<summary>Web Data</summary><br>
 
 <h4>RESTful Web Service</h4>
 <table>
@@ -1802,4 +1802,91 @@ request = ...
 
 ---
 
+<details>
+<summary>Organizing and Accessing Data Cheat Sheet</summary><br>
+
+<p>Focuses on managing and accessing data, a natural progression after importing/exporting.</p>
+
+</details>
+
+---
+
+<details>
+<summary>Preprocessing Time-Series Data Tips and Tricks</summary><br>
+
+<p>Deals with preparing time-series data for analysis, an intermediate-level topic.</p>
+
+</details>
+
+---
+
+<details>
+<summary>Machine Learning Quick Start Guide</summary><br>
+
+<p>Introduces machine learning concepts and workflows.</p>
+
+</details>
+
+---
+
+<details>
+<summary>Deep Learning with MATLAB Quick Start Guide</summary><br>
+
+<p>Builds on machine learning with deep learning techniques.</p>
+
+</details>
+
+---
+
+<details>
+<summary>AutoML Cheat Sheet</summary><br>
+
+<p>Introduces automation in machine learning, streamlining workflows for advanced users.</p>
+
+</details>
+
+---
+
+<details>
+<summary>Sensor Fusion Cheat Sheet Quick Start Guide</summary><br>
+
+<p>Focuses on combining data from multiple sensors, useful for specialized applications.</p>
+
+</details>
+
+---
+
+<details>
+<summary>Text Analytics Cheat Sheet</summary><br>
+
+<p>Introduces working with textual data, an advanced and specialized field.</p>
+
+</details>
+
+---
+
+<details>
+<summary>Problem-Based Optimization with Optimization Toolbox Cheat Sheet</summary><br>
+
+<p>Focuses on optimization using MATLAB's toolbox, suitable for advanced optimization tasks.</p>
+
+</details>
+
+---
+
+<details>
+<summary>Solver-Based Optimization in MATLAB Cheat Sheet</summary><br>
+
+<p>Advanced optimization techniques using solvers, building on problem-based approaches.</p>
+
+</details>
+
+---
+
+<details>
+<summary>Quantum Computing Cheat Sheet</summary><br>
+
+<p>Covers cutting-edge topics in quantum computing.</p>
+
+</details>
 
