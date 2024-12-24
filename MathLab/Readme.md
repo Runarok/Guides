@@ -1584,3 +1584,133 @@ end
 </details>
 
 ---
+
+<details>
+<summary><b>Low-Level I/O</b></summary>
+
+<table>
+  <tr>
+    <th>Function</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>fopen</code></td>
+    <td>Open a file for low-level input/output operations.</td>
+  </tr>
+  <tr>
+    <td><code>fread</code></td>
+    <td>Read binary data from a file.</td>
+  </tr>
+  <tr>
+    <td><code>fwrite</code></td>
+    <td>Write binary data to a file.</td>
+  </tr>
+  <tr>
+    <td><code>fprintf</code></td>
+    <td>Write formatted data to a file.</td>
+  </tr>
+  <tr>
+    <td><code>fscanf</code></td>
+    <td>Read formatted data from a file.</td>
+  </tr>
+  <tr>
+    <td><code>textscan</code></td>
+    <td>Read formatted data from a text file.</td>
+  </tr>
+  <tr>
+    <td><code>fclose</code></td>
+    <td>Close an open file.</td>
+  </tr>
+</table>
+
+</details>
+
+<details>
+<summary><b>Standard File Formats</b></summary>
+
+<table>
+  <tr>
+    <th>File Format</th>
+    <th>Function</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>MAT-File</td>
+    <td><code>load</code>, <code>save</code></td>
+    <td>Load or save MATLAB variables.</td>
+  </tr>
+  <tr>
+    <td>Text/CSV</td>
+    <td><code>readtable</code>, <code>writetable</code></td>
+    <td>Import/export tabular data.</td>
+  </tr>
+  <tr>
+    <td>Spreadsheet</td>
+    <td><code>readtable</code>, <code>writetable</code></td>
+    <td>Import/export spreadsheet files (e.g., Excel).</td>
+  </tr>
+  <tr>
+    <td>XML</td>
+    <td><code>xmlread</code>, <code>xmlwrite</code></td>
+    <td>Read/write XML files.</td>
+  </tr>
+  <tr>
+    <td>JSON</td>
+    <td><code>jsondecode</code>, <code>jsonencode</code></td>
+    <td>Decode or encode JSON data.</td>
+  </tr>
+  <tr>
+    <td>HDF5</td>
+    <td><code>h5read</code>, <code>h5write</code></td>
+    <td>Read/write HDF5 data files.</td>
+  </tr>
+  <tr>
+    <td>Image</td>
+    <td><code>imread</code>, <code>imwrite</code></td>
+    <td>Read/write image files (e.g., PNG, JPEG).</td>
+  </tr>
+  <tr>
+    <td>Audio</td>
+    <td><code>audioread</code>, <code>audiowrite</code></td>
+    <td>Read/write audio files.</td>
+  </tr>
+  <tr>
+    <td>Video</td>
+    <td><code>VideoReader</code>, <code>VideoWriter</code></td>
+    <td>Read/write video files.</td>
+  </tr>
+</table>
+
+</details>
+
+<details>
+<summary><b>Web Data</b></summary>
+
+<table>
+  <tr>
+    <th>Function</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>webread</code></td>
+    <td>Read data from a web service or URL.</td>
+  </tr>
+  <tr>
+    <td><code>webwrite</code></td>
+    <td>Write data to a web service.</td>
+  </tr>
+  <tr>
+    <td><code>websave</code></td>
+    <td>Save web content to a file.</td>
+  </tr>
+  <tr>
+    <td><code>urlread</code> (legacy)</td>
+    <td>Read content from a URL (legacy function).</td>
+  </tr>
+  <tr>
+    <td><code>urlwrite</code> (legacy)</td>
+    <td>Write content from a URL to a file (legacy function).</td>
+  </tr>
+</table>
+
+</details>
