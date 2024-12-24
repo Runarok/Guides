@@ -566,7 +566,7 @@
 ---
 
 <details>
-  <summary>Tasks (Live Editor)</summary>
+  <summary>Tasks (Live Editor)</summary><br>
   <table>
     <tr>
       <th>Task</th>
