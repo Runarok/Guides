@@ -1,5 +1,5 @@
 <details>
-  <summary>Which Machine Learning Algorithm Is Right for You?</summary>
+  <summary>Which Machine Learning Algorithm Is Right for You?</summary><br>
 
 <table>
   <thead>
@@ -86,7 +86,7 @@
 <details>
     <summary>MATLAB® Basic Functions Reference</summary><br>
 <details>
-  <summary>MATLAB Environment</summary>
+  <summary>MATLAB Environment</summary><br>
   <table border="1" cellpadding="5" cellspacing="0">
     <thead>
       <tr>
@@ -150,7 +150,7 @@
 ---
 
 <details>
-  <summary>Operators and Special Characters</summary>
+  <summary>Operators and Special Characters</summary><br>
   <table border="1" cellpadding="5" cellspacing="0">
     <thead>
       <tr>
@@ -218,7 +218,7 @@
 ---
 
 <details>
-  <summary>Defining and Changing Array Variables</summary>
+  <summary>Defining and Changing Array Variables</summary><br>
   <table border="1" cellpadding="5" cellspacing="0">
     <thead>
       <tr>
@@ -282,7 +282,7 @@
 ---
 
 <details>
-  <summary>Special Variables and Constants</summary>
+  <summary>Special Variables and Constants</summary><br>
   <table border="1" cellpadding="5" cellspacing="0">
     <thead>
       <tr>
@@ -322,7 +322,7 @@
 ---
 
 <details>
-  <summary>Complex Numbers</summary>
+  <summary>Complex Numbers</summary><br>
   <table border="1" cellpadding="5" cellspacing="0">
     <thead>
       <tr>
