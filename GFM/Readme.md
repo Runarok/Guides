@@ -168,7 +168,9 @@
     <source src="audio.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
+  GitHub supports .mp3, .ogg, and .wav
   ```
+  
      **Output**:
    <audio controls>
     <source src="audio.mp3" type="audio/mpeg">
@@ -181,6 +183,7 @@
     <source src="movie.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+    GitHub supports .mp4, .webm, and .ogg
   ```
      **Output**:
   <video controls>
