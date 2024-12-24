@@ -160,18 +160,6 @@
     San Francisco, CA 94107
   </address>
   
-- **Aside (`<aside>`)**: For tangential content.
-  ```html
-  <aside>
-    <h3>Did you know?</h3>
-    <p>GitHub is a platform for developers to collaborate.</p>
-  </aside>
-  ```
-     **Output**:
-  <aside>
-    <h3>Did you know?</h3>
-    <p>GitHub is a platform for developers to collaborate.</p>
-  </aside>
 
 ### **Media Elements**
 - **Audio (`<audio>`)**: Embed audio files.
