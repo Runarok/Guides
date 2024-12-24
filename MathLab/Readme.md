@@ -1586,7 +1586,10 @@ end
 ---
 
 <details>
-<summary><b>Low-Level I/O</b></summary>
+<summary>Importing and Exporting Data Using MATLAB</summary><br>
+
+<details>
+<summary>Low-Level I/O</summary><br>
 
 <table>
   <tr>
@@ -1626,7 +1629,7 @@ end
 </details>
 
 <details>
-<summary><b>Standard File Formats</b></summary>
+<summary>Standard File Formats</summary><br>
 
 <table>
   <tr>
@@ -1680,11 +1683,10 @@ end
     <td>Read/write video files.</td>
   </tr>
 </table>
-
 </details>
 
 <details>
-<summary><b>Web Data</b></summary>
+<summary>Web Data</summary><br>
 
 <table>
   <tr>
@@ -1712,5 +1714,5 @@ end
     <td>Write content from a URL to a file (legacy function).</td>
   </tr>
 </table>
-
+</details>
 </details>
