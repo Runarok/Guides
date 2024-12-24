@@ -271,6 +271,10 @@
   </ol>
   ```
      **Output**:
+  <ol>
+    <li>First item</li>
+    <li>Second item</li>
+  </ol>
   
 - **Unordered List (`<ul>`)**: An unordered (bulleted) list.
   ```html
@@ -280,12 +284,16 @@
   </ul>
   ```
      **Output**:
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
   
 - **List Item (`<li>`)**: Defines each item in a list.
   ```html
   <li>This is a list item</li>
   ```
-     **Output**:
+     **Output**:  <li>This is a list item</li>
   
 
 ### **Linking and Anchor Tags**
@@ -293,13 +301,15 @@
   ```html
   <a href="https://github.com">Visit GitHub</a>
   ```
-     **Output**:
+     **Output**:  <a href="https://github.com">Visit GitHub</a>
+
   
 - **Anchor with Target (`<a target="_blank">`)**: Opens the link in a new window.
   ```html
   <a href="https://github.com" target="_blank">Visit GitHub</a>
   ```
-     **Output**:
+     **Output**:  <a href="https://github.com" target="_blank">Visit GitHub</a>
+
   
 
 ### **Table Tags**
@@ -317,6 +327,16 @@
   </table>
   ```
      **Output**:
+    <table>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+    <tr>
+      <td>Data 1</td>
+      <td>Data 2</td>
+    </tr>
+  </table>
   
 - **Table Row (`<tr>`)**: Defines a row in the table.
   ```html
@@ -326,18 +346,22 @@
   </tr>
   ```
      **Output**:
+    <tr>
+    <td>Row 1, Cell 1</td>
+    <td>Row 1, Cell 2</td>
+  </tr>
   
 - **Table Header (`<th>`)**: Defines a header cell in the table.
   ```html
   <th>Header Content</th>
   ```
-     **Output**:
+     **Output**:   <th>Header Content</th>
   
 - **Table Data (`<td>`)**: Defines a data cell in the table.
   ```html
   <td>Data Content</td>
   ```
-     **Output**:
+     **Output**:   <td>Data Content</td>
   
 
 ### **Image and Embed Tags**
@@ -345,13 +369,13 @@
   ```html
   <img src="image.jpg" alt="Alt Text" />
   ```
-     **Output**:
+     **Output**:  <img src="image.jpg" alt="Alt Text" />
   
 - **Embed (`<embed>`)**: Embeds external content like multimedia.
   ```html
   <embed src="file.pdf" width="500" height="375">
   ```
-     **Output**:
+     **Output**:  <embed src="file.pdf" width="500" height="375">
   
 
 ### **Meta and Header Tags**
@@ -359,55 +383,21 @@
   ```html
   <meta name="description" content="GitHub Flavored Markdown Example">
   ```
-     **Output**:
+     **Output**:  <meta name="description" content="GitHub Flavored Markdown Example">
   
 - **Title (`<title>`)**: Defines the title of the page (appears in the browser tab).
   ```html
   <title>GitHub Flavored Markdown</title>
   ```
-     **Output**:
+     **Output**:  <title>GitHub Flavored Markdown</title>
   
 - **Link (`<link>`)**: Specifies relationships between a document and external resources, typically used for CSS links.
   ```html
   <link rel="stylesheet" type="text/css" href="styles.css">
   ```
-     **Output**:
+     **Output**:  <link rel="stylesheet" type="text/css" href="styles.css">
   
   
-### **Script Tags**
-- **Script (`<script>`)**: Used to define JavaScript code.
-  ```html
-  <script>
-    alert("Hello, World!");
-  </script>
-  ```
-     **Output**:
-  
-
-### **Iframe and Object Tags**
-- **Iframe (`<iframe>`)**: Embeds an external webpage.
-  ```html
-  <iframe src="https://example.com" width="600" height="400"></iframe>
-  ```
-     **Output**:
-  
-- **Object (`<object>`)**: Embeds an external resource like a multimedia file or another document.
-  ```html
-  <object data="movie.mp4" width="400" height="300"></object>
-  ```
-     **Output**:
-  
-
-### **Style Tags**
-- **Style (`<style>`)**: Defines CSS styles.
-  ```html
-  <style>
-    body { background-color: lightblue; }
-  </style>
-  ```
-     **Output**:
-  
-
 ### **HTML5 Tags (Additional)**
 - **Section (`<section>`)**: Represents a section in a document.
   ```html
@@ -417,6 +407,10 @@
   </section>
   ```
      **Output**:
+  <section>
+    <h2>Introduction</h2>
+    <p>This is the introduction section.</p>
+  </section>
   
 - **Article (`<article>`)**: Represents an independent, self-contained piece of content.
   ```html
@@ -426,46 +420,17 @@
   </article>
   ```
      **Output**:
+  <article>
+    <h2>Article Title</h2>
+    <p>This is the content of the article.</p>
+  </article>
   
-- **Aside (`<aside>`)**: Represents content that is tangentially related to the content around it.
-  ```html
-  <aside>
-    <h3>Related Information</h3>
-    <p>Here is some related content.</p>
-  </aside>
-  ```
-     **Output**:
-  
-- **Header (`<header>`)**: Defines the header of a document or section.
-  ```html
-  <header>
-    <h1>Main Heading</h1>
-    <nav>Navigation Links</nav>
-  </header>
-  ```
-     **Output**:
-  
-- **Footer (`<footer>`)**: Defines the footer of a document or section.
-  ```html
-  <footer>
-    <p>&copy; 2024 GitHub</p>
-  </footer>
-  ```
-     **Output**:
-  
-
-### **Miscellaneous**
-- **Comment (`<!-- -->`)**: Used for adding comments.
-  ```html
-  <!-- This is a comment -->
-  ```
-     **Output**:  Not visible <!-- This is a comment -->
   
 - **Anchor with Name (`<a name="section1">`)**: Used to create named anchors for links.
   ```html
   <a name="section1">Section 1</a>
   ```
-     **Output**:
+     **Output**:  <a name="section1">Section 1</a>
   
 
 ## **Remaining HTML Tags Supported in GitHub Flavored Markdown**
@@ -475,83 +440,36 @@
   ```html
   <dfn>HTML</dfn> is a markup language.
   ```
-     **Output**:
+     **Output**:  <dfn>HTML</dfn> is a markup language.
   
 
 - **Span (`<span>`)**: Generic inline container for styling purposes.
   ```html
   <span style="color: red;">This is a red text.</span>
   ```
-     **Output**:
+     **Output**:  <span style="color: red;">This is a red text.</span>
   
 
 - **Ruby (`<ruby>`)**: Represents ruby annotations for East Asian typography.
   ```html
   <ruby>漢<rt>kan</rt></ruby>
   ```
-     **Output**:
+     **Output**:  <ruby>漢<rt>kan</rt></ruby>
   
 
 - **Rt (`<rt>`)**: Represents the pronunciation of characters in a `<ruby>` element.
   ```html
   <ruby>漢<rt>kan</rt></ruby>
   ```
-     **Output**:
+     **Output**:  <ruby>漢<rt>kan</rt></ruby>
   
 
 - **Rb (`<rb>`)**: Represents the base text in a `<ruby>` element.
   ```html
   <ruby><rb>漢</rb><rt>kan</rt></ruby>
   ```
-     **Output**:
+     **Output**:  <ruby><rb>漢</rb><rt>kan</rt></ruby>
   
-  
-### **Metadata Elements**
-- **Base (`<base>`)**: Specifies a base URL for relative URLs.
-  ```html
-  <base href="https://www.example.com/" />
-  ```
-     **Output**:
-  
-
-- **Link (`<link>`)**: Defines the relationship between a document and an external resource, most commonly used for CSS.
-  ```html
-  <link rel="stylesheet" href="styles.css" />
-  ```
-     **Output**:
-  
-
-- **Meta (`<meta>`)**: Specifies metadata such as document encoding, keywords, etc.
-  ```html
-  <meta charset="UTF-8" />
-  <meta name="description" content="GitHub Flavored Markdown" />
-  ```
-     **Output**:
-  
-
-
-### **Embedded Content**
-- **Iframe (`<iframe>`)**: Embeds an external webpage.
-  ```html
-  <iframe src="https://example.com" width="600" height="400"></iframe>
-  ```
-     **Output**:
-  
-
-- **Object (`<object>`)**: Embeds an external resource like a multimedia file or another document.
-  ```html
-  <object data="movie.mp4" width="400" height="300"></object>
-  ```
-     **Output**:
-  
-
-- **Embed (`<embed>`)**: Embeds external content such as multimedia.
-  ```html
-  <embed src="file.pdf" width="500" height="375">
-  ```
-     **Output**:
-  
-
 
 ### **Document Structure Elements**
 - **Section (`<section>`)**: Represents a generic section of content.
@@ -648,49 +566,7 @@
      **Output**:
   
 
-  
-### **Table Elements**
-- **Table (`<table>`)**: Defines a table.
-  ```html
-  <table>
-    <tr>
-      <th>Header 1</th>
-      <th>Header 2</th>
-    </tr>
-    <tr>
-      <td>Data 1</td>
-      <td>Data 2</td>
-    </tr>
-  </table>
-  ```
-     **Output**:
-  
 
-- **Table Row (`<tr>`)**: Defines a row in the table.
-  ```html
-  <tr>
-    <td>Row 1, Cell 1</td>
-    <td>Row 1, Cell 2</td>
-  </tr>
-  ```
-     **Output**:
-  
-### **Text Grouping and Wrapping**
-- **Div (`<div>`)**: Defines a division or section in the document.
-  ```html
-  <div class="container">This is a division.</div>
-  ```
-     **Output**:  <div class="container">This is a division.</div>
-  
-
-- **Span (`<span>`)**: Defines an inline section for styling.
-  ```html
-  <span style="color:red;">This is a red text.</span>
-  ```
-     **Output**:  <span style="color:red;">This is a red text.</span>
-   
-
-### **Embedded External Content**
 - **Picture (`<picture>`)**: Provides multiple image sources for responsive images (may not work well in GFM).
   ```html
   <picture>
