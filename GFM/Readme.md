@@ -703,24 +703,3 @@
     <source srcset="image.webp" type="image/webp">
     <img src="image.jpg" alt="Image" />
   </picture>
-  
-
-  
-### **Progress and Meter**
-- **Progress (`<progress>`)**: Represents a progress bar.
-  ```html
-  <progress value="50" max="100"></progress>
-  ```
-     **Output**:  <progress value="50" max="100"></progress>
-  
-
-
-- **Meter (`<meter>`)**: Represents a scalar measurement within a known range.
-  ```html
-  <meter value="2" min="0" max="10">2 out of 10</meter>
-  ```
-     **Output**:  <meter value="2" min="0" max="10">2 out of 10</meter>
-  
-
-
-
