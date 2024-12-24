@@ -1589,105 +1589,165 @@ end
 <summary>Importing and Exporting Data Using MATLAB</summary><br>
 
 <details>
-<summary>Low-Level I/O</summary><br>
+  <summary>Standard File Formats</summary><br>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Single File</th>
+        <th>Multiple Files</th>
+        <th>Write</th>
+        <th>Advanced</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Text</td>
+        <td><code>readtable</code></td>
+        <td><code>tabularTextDatastore</code></td>
+        <td><code>writetable</code></td>
+        <td><code>detectImportOptions</code>, <code>textscan</code></td>
+      </tr>
+      <tr>
+        <td>Spreadsheet</td>
+        <td><code>readtable</code></td>
+        <td><code>spreadsheetDatastore</code></td>
+        <td><code>writetable</code></td>
+        <td><code>detectImportOptions</code></td>
+      </tr>
+      <tr>
+        <td>.mat</td>
+        <td><code>load</code></td>
+        <td><code>matfile</code>, <code>fileDatastore</code></td>
+        <td><code>save</code></td>
+        <td>Custom datastore</td>
+      </tr>
+      <tr>
+        <td>Image</td>
+        <td><code>imread</code></td>
+        <td><code>imageDatastore</code></td>
+        <td><code>imwrite</code></td>
+        <td>Custom datastore</td>
+      </tr>
+      <tr>
+        <td>Video</td>
+        <td><code>VideoReader</code></td>
+        <td><code>fileDatastore</code></td>
+        <td><code>VideoWriter</code></td>
+        <td>Custom datastore</td>
+      </tr>
+      <tr>
+        <td>Audio</td>
+        <td><code>audioread</code></td>
+        <td><code>fileDatastore</code></td>
+        <td><code>audiowrite</code></td>
+        <td>Custom datastore</td>
+      </tr>
+      <tr>
+        <td>NetCDF</td>
+        <td><code>ncread</code></td>
+        <td><code>fileDatastore</code></td>
+        <td><code>ncwrite</code></td>
+        <td><code>netcdf</code></td>
+      </tr>
+      <tr>
+        <td>CDF</td>
+        <td><code>cdfread</code></td>
+        <td><code>fileDatastore</code></td>
+        <td><code>cdfwrite</code></td>
+        <td><code>cdflib</code></td>
+      </tr>
+      <tr>
+        <td>HDF5</td>
+        <td><code>h5read</code></td>
+        <td><code>fileDatastore</code></td>
+        <td><code>h5write</code></td>
+        <td><code>H5</code>, <code>H5F</code>, ...</td>
+      </tr>
+      <tr>
+        <td>XML</td>
+        <td><code>xmlread</code></td>
+        <td><code>fileDatastore</code></td>
+        <td><code>xmlwrite</code></td>
+        <td>Custom datastore</td>
+      </tr>
+      <tr>
+        <td>Binary</td>
+        <td><code>fread</code></td>
+        <td><code>fileDatastore</code></td>
+        <td><code>fwrite</code></td>
+        <td>Custom datastore</td>
+      </tr>
+    </tbody>
+  </table>
+</details>
+
+
+<details>
+<summary><b>Low-Level I/O</b></summary>
+
+<p>Low-level functions such as <code>fgetl</code> and <code>fscanf</code> allow the most control over I/O.</p>
 
 <table>
   <tr>
-    <th>Function</th>
-    <th>Description</th>
+    <th>Type</th>
+    <th>Specifier</th>
+    <th>Output Class</th>
   </tr>
   <tr>
-    <td><code>fopen</code></td>
-    <td>Open a file for low-level input/output operations.</td>
+    <td>Signed int</td>
+    <td>%d, %8d, ...</td>
+    <td>int32, int8</td>
   </tr>
   <tr>
-    <td><code>fread</code></td>
-    <td>Read binary data from a file.</td>
+    <td>Unsigned int</td>
+    <td>%u, %8u, ...</td>
+    <td>uint32, uint8</td>
   </tr>
   <tr>
-    <td><code>fwrite</code></td>
-    <td>Write binary data to a file.</td>
+    <td>Floating point</td>
+    <td>%f, %8.2f</td>
+    <td>double, single</td>
   </tr>
   <tr>
-    <td><code>fprintf</code></td>
-    <td>Write formatted data to a file.</td>
+    <td>Text array</td>
+    <td>%s, %q, "TextType"</td>
+    <td>string</td>
   </tr>
   <tr>
-    <td><code>fscanf</code></td>
-    <td>Read formatted data from a file.</td>
+    <td>Datetime</td>
+    <td>%D, %{fmt}D</td>
+    <td>datetime</td>
   </tr>
   <tr>
-    <td><code>textscan</code></td>
-    <td>Read formatted data from a text file.</td>
+    <td>Duration</td>
+    <td>%t, %{fmt}t</td>
+    <td>duration</td>
   </tr>
   <tr>
-    <td><code>fclose</code></td>
-    <td>Close an open file.</td>
+    <td>Category</td>
+    <td>%C</td>
+    <td>categorical</td>
+  </tr>
+  <tr>
+    <td>Pattern</td>
+    <td>%[-]</td>
+    <td>string</td>
+  </tr>
+  <tr>
+    <td>Skip field</td>
+    <td>%*k</td>
+    <td>—</td>
   </tr>
 </table>
 
 </details>
 
 <details>
-<summary>Standard File Formats</summary><br>
+<summary><b>Web Data</b></summary>
 
-<table>
-  <tr>
-    <th>File Format</th>
-    <th>Function</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>MAT-File</td>
-    <td><code>load</code>, <code>save</code></td>
-    <td>Load or save MATLAB variables.</td>
-  </tr>
-  <tr>
-    <td>Text/CSV</td>
-    <td><code>readtable</code>, <code>writetable</code></td>
-    <td>Import/export tabular data.</td>
-  </tr>
-  <tr>
-    <td>Spreadsheet</td>
-    <td><code>readtable</code>, <code>writetable</code></td>
-    <td>Import/export spreadsheet files (e.g., Excel).</td>
-  </tr>
-  <tr>
-    <td>XML</td>
-    <td><code>xmlread</code>, <code>xmlwrite</code></td>
-    <td>Read/write XML files.</td>
-  </tr>
-  <tr>
-    <td>JSON</td>
-    <td><code>jsondecode</code>, <code>jsonencode</code></td>
-    <td>Decode or encode JSON data.</td>
-  </tr>
-  <tr>
-    <td>HDF5</td>
-    <td><code>h5read</code>, <code>h5write</code></td>
-    <td>Read/write HDF5 data files.</td>
-  </tr>
-  <tr>
-    <td>Image</td>
-    <td><code>imread</code>, <code>imwrite</code></td>
-    <td>Read/write image files (e.g., PNG, JPEG).</td>
-  </tr>
-  <tr>
-    <td>Audio</td>
-    <td><code>audioread</code>, <code>audiowrite</code></td>
-    <td>Read/write audio files.</td>
-  </tr>
-  <tr>
-    <td>Video</td>
-    <td><code>VideoReader</code>, <code>VideoWriter</code></td>
-    <td>Read/write video files.</td>
-  </tr>
-</table>
-</details>
-
-<details>
-<summary>Web Data</summary><br>
-
+<h4>RESTful Web Service</h4>
 <table>
   <tr>
     <th>Function</th>
@@ -1695,24 +1755,51 @@ end
   </tr>
   <tr>
     <td><code>webread</code></td>
-    <td>Read data from a web service or URL.</td>
+    <td>Read data</td>
   </tr>
   <tr>
     <td><code>webwrite</code></td>
-    <td>Write data to a web service.</td>
+    <td>Write data</td>
   </tr>
   <tr>
     <td><code>websave</code></td>
-    <td>Save web content to a file.</td>
+    <td>Save data to file</td>
   </tr>
   <tr>
-    <td><code>urlread</code> (legacy)</td>
-    <td>Read content from a URL (legacy function).</td>
-  </tr>
-  <tr>
-    <td><code>urlwrite</code> (legacy)</td>
-    <td>Write content from a URL to a file (legacy function).</td>
+    <td><code>weboptions</code></td>
+    <td>Specify options such as authentication and timeout</td>
   </tr>
 </table>
+
+<h4>JSON</h4>
+<table>
+  <tr>
+    <th>Function</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>jsondecode</code></td>
+    <td>Decode JSON data</td>
+  </tr>
+  <tr>
+    <td><code>jsonencode</code></td>
+    <td>Encode JSON data</td>
+  </tr>
+</table>
+
+<h4>HTTP Messaging</h4>
+<p>Use the HTTP interface for more complex web communication:</p>
+
+<pre>
+body = ...
+    matlab.net.http.MessageBody(x);
+
+request = ...
+    matlab.net.http.RequestMessage(method, header, body);
+</pre>
+
 </details>
-</details>
+
+---
+
+
