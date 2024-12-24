@@ -1342,3 +1342,241 @@ end
 </details>
 
 ---
+
+<details>
+  <summary>MATLAB Live Editor Quick Start Guide</summary><br>
+  <p>MATLAB Live Editor allows you to combine code, output, and formatted text in one interactive environment. Live Scripts provide an interactive way to write and test code while incorporating explanations, visualizations, and outputs.</p>
+  
+  <h4>Features:</h4>
+  <ul>
+    <li><strong>Code Execution:</strong> Execute sections or all code to see outputs.</li>
+    <li><strong>Text Formatting:</strong> Insert rich text such as titles, lists, and LaTeX equations.</li>
+    <li><strong>Interactive Visualizations:</strong> Plot graphs directly within the editor.</li>
+    <li><strong>Exporting:</strong> Save or export the live script as HTML, PDF, or LaTeX for sharing.</li>
+    <li><strong>Interactive Widgets:</strong> Include controls like sliders and buttons for dynamic input.</li>
+  </ul>
+  
+  <h4>Basic Steps:</h4>
+  <ol>
+    <li>Create a Live Script by going to <em>File > New > Live Script</em>.</li>
+    <li>Write code, insert text, and visualize data.</li>
+    <li>Run sections or the whole script to see results immediately.</li>
+    <li>Save or export the document as needed.</li>
+  </ol>
+</details>
+
+<details>
+  <summary>Markdown for Formatting</summary><br>
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Markdown</th>
+    </tr>
+    <tr>
+      <td><strong>Title</strong></td>
+      <td><code>#</code></td>
+    </tr>
+    <tr>
+      <td><strong>Heading</strong></td>
+      <td><code>##</code></td>
+    </tr>
+    <tr>
+      <td><strong>Section break</strong></td>
+      <td><code>%%</code></td>
+    </tr>
+    <tr>
+      <td><strong>Bulleted list</strong></td>
+      <td><code>*</code></td>
+    </tr>
+    <tr>
+      <td><strong>Numbered list</strong></td>
+      <td><code>1.</code></td>
+    </tr>
+    <tr>
+      <td><strong>Hyperlink</strong></td>
+      <td><code>&lt; &gt;</code></td>
+    </tr>
+    <tr>
+      <td><strong>Insert LaTeX equation</strong></td>
+      <td><code>$$</code></td>
+    </tr>
+    <tr>
+      <td><strong>Monospaced text</strong></td>
+      <td><code>!!</code></td>
+    </tr>
+    <tr>
+      <td><strong>Code example</strong></td>
+      <td><code>```</code></td>
+    </tr>
+    <tr>
+      <td><strong>Text formatting</strong></td>
+      <td><code>*italic*</code>, <code>**bold**</code>, <code>_italic_</code>, <code>__bold__</code>, <code>_*italic bold*__</code>, <code>*__bold italic__*</code></td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary>Shortcuts for Coding</summary><br>
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Windows</th>
+      <th>Mac</th>
+    </tr>
+    <tr>
+      <td><strong>Toggle code and text</strong></td>
+      <td><code>Alt+Enter</code></td>
+      <td><code>~</code></td>
+    </tr>
+    <tr>
+      <td><strong>Insert section break</strong></td>
+      <td><code>Ctrl+Alt+Enter</code></td>
+      <td><code>⌘</code></td>
+    </tr>
+    <tr>
+      <td><strong>Run section</strong></td>
+      <td><code>Ctrl+Enter</code></td>
+      <td><code>⌘</code></td>
+    </tr>
+    <tr>
+      <td><strong>Run and advance</strong></td>
+      <td><code>Ctrl+Shift+Enter</code></td>
+      <td><code>⇧⌘</code></td>
+    </tr>
+    <tr>
+      <td><strong>Run all</strong></td>
+      <td><code>F5</code></td>
+      <td><code>⇧⌘R</code></td>
+    </tr>
+    <tr>
+      <td><strong>Run next line</strong></td>
+      <td><code>F10</code></td>
+      <td><code>F10</code></td>
+    </tr>
+    <tr>
+      <td><strong>Comment</strong></td>
+      <td><code>Ctrl+R</code></td>
+      <td><code>⌘/</code></td>
+    </tr>
+    <tr>
+      <td><strong>Uncomment</strong></td>
+      <td><code>Ctrl+T</code></td>
+      <td><code>⌘T</code></td>
+    </tr>
+    <tr>
+      <td><strong>Increase indent</strong></td>
+      <td><code>Ctrl+]</code></td>
+      <td><code>⌘]</code></td>
+    </tr>
+    <tr>
+      <td><strong>Decrease indent</strong></td>
+      <td><code>Ctrl+[</code></td>
+      <td><code>⌘[</code></td>
+    </tr>
+    <tr>
+      <td><strong>Smart indent</strong></td>
+      <td><code>Ctrl+I</code></td>
+      <td><code>⌘I</code></td>
+    </tr>
+    <tr>
+      <td><strong>Quit execution</strong></td>
+      <td><code>Ctrl+C</code></td>
+      <td><code>⌃C</code></td>
+    </tr>
+    <tr>
+      <td><strong>Quit execution</strong></td>
+      <td><code>Shift+F5</code></td>
+      <td><code>⌃C</code></td>
+    </tr>
+  </table>
+</details>
+
+---
+
+<details>
+  <summary>Writing Code</summary><br>
+  <p>Writing code in MATLAB Live Editor allows you to combine text, code, and outputs in an interactive environment. The editor facilitates writing code, visualizing results, and adding explanations simultaneously.</p>
+  
+  <h4>Code Writing Tips:</h4>
+  <ul>
+    <li><strong>Write code in sections:</strong> Use section breaks (`%%`) to organize the script into different parts.</li>
+    <li><strong>Insert comments:</strong> Use `%` for single-line comments to explain the code and improve readability.</li>
+    <li><strong>Use interactive widgets:</strong> You can add sliders and buttons to make your code more interactive and visually informative.</li>
+  </ul>
+
+  <h4>Code Structure:</h4>
+  <pre><code>
+  %% Section 1: Define Variables
+  x = 1:10;
+  y = x.^2;
+  
+  %% Section 2: Plot the Data
+  plot(x, y);
+  title('Plot of x vs y');
+  </code></pre>
+</details>
+
+<details>
+  <summary>Debugging</summary><br>
+  <p>MATLAB provides several tools to help debug your code and find errors efficiently. You can use breakpoints, the Debugging panel, and other features to step through the code and inspect variables.</p>
+
+  <h4>Debugging Techniques:</h4>
+  <ul>
+    <li><strong>Set Breakpoints:</strong> Click on the left margin of the script to set breakpoints where you want the execution to pause. This helps you inspect variables.</li>
+    <li><strong>Step Through Code:</strong> Use the 'Step' options to go through your code one line at a time to identify issues.</li>
+    <li><strong>Use the Debugging Panel:</strong> View variable values and modify them in real-time during the execution of the script.</li>
+  </ul>
+  
+  <h4>Common Debugging Commands:</h4>
+  <table>
+    <tr>
+      <th>Command</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>dbstop</code></td>
+      <td>Sets a breakpoint in the code (e.g., <code>dbstop in script_name at line_number</code>)</td>
+    </tr>
+    <tr>
+      <td><code>dbcont</code></td>
+      <td>Continues execution after hitting a breakpoint</td>
+    </tr>
+    <tr>
+      <td><code>dbstep</code></td>
+      <td>Steps through the code one line at a time</td>
+    </tr>
+    <tr>
+      <td><code>dbquit</code></td>
+      <td>Quits the debugging session</td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary>Exploring Outputs</summary><br>
+  <p>MATLAB allows you to explore outputs interactively within the Live Editor. You can view results in the output area, plot them graphically, and even modify them in real-time to test different scenarios.</p>
+
+  <h4>Exploring Output:</h4>
+  <ul>
+    <li><strong>View Numeric Outputs:</strong> Numeric results from calculations are displayed immediately below the code block.</li>
+    <li><strong>Visualize Data:</strong> MATLAB's plotting functions allow you to generate graphs to visualize data outputs easily.</li>
+    <li><strong>Use the Variable Editor:</strong> You can inspect and edit variables directly in the Variable Editor to explore data values.</li>
+  </ul>
+
+  <h4>Examples of Output Exploration:</h4>
+  <pre><code>
+  %% Section: Compute and Display Results
+  x = 1:10;
+  y = x.^2;
+  disp(y);
+  
+  %% Section: Plotting the Results
+  plot(x, y);
+  xlabel('x');
+  ylabel('y');
+  title('Square of x');
+  </code></pre>
+</details>
+
+
+---
