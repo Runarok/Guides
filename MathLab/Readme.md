@@ -85,7 +85,7 @@
 
 <details>
     <summary>MATLAB® Basic Functions Reference</summary>
-<details>
+<details><br>
   <summary>MATLAB Environment</summary>
   <table border="1" cellpadding="5" cellspacing="0">
     <thead>
@@ -146,6 +146,8 @@
     </tbody>
   </table>
 </details>
+
+---
 
 <details>
   <summary>Operators and Special Characters</summary>
@@ -213,6 +215,8 @@
   </table>
 </details>
 
+---
+
 <details>
   <summary>Defining and Changing Array Variables</summary>
   <table border="1" cellpadding="5" cellspacing="0">
@@ -275,6 +279,8 @@
   </table>
 </details>
 
+---
+
 <details>
   <summary>Special Variables and Constants</summary>
   <table border="1" cellpadding="5" cellspacing="0">
@@ -312,6 +318,8 @@
     </tbody>
   </table>
 </details>
+
+---
 
 <details>
   <summary>Complex Numbers</summary>
@@ -351,3 +359,6 @@
   </table>
 </details>
 </details>
+
+---
+
