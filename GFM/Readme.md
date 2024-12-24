@@ -101,39 +101,6 @@
   ```
      **Output**:  <del>This text was deleted</del>
   
-  
-### **Forms (Limited Support)**
-- **Form (`<form>`)**: Although limited, some form elements work.
-  ```html
-  <form action="/submit">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
-    <input type="submit" value="Submit">
-  </form>
-  ```
-     **Output**:
-  <form action="/submit">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name">
-    <input type="submit" value="Submit">
-  </form>
-  
-- **Input (`<input>`)**: Various types of input elements.
-  ```html
-  <input type="text" placeholder="Enter text here" />
-  <input type="checkbox" /> Checkbox
-  ```
-  **Output**:
-  <input type="text" placeholder="Enter text here" />
-  <input type="checkbox" /> Checkbox
-  
-- **Button (`<button>`)**: A clickable button element.
-  ```html
-  <button type="button">Click Me</button>
-  ```
-     **Output**:  <button type="button">Click Me</button>
-  
-
 ### **Structural Elements**
 - **Navigation (`<nav>`)**: For navigation links.
   ```html
