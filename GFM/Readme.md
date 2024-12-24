@@ -675,178 +675,20 @@
   ```
      **Output**:
   
-
-- **Table Header (`<th>`)**: Defines a header cell in the table.
-  ```html
-  <th>Header Content</th>
-  ```
-     **Output**:
-  
-
-- **Table Data (`<td>`)**: Defines a data cell in the table.
-  ```html
-  <td>Data Content</td>
-  ```
-     **Output**:
-  
-
-
 ### **Text Grouping and Wrapping**
 - **Div (`<div>`)**: Defines a division or section in the document.
   ```html
   <div class="container">This is a division.</div>
   ```
-     **Output**:
+     **Output**:  <div class="container">This is a division.</div>
   
 
 - **Span (`<span>`)**: Defines an inline section for styling.
   ```html
   <span style="color:red;">This is a red text.</span>
   ```
-     **Output**:
-  
-
-
-### **Meta and Miscellaneous**
-- **Meta (`<meta>`)**: Provides metadata about the HTML document.
-  ```html
-  <meta charset="UTF-8">
-  ```
-- **Base (`<base>`)**: Specifies a base URL for all relative URLs in the document.
-  ```html
-  <base href="https://www.example.com/" />
-  ```
-     **Output**:
-  
-
-
-## **Other Potential HTML Tags Supported in GitHub Flavored Markdown**
-
-### **Script, Style, and Miscellaneous Elements**
-- **Script (`<script>`)**: Embeds JavaScript, but due to security reasons, this is generally not supported in GFM.
-  ```html
-  <script>alert('Hello World!');</script>
-  ```
-     **Output**:
-  
-
-- **Style (`<style>`)**: Defines custom CSS styles, but might be ignored.
-  ```html
-  <style>
-    body { background-color: lightgray; }
-  </style>
-  ```
-     **Output**:
-  
-
-  
-### **Details and Summary for Interactive Content**
-- **Details (`<details>`)**: Creates a collapsible section.
-  ```html
-  <details>
-    <summary>Click to expand</summary>
-    <p>This is hidden content.</p>
-  </details>
-  ```
-     **Output**:
-  
-
-  
-- **Summary (`<summary>`)**: Specifies a visible heading for a `<details>` element.
-  ```html
-  <details>
-    <summary>Summary text</summary>
-    <p>Details content</p>
-  </details>
-  ```
-     **Output**:
-  
-
-
-### **Text Content and Special Cases**
-- **Code (`<code>`)**: Represents inline code.
-  ```html
-  <code>var x = 10;</code>
-  ```
-     **Output**:
-  
-
-  
-- **Preformatted Text (`<pre>`)**: Displays preformatted text with whitespace preserved.
-  ```html
-  <pre>
-    This is preformatted
-    text, preserving whitespace.
-  </pre>
-  ```
-     **Output**:
-  
-
-  
-### **Semantic Elements**
-- **Main (`<main>`)**: Specifies the main content of a document, but might be ignored.
-  ```html
-  <main>
-    <h1>Main Content</h1>
-    <p>This is the main content of the page.</p>
-  </main>
-  ```
-     **Output**:
-  
-
-
-- **Mark (`<mark>`)**: Highlights text.
-  ```html
-  <mark>This is highlighted text.</mark>
-  ```
-     **Output**:
-  
-
-
-### **Form Controls (Limited)**
-- **Optgroup (`<optgroup>`)**: Groups options inside a `<select>` dropdown.
-  ```html
-  <select>
-    <optgroup label="Group 1">
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-    </optgroup>
-  </select>
-  ```
-     **Output**:
-  
-
-- **Label (`<label>`)**: Defines a label for an `<input>` element.
-  ```html
-  <label for="username">Username:</label>
-  <input type="text" id="username">
-  ```
-     **Output**:
-  
-
-
-### **Iframe and Multimedia Elements**
-- **Audio (`<audio>`)**: Embeds an audio file.
-  ```html
-  <audio controls>
-    <source src="audio.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
-  </audio>
-  ```
-     **Output**:
-  
-
-  
-- **Video (`<video>`)**: Embeds a video file.
-  ```html
-  <video width="320" height="240" controls>
-    <source src="movie.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  ```
-     **Output**:
-  
-
+     **Output**:  <span style="color:red;">This is a red text.</span>
+   
 
 ### **Embedded External Content**
 - **Picture (`<picture>`)**: Provides multiple image sources for responsive images (may not work well in GFM).
@@ -857,6 +699,10 @@
   </picture>
   ```
      **Output**:
+    <picture>
+    <source srcset="image.webp" type="image/webp">
+    <img src="image.jpg" alt="Image" />
+  </picture>
   
 
   
@@ -865,7 +711,7 @@
   ```html
   <progress value="50" max="100"></progress>
   ```
-     **Output**:
+     **Output**:  <progress value="50" max="100"></progress>
   
 
 
@@ -873,7 +719,7 @@
   ```html
   <meter value="2" min="0" max="10">2 out of 10</meter>
   ```
-     **Output**:
+     **Output**:  <meter value="2" min="0" max="10">2 out of 10</meter>
   
 
 
