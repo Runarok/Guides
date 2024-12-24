@@ -358,6 +358,420 @@
     </tbody>
   </table>
 </details>
+
+---
+
+<details>
+  <summary>Elementary Functions</summary><br>
+  <table>
+    <tr>
+      <th>Function</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>sin(x), asin</code></td>
+      <td>Sine and inverse (argument in radians)</td>
+    </tr>
+    <tr>
+      <td><code>sind(x), asind</code></td>
+      <td>Sine and inverse (argument in degrees)</td>
+    </tr>
+    <tr>
+      <td><code>sinh(x), asinh</code></td>
+      <td>Hyperbolic sine and inverse (argument in radians)</td>
+    </tr>
+    <tr>
+      <td><code>cos, tan, csc, sec, cot</code></td>
+      <td>Other trigonometric functions</td>
+    </tr>
+    <tr>
+      <td><code>abs(x)</code></td>
+      <td>Absolute value of x, complex magnitude</td>
+    </tr>
+    <tr>
+      <td><code>exp(x)</code></td>
+      <td>Exponential of x</td>
+    </tr>
+    <tr>
+      <td><code>sqrt(x), nthroot(x, n)</code></td>
+      <td>Square root, real nth root of real numbers</td>
+    </tr>
+    <tr>
+      <td><code>log(x)</code></td>
+      <td>Natural logarithm of x</td>
+    </tr>
+    <tr>
+      <td><code>log2(x), log10</code></td>
+      <td>Logarithm with base 2 and 10, respectively</td>
+    </tr>
+    <tr>
+      <td><code>factorial(n)</code></td>
+      <td>Factorial of n</td>
+    </tr>
+    <tr>
+      <td><code>sign(x)</code></td>
+      <td>Sign of x</td>
+    </tr>
+    <tr>
+      <td><code>mod(x, d)</code></td>
+      <td>Remainder after division (modulo)</td>
+    </tr>
+    <tr>
+      <td><code>ceil(x), fix, floor</code></td>
+      <td>Round toward +inf, 0, -inf</td>
+    </tr>
+    <tr>
+      <td><code>round(x)</code></td>
+      <td>Round to nearest decimal or integer</td>
+    </tr>
+  </table>
+</details>
+
+---
+
+<details>
+  <summary>Tables</summary><br>
+  <table>
+    <tr>
+      <th>Function</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>table(var1, ..., varN)</code></td>
+      <td>Create table from data in variables <code>var1, ..., varN</code></td>
+    </tr>
+    <tr>
+      <td><code>readtable("file")</code></td>
+      <td>Create table from file</td>
+    </tr>
+    <tr>
+      <td><code>array2table(A)</code></td>
+      <td>Convert numeric array to table</td>
+    </tr>
+    <tr>
+      <td><code>T.var</code></td>
+      <td>Extract data from variable <code>var</code></td>
+    </tr>
+    <tr>
+      <td><code>T(rows, columns), T(rows, ["col1", "coln"])</code></td>
+      <td>Create a new table with specified rows and columns from <code>T</code></td>
+    </tr>
+    <tr>
+      <td><code>T.varname = data</code></td>
+      <td>Assign data to (new) column in <code>T</code></td>
+    </tr>
+    <tr>
+      <td><code>T.Properties</code></td>
+      <td>Access properties of <code>T</code></td>
+    </tr>
+    <tr>
+      <td><code>categorical(A)</code></td>
+      <td>Create a categorical array</td>
+    </tr>
+    <tr>
+      <td><code>summary(T), groupsummary</code></td>
+      <td>Print summary of table</td>
+    </tr>
+    <tr>
+      <td><code>join(T1, T2)</code></td>
+      <td>Join tables with common variables</td>
+    </tr>
+  </table>
+</details>
+
+---
+
+<details>
+  <summary>Plotting</summary><br>
+  <table>
+    <tr>
+      <th>Function</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>plot(x, y, LineSpec)</code></td>
+      <td>Plot y vs. x (LineSpec is optional). LineSpec is a combination of linestyle, marker, and color as a string. Example: "-r" = red solid line without markers</td>
+    </tr>
+    <tr>
+      <td><code>title("Title")</code></td>
+      <td>Add plot title</td>
+    </tr>
+    <tr>
+      <td><code>legend("1st", "2nd")</code></td>
+      <td>Add legend to axes</td>
+    </tr>
+    <tr>
+      <td><code>x/y/zlabel("label")</code></td>
+      <td>Add x/y/z axis label</td>
+    </tr>
+    <tr>
+      <td><code>x/y/zticks(ticksvec)</code></td>
+      <td>Get or set x/y/z axis ticks</td>
+    </tr>
+    <tr>
+      <td><code>x/y/zticklabels(labels)</code></td>
+      <td>Get or set x/y/z axis tick labels</td>
+    </tr>
+    <tr>
+      <td><code>x/y/ztickangle(angle)</code></td>
+      <td>Rotate x/y/z axis tick labels</td>
+    </tr>
+    <tr>
+      <td><code>x/y/zlim</code></td>
+      <td>Get or set x/y/z axis range</td>
+    </tr>
+    <tr>
+      <td><code>axis(lim), axis style</code></td>
+      <td>Set axis limits and style</td>
+    </tr>
+    <tr>
+      <td><code>text(x, y, "txt")</code></td>
+      <td>Add text</td>
+    </tr>
+    <tr>
+      <td><code>grid on/off</code></td>
+      <td>Show axis grid</td>
+    </tr>
+    <tr>
+      <td><code>hold on/off</code></td>
+      <td>Retain the current plot when adding new plots</td>
+    </tr>
+    <tr>
+      <td><code>subplot(m, n, p), tiledlayout(m, n)</code></td>
+      <td>Create axes in tiled positions</td>
+    </tr>
+    <tr>
+      <td><code>yyaxis left/right</code></td>
+      <td>Create second y-axis</td>
+    </tr>
+    <tr>
+      <td><code>figure</code></td>
+      <td>Create figure window</td>
+    </tr>
+    <tr>
+      <td><code>gcf, gca</code></td>
+      <td>Get current figure, get current axis</td>
+    </tr>
+    <tr>
+      <td><code>clf</code></td>
+      <td>Clear current figure</td>
+    </tr>
+    <tr>
+      <td><code>close all</code></td>
+      <td>Close open figures</td>
+    </tr>
+  </table>
+</details>
+
+---
+
+<details>
+  <summary>Tasks (Live Editor)</summary>
+  <table>
+    <tr>
+      <th>Task</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>Clean Missing Data</code></td>
+      <td>Interactively clean missing data in your dataset</td>
+    </tr>
+    <tr>
+      <td><code>Clean Outlier</code></td>
+      <td>Interactively identify and clean outliers in your data</td>
+    </tr>
+    <tr>
+      <td><code>Find Change Points</code></td>
+      <td>Identify points in the data where a change occurs</td>
+    </tr>
+    <tr>
+      <td><code>Find Local Extrema</code></td>
+      <td>Find local minima and maxima in your data</td>
+    </tr>
+    <tr>
+      <td><code>Remove Trends</code></td>
+      <td>Interactively remove trends from the data</td>
+    </tr>
+    <tr>
+      <td><code>Smooth Data</code></td>
+      <td>Apply smoothing techniques to the data</td>
+    </tr>
+  </table>
+</details>
+
+---
+
+<details>
+  <summary>Programming Methods</summary><br>
+  <table>
+    <tr>
+      <th>Topic</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>Functions</code></td>
+      <td>
+        <pre>
+% Save your function in a function file or at the end
+% of a script file. Function files must have the
+% same name as the 1st function
+function cavg = cumavg(x) %multiple args. possible
+  cavg = cumsum(vec)./(1:length(vec));
+end
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td><code>Anonymous Functions</code></td>
+      <td>
+        <pre>
+% Defined via function handles
+fun = @(x) cos(x.^2)./abs(3*x);
+        </pre>
+      </td>
+    </tr>
+  </table>
+</details>
+
+---
+
+<details>
+  <summary>Control Structures</summary><br>
+  <table>
+    <tr>
+      <th>Control Structure</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>if, elseif</code></td>
+      <td>
+        <pre>
+if n < 10
+  disp("n smaller than 10")
+elseif n <= 20
+  disp("n between 10 and 20")
+else
+  disp("n larger than 20")
+end
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td><code>Switch Case</code></td>
+      <td>
+        <pre>
+n = input("Enter an integer: ");
+switch n
+  case -1
+    disp("negative one")
+  case {0,1,2,3} % check four cases together
+    disp("integer between 0 and 3")
+  otherwise
+    disp("integer value outside interval [-1,3]")
+end
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td><code>For-Loop</code></td>
+      <td>
+        <pre>
+% loop a specific number of times, and keep
+% track of each iteration with an incrementing
+% index variable
+for i = 1:3
+  disp("cool");
+end
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td><code>While-Loop</code></td>
+      <td>
+        <pre>
+% loops as long as a condition remains true
+n = 1;
+nFactorial = 1;
+while nFactorial < 1e100
+  n = n + 1;
+  nFactorial = nFactorial * n;
+end
+        </pre>
+      </td>
+    </tr>
+    <tr>
+      <td><code>break</code></td>
+      <td>Terminate execution of for- or while-loop</td>
+    </tr>
+    <tr>
+      <td><code>continue</code></td>
+      <td>Pass control to the next iteration of a loop</td>
+    </tr>
+    <tr>
+      <td><code>try, catch</code></td>
+      <td>Execute statements and catch errors</td>
+    </tr>
+  </table>
+</details>
+
+---
+
+<details>
+  <summary>Integration and Differentiation</summary><br>
+  <table>
+    <tr>
+      <th>Function</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td><code>integral(f, a, b)</code></td>
+      <td>Numerical integration (analogous functions for 2D and 3D)</td>
+    </tr>
+    <tr>
+      <td><code>trapz(x, y)</code></td>
+      <td>Trapezoidal numerical integration</td>
+    </tr>
+    <tr>
+      <td><code>diff(X)</code></td>
+      <td>Differences and approximate derivatives</td>
+    </tr>
+    <tr>
+      <td><code>gradient(X)</code></td>
+      <td>Numerical gradient</td>
+    </tr>
+    <tr>
+      <td><code>curl(X, Y, Z, U, V, W)</code></td>
+      <td>Curl and angular velocity</td>
+    </tr>
+    <tr>
+      <td><code>divergence(X, ..., W)</code></td>
+      <td>Compute divergence of vector field</td>
+    </tr>
+    <tr>
+      <td><code>ode45(ode, tspan, y0)</code></td>
+      <td>Solve system of nonstiff ODEs</td>
+    </tr>
+    <tr>
+      <td><code>ode15s(ode, tspan, y0)</code></td>
+      <td>Solve system of stiff ODEs</td>
+    </tr>
+    <tr>
+      <td><code>deval(sol, x)</code></td>
+      <td>Evaluate solution of differential equation</td>
+    </tr>
+    <tr>
+      <td><code>pdepe(m, pde, ic, ..., bc, xm, ts)</code></td>
+      <td>Solve 1D partial differential equation</td>
+    </tr>
+    <tr>
+      <td><code>pdeval(m, xmesh, ..., usol, xq)</code></td>
+      <td>Interpolate numeric PDE solution</td>
+    </tr>
+  </table>
+</details>
+
+
+
 </details>
 
 ---
