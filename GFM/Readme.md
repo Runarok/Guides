@@ -334,31 +334,43 @@
   
 - **Table Row (`<tr>`)**: Defines a row in the table.
   ```html
+  </table>
   <tr>
     <td>Row 1, Cell 1</td>
     <td>Row 1, Cell 2</td>
   </tr>
+  </table>
   ```
      **Output**:
-    <tr>
+  <table>8
+  <tr>
     <td>Row 1, Cell 1</td>
     <td>Row 1, Cell 2</td>
   </tr>
-  
+  </table>
+    
 - **Table Header (`<th>`)**: Defines a header cell in the table.
   ```html
-  <th>Header Content</th>
+    <table>
+    <th>Header Content</th>
+    </table>
   ```
-     **Output**:   <th>Header Content</th>
-  
+     **Output**:
+    <table>
+    <th>Header Content</th>
+    </table>
+      
 - **Table Data (`<td>`)**: Defines a data cell in the table.
   ```html
+  <table>
   <td>Data Content</td>
+  </table>
   ```
-     **Output**:   <td>Data Content</td>
-  
-
-### **Image and Embed Tags**
+     **Output**:
+  <table>
+  <td>Data Content</td>
+  </table>
+    
 - **Image (`<img>`)**: Embeds an image.
   ```html
   <img src="image.jpg" alt="Alt Text" />
