@@ -1,0 +1,147 @@
+Below is the complete code, consolidated into a single script, with comments explaining each step.
+
+#importing necessary modules
+import pandas as pd
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+from imblearn.over_sampling import SMOTE
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load the dataset
+file_path = '/content/train.csv'
+df = pd.read_csv(file_path)
+
+# Display initial information about the dataset
+print("Initial Dataset Information")
+print(df.info())
+print("\nInitial Class Distribution")
+print(df['Survived'].value_counts())
+
+# Data Cleaning
+# Fill missing values in 'Age' with the median value
+df['Age'].fillna(df['Age'].median(), inplace=True)
+
+# Drop the 'Cabin' column due to a high number of missing values
+df.drop(columns=['Cabin'], inplace=True)
+
+# Fill missing values in 'Embarked' with the most frequent value
+df['Embarked'].fillna(df['Embarked'].mode()[0], inplace=True)
+
+# Feature Engineering
+# Create a new feature 'FamilySize' by combining 'SibSp' and 'Parch'
+df['FamilySize'] = df['SibSp'] + df['Parch'] + 1
+
+# Drop the 'SibSp' and 'Parch' columns as they are now represented by 'FamilySize'
+df.drop(columns=['SibSp', 'Parch'], inplace=True)
+
+# Extract titles from the 'Name' feature
+df['Title'] = df['Name'].str.extract(' ([A-Za-z]+)\.', expand=False)
+
+# Simplify the titles into common groups
+df['Title'] = df['Title'].replace(['Lady', 'Countess', 'Capt', 'Col', 'Don', 'Dr', 'Major', 'Rev', 'Sir', 'Jonkheer', 'Dona'], 'Rare')
+df['Title'] = df['Title'].replace('Mlle', 'Miss')
+df['Title'] = df['Title'].replace('Ms', 'Miss')
+df['Title'] = df['Title'].replace('Mme', 'Mrs')
+
+# Drop the 'Name' column as it's no longer needed
+df.drop(columns=['Name'], inplace=True)
+
+# Feature Scaling and Encoding
+numerical_features = ['Age', 'Fare', 'FamilySize']
+categorical_features = ['Sex', 'Embarked', 'Title']
+
+preprocessor = ColumnTransformer  (transformers=[('num', StandardScaler(), numerical_features), ('cat', OneHotEncoder(), categorical_features)])
+
+# Prepare the features and target variable
+X = df.drop(columns=['Survived', 'PassengerId'])
+y = df['Survived']
+
+# Apply the transformations
+X_processed = preprocessor.fit_transform(X)
+
+# Apply SMOTE to balance the classes
+smote = SMOTE(random_state=42)
+X_resampled, y_resampled = smote.fit_resample(X_processed, y)
+
+# Convert the resampled data back into a DataFrame
+numerical_cols = preprocessor.transformers_[0][2]
+categorical_cols = preprocessor.transformers_[1][1].get_feature_names_out(categorical_features)
+all_cols = list(numerical_cols) + list(categorical_cols)
+
+df_resampled = pd.DataFrame(X_resampled, columns=all_cols)
+df_resampled['Survived'] = y_resampled.reset_index(drop=True)
+
+# Save the processed dataset to a CSV file
+processed_file_path = '/content/processed_titanic_dataset.csv'
+df_resampled.to_csv(processed_file_path, index=False)
+
+# Visualizations and Summary Statistics
+# Original class distribution
+plt.figure(figsize=(8, 6))
+sns.countplot(data=df, x='Survived')
+plt.title('Original Class Distribution')
+plt.xlabel('Survived')
+plt.ylabel('Count')
+plt.show()
+
+# Class distribution after SMOTE
+plt.figure(figsize=(8, 6))
+sns.countplot(x=y_resampled)
+plt.title('Class Distribution After SMOTE')
+plt.xlabel('Survived')
+plt.ylabel('Count')
+plt.show()
+
+# Summary statistics before preprocessing
+df['FamilySize'] = df['SibSp'] + df['Parch'] + 1
+df_summary_before = df[numerical_features].describe()
+
+# Summary statistics after preprocessing
+df_processed = pd.DataFrame(X_processed, columns=numerical_cols + categorical_cols)
+df_summary_after = df_processed[numerical_features].describe()
+
+print("Summary Statistics Before Preprocessing")
+print(df_summary_before)
+
+print("\nSummary Statistics After Preprocessing")
+print(df_summary_after)
+
+# Visualize the distribution of numerical features before preprocessing
+df[numerical_features].hist(figsize=(12, 8), bins=20)
+plt.suptitle('Distribution of Numerical Features Before Preprocessing')
+plt.show()
+
+# Visualize the distribution of numerical features after preprocessing
+df_processed[numerical_features].hist(figsize=(12, 8), bins=20)
+plt.suptitle('Distribution of Numerical Features After Preprocessing')
+plt.show()
+
+# Visualize the distribution of the 'FamilySize' feature
+plt.figure(figsize=(8, 6))
+sns.countplot(data=df, x='FamilySize')
+plt.title('Distribution of FamilySize Feature')
+plt.xlabel('FamilySize')
+plt.ylabel('Count')
+plt.show()
+
+# Visualize the distribution of the 'Title' feature
+plt.figure(figsize=(10, 6))
+sns.countplot(data=df, x='Title')
+plt.title('Distribution of Title Feature')
+plt.xlabel('Title')
+plt.ylabel('Count')
+plt.show()
+
+print(f"Processed file saved to: {processed_file_path}")
+
+
+*Explanation of Each Step*
+  Loading the Dataset: The dataset is loaded from a CSV file.
+  Data Cleaning: Missing values are handled, and irrelevant columns are dropped.
+  Feature Engineering: New features 'FamilySize' and 'Title' are created to provide additional context.
+  Feature Scaling and Encoding: Numerical features are standardized, and categorical features are one-hot encoded.
+  Handling Imbalanced Data: SMOTE is applied to balance the classes in the target variable.
+  Saving the Processed Dataset: The processed dataset is saved to a CSV file.
+  Visualizations and Summary Statistics: Visualizations and summary statistics are generated to illustrate the impact of preprocessing and feature engineering.
