@@ -1,29 +1,48 @@
 clc;
 clear all;
 close all;
-x=input('enter the first input sequence=');
-h=input('enter the second input sequence=');
-l=length(x);
-m=length(h);
-N=l+m-1;
-Xk=fft(x,N);
-Hk=fft(h,N);
-Yk=Xk.*Hk;
-y=ifft(Yk,N);
-disp('linear convoluted output using DFT and IDFT method');
+
+% Taking input from the user
+x = input('Enter the first input sequence: ');  % Input sequence x
+h = input('Enter the second input sequence: '); % Input sequence h
+
+% Lengths of the sequences
+l = length(x);
+m = length(h);
+
+% Length of the result sequence (linear convolution length)
+N = l + m - 1;
+
+% Compute the FFT of both sequences
+Xk = fft(x, N);
+Hk = fft(h, N);
+
+% Multiply the FFTs (frequency domain multiplication)
+Yk = Xk .* Hk;
+
+% Compute the inverse FFT to get the linear convolution result
+y = ifft(Yk, N);
+
+% Display the linear convoluted output
+disp('Linear convoluted output using DFT and IDFT method:');
 disp(y);
-subplot(3,1,1);
+
+% Plot the sequences and the result
+figure;
+subplot(3, 1, 1);
 stem(x);
-title('the first sequence');
-xlabel('time');
-ylabel('amplitude');
-subplot(3,1,2);
+title('The First Sequence');
+xlabel('Time');
+ylabel('Amplitude');
+
+subplot(3, 1, 2);
 stem(h);
-title('the second sequence');
-xlabel('time');
-ylabel('amplitude');
-subplot(3,1,3);
+title('The Second Sequence');
+xlabel('Time');
+ylabel('Amplitude');
+
+subplot(3, 1, 3);
 stem(y);
-title('the linear convoluted sequence');
-xlabel('time');
-ylabel('amplitude');
+title('The Linear Convoluted Sequence');
+xlabel('Time');
+ylabel('Amplitude');
