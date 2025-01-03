@@ -1,37 +1,51 @@
 clc;
 clear all;
 close all;
-rp=input('enter the pass band ripple=');
-rs=input('enter the stop band ripple=');
-wp=input('enter the pass band frequency=');
-ws=input('enter the stop band frequency=');
-fs=input('enter the sampling frequency=');
-w1=2*wp/fs;
- w2=2*ws/fs;
- [n,wn]=buttord(w1,w2,rp,rs);
- [b,a]=butter(n,wn,'low');
-disp('the order of lpf');
-disp(n);
-disp('the cut off freq of lpf');
-disp(wn);
-w=0:0.01:pi;
-[h]=freqz(b,a,w);
-mag=20*log10(abs(h));
-ang=angle(h);
-subplot(2,1,1);
-plot(w/pi,mag);
-xlabel('normalized freq');
-ylabel('magnitude');
-subplot(2,1,2);
-plot(w/pi,ang);
-xlabel('normalised freq');
-ylabel('angle');
 
-%%
-system input:
-enter the passband ripple=0.02
-enter the stopband ripple=0.01
-enter the passbandfreq=1200
-enter the stopbandfreq=1700
-enter the sampling freq=9000        
-%%
+% Taking input from the user
+rp = input('Enter the passband ripple (in dB): ');  % Passband ripple (in dB)
+rs = input('Enter the stopband ripple (in dB): ');  % Stopband ripple (in dB)
+wp = input('Enter the passband frequency (in Hz): '); % Passband frequency (Hz)
+ws = input('Enter the stopband frequency (in Hz): '); % Stopband frequency (Hz)
+fs = input('Enter the sampling frequency (in Hz): ');  % Sampling frequency (Hz)
+
+% Normalize the passband and stopband frequencies (0 to pi) for digital filter design
+w1 = 2 * wp / fs;  % Normalized passband frequency (wp / fs) * 2
+w2 = 2 * ws / fs;  % Normalized stopband frequency (ws / fs) * 2
+
+% Design the Butterworth filter using buttord and butter functions
+[n, wn] = buttord(w1, w2, rp, rs);  % Calculate the filter order (n) and cutoff frequency (wn)
+[b, a] = butter(n, wn, 'low');  % Get the low-pass Butterworth filter coefficients
+
+% Display filter specifications
+disp('The order of the low-pass filter:');
+disp(n);
+disp('The cutoff frequency of the low-pass filter (normalized):');
+disp(wn);
+
+% Frequency range for plotting the frequency response
+w = 0:0.01:pi;  % Frequency range from 0 to pi
+[h] = freqz(b, a, w);  % Compute the frequency response of the filter
+
+% Magnitude and Phase of the frequency response
+mag = 20 * log10(abs(h));  % Magnitude in dB
+ang = angle(h);  % Phase angle in radians
+
+% Plotting the magnitude and phase response
+figure;
+
+% Magnitude plot
+subplot(2, 1, 1);
+plot(w / pi, mag);  % Normalize frequency by pi
+xlabel('Normalized Frequency (\pi rad/sample)');
+ylabel('Magnitude (dB)');
+title('Magnitude Response of Low-pass Filter');
+grid on;
+
+% Phase plot
+subplot(2, 1, 2);
+plot(w / pi, ang);  % Normalize frequency by pi
+xlabel('Normalized Frequency (\pi rad/sample)');
+ylabel('Phase (radians)');
+title('Phase Response of Low-pass Filter');
+grid on;
