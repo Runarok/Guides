@@ -49,3 +49,12 @@ xlabel('Normalized Frequency (\pi rad/sample)');
 ylabel('Phase (radians)');
 title('Phase Response of Low-pass Filter');
 grid on;
+
+%%
+Example input:
+Enter the passband ripple (in dB): 3
+Enter the stopband ripple (in dB): 60
+Enter the passband frequency (in Hz): 150
+Enter the stopband frequency (in Hz): 300
+Enter the sampling frequency (in Hz): 1500
+%%
