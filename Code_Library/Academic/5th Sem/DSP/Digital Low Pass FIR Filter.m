@@ -27,7 +27,7 @@ ylabel('gain in dB');
 title('low pass filter using rectangular window');
 
 %%
-system output
+system input:
 enter the passband ripple=0.02
 enter the stopband ripple=0.01
 enter the passbandfreq=1200
