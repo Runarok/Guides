@@ -85,3 +85,12 @@ xlabel('Normalized Frequency');
 ylabel('Gain (dB)');
 title('High-pass filter using Hamming window');
 grid on;
+
+%%
+Example input:
+Enter the passband ripple: 0.02
+Enter the stopband ripple: 0.01
+Enter the passband frequency: 1200
+Enter the stopband frequency: 1700
+Enter the sampling frequency: 9000
+%%
