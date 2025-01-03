@@ -1,29 +1,48 @@
 clc;
 clear all;
 close all;
-x=input('enter the first input sequence=');
-h=input('enter the second input sequence=');
-l=length(x);
-m=length(h);
-N=max(l,m);
-Xk=fft(x,N);
-Hk=fft(h,N);
-Yk=Xk.*Hk;
-y=ifft(Yk,N);
-disp('circuler convoluted output using DFT and IDFT method');
+
+% Taking input from the user
+x = input('Enter the first input sequence: ');  % First input sequence
+h = input('Enter the second input sequence: '); % Second input sequence
+
+% Lengths of the sequences
+l = length(x);
+m = length(h);
+
+% Length of the result sequence (for circular convolution, we use max length)
+N = max(l, m);
+
+% Compute the FFT of both sequences, zero-padding if necessary
+Xk = fft(x, N);  % FFT of the first sequence
+Hk = fft(h, N);  % FFT of the second sequence
+
+% Element-wise multiplication in the frequency domain
+Yk = Xk .* Hk;
+
+% Compute the inverse FFT to get the circular convolution result
+y = ifft(Yk, N);
+
+% Display the circular convoluted output
+disp('Circular convoluted output using DFT and IDFT method:');
 disp(y);
-subplot(3,1,1);
+
+% Plot the sequences and the result
+figure;
+subplot(3, 1, 1);
 stem(x);
-title('the first sequence');
-xlabel('time');
-ylabel('amplitude');
-subplot(3,1,2);
+title('The First Sequence');
+xlabel('Time');
+ylabel('Amplitude');
+
+subplot(3, 1, 2);
 stem(h);
-title('the second sequence');
-xlabel('time');
-ylabel('amplitude');
-subplot(3,1,3);
+title('The Second Sequence');
+xlabel('Time');
+ylabel('Amplitude');
+
+subplot(3, 1, 3);
 stem(y);
-title('the circuler convoluted sequence');
-xlabel('time');
-ylabel('amplitude');
+title('The Circular Convoluted Sequence');
+xlabel('Time');
+ylabel('Amplitude');
