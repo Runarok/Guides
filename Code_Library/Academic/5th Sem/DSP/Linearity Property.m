@@ -1,4 +1,3 @@
-
 clc;
 clear all;
 close all;
@@ -23,5 +22,3 @@ if(yk==yv)
     else
       disp('linearity property is not satisfied');  
 end;
-                
-                
