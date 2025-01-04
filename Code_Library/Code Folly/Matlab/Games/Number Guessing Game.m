@@ -155,5 +155,4 @@ function [score, elapsedTime] = speed_mode()
     fprintf('You took %.2f seconds to guess the correct number.\n', elapsedTime);
 end
 
-% Call the function to start the game
-play_game();
+
