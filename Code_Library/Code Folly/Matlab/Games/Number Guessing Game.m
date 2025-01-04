@@ -20,10 +20,6 @@ targetNumber = randi([1, 100]);
 % Initialize attempt counter
 attempts = 0;
 
-% Array of diverse messages
-lowMessages = {'Too low!', 'Not quite, try higher.', 'Your guess is too small.'};
-highMessages = {'Too high!', 'Close, but lower.', 'Your guess is too large.'};
-
 % Game loop
 while attempts < maxGuesses
     % Get user input
@@ -37,9 +33,23 @@ while attempts < maxGuesses
         fprintf('Congratulations! You guessed the correct number %d in %d attempts.\n', targetNumber, attempts);
         break; % Exit the game loop
     elseif guess < targetNumber
-        disp(lowMessages{randi(length(lowMessages))}); % Randomly choose a "too low" message
+        % Specific message for "too low"
+        if targetNumber - guess <= 5
+            disp('Very close, but still a little too low!');
+        elseif targetNumber - guess <= 10
+            disp('Close, but you need to guess higher!');
+        else
+            disp('Your guess is too low! Try a much higher number.');
+        end
     else
-        disp(highMessages{randi(length(highMessages))}); % Randomly choose a "too high" message
+        % Specific message for "too high"
+        if guess - targetNumber <= 5
+            disp('Very close, but still a little too high!');
+        elseif guess - targetNumber <= 10
+            disp('Close, but you need to guess lower!');
+        else
+            disp('Your guess is too high! Try a much lower number.');
+        end
     end
     
     % If maximum guesses are reached
