@@ -168,6 +168,3 @@ function [score, elapsedTime] = speed_mode()
     score = max(0, baseScore - attempts * 10 - round(elapsedTime));
     fprintf('You took %.2f seconds to guess the correct number.\n', elapsedTime);
 end
-
-% Call the function to start the game
-play_game();
