@@ -48,7 +48,6 @@ function play_game()
     end
 end
 
-% Classic Mode (User guesses the number)
 function [score, elapsedTime] = classic_mode()
     % Set up the game parameters
     targetNumber = randi([1, 100]);
@@ -58,7 +57,14 @@ function [score, elapsedTime] = classic_mode()
     tic; % Start the timer when the game actually starts
     
     while attempts < maxGuesses
-        guess = input('Enter your guess: ');
+        % Get the user's guess and check if it's empty
+        guessStr = input('Enter your guess: ', 's');  % 's' allows string input
+        if isempty(guessStr) || ~isnumeric(str2double(guessStr)) || str2double(guessStr) < 1 || str2double(guessStr) > 100
+            disp('Invalid input! Please enter a number between 1 and 100.');
+            continue; % Skip the rest of the loop and ask for the guess again
+        end
+        
+        guess = str2double(guessStr); % Convert the input to a number
         attempts = attempts + 1;
 
         % Calculate the difference between the guess and the target number
@@ -70,20 +76,22 @@ function [score, elapsedTime] = classic_mode()
             break;
         elseif guess < targetNumber
             % Feedback for guesses below the target number
-            if targetNumber - guess > halfRange
-                disp('Too low!');
+            difference = targetNumber - guess;
+            if difference > halfRange
+                disp(['Too low! The number is much higher than your guess. Try a larger number.']);
             else
-                disp('Low');
+                disp(['Low. You\'re close, but the number is slightly higher. Try guessing a bit higher.']);
             end
         else
             % Feedback for guesses above the target number
-            if guess - targetNumber > halfRange
-                disp('Too high!');
+            difference = guess - targetNumber;
+            if difference > halfRange
+                disp(['Too high! The number is much lower than your guess. Try a smaller number.']);
             else
-                disp('High');
+                disp(['High. You\'re close, but the number is slightly lower. Try guessing a bit lower.']);
             end
         end
-    end
+
 
     % Calculate elapsed time
     elapsedTime = toc;
@@ -108,8 +116,10 @@ function [score, elapsedTime] = reverse_mode()
         attempts = attempts + 1;
         guess = round((lowerBound + upperBound) / 2); % Binary search approach
         fprintf('Is your number %d? (1 = too low, 2 = correct, 3 = too high): ', guess);
+        
         userResponse = input('', 's');
         
+        % Ensure the user provides valid input
         if userResponse == '2'
             fprintf('The computer guessed the correct number %d in %d attempts.\n', guess, attempts);
             break;
@@ -119,55 +129,54 @@ function [score, elapsedTime] = reverse_mode()
             upperBound = guess - 1; % The number is lower
         else
             disp('Invalid input, please respond with 1, 2, or 3.');
+            attempts = attempts - 1; % Do not count invalid attempts
         end
     end
 
-    % Calculate elapsed time
-    elapsedTime = toc;
-
-    % Score calculation: higher score for fewer attempts and less time
+    % Score calculation: based on attempts only, not time
     baseScore = 1000;
-    score = max(0, baseScore - attempts * 30 - round(elapsedTime));
-    fprintf('The computer took %.2f seconds to guess your number.\n', elapsedTime);
+    score = max(0, baseScore - attempts * 30);
 end
 
-% Speed Mode (Guess the number in a limited time)
-function [score, elapsedTime] = speed_mode()
+function [score, elapsedTime] = reverse_mode()
     % Set up the game parameters
-    targetNumber = randi([1, 100]);
-    maxTime = 30; % Time limit in seconds
+    disp('Think of a number between 1 and 100, and the computer will try to guess it!');
+    lowerBound = 1;
+    upperBound = 100;
+    attempts = 0;
     disp('Game starts now!');
     tic; % Start the timer when the game actually starts
-    attempts = 0;
-    
-    disp('You have 30 seconds to guess the number between 1 and 100!');
     
     while true
-        elapsedTime = toc;
-        
-        if elapsedTime > maxTime
-            disp('Time is up! You ran out of time.');
-            break;
-        end
-        
-        guess = input('Enter your guess: ');
         attempts = attempts + 1;
-
-        if guess == targetNumber
-            fprintf('Congratulations! You guessed the correct number %d in %d attempts.\n', targetNumber, attempts);
-            break;
-        elseif guess < targetNumber
-            disp('Your guess is too low! Try higher.');
-        else
-            disp('Your guess is too high! Try lower.');
+        guess = round((lowerBound + upperBound) / 2); % Binary search approach
+        fprintf('Is your number %d? (1 = too low, 2 = correct, 3 = too high): ', guess);
+        
+        % Loop until the user provides valid input
+        validInput = false;
+        while ~validInput
+            userResponse = input('', 's');
+            
+            if userResponse == '2'
+                fprintf('The computer guessed the correct number %d in %d attempts.\n', guess, attempts);
+                validInput = true;
+                break;
+            elseif userResponse == '1'
+                lowerBound = guess + 1; % The number is higher
+                validInput = true;
+            elseif userResponse == '3'
+                upperBound = guess - 1; % The number is lower
+                validInput = true;
+            else
+                disp('Invalid input, please respond with 1, 2, or 3.');
+            end
         end
     end
-    
-    % Calculate elapsed time
-    elapsedTime = toc;
 
-    % Score calculation: higher score for fewer attempts and less time
+    % Stop the timer
+    elapsedTime = toc;
+    
+    % Score calculation: based on attempts only, not time
     baseScore = 1000;
-    score = max(0, baseScore - attempts * 10 - round(elapsedTime));
-    fprintf('You took %.2f seconds to guess the correct number.\n', elapsedTime);
+    score = max(0, baseScore - attempts * 30);
 end
