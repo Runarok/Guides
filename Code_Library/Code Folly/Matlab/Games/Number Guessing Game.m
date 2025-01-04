@@ -60,13 +60,27 @@ function [score, elapsedTime] = classic_mode()
         guess = input('Enter your guess: ');
         attempts = attempts + 1;
 
+        % Calculate the difference between the guess and the target number
+        range = 100; % Range of numbers
+        halfRange = range / 2;
+        
         if guess == targetNumber
             fprintf('Congratulations! You guessed the correct number %d in %d attempts.\n', targetNumber, attempts);
             break;
         elseif guess < targetNumber
-            disp('Your guess is too low! Try higher.');
+            % Feedback for guesses below the target number
+            if targetNumber - guess > halfRange
+                disp('Too low!');
+            else
+                disp('Low');
+            end
         else
-            disp('Your guess is too high! Try lower.');
+            % Feedback for guesses above the target number
+            if guess - targetNumber > halfRange
+                disp('Too high!');
+            else
+                disp('High');
+            end
         end
     end
 
@@ -155,4 +169,5 @@ function [score, elapsedTime] = speed_mode()
     fprintf('You took %.2f seconds to guess the correct number.\n', elapsedTime);
 end
 
-
+% Call the function to start the game
+play_game();
