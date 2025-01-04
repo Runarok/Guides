@@ -1,4 +1,4 @@
-% Enhanced Number Guessing Game in MATLAB
+% Enhanced Number Guessing Game with Score System and Randomized Game Modes
 
 % Function to play the game
 function play_game()
@@ -8,68 +8,37 @@ function play_game()
 
     % Welcome message
     disp('Welcome to the Enhanced Number Guessing Game!');
-    disp('I will select a number between 1 and 100.');
-    disp('You can set the number of guesses you want to make.');
+    disp('Choose a game mode:');
+    disp('1. Classic Mode (You guess the number)');
+    disp('2. Reverse Mode (Computer guesses your number)');
+    disp('3. Speed Mode (Guess the number in a limited time)');
     disp(' ');
 
     while true
-        % Set the maximum number of guesses
-        maxGuesses = input('Enter the number of guesses you would like: ');
-
-        % Validate number of guesses
-        if ~isnumeric(maxGuesses) || maxGuesses <= 0
-            disp('Please enter a valid positive number of guesses.');
+        % Select the game mode
+        mode = input('Choose game mode (1-Classic, 2-Reverse, 3-Speed): ');
+        
+        % Validate mode input
+        if ~ismember(mode, [1, 2, 3])
+            disp('Invalid choice! Please select a valid game mode.');
             continue;
         end
         
-        % Generate a random number between 1 and 100
-        targetNumber = randi([1, 100]);
-
-        % Initialize attempt counter
-        attempts = 0;
-
-        % Game loop
-        while attempts < maxGuesses
-            % Get user input
-            guess = input('Enter your guess: ');
-
-            % Increment the attempt counter
-            attempts = attempts + 1;
-
-            % Check if the guess is correct, too high, or too low
-            if guess == targetNumber
-                fprintf('Congratulations! You guessed the correct number %d in %d attempts.\n', targetNumber, attempts);
-                break; % Exit the game loop
-            elseif guess < targetNumber
-                % Specific message for "too low"
-                if targetNumber - guess <= 5
-                    disp('Very close, but still a little too low! You are so close!');
-                elseif targetNumber - guess <= 10
-                    disp('Close, but you need to guess higher!');
-                else
-                    disp('Your guess is too low! Try a much higher number.');
-                end
-                fprintf('Range: %d - 100\n', guess+1); % Suggest range above guess
-            else
-                % Specific message for "too high"
-                if guess - targetNumber <= 5
-                    disp('Very close, but still a little too high! Almost there!');
-                elseif guess - targetNumber <= 10
-                    disp('Close, but you need to guess lower!');
-                else
-                    disp('Your guess is too high! Try a much lower number.');
-                end
-                fprintf('Range: 1 - %d\n', guess-1); % Suggest range below guess
-            end
-
-            % If maximum guesses are reached
-            if attempts == maxGuesses
-                disp('Sorry, you have run out of guesses!');
-                fprintf('The correct number was %d.\n', targetNumber);
-                break;
-            end
+        % Set up the game based on the mode
+        if mode == 1
+            % Classic Mode (User guesses the number)
+            [score, elapsedTime] = classic_mode();
+        elseif mode == 2
+            % Reverse Mode (Computer guesses the number)
+            [score, elapsedTime] = reverse_mode();
+        elseif mode == 3
+            % Speed Mode (Guess the number in a limited time)
+            [score, elapsedTime] = speed_mode();
         end
 
+        % Display score
+        fprintf('Your score is: %d\n', score);
+        
         % Ask if the user wants to play again
         play_again = input('Do you want to play again? (y/n): ', 's');
         if lower(play_again) ~= 'y'
@@ -77,6 +46,113 @@ function play_game()
             break;
         end
     end
+end
+
+% Classic Mode (User guesses the number)
+function [score, elapsedTime] = classic_mode()
+    % Set up the game parameters
+    targetNumber = randi([1, 100]);
+    maxGuesses = input('Enter the number of guesses you would like: ');
+    attempts = 0;
+    tic; % Start the timer
+    
+    while attempts < maxGuesses
+        guess = input('Enter your guess: ');
+        attempts = attempts + 1;
+
+        if guess == targetNumber
+            fprintf('Congratulations! You guessed the correct number %d in %d attempts.\n', targetNumber, attempts);
+            break;
+        elseif guess < targetNumber
+            disp('Your guess is too low! Try higher.');
+        else
+            disp('Your guess is too high! Try lower.');
+        end
+    end
+
+    % Calculate elapsed time
+    elapsedTime = toc;
+
+    % Score calculation: higher score for fewer attempts and less time
+    baseScore = 1000;
+    score = max(0, baseScore - attempts * 20 - round(elapsedTime));
+    fprintf('You took %.2f seconds to guess the correct number.\n', elapsedTime);
+end
+
+% Reverse Mode (Computer guesses the number)
+function [score, elapsedTime] = reverse_mode()
+    % Set up the game parameters
+    disp('Think of a number between 1 and 100, and the computer will try to guess it!');
+    lowerBound = 1;
+    upperBound = 100;
+    attempts = 0;
+    tic; % Start the timer
+    
+    while true
+        attempts = attempts + 1;
+        guess = round((lowerBound + upperBound) / 2); % Binary search approach
+        fprintf('Is your number %d? (1 = too low, 2 = correct, 3 = too high): ', guess);
+        userResponse = input('', 's');
+        
+        if userResponse == '2'
+            fprintf('The computer guessed the correct number %d in %d attempts.\n', guess, attempts);
+            break;
+        elseif userResponse == '1'
+            lowerBound = guess + 1; % The number is higher
+        elseif userResponse == '3'
+            upperBound = guess - 1; % The number is lower
+        else
+            disp('Invalid input, please respond with 1, 2, or 3.');
+        end
+    end
+
+    % Calculate elapsed time
+    elapsedTime = toc;
+
+    % Score calculation: higher score for fewer attempts and less time
+    baseScore = 1000;
+    score = max(0, baseScore - attempts * 30 - round(elapsedTime));
+    fprintf('The computer took %.2f seconds to guess your number.\n', elapsedTime);
+end
+
+% Speed Mode (Guess the number in a limited time)
+function [score, elapsedTime] = speed_mode()
+    % Set up the game parameters
+    targetNumber = randi([1, 100]);
+    maxTime = 30; % Time limit in seconds
+    tic; % Start the timer
+    attempts = 0;
+    
+    disp('You have 30 seconds to guess the number between 1 and 100!');
+    
+    while true
+        elapsedTime = toc;
+        
+        if elapsedTime > maxTime
+            disp('Time is up! You ran out of time.');
+            break;
+        end
+        
+        guess = input('Enter your guess: ');
+        attempts = attempts + 1;
+
+        if guess == targetNumber
+            fprintf('Congratulations! You guessed the correct number %d in %d attempts.\n', targetNumber, attempts);
+            break;
+        elseif guess < targetNumber
+            disp('Your guess is too low! Try higher.');
+        else
+            disp('Your guess is too high! Try lower.');
+        end
+    end
+    
+    % Calculate elapsed time
+    elapsedTime = toc;
+
+    % Score calculation: higher score for fewer attempts and less time
+    baseScore = 1000;
+    score = max(0, baseScore - attempts * 10 - round(elapsedTime));
+    fprintf('You took %.2f seconds to guess the correct number.\n', elapsedTime);
 end
 
 % Call the function to start the game
