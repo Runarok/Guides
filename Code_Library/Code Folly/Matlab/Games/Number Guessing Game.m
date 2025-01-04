@@ -51,42 +51,19 @@ end
 % Classic Mode (User guesses the number)
 function [score, elapsedTime] = classic_mode()
     % Set up the game parameters
-    disp('Select difficulty level:');
-    disp('1. Easy (1 to 50)');
-    disp('2. Medium (1 to 100)');
-    disp('3. Hard (1 to 200)');
-    
-    difficulty = input('Choose difficulty (1-Easy, 2-Medium, 3-Hard): ');
-    
-    % Set the range based on difficulty
-    if difficulty == 1
-        rangeMin = 1;
-        rangeMax = 50;
-    elseif difficulty == 2
-        rangeMin = 1;
-        rangeMax = 100;
-    elseif difficulty == 3
-        rangeMin = 1;
-        rangeMax = 200;
-    else
-        disp('Invalid choice, defaulting to Medium difficulty.');
-        rangeMin = 1;
-        rangeMax = 100;
-    end
-    
-    targetNumber = randi([rangeMin, rangeMax]);
+    targetNumber = randi([1, 100]);
     maxGuesses = input('Enter the number of guesses you would like: ');
     attempts = 0;
-    tic; % Start the timer
+    disp('Game starts now!');
+    tic; % Start the timer when the game actually starts
     
     while attempts < maxGuesses
-        guessesLeft = maxGuesses - attempts;  % Calculate guesses left
-        fprintf('You have %d guesses left.\n', guessesLeft);  % Display guesses left
         guess = input('Enter your guess: ');
         attempts = attempts + 1;
 
         % Calculate the difference between the guess and the target number
-        halfRange = (rangeMax - rangeMin) / 2;
+        range = 100; % Range of numbers
+        halfRange = range / 2;
         
         if guess == targetNumber
             fprintf('Congratulations! You guessed the correct number %d in %d attempts.\n', targetNumber, attempts);
@@ -124,7 +101,8 @@ function [score, elapsedTime] = reverse_mode()
     lowerBound = 1;
     upperBound = 100;
     attempts = 0;
-    tic; % Start the timer
+    disp('Game starts now!');
+    tic; % Start the timer when the game actually starts
     
     while true
         attempts = attempts + 1;
@@ -158,7 +136,8 @@ function [score, elapsedTime] = speed_mode()
     % Set up the game parameters
     targetNumber = randi([1, 100]);
     maxTime = 30; % Time limit in seconds
-    tic; % Start the timer
+    disp('Game starts now!');
+    tic; % Start the timer when the game actually starts
     attempts = 0;
     
     disp('You have 30 seconds to guess the number between 1 and 100!');
