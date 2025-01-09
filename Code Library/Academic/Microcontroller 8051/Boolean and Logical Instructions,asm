@@ -1,0 +1,280 @@
+; Logical Byte Operations Program
+
+; Assembly Program for Logical Byte Operations
+ORG 00H               ; Starting address of the program
+
+MOV R0, #34H          ; Load register R0 with value 34H (0011 0100)
+MOV A, R0             ; Move the value of R0 to accumulator (A)
+
+; AND Logical Operation
+ANL A, #0FH           ; Perform AND operation with 0FH (0000 1111)
+MOV P1, A             ; Store result in Port 1 (P1)
+
+MOV A, R0             ; Reload value from R0 into A
+
+; OR Logical Operation
+ORL A, #0FH           ; Perform OR operation with 0FH (0000 1111)
+MOV P1, A             ; Store result in Port 1 (P1)
+
+MOV A, R0             ; Reload value from R0 into A
+
+; XOR Logical Operation
+XRL A, #0FH           ; Perform XOR operation with 0FH (0000 1111)
+MOV P1, A             ; Store result in Port 1 (P1)
+
+MOV A, R0             ; Reload value from R0 into A
+
+; Complement Logical Operation
+CPL A                 ; Complement the value in the accumulator
+MOV P1, A             ; Store result in Port 1 (P1)
+
+MOV A, R0             ; Reload value from R0 into A
+
+; Clear Logical Operation
+CLR A                 ; Clear the accumulator (set it to 00H)
+MOV P1, A             ; Store result in Port 1 (P1)
+
+MOV A, R0             ; Reload value from R0 into A
+
+; Rotate Right Logical Operations
+RR A                  ; Rotate right the value in the accumulator
+RR A                  ; Rotate right again
+RR A                  ; Rotate right again
+RR A                  ; Rotate right again
+MOV P1, A             ; Store result in Port 1 (P1)
+
+MOV A, R0             ; Reload value from R0 into A
+
+; Rotate Left Logical Operations
+RL A                  ; Rotate left the value in the accumulator
+RL A                  ; Rotate left again
+RL A                  ; Rotate left again
+RL A                  ; Rotate left again
+MOV P1, A             ; Store result in Port 1 (P1)
+
+MOV A, R0             ; Reload value from R0 into A
+
+; Rotate Right with Carry Logical Operations
+SETB C                ; Set carry bit
+RRC A                 ; Rotate right through carry
+RRC A                 ; Rotate right again through carry
+RRC A                 ; Rotate right again through carry
+RRC A                 ; Rotate right again through carry
+MOV P1, A             ; Store result in Port 1 (P1)
+
+MOV A, R0             ; Reload value from R0 into A
+
+; Rotate Left with Carry Logical Operations
+RLC A                 ; Rotate left through carry
+RLC A                 ; Rotate left again through carry
+RLC A                 ; Rotate left again through carry
+RLC A                 ; Rotate left again through carry
+MOV P1, A             ; Store result in Port 1 (P1)
+
+SJMP $                ; Infinite loop (to hold the program execution)
+
+END                   ; End of program
+
+; -----------------------------------------------------------------------------------------------
+; -----------------------------------------------------------------------------------------------
+; -----------------------------------------------------------------------------------------------
+; -----------------------------------------------------------------------------------------------
+
+; Logical Bit Operations Program
+
+; Assembly Program for Logical Bit Operations
+ORG 00H               ; Starting address of the program
+
+; Set, Clear, and Complement Bit 01H
+SETB 01H              ; Set bit 01H (bit addressable memory at location 01H)
+CLR 01H               ; Clear bit 01H (set it to 0)
+CPL 01H               ; Complement bit 01H (invert its value)
+
+; Move Bit from Bit Addressable Memory to Carry
+MOV C, 01H            ; Move the value from bit addressable location 01H to carry
+
+; Move Carry to Bit Addressable Memory Location
+MOV 07FH, C           ; Move the content of carry to bit addressable location 07FH
+
+; Set Bit and Perform Logical AND, OR Operations with Carry
+SETB 01H              ; Set bit 01H
+ANL C, 01H            ; AND the value in bit 01H with carry
+ORL C, 01H            ; OR the value in bit 01H with carry
+
+SJMP $                ; Infinite loop (to hold the program execution)
+
+END                   ; End of program
+
+; -----------------------------------------------------------------------------------------------
+; -----------------------------------------------------------------------------------------------
+; -----------------------------------------------------------------------------------------------
+; -----------------------------------------------------------------------------------------------
+
+; 2 Out of 5 Code Check Program
+
+ORG 00H               ; Program start at address 00H
+
+; Initialize Ports and Counter
+MOV P1, #0FFH         ; Set Port 1 to 0xFF (for input data)
+MOV P0, #00H          ; Set Port 0 to 0x00 (initial output)
+MOV R2, #05H          ; Set R2 to 5, as we need to check 5 bits
+
+MAIN: 
+    MOV A, P1         ; Load P1 value into accumulator A
+    MOV R0, A         ; Copy accumulator A to R0 (save P1 value for later use)
+    
+    ; Check if the last 3 most significant bits (MSB) are 0 (001F) or not.
+    ORL A, #01FH       ; OR A with 0x1F (0001 1111) to mask the last 3 bits
+    CJNE A, #01FH, NOTOF ; If any of the last 3 bits are high, jump to NOTOF
+
+    ; If the last 3 bits are 0, we proceed to check how many 1's are in the remaining 5 bits.
+CHECK: 
+    MOV A, R0         ; Reload R0 (P1 value) into accumulator A
+AGAIN: 
+    RRC A             ; Rotate right through the carry (right-shift the bits)
+    JNC LOOP          ; If no carry (i.e., bit was 0), skip incrementing R1
+    INC R1            ; If carry was set (i.e., bit was 1), increment R1 (count the 1's)
+
+LOOP: 
+    DEC R2            ; Decrease the counter R2 (5 times total)
+    CJNE R2, #00, AGAIN ; Repeat the rotation and check until R2 reaches 0
+
+    ; After the rotation, R1 contains the number of 1's in the last 5 bits.
+    ; If R1 equals 2, it is a valid "2 out of 5 code".
+    CJNE R1, #02, NOTOF ; If R1 is not 2, jump to NOTOF
+
+    ; If it's a "2 out of 5 code", set P0 upper nibble to high (F0)
+    MOV P0, #0F0H      ; Set upper nibble of P0 to high (0xF0)
+    SJMP HERE          ; Jump to HERE (loop indefinitely)
+
+NOTOF: 
+    MOV P0, #00FH      ; If not a valid "2 out of 5 code", set lower nibble of P0 to high (0x0F)
+    
+HERE: 
+    SJMP HERE          ; Infinite loop to halt the program
+
+END                    ; End of program
+
+; -----------------------------------------------------------------------------------------------
+; -----------------------------------------------------------------------------------------------
+; -----------------------------------------------------------------------------------------------
+; -----------------------------------------------------------------------------------------------
+
+; Table for bit-addressable memory locations
+; BIT    BYTE    BIT    BYTE    BIT    BYTE    BIT    BYTE
+; 00    20.0    01    20.1    02    20.2    03    20.3
+; 04    20.4    05    20.5    06    20.6    07    20.7
+; 10    21.0    11    21.1    12    21.2    13    21.3
+; 14    21.4    15    21.5    16    21.6    17    21.7
+; 20    22.0    21    22.1    22    22.2    23    22.3
+; 24    22.4    25    22.5    26    22.6    27    22.7
+; 30    23.0    31    23.1    32    23.2    33    23.3
+; 34    23.4    35    23.5    36    23.6    37    23.7
+; 40    24.0    41    24.1    42    24.2    43    24.3
+
+; Variable declarations
+X        EQU 10H    ; X is bit 10
+Y        EQU 11H    ; Y is bit 11
+Z        EQU 12H    ; Z is bit 12
+NOT_X    EQU 20H    ; NOT_X is bit 20
+NOT_Y    EQU 21H    ; NOT_Y is bit 21
+NOT_Z    EQU 22H    ; NOT_Z is bit 22
+OUTPUT   EQU P0.0   ; Output on P0.0
+
+; Initialize Ports
+MOV P1, #0FFH      ; Set Port 1 as input (0xFF to read from P1.0 to P1.7)
+MOV P0, #00H       ; Set Port 0 to 0 (Output to P0.0)
+
+; Initializing X, Y, Z and their complements after reading the values from Port 1
+
+MOV C, P1.0        ; Read P1.0 into carry (for X)
+MOV X, C
+CPL C              ; Complement the value (NOT X)
+MOV NOT_X, C
+
+MOV C, P1.1        ; Read P1.1 into carry (for Y)
+MOV Y, C
+CPL C              ; Complement the value (NOT Y)
+MOV NOT_Y, C
+
+MOV C, P1.2        ; Read P1.2 into carry (for Z)
+MOV Z, C
+CPL C              ; Complement the value (NOT Z)
+MOV NOT_Z, C
+
+; Expression 1: OUTPUT = X + Y + Z (Logical OR)
+CLR C              ; Clear the carry before starting the OR operation
+MOV C, X           ; Move X to carry
+ORL C, Y           ; OR carry with Y
+ORL C, Z           ; OR carry with Z
+MOV OUTPUT, C      ; Store the result in OUTPUT
+
+; Expression 2: OUTPUT = XYZ (Logical AND)
+CLR C              ; Clear the carry before starting the AND operation
+MOV C, X           ; Move X to carry
+ANL C, Y           ; AND carry with Y
+ANL C, Z           ; AND carry with Z
+MOV OUTPUT, C      ; Store the result in OUTPUT
+
+; Expression 3: OUTPUT = XY + Z (Logical AND + OR)
+CLR C              ; Clear the carry before starting the AND and OR operations
+MOV C, X           ; Move X to carry
+ANL C, Y           ; AND carry with Y (X * Y)
+ORL C, Z           ; OR carry with Z
+MOV OUTPUT, C      ; Store the result in OUTPUT
+
+; Expression 4: OUTPUT = X + YZ (Logical OR + AND)
+CLR C              ; Clear the carry before starting the OR and AND operations
+MOV C, Y           ; Move Y to carry
+ANL C, Z           ; AND carry with Z (Y * Z)
+ORL C, X           ; OR carry with X
+MOV OUTPUT, C      ; Store the result in OUTPUT
+
+; Expression 5: OUTPUT = !X + !Y + !Z (Logical OR of complements)
+CLR C              ; Clear the carry before starting the OR operation
+MOV C, NOT_X       ; Move NOT_X to carry
+ORL C, NOT_Y       ; OR carry with NOT_Y
+ORL C, NOT_Z       ; OR carry with NOT_Z
+MOV OUTPUT, C      ; Store the result in OUTPUT
+
+; Expression 6: OUTPUT = !(X + Y) + Z (Logical OR with complement)
+CLR C              ; Clear the carry before starting the OR and NOT operations
+MOV C, X           ; Move X to carry
+ORL C, Y           ; OR carry with Y (X + Y)
+CPL C              ; Complement the result
+ORL C, Z           ; OR carry with Z
+MOV OUTPUT, C      ; Store the result in OUTPUT
+
+; Expression 7: OUTPUT = !(X + Y + Z) (Logical OR and complement)
+CLR C              ; Clear the carry before starting the OR operation
+MOV C, X           ; Move X to carry
+ORL C, Y           ; OR carry with Y
+ORL C, Z           ; OR carry with Z
+CPL C              ; Complement the result
+MOV OUTPUT, C      ; Store the result in OUTPUT
+
+; Expression 8: OUTPUT = XYZ + !(XY)Z + !Y!Z (Complex combination)
+CLR C              ; Clear the carry before starting the AND operations
+MOV C, X           ; Move X to carry
+ANL C, Y           ; AND carry with Y (X * Y)
+ANL C, Z           ; AND carry with Z (X * Y * Z)
+MOV 00H, C         ; Store result in temporary memory 00H
+
+MOV C, X           ; Move X to carry
+ANL C, Y           ; AND carry with Y (X * Y)
+CPL C              ; Complement the result (!(XY))
+ANL C, Z           ; AND carry with Z
+MOV 01H, C         ; Store result in temporary memory 01H
+
+MOV C, NOT_Y       ; Move NOT_Y to carry
+ANL C, NOT_Z       ; AND carry with NOT_Z (NOT Y * NOT Z)
+ORL C, 01H         ; OR with temporary result 01H
+ORL C, 00H         ; OR with temporary result 00H
+MOV OUTPUT, C      ; Store the final result in OUTPUT
+
+HERE: SJMP HERE    ; Infinite loop to stop the program
+
+END
+
+; -----------------------------------------------------------------------------------------------
+
