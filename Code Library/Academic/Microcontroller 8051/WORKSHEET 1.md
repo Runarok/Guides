@@ -167,8 +167,6 @@ MOV R0, A     ; Store result (most significant byte) in R0
 ; After execution, R1 contains the least significant byte (B3H), and R0 contains the most significant byte (33H).
 </pre>
 
-
-
 ---
 
 
@@ -279,3 +277,43 @@ END
 This code implements the Boolean function **WX + YZ** on the 8051 microcontroller using Port 1 and Port 2 for inputs and Port 3 for the output.
 
 ---
+
+### 1. Upon reset, all the ports of the 8051 are configured as ______ (input, output).
+- **Answer**: Upon reset, all the ports of the 8051 are configured as **input** ports by default.
+
+### 2. To make all the bits of a port an input port we must write ____ hex to it.
+- **Answer**: To make all the bits of a port an input port, we must write **00H** to it. This will configure all the bits of the port as input.
+
+### 3. Which ports of the 8051 are bits addressable?
+- **Answer**: The **P1** and **P3** ports of the 8051 are bit-addressable. Specifically, bits from **P1.0** to **P1.7** and **P3.0** to **P3.7** can be accessed individually.
+
+### 4. What does it mean for a port to be "read-modify-write"?
+- **Answer**: A "read-modify-write" operation means that the data from the port is first read into the accumulator, then modified (such as setting or clearing specific bits), and finally written back to the port. This operation is typical for ports that don't have individual control over each bit, and is common in **P0** and **P2** in the 8051.
+
+### 5. Write a program to monitor P2.4 continuously. When it becomes low, it sends 55H to P1.
+<pre>
+ORG 0H         ; Start of the program
+
+MONITOR:
+    MOV A, P2   ; Read the value of Port 2
+    ANL A, #0x10 ; Mask all bits except P2.4 (0x10 = 00010000)
+    JZ NOT_LOW   ; Jump to NOT_LOW if P2.4 is high
+
+    MOV P1, #55H ; Send 55H to Port 1 when P2.4 is low
+
+NOT_LOW:
+    SJMP MONITOR ; Continue monitoring P2.4
+
+END
+</pre>
+
+### Explanation of the Program:
+1. **MOV A, P2**: Loads the value of Port 2 into the accumulator.
+2. **ANL A, #0x10**: Performs a bitwise AND operation with `0x10` (binary `00010000`), isolating the bit corresponding to **P2.4**.
+3. **JZ NOT_LOW**: If P2.4 is high (the result of the AND operation is zero), jump to `NOT_LOW` to continue monitoring.
+4. **MOV P1, #55H**: If P2.4 is low, send the value **55H** to Port 1.
+5. **SJMP MONITOR**: Unconditionally jump back to the start of the loop to continue monitoring **P2.4**.
+
+---
+
+
