@@ -1,6 +1,5 @@
-; Basic Linear Search (Iterative)
-
 ;***********************************************************************
+; Basic Linear Search (Iterative)
 ; Find Largest Element in an Array (Basic Linear Search)
 ;***********************************************************************
 
@@ -31,13 +30,9 @@ NEXT_ELEMENT:
     JC FIND_LARGEST_LOOP ; If not all elements are processed, repeat the loop
 
     ; At this point, the largest element is stored in R2
-    ; The program will end after storing the largest value in R2
     NOP                   ; No operation (end of program)
     END                   ; End of program
 
-
-
-; Using a Subroutine to Find the Largest Element
 
 ;***********************************************************************
 ; Find Largest Element Using a Subroutine
@@ -79,10 +74,6 @@ NEXT_ELEMENT:
     RET                  ; Return from subroutine
 
 
-
-
-; Using a Stack (For recursive approach)
-
 ;***********************************************************************
 ; Find Largest Element Using Recursion
 ;***********************************************************************
@@ -123,11 +114,6 @@ RECURSION_EXIT:
     RET
 
 
-
-
-
-; Optimized with Early Exit
-
 ;***********************************************************************
 ; Optimized Find Largest Element with Early Exit
 ;***********************************************************************
@@ -162,9 +148,6 @@ CHECK_END:
     NOP                   ; No operation (end of program)
     END                   ; End of program
 
-
-
-; Using Comparison Subroutine
 
 ;***********************************************************************
 ; Find Largest Element Using Comparison Subroutine
