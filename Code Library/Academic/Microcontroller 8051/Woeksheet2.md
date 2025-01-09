@@ -62,3 +62,48 @@ MOV R0, A     ; Store result (most significant byte) in R0
 
 ; After execution, R1 contains the least significant byte (B3H), and R0 contains the most significant byte (33H).
 </pre>
+
+
+
+---
+
+
+# Assignment: Delay Subroutine Analysis
+
+## Problem Statement:
+Following is a delay subroutine. Find how much delay this subroutine provides. Insert the delay appropriately inside the BCD COUNTER program so that each count should happen after **twice the delay**.
+
+### Delay Subroutine:
+
+<pre>
+DELAY: 
+    NOP
+    MOV R2, #25          ; Load 25 into R2
+H0:
+    MOV R3, #255         ; Load 255 into R3
+HI:
+    MOV R4, #255         ; Load 255 into R4
+    DJNZ R4, $           ; Decrement R4 and jump if not zero
+    DJNZ R3, HI          ; Decrement R3 and jump if not zero
+    DJNZ R2, H0          ; Decrement R2 and jump if not zero
+    RET                  ; Return from subroutine
+</pre>
+
+### Analysis:
+
+- **NOP**: No operation, just a placeholder.
+- **MOV R2, #25**: Initializes R2 to 25. This creates the outer loop that iterates 25 times.
+- **MOV R3, #255**: Initializes R3 to 255. This is the middle loop that iterates 255 times for each iteration of the outer loop.
+- **MOV R4, #255**: Initializes R4 to 255. This is the innermost loop that iterates 255 times for each iteration of the middle loop.
+
+The delay occurs by using `DJNZ` (Decrement and Jump if Not Zero), which decreases the value in the register and jumps back to the labeled instruction if the value is not zero. Each `DJNZ` operation is responsible for a small delay in the program.
+
+To calculate the delay:
+
+1. The innermost loop (`R4`) will execute 255 times.
+2. The middle loop (`R3`) will execute 255 times for each iteration of the outer loop (`R2`), so it will run a total of 255 * 255 = 65025 times.
+3. The outer loop (`R2`) runs 25 times.
+
+Thus, the total number of iterations for the delay subroutine is:
+
+
