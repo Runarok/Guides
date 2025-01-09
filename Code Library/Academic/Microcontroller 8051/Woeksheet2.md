@@ -106,4 +106,72 @@ To calculate the delay:
 
 Thus, the total number of iterations for the delay subroutine is:
 
+---
 
+# Realizing the Function WX + WYX + YZ
+
+### 1. Expression Simplification:
+The given Boolean function is **WX + WYX + YZ**.
+
+- **WX + WYX** can be simplified because **WYX** is just **WX** with an extra factor of **Y**, and **WX + WX = WX**.
+- Therefore, the simplified expression is **WX + YZ**.
+
+### 2. Logic Gate Implementation:
+To implement **WX + YZ**, we use AND and OR gates:
+- **WX** requires an AND gate to combine **W** and **X**.
+- **YZ** requires an AND gate to combine **Y** and **Z**.
+- Finally, an OR gate combines the outputs of the two AND gates.
+
+### 3. Boolean Equation:
+The simplified function can be expressed as:  
+**F = (W AND X) OR (Y AND Z)**
+
+### 4. Circuit Diagram:
+
+<pre>
+W ──┬── AND ──┐
+         |     │
+X ──────┘     │
+               OR ── F
+Y ──┬── AND ──┘
+         |     
+Z ──────┘     
+</pre>
+
+This diagram represents:
+- Two AND gates: one for **WX** and one for **YZ**.
+- One OR gate to combine the outputs of the two AND gates to get the final output **F**.
+
+### 5. Code Implementation (in 8051 Assembly):
+Here's a simple 8051 assembly code to realize the Boolean function **WX + YZ**:
+
+<pre>
+ORG 0H            ; Start of program
+MOV A, P1         ; Load Port 1 into accumulator (W and X)
+ANL A, #0x03      ; AND with 00000011 to extract W and X (bit 0 and 1)
+MOV B, A          ; Store result of WX in register B
+
+MOV A, P2         ; Load Port 2 into accumulator (Y and Z)
+ANL A, #0x03      ; AND with 00000011 to extract Y and Z (bit 0 and 1)
+MOV R0, A         ; Store result of YZ in register R0
+
+MOV A, B          ; Load WX result
+ORL A, R0         ; OR with YZ result to get final result
+MOV P3, A         ; Output result to Port 3
+END
+</pre>
+
+### 6. Explanation of the Code:
+1. **MOV A, P1**: Loads the data from Port 1 (assumed to be inputs for **W** and **X**) into the accumulator.
+2. **ANL A, #0x03**: Performs a bitwise AND with `0x03` to isolate **W** and **X**.
+3. **MOV B, A**: Stores the result of **WX** in register B.
+4. **MOV A, P2**: Loads the data from Port 2 (assumed to be inputs for **Y** and **Z**) into the accumulator.
+5. **ANL A, #0x03**: Performs a bitwise AND with `0x03` to isolate **Y** and **Z**.
+6. **MOV R0, A**: Stores the result of **YZ** in register R0.
+7. **MOV A, B**: Loads the **WX** result from register B.
+8. **ORL A, R0**: Performs a bitwise OR with the **YZ** result.
+9. **MOV P3, A**: Outputs the final result to Port 3.
+
+This code implements the Boolean function **WX + YZ** on the 8051 microcontroller using Port 1 and Port 2 for inputs and Port 3 for the output.
+
+---
