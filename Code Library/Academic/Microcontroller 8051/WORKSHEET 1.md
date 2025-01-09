@@ -316,4 +316,174 @@ END
 
 ---
 
+### 1. Find the value in A, the accumulator, after the following code.
+<pre>
+MOV A, #45H
+RR A
+RR A
+RR A
+</pre>
+- **Explanation**: The `RR A` (Rotate Right) instruction rotates the accumulator **A** right by one bit, with the carry bit shifting into the most significant bit (MSB), and the least significant bit (LSB) shifting into the carry bit.
+- Starting with **A = 45H** (which is `01000101` in binary):
+  - First `RR A`: **A = 22H** (binary `00100010`)
+  - Second `RR A`: **A = 11H** (binary `00010001`)
+  - Third `RR A`: **A = 08H** (binary `00001000`)
+- **Final value in A**: **08H**
 
+### 2. Find the value in A, the accumulator, after the following code.
+<pre>
+MOV A, #45H
+RL A
+RL A
+RL A
+</pre>
+- **Explanation**: The `RL A` (Rotate Left) instruction rotates the accumulator **A** left by one bit, with the carry bit shifting into the least significant bit (LSB), and the most significant bit (MSB) shifting into the carry bit.
+- Starting with **A = 45H** (which is `01000101` in binary):
+  - First `RL A`: **A = 8AH** (binary `10001010`)
+  - Second `RL A`: **A = 15H** (binary `00010101`)
+  - Third `RL A`: **A = 2AH** (binary `00101010`)
+- **Final value in A**: **2AH**
+
+### 3. In the absence of the "SWAP A" instruction, how would you perform the operation?
+- **Answer**: The "SWAP A" instruction swaps the nibbles (4-bit groups) of the accumulator **A**. In the absence of the `SWAP A` instruction, you can perform the swap manually by:
+  1. Masking the upper nibble and shifting it to the lower nibble.
+  2. Masking the lower nibble and shifting it to the upper nibble.
+- Example procedure:
+  - Use **ANL A, #0F0H** to clear the lower nibble.
+  - Use **SWAP** or manually shift and combine to swap the nibbles.
+
+### 4. Can the SWAP instruction work on any register?
+- **Answer**: No, the **SWAP** instruction works only on the **A** register (the accumulator) in the 8051 microcontroller. It swaps the upper and lower nibbles of **A**.
+
+### 5. Find the value in A after the following code.
+<pre>
+CLR A
+XRL A, #0FFH
+</pre>
+- **Explanation**: 
+  - **CLR A** sets **A = 00H** (binary `00000000`).
+  - **XRL A, #0FFH** performs a bitwise XOR operation between **A** and **0FFH** (binary `11111111`).
+  - **A = 00H XOR 0FFH = 0FFH** (binary `11111111`).
+- **Final value in A**: **FFH**
+
+### 6. Find the value in A after the following code.
+<pre>
+CLR A
+CPL A
+XRL A, #0FFH
+</pre>
+- **Explanation**:
+  - **CLR A** sets **A = 00H** (binary `00000000`).
+  - **CPL A** complements **A**, changing **A = FFH** (binary `11111111`).
+  - **XRL A, #0FFH** performs a bitwise XOR between **A** and **0FFH**.
+  - **A = FFH XOR 0FFH = 00H** (binary `00000000`).
+- **Final value in A**: **00H**
+
+
+---
+
+# General Worksheet
+
+### 1. Give the highest single digit for each of the number systems: decimal, binary, and hex.
+- **Decimal**: 9
+- **Binary**: 1
+- **Hexadecimal**: F
+
+### 2. Which of the following cannot be a number in base-2? Give the reason.
+- (a) 11001 — Valid binary number (only contains 1s and 0s).
+- (b) 113 — **Cannot be a valid binary number** because it contains the digit '3', which is not allowed in base-2.
+- (c) 10001 — Valid binary number (only contains 1s and 0s).
+
+### 3. What is the highest 8-bit number?
+- (a) In binary: **11111111** (binary representation of 255).
+- (b) In hex: **FF** (hexadecimal representation of 255).
+
+### 4. What is the highest 16-bit number?
+- (a) In binary: **1111111111111111** (binary representation of 65535).
+- (b) In hex: **FFFF** (hexadecimal representation of 65535).
+
+### 5. Convert binary 100000 to decimal and hex.
+- (a) Decimal: **32** (binary `100000` is 32 in decimal).
+- (b) Hex: **20** (binary `100000` is 20 in hexadecimal).
+
+### 6. Convert hex number BAAD to binary and decimal.
+- (a) Binary: **1011101010101101** (hex `BAAD` is `1011101010101101` in binary).
+- (b) Decimal: **47821** (hex `BAAD` is 47821 in decimal).
+
+### 7. Find the value of the CY flag after the execution of the following code.
+- (a) 
+<pre>
+MOV A, #85H
+ADD A, #92H
+</pre>
+  - **CY flag value**: **Carry (CY) flag = 1** because 85H + 92H = 117H, which overflows an 8-bit value.
+
+- (b)
+<pre>
+MOV A, #15H
+ADD A, #72H
+</pre>
+  - **CY flag value**: **Carry (CY) flag = 0** because 15H + 72H = 87H, no overflow.
+
+- (c)
+<pre>
+MOV A, #0F5H
+ADD A, #52H
+</pre>
+  - **CY flag value**: **Carry (CY) flag = 0** because 0F5H + 52H = 147H, no overflow.
+
+- (d)
+<pre>
+MOV A, #0FFH
+INC A
+</pre>
+  - **CY flag value**: **Carry (CY) flag = 1** because 0FFH + 1 = 100H, which overflows.
+
+### 8. Upon reset, what is the value in the SP register?
+- **Answer**: Upon reset, the **SP (Stack Pointer)** register is initialized to **07H**.
+
+### 9. Upon pushing data onto the stack, the SP register is _____________ (decremented, incremented).
+- **Answer**: The **SP register is decremented** upon pushing data onto the stack.
+
+### 10. Upon popping data from the stack, the SP register is ___________ (decremented, incremented).
+- **Answer**: The **SP register is incremented** upon popping data from the stack.
+
+### 11. Can you change the value of the SP register? If yes, explain why you would want to do that.
+- **Answer**: Yes, you can change the value of the SP register. You might want to do this when manually managing stack operations or when working with multiple subroutines and dynamically allocating memory on the stack.
+
+### 12. The stack uses the same area of RAM as bank ______.
+- **Answer**: The stack uses the same area of RAM as **Bank 1**.
+
+### 13. Indicate the size (8- or 16-bit) of each of the following registers.
+- **PC**: 16-bit
+- **A**: 8-bit
+- **B**: 8-bit
+- **R0**: 8-bit
+- **R1**: 8-bit
+- **R2**: 8-bit
+- **R7**: 8-bit
+
+### 14. For Question 1, indicate the largest value (in decimal) that each register can contain.
+- **PC**: 65535 (16-bit register)
+- **A**: 255 (8-bit register)
+- **B**: 255 (8-bit register)
+- **R0**: 255 (8-bit register)
+- **R1**: 255 (8-bit register)
+- **R2**: 255 (8-bit register)
+- **R7**: 255 (8-bit register)
+
+### 15. For Question 1, indicate the largest value (in hex) that each register can contain.
+- **PC**: FFFF (16-bit register)
+- **A**: FF (8-bit register)
+- **B**: FF (8-bit register)
+- **R0**: FF (8-bit register)
+- **R1**: FF (8-bit register)
+- **R2**: FF (8-bit register)
+- **R7**: FF (8-bit register)
+
+### 16. Who generates each of the following files and what is the use of each.
+- **.asm**: Generated by the programmer or assembly editor. It is the **source code** written in assembly language.
+- **.lst**: Generated by the assembler. It contains the **listing file**, which includes the source code along with memory addresses and machine code.
+- **.obj**: Generated by the assembler. It contains the **object code**, which is machine-readable code generated from the assembly source.
+- **.abs**: Generated by the linker. It contains the **absolute object code**, ready to be loaded into memory.
+- **.hex**: Generated by the linker or a similar tool. It contains the **hexadecimal representation** of the machine code, often used for programming the microcontroller's memory.
