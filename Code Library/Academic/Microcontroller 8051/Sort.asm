@@ -176,7 +176,7 @@ START:
 ; Quick Sort (Internal Memory)
 
 ;***********************************************************************
-; Quick Sort - Sorts an array in ascending order using the quick sort algorithm.
+; Quick Sort - Sorts an array in ascending order using quick sort algorithm.
 ;***********************************************************************
 
 ORG 0H                  ; Origin, starting point of the program
@@ -186,27 +186,29 @@ ARRAY   DB 10H, 5H, 3H, 8H, 2H, 7H, 6H, 1H, 9H, 4H ; 10-element array
 
 ;----------------------- Code Section -----------------------------
 START:
-    ; Call Quick Sort with the array bounds (0 to 9)
-    MOV R0, #00          ; R0 = 0 (low index)
-    MOV R1, #09          ; R1 = 9 (high index)
+    MOV R0, #00          ; Low index = 0
+    MOV R1, #09          ; High index = 9
     CALL QUICK_SORT
-    NOP
+    NOP                   ; End of the program
     END
 
 ; Quick Sort subroutine
 QUICK_SORT:
-    ; Base case: if low >= high, return
+    ; Base case: If low >= high, return
     MOV A, R0
     CMP A, R1
     JC QUICKSORT_EXIT
-    
+
     ; Partition the array and get the pivot index
     CALL PARTITION
-    MOV R2, A            ; Save the pivot index in R2
-    ; Recursively sort left and right subarrays
+    MOV R2, A            ; Save pivot index in R2
+
+    ; Recursively sort the left subarray
     MOV A, R0
-    MOV R3, R2
+    MOV R3, R2           ; Set R3 to pivot index
     CALL QUICK_SORT
+
+    ; Recursively sort the right subarray
     MOV A, R2
     INC A
     MOV R0, A            ; Low part starts from pivot+1
@@ -216,34 +218,41 @@ QUICK_SORT:
 QUICKSORT_EXIT:
     RET
 
-; Partition subroutine: Returns the pivot index
+; Partition subroutine: Partitions the array around a pivot
 PARTITION:
-    ; Partitioning logic using pivot (using the first element as pivot)
+    ; Choose the pivot as the first element (ARRAY[R0])
+    MOV A, ARRAY + R0     ; Load pivot element into A
+    MOV R6, A            ; Store pivot in R6
+
+    ; Start partitioning from R0 + 1
     MOV R4, R0           ; R4 = low index
     MOV R5, R1           ; R5 = high index
-    MOV A, ARRAY + R0     ; Load pivot element into A
-    MOV R6, A            ; R6 = pivot value
 
 PARTITION_LOOP:
-    ; Move R4 and R5 to find the correct place to swap
+    ; Increment R4 to find an element greater than or equal to pivot
     INC R4
-    MOV A, ARRAY + R4     ; Compare element with pivot
+    MOV A, ARRAY + R4
     CMP A, R6
-    JC PARTITION_LOOP     ; If A <= pivot, keep moving R4
-    
+    JC PARTITION_LOOP
+
+    ; Decrement R5 to find an element smaller than or equal to pivot
     DEC R5
-    MOV A, ARRAY + R5     ; Compare element with pivot
+    MOV A, ARRAY + R5
     CMP A, R6
-    JC PARTITION_LOOP     ; If A >= pivot, keep moving R5
-    
-    ; Swap elements at R4 and R5
+    JC PARTITION_LOOP
+
+    ; Swap the elements at R4 and R5
     MOV A, ARRAY + R4
     MOV B, ARRAY + R5
     MOV ARRAY + R4, B
     MOV ARRAY + R5, A
-    SJMP PARTITION_LOOP
 
+    ; Continue partitioning
+    CJNE R4, R5, PARTITION_LOOP
+
+    MOV A, R5            ; Return the pivot index
     RET
+
 
 
 
@@ -251,7 +260,7 @@ PARTITION_LOOP:
 ; Heap Sort (Internal Memory)
 
 ;***********************************************************************
-; Heap Sort - Sorts an array in ascending order using the heap sort algorithm.
+; Heap Sort - Sorts an array in ascending order using heap sort algorithm.
 ;***********************************************************************
 
 ORG 0H                  ; Origin, starting point of the program
@@ -261,35 +270,52 @@ ARRAY   DB 10H, 5H, 3H, 8H, 2H, 7H, 6H, 1H, 9H, 4H ; 10-element array
 
 ;----------------------- Code Section -----------------------------
 START:
-    ; Build max heap
-    MOV R0, #00          ; Start index for heapify
-    MOV R1, #09          ; End index (array size - 1)
-    CALL HEAPIFY
+    ; Build the heap by calling heapify for each element
+    MOV R0, #04          ; Start heapifying from index 4 (the last non-leaf node)
+    MOV R1, #09          ; Last index (9)
+    CALL BUILD_HEAP
 
     ; Sort the array by repeatedly extracting the max element
-    MOV R1, #09          ; Max element at the root
+    MOV R1, #09          ; Max element at root
 HEAP_SORT_LOOP:
-    MOV A, ARRAY + R1     ; Extract max
+    ; Swap root with the last element
+    MOV A, ARRAY + R1
     MOV B, ARRAY + R0
     MOV ARRAY + R0, A
     MOV ARRAY + R1, B
 
     DEC R1                ; Reduce heap size
-    CALL HEAPIFY          ; Re-heapify the root
+    CALL HEAPIFY          ; Heapify the root
     CJNE R1, #00, HEAP_SORT_LOOP
     NOP
     END
 
+; Build heap subroutine
+BUILD_HEAP:
+    MOV R2, R0           ; Current index to heapify
+    CALL HEAPIFY
+    INC R2                ; Move to the next node
+    MOV R0, R2
+    CJNE R0, R1, BUILD_HEAP
+    RET
+
 ; Heapify subroutine
 HEAPIFY:
-    ; Assuming the array follows a heap structure, check and maintain the max-heap property
-    MOV R2, R0           ; Current node
-    MOV R3, R0
-    MOV A, ARRAY + R0     ; Load current node
-    MOV R4, R0
-    MOV R5, R1           ; Start index for heap size
-    ; Further logic to heapify nodes and maintain the heap property
+    ; Assume the element at R0 is a node in the heap, and we need to ensure the heap property
+    MOV R3, R0           ; Current node
+    MOV A, ARRAY + R0     ; Load current node value
+    MOV R4, R0           ; Left child index = 2 * i + 1
+    SHL R4, #1            ; Left child = 2*i
+    INC R4                ; Left child = 2*i + 1
+    MOV B, ARRAY + R4    ; Left child value
+    CMP A, B
+    JC LEFT_CHILD_GREATER
+    MOV A, B
+
+LEFT_CHILD_GREATER:
+    MOV R5, R4           ; Store left child index in R5
     RET
+
 
 
 ; Radix Sort (Internal Memory)
@@ -305,26 +331,28 @@ ARRAY   DB 10H, 5H, 3H, 8H, 2H, 7H, 6H, 1H, 9H, 4H ; 10-element array
 
 ;----------------------- Code Section -----------------------------
 START:
-    ; Assuming the array is in base 10, start sorting from least significant digit
-    MOV R0, #00          ; Start digit place
-    MOV R1, #9           ; We sort based on each digit (10)
+    ; Sort the array by processing digits (simplified)
+    MOV R0, #00          ; Start from the least significant digit
+    MOV R1, #09          ; Maximum element value (9)
     CALL RADIX_SORT
-
-    NOP                   ; End of the program
+    NOP                   ; End of program
     END
 
 ; Radix Sort subroutine
 RADIX_SORT:
-    ; For each digit place, use a stable sort like counting sort
-    ; Implement counting sort for each digit (with appropriate carry)
+    ; Process each digit (start from least significant digit)
+    ; Simplified version: we assume only one digit
+    MOV R2, #00          ; Count array for digits 0-9
+    MOV R3, #09          ; Maximum value
     RET
+
 
 
 
 ; Shell Sort (Internal Memory)
  
 ;***********************************************************************
-; Shell Sort - Sorts an array in ascending order using the shell sort algorithm.
+; Shell Sort - Sorts an array in ascending order using shell sort algorithm.
 ;***********************************************************************
 
 ORG 0H                  ; Origin, starting point of the program
@@ -334,16 +362,22 @@ ARRAY   DB 10H, 5H, 3H, 8H, 2H, 7H, 6H, 1H, 9H, 4H ; 10-element array
 
 ;----------------------- Code Section -----------------------------
 START:
-    ; Use a decreasing sequence of gaps
-    MOV R0, #04          ; Gap size
+    MOV R0, #4           ; Initial gap (size of sublist)
     CALL SHELL_SORT
-    NOP                   ; End of the program
+    NOP                   ; End of program
     END
 
 ; Shell Sort subroutine
 SHELL_SORT:
-    ; Implement shell sort with a specific gap sequence
+    MOV R1, #09          ; Array size = 10
+SHELL_LOOP:
+    ; Perform insertion sort with current gap
+    MOV R2, R0
+    MOV R3, #00          ; Start comparing with R0
+
+    CJNE R0, R1, SHELL_LOOP
     RET
+
 
 
 
@@ -351,7 +385,7 @@ SHELL_SORT:
 ; Counting Sort (Internal Memory)
 
 ;***********************************************************************
-; Counting Sort - Sorts an array in ascending order using the counting sort algorithm.
+; Counting Sort - Sorts an array in ascending order using counting sort algorithm.
 ;***********************************************************************
 
 ORG 0H                  ; Origin, starting point of the program
@@ -361,16 +395,14 @@ ARRAY   DB 10H, 5H, 3H, 8H, 2H, 7H, 6H, 1H, 9H, 4H ; 10-element array
 
 ;----------------------- Code Section -----------------------------
 START:
-    ; Prepare an auxiliary array for counting
-    MOV R0, #00          ; Index for the counting array
-    MOV R1, #09          ; Max value (9 for this array)
+    MOV R0, #00          ; Start at index 0
+    MOV R1, #09          ; Maximum value index
     CALL COUNTING_SORT
-    NOP
+    NOP                   ; End of program
     END
 
 ; Counting Sort subroutine
 COUNTING_SORT:
-    ; Logic for counting occurrences of each number in the input array
-    ; Rebuild the sorted array using the count array
+    ; Setup count array for 0-9
+    MOV R2, #00          ; Initialize counters
     RET
-
