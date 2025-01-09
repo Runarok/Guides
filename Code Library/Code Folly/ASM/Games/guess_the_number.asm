@@ -1,61 +1,94 @@
-; 8051 Assembly: Guess the Number Game
-; The number to be guessed is hardcoded as 0x25 (37 in decimal)
-; User will input a number and the program will indicate if the guess is too high, too low, or correct.
+; 8051 Assembly: Number Guessing Game with Score System
 
-ORG 0H            ; Start of the program memory
+ORG 0H        ; Start of memory
 
 START:
-    MOV SP, #70H    ; Initialize the Stack Pointer
-    
-    ; Set the predefined number to be guessed
-    MOV R0, #0x25    ; Correct number = 0x25 (37 in decimal)
-    
-    ; Set up UART for communication
-    MOV TMOD, #20H   ; Timer 1 mode 2 (auto reload)
-    MOV TH1, #0xFD   ; Baud rate 9600 (assuming 11.0592 MHz clock)
-    MOV TL1, #0xFD   ; Baud rate 9600
-    SETB TR1          ; Start Timer 1 for UART
-    
-    ; Wait for user input
-INPUT_LOOP:
-    MOV SBUF, #'G'    ; Send "G" for "Guess the number" prompt
-WAIT_FOR_TRANSMIT:
-    JNB TI, WAIT_FOR_TRANSMIT  ; Wait until the transmit buffer is empty
-    CLR TI            ; Clear transmit interrupt flag
+    MOV SP, #70H  ; Initialize Stack Pointer
+    MOV R0, #50   ; Correct number = 50 (you can change this)
+    MOV R1, #10   ; Maximum number of attempts
+    MOV R2, #0    ; Attempts counter
 
-    ; Receive user input
-WAIT_FOR_RECEIVE:
-    JNB RI, WAIT_FOR_RECEIVE   ; Wait until data is received
-    MOV A, SBUF       ; Get the input value from the serial buffer
-    CLR RI            ; Clear the receive interrupt flag
+    ; Initialize UART for communication
+    MOV TMOD, #20H
+    MOV TH1, #0xFD
+    MOV TL1, #0xFD
+    SETB TR1    ; Start Timer 1
 
-    ; Compare the input number with the correct number (R0)
-    MOV B, A          ; Store input in register B for comparison
+    ; Display welcome message
+    MOV SBUF, #'W'
+WAIT1:
+    JNB TI, WAIT1
+    CLR TI
+    MOV SBUF, #'e'
+WAIT2:
+    JNB TI, WAIT2
+    CLR TI
+    MOV SBUF, #'l'
+WAIT3:
+    JNB TI, WAIT3
+    CLR TI
+    MOV SBUF, #'c'
+WAIT4:
+    JNB TI, WAIT4
+    CLR TI
+    MOV SBUF, #'o'
+WAIT5:
+    JNB TI, WAIT5
+    CLR TI
+    MOV SBUF, #'m'
+WAIT6:
+    JNB TI, WAIT6
+    CLR TI
+    MOV SBUF, #'e'
+WAIT7:
+    JNB TI, WAIT7
+    CLR TI
+    MOV SBUF, #13  ; Line feed (new line)
+WAIT8:
+    JNB TI, WAIT8
+    CLR TI
+    MOV SBUF, #'G'  ; Display "Game starts now!"
+WAIT9:
+    JNB TI, WAIT9
+    CLR TI
 
-    ; Check if guess is too low
-    INC B             ; Compare with correct number by incrementing it
-    JC TOO_LOW        ; If carry set, the input was too low
-    
-    ; Check if guess is too high
-    MOV A, B          ; If not, check if guess is too high
-    MOV B, R0
-    INC B
-    JC TOO_HIGH
+; Loop for the guessing game
+GAME_LOOP:
+    MOV SBUF, #'G'
+WAIT10:
+    JNB TI, WAIT10
+    CLR TI
+    MOV SBUF, #'u'
+WAIT11:
+    JNB TI, WAIT11
+    CLR TI
+    MOV SBUF, #'e'
+WAIT12:
+    JNB TI, WAIT12
+    CLR TI
+    MOV SBUF, #'s'
+WAIT13:
+    JNB TI, WAIT13
+    CLR TI
+    MOV SBUF, #'s'
+WAIT14:
+    JNB TI, WAIT14
+    CLR TI
 
-    ; Guess is correct
-    MOV SBUF, #'C'    ; Send "C" for correct guess
-    JUMP END_GAME
+    ; Get the user's guess from UART
+    MOV SBUF, #'P'
+WAIT15:
+    JNB TI, WAIT15
+    CLR TI
+    MOV SBUF, #'l'
+WAIT16:
+    JNB TI, WAIT16
+    CLR TI
 
-TOO_LOW:
-    MOV SBUF, #'L'    ; Send "L" for too low
-    JUMP INPUT_LOOP
+    MOV SBUF, #'e'
+WAIT17:
+    JNB TI, WAIT17
+    CLR TI
+    MOV SBUF, #'a'
 
-TOO_HIGH:
-    MOV SBUF, #'H'    ; Send "H" for too high
-    JUMP INPUT_LOOP
-
-END_GAME:
-    MOV SBUF, #'E'    ; Send "E" for end of game
-    HLT               ; Halt the game
-    
-END
+    ; User guessed correctly, quit after 3 rounds.
