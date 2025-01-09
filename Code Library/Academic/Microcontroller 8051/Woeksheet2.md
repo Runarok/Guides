@@ -1,16 +1,13 @@
 # WORKSHEET
 
 ### 1. Explain the difference between the ADD and ADDC instructions.
-<pre>
 The main difference between the **ADD** and **ADDC** (Add with Carry) instructions lies in the carry bit:
 
 - **ADD A, source**: This instruction adds the contents of the source register or memory location to the accumulator (A) and stores the result in A. It does not consider the carry bit (C) from the previous operation.
-  
+
 - **ADDC A, source**: This instruction adds the contents of the source register or memory location to the accumulator (A) and also adds the carry bit (C) from the previous operation. It is typically used when performing multi-byte addition where carry is involved.
-</pre>
 
 ### 2. Show how to perform the subtraction: 29H - 21H.
-<pre>
 The subtraction operation can be performed using the **SUBB** (Subtract with Borrow) instruction. 
 
 Here's how to perform the subtraction of 29H - 21H:
@@ -20,24 +17,21 @@ Here's how to perform the subtraction of 29H - 21H:
 
 Example program:
 
+<pre>
 MOV A, #29H   ; Load A with 29H
 MOV B, #21H   ; Load B with 21H
 SUBB A, B     ; Perform A - B (29H - 21H)
-
-; After execution, A will contain 08H (29H - 21H = 08H)
 </pre>
+
+After execution, A will contain 08H (29H - 21H = 08H).
 
 ### 4. True or False. "DA A" must be used for adding BCD data only.
-<pre>
 **True.** The **DA A** (Decimal Adjust Accumulator) instruction is specifically used to adjust the result in the accumulator (A) to a valid BCD (Binary Coded Decimal) format after performing an addition or subtraction operation on BCD data. It ensures that the result is a valid BCD value, correcting it if necessary.
-</pre>
 
 ### 5. Can we use the "DA A" instruction to convert data such as 9CH into BCD without first performing an ADD instruction? Explain your answer.
-<pre>
-**No.** The **DA A** instruction is used to adjust the accumulator (A) to BCD format after an arithmetic operation, such as addition or subtraction. It is not used to directly convert a value like 9CH into BCD. 
+**No.** The **DA A** instruction is used to adjust the accumulator (A) to BCD format after an arithmetic operation, such as addition or subtraction. It is not used to directly convert a value like 9CH into BCD.
 
 For example, if 9CH is loaded directly into the accumulator without any prior addition operation, the **DA A** instruction will not modify it, since it does not correct the accumulator unless there is a need for correction (e.g., after an addition or subtraction of BCD values). 
-</pre>
 
 ### 6. Show a simple program to add 2345H and 56F8H.
 <pre>
