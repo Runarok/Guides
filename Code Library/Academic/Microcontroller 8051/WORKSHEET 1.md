@@ -276,6 +276,74 @@ END
 
 This code implements the Boolean function **WX + YZ** on the 8051 microcontroller using Port 1 and Port 2 for inputs and Port 3 for the output.
 
+Indepth code Example:
+
+<pre>
+ 
+; Variable declarations
+W        EQU 00H    ; W is bit 0
+X        EQU 01H    ; X is bit 1
+Y        EQU 02H    ; Y is bit 2
+Z        EQU 03H    ; Z is bit 3
+NOT_W    EQU 10H    ; NOT_W is bit 16
+NOT_Y    EQU 11H    ; NOT_Y is bit 17
+OUTPUT   EQU P0.0   ; Output on P0.0
+
+; Initialize Ports
+MOV P1, #0FFH      ; Set Port 1 as input (0xFF to read from P1.0 to P1.7)
+MOV P0, #00H       ; Set Port 0 to 0 (Output to P0.0)
+
+; Initializing W, X, Y, Z and their complements after reading the values from Port 1
+
+MOV C, P1.0        ; Read P1.0 into carry (for W)
+MOV W, C
+CPL C              ; Complement the value (NOT W)
+MOV NOT_W, C
+
+MOV C, P1.1        ; Read P1.1 into carry (for X)
+MOV X, C
+
+MOV C, P1.2        ; Read P1.2 into carry (for Y)
+MOV Y, C
+CPL C              ; Complement the value (NOT Y)
+MOV NOT_Y, C
+
+MOV C, P1.3        ; Read P1.3 into carry (for Z)
+MOV Z, C
+
+; Expression 1: WX = W * X (AND operation)
+CLR C              ; Clear the carry before starting the AND operation
+MOV C, W           ; Move W to carry
+ANL C, X           ; AND carry with X (W * X)
+MOV 20H, C         ; Store the result of WX in memory 20H
+
+; Expression 2: WYX = W * Y * X (AND operation)
+CLR C              ; Clear the carry before starting the AND operation
+MOV C, W           ; Move W to carry
+ANL C, Y           ; AND carry with Y (W * Y)
+ANL C, X           ; AND carry with X (W * Y * X)
+MOV 21H, C         ; Store the result of WYX in memory 21H
+
+; Expression 3: YZ = Y * Z (AND operation)
+CLR C              ; Clear the carry before starting the AND operation
+MOV C, Y           ; Move Y to carry
+ANL C, Z           ; AND carry with Z (Y * Z)
+MOV 22H, C         ; Store the result of YZ in memory 22H
+
+; Combine results: OUTPUT = WX + WYX + YZ (OR operation)
+CLR C              ; Clear the carry before starting the OR operation
+MOV C, 20H         ; Move WX to carry
+ORL C, 21H         ; OR carry with WYX
+ORL C, 22H         ; OR carry with YZ
+MOV OUTPUT, C      ; Store the result in OUTPUT
+
+HERE: SJMP HERE    ; Infinite loop to stop the program
+
+END
+
+    
+</pre>
+
 ---
 
 ### 1. Upon reset, all the ports of the 8051 are configured as ______ (input, output).
