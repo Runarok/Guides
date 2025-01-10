@@ -19,7 +19,7 @@ Runarok-Guides/
 - **`LICENSE`**  
   The repository is licensed under the **MIT License**. Please see the `LICENSE` file for full terms and conditions.
 
-- **`Code Library/`**  
+- [**`Code Library/`**](./Codelibrary)
   This folder contains code resources divided into:
   - **`Academic/`**: Projects and examples related to coursework and academic research.
   - **`Code Folly/`**: Experimental projects and fun programming exercises.
