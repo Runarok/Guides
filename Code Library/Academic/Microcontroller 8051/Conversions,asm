@@ -1,0 +1,159 @@
+; ----- MEMORY WINDOW BEFORE EXECUTION -----
+; Let's assume initial memory values are:
+; RAM_ADDR = 40H, ASC_RESULT = 50H
+; BCD data in A register = 29H
+; ASCII equivalent of '4' = 34H, '7' = 37H, etc.
+; P1 and P2 are configured as output ports
+; Registers R2, R5, R6, R7, R4, etc., are used for calculations
+
+; ----------- BCD to ASCII Conversion -----------
+ORG 0H
+; Conversion of Packed BCD (29H) to ASCII
+MOV A, #29H       ; Load 29H (BCD) to A
+MOV R2, A         ; Copy of BCD data to R2
+ANL A, #0FH       ; Mask upper nibble (A = 09H)
+ORL A, #30H       ; Convert to ASCII (A = 39H, ASCII '9')
+MOV R6, A         ; Save ASCII value of upper nibble to R6
+MOV A, R2         ; Restore original BCD data (A = 29H)
+ANL A, #0F0H      ; Mask lower nibble (A = 20H)
+RR A              ; Rotate right to extract lower nibble
+RR A
+RR A
+RR A              ; A = 02H (lower nibble)
+ORL A, #30H       ; Convert to ASCII (A = 32H, ASCII '2')
+MOV R2, A         ; Save ASCII value of lower nibble to R2
+MOV P1, A         ; Output the lower nibble ASCII ('2') to P1
+MOV P2, R6        ; Output the upper nibble ASCII ('9') to P2
+SJMP $            ; Infinite loop (program stops here)
+END
+
+; ----- MEMORY WINDOW AFTER EXECUTION -----
+; P1 = 32H ('2')
+; P2 = 39H ('9')
+; R2 = 32H ('2')
+; R6 = 39H ('9')
+
+; ----------- ASCII to Decimal Conversion -----------
+ORG 0
+; Conversion of ASCII ('4' and '7') to decimal
+MOV R5, #"4"      ; Load ASCII equivalent of '4' (34H) to R5
+MOV R6, #"7"      ; Load ASCII equivalent of '7' (37H) to R6
+MOV A, R5         ; A = '4' (34H)
+ANL A, #0FH       ; Mask lower nibble (A = 04H)
+MOV R5, A         ; Store the lower nibble (4) to R5
+MOV A, R6         ; A = '7' (37H)
+ANL A, #0FH       ; Mask upper nibble (A = 07H)
+MOV R6, A         ; Store the upper nibble (7) to R6
+MOV A, R5         ; Get lower nibble value of '4' in A
+RL A              ; Rotate left to shift bits
+RL A
+RL A
+RL A
+ORL A, R6         ; Combine the upper and lower nibbles for final decimal value
+MOV P1, A         ; Output the final packed decimal result to P1
+SJMP $            ; Infinite loop (program stops here)
+END
+
+; ----- MEMORY WINDOW AFTER EXECUTION -----
+; P1 will display the final packed decimal result
+; R5 contains lower nibble (4), R6 contains upper nibble (7)
+
+; ----------- Decimal to ASCII Conversion -----------
+RAM_ADDR EQU 40H  ; Address for storing decimal values
+ASC_RSULT EQU 50H ; Address for storing ASCII result
+ORG 00H
+MAIN:
+MOV R0, #RAM_ADDR ; Set R0 to RAM address to fetch decimal values
+MOV R1, #ASC_RSULT ; Set R1 to result address
+MOV R2, #0AH       ; Loop count (10 values to convert)
+BACK:
+MOV A, @R0         ; Load decimal value from RAM address
+ORL A, #30H        ; Add ASCII offset (0x30)
+MOV @R1, A         ; Store the result to ASC_RSULT
+INC R0             ; Increment address pointer for next decimal value
+INC R1             ; Increment result address pointer
+DJNZ R2, BACK      ; Loop 10 times (convert 10 decimal values)
+MOV R1, #ASC_RSULT ; Point R1 to ASC_RSULT
+MOV R2, #0AH       ; Loop count (verify results)
+NEXT:
+MOV A, @R1         ; Load ASCII result
+MOV P1, A          ; Output to port P1
+INC R1             ; Increment result address pointer
+DJNZ R2, NEXT      ; Loop 10 times (verify 10 values)
+SJMP $             ; Infinite loop (program stops here)
+END
+
+; ----- MEMORY WINDOW AFTER EXECUTION -----
+; P1 displays the converted ASCII values of decimal numbers
+; The decimal values have been converted and verified.
+
+; ----------- Hexadecimal to Decimal Conversion -----------
+ORG 0000
+MAIN:
+MOV A, #0FFH      ; Load FFH (hexadecimal) to A register
+MOV P1, A         ; Display FFH on port P1
+MOV A, P1         ; Take the hexadecimal input from P1
+MOV B, #10        ; Prepare for division by 10
+DIV AB            ; Divide by 10, result in A (quotient) and B (remainder)
+MOV R7, B         ; Store unit place (remainder) in R7
+MOV B, #10        ; Divide again by 10
+DIV AB            ; Result in A (quotient) and B (remainder)
+MOV R6, B         ; Store tens place (remainder) in R6
+MOV R5, A         ; Store hundreds place in R5
+LJMP MAIN         ; Loop forever
+END
+
+; ----- MEMORY WINDOW AFTER EXECUTION -----
+; P1 will display the hexadecimal input (FFH)
+; R5 contains hundreds place, R6 contains tens place, R7 contains units place of decimal conversion
+
+; ----------- Decimal to Hexadecimal Conversion -----------
+ORG 00
+MOV R3, #002      ; Placeholder values for conversions
+MOV R4, #00
+MOV A, #251       ; Decimal input value
+MOV B, #02        ; Divide by 2 (binary conversion method)
+CLR C
+DIV AB            ; Divide by 2
+MOV R5, A         ; Store quotient in R5
+MOV A, B          ; Move remainder to A
+ORL A, R4         ; OR with R4
+MOV R4, A         ; Store result in R4
+MOV B, #02        ; Divide by 2 again
+MOV A, R5         ; Move quotient to A
+DIV AB            ; Divide by 2
+MOV R5, A         ; Store result in R5
+MOV A, B
+RL A              ; Rotate left to get the first bit
+ORL A, R4         ; OR with the result from previous operation
+MOV R4, A         ; Store the updated result in R4
+MOV B, #02        ; Divide by 2 again
+MOV A, R5
+DIV AB            ; Divide by 2
+MOV R5, A         ; Store result in R5
+MOV A, B
+RL A              ; Rotate left to get the second bit
+RL A
+ORL A, R4         ; OR with previous result
+MOV R4, A         ; Store the updated result in R4
+MOV B, #02        ; Divide by 2 once more
+MOV A, R5
+DIV AB            ; Divide by 2 again
+MOV R5, A
+MOV A, B
+RL A              ; Rotate left to get the final bit
+RL A
+RL A
+ORL A, R4         ; OR with previous result
+MOV R4, A         ; Store final result in R4
+MOV A, R5         ; Swap to get hexadecimal result
+SWAP A
+ORL A, R4         ; OR with the previous result
+MOV P1, A         ; Output to P1 (final result in hexadecimal)
+HERE:
+SJMP HERE         ; Infinite loop (program stops here)
+END
+
+; ----- MEMORY WINDOW AFTER EXECUTION -----
+; P1 will display the final hexadecimal result after the conversion
+; R4 contains the result of the conversion (hexadecimal)
