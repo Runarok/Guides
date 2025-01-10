@@ -16,18 +16,18 @@ Runarok-Guides/
 
 ### Directory Breakdown
 
-- **`LICENSE`**  
+- **[`LICENSE`](LICENSE)**  
   The repository is licensed under the **MIT License**. Please see the `LICENSE` file for full terms and conditions.
 
-- [**`Code Library/`**](./Codelibrary)
+- **[`Code Library/`](./CodeLibrary)**  
   This folder contains code resources divided into:
-  - **`Academic/`**: Projects and examples related to coursework and academic research.
-  - **`Code Folly/`**: Experimental projects and fun programming exercises.
+  - **[`Academic/`](./CodeLibrary/Academic)**: Projects and examples related to coursework and academic research.
+  - **[`Code Folly/`](./CodeLibrary/CodeFolly)**: Experimental projects and fun programming exercises.
 
-- **`Code Manual/`**  
+- **[`Code Manual/`](./CodeManual)**  
   A set of guides and documentation to improve coding practices, enhance productivity, and explore advanced techniques.
 
-- **`Code Quest/`**  
+- **[`Code Quest/`](./CodeQuest)**  
   A collection of resources for tracking personal growth, working through courses, and preparing for internships or professional roles.
 
 ## Contributions
