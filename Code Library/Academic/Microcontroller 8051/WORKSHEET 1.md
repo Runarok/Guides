@@ -279,7 +279,6 @@ This code implements the Boolean function **WX + YZ** on the 8051 microcontrolle
 Indepth code Example:
 
 <pre>
- 
 ; Variable declarations
 W        EQU 00H    ; W is bit 0
 X        EQU 01H    ; X is bit 1
@@ -340,8 +339,6 @@ MOV OUTPUT, C      ; Store the result in OUTPUT
 HERE: SJMP HERE    ; Infinite loop to stop the program
 
 END
-
-    
 </pre>
 
 ---
