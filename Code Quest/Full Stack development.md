@@ -24,4 +24,9 @@ I will update this document with what I learn in **The Odin Project**, focusing 
 ## [Foundations](https://www.theodinproject.com/paths/foundations/courses/foundations)
 
 ### Reference for Navigating Problems
-![Navigate Problems](https://cdn.statically.io/gh/TheOdinProject/curriculum/978ba0e91a6a47452de819246f4c495e6b092f54/foundations/introduction/motivation_and_mindset/imgs/00.png)
+<p align="center">
+  <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/978ba0e91a6a47452de819246f4c495e6b092f54/foundations/introduction/motivation_and_mindset/imgs/00.png" 
+       width="500" height="auto" >
+</p>
+
+
