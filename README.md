@@ -11,7 +11,8 @@ Runarok-Guides/
 │   ├── Academic/         # Code examples related to academic projects
 │   └── Code Folly/       # Various programming projects and experiments
 ├── Code Manual/          # Documentation and guides related to coding practices
-└── Code Quest/           # Collection of personal progress, courses, and internship resources
+├── Code Quest/           # Collection of personal progress, courses, and internship resources
+└── Code Reference/       # Archived files from projects kept for personal reference and future updates
 </pre>
 
 ### Directory Breakdown
@@ -29,6 +30,11 @@ Runarok-Guides/
 
 - **[`Code Quest/`](./Code%20Quest)**  
   A collection of resources for tracking personal growth, working through courses, and preparing for internships or professional roles.
+
+- **[`Code Reference/`](./Code%20Reference)**  
+  This folder contains archived files from various projects, stored for personal reference and potential future updates, even though the original repositories are archived. Files are kept for reuse or learning when revisiting old code or working on new projects.
+  
+---
 
 ## Contributions
 
