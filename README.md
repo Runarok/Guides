@@ -22,7 +22,7 @@ Runarok-Guides/
 
 - **[`Code Library/`](./Code%20Library)**  
   This folder contains code resources divided into:
-  - **[`Academic/`](./CodeLibrary/Academic)**: Projects and examples related to coursework and academic research.
+  - **[`Academic/`](./Code%20Library/Academic)**: Projects and examples related to coursework and academic research.
   - **[`Code Folly/`](./Code%20Library/Code%20Folly)**: Experimental projects and fun programming exercises.
 
 - **[`Code Manual/`](./Code%20Manual)**  
