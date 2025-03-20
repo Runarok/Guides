@@ -27,7 +27,7 @@ Steps:
 const char* ssid = "IOT LAB";           // WiFi SSID
 const char* password = "Reddy@143";     // WiFi password
 
-#define BOTtoken "7821273262:AAEYfme2VObXSokSk58DQhVdAvViuJHgeTQ" // Telegram Bot token received from BotFather
+#define BOTtoken "Telegram Bot token" // Telegram Bot token received from BotFather
 #define CHAT_ID "7820393453"            // Chat ID received from userinfobot to identify your chat
 
 WiFiClientSecure client;               // Create a secure WiFi client
