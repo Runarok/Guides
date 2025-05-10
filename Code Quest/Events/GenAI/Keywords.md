@@ -425,6 +425,121 @@ LangChain was created to address some of the common challenges of working with L
 
 </details>
 
+<!-- Transformers -->
+<details>
+<summary><h4>What are Transformers?</h4></summary>
+<strong>Definition:</strong> Transformers are a type of neural network architecture that excels at processing sequences of data, such as text. They are the backbone of most state-of-the-art natural language processing (NLP) models, including GPT.  
+
+<strong>Key Features:</strong>  
+<ul>
+  <li><strong>Self-Attention Mechanism:</strong> Allows the model to weigh the importance of each word in a sentence relative to others.</li>
+  <li><strong>Parallel Processing:</strong> Unlike RNNs, transformers process input data simultaneously rather than sequentially.</li>
+  <li><strong>Encoder-Decoder Structure:</strong>
+    <ul>
+      <li><strong>Encoder:</strong> Analyzes the input sequence.</li>
+      <li><strong>Decoder:</strong> Generates the output sequence.</li>
+    </ul>
+  </li>
+</ul>
+
+<strong>Popular Models:</strong>
+<ul>
+  <li>BERT (Bidirectional Encoder Representations from Transformers)</li>
+  <li>GPT (Generative Pre-trained Transformer)</li>
+  <li>T5 (Text-to-Text Transfer Transformer)</li>
+</ul>
+
+<strong>Applications:</strong> Text Generation, Translation, Sentiment Analysis, Question Answering.
+</details>
+
+<!-- NGROK -->
+<details>
+<summary><h4>What is NGROK?</h4></summary>
+<strong>Definition:</strong> NGROK is a tool that creates secure tunnels from your local machine to the internet. It exposes local servers to the public, making them accessible via a unique URL.  
+
+<strong>Key Features:</strong>
+<ul>
+  <li><strong>Local to Public URL:</strong> Makes local servers accessible on the internet.</li>
+  <li><strong>HTTPS Support:</strong> Automatically provides secure URLs.</li>
+  <li><strong>Port Forwarding:</strong> Exposes specific ports, e.g., for web servers or APIs.</li>
+  <li><strong>Access Control:</strong> Protects your tunnel with authentication and whitelisting.</li>
+</ul>
+
+<strong>Use Cases:</strong> Testing webhooks and APIs locally, Hosting local web servers for demos.
+</details>
+
+<!-- Streamlit -->
+<details>
+<summary><h4>What is Streamlit?</h4></summary>
+<strong>Definition:</strong> Streamlit is an open-source Python framework used to build interactive, data-driven web apps easily.  
+
+<strong>Key Features:</strong>
+<ul>
+  <li><strong>Python-Focused:</strong> Write apps entirely in Python without needing HTML, CSS, or JavaScript.</li>
+  <li><strong>Data Visualization:</strong> Integrates seamlessly with libraries like Matplotlib, Seaborn, and Plotly.</li>
+  <li><strong>Real-Time Updates:</strong> Automatically refreshes when code changes.</li>
+  <li><strong>Widgets:</strong> Add sliders, buttons, checkboxes, and more for user interaction.</li>
+</ul>
+
+<strong>Use Cases:</strong> Data Science Dashboards, Machine Learning Model Visualization, Rapid Prototyping.
+</details>
+
+<!-- API Keys -->
+<details>
+<summary><h4>What are API Keys?</h4></summary>
+<strong>Definition:</strong> API keys are unique alphanumeric strings used to authenticate and identify applications accessing an API.  
+
+<strong>Best Practices:</strong>
+<ul>
+  <li><strong>Environment Variables:</strong> Store API keys securely.</li>
+  <li><strong>Key Rotation:</strong> Periodically update keys to minimize risk.</li>
+  <li><strong>IP Whitelisting:</strong> Restrict keys to specific IP addresses.</li>
+</ul>
+</details>
+
+<!-- RAG -->
+<details>
+<summary><h4>What is RAG (Retrieval-Augmented Generation)?</h4></summary>
+<strong>Definition:</strong> RAG is a hybrid approach that combines information retrieval with text generation.  
+
+<strong>How It Works:</strong>
+<ol>
+  <li><strong>Retrieval Phase:</strong> Searches a knowledge base for relevant documents.</li>
+  <li><strong>Generation Phase:</strong> Uses a generative model to produce a response based on retrieved documents.</li>
+</ol>
+
+<strong>Benefits:</strong> Enhanced accuracy, real-time data, context-aware responses.
+</details>
+
+<!-- NNW -->
+<details>
+<summary><h4>What is NNW (Neural Network Weighting)?</h4></summary>
+<strong>Definition:</strong> NNW refers to the process of assigning weights to connections between neurons during model training.  
+
+<strong>Key Aspects:</strong>
+<ul>
+  <li><strong>Weight Initialization:</strong> Random assignment before training.</li>
+  <li><strong>Weight Update:</strong> Adjusted through optimization algorithms (e.g., gradient descent).</li>
+  <li><strong>Regularization:</strong> Techniques like L2 regularization to prevent overfitting.</li>
+</ul>
+</details>
+
+<!-- VectorDB -->
+<details>
+<summary><h4>What is VectorDB (Vector Database)?</h4></summary>
+<strong>Definition:</strong> A vector database stores and indexes high-dimensional vectors for fast similarity search and retrieval.  
+
+<strong>Key Features:</strong>
+<ul>
+  <li><strong>Efficient Search:</strong> Uses Approximate Nearest Neighbor (ANN) algorithms.</li>
+  <li><strong>Vector Indexing:</strong> Supports HNSW, IVFFlat, and PQ indexing methods.</li>
+  <li><strong>Scalability:</strong> Handles large-scale vector data efficiently.</li>
+</ul>
+
+<strong>Applications:</strong> Semantic Search, Recommendation Systems, Image/Text Retrieval.
+</details>
+
+
 <!--
 <details><summary><h4>Large Language Models (LLMs)</h4></summary>
 </details>
