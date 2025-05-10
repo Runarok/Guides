@@ -351,6 +351,79 @@ LangChain was created to address some of the common challenges of working with L
 
 - **Claude AI**: [Claude AI](https://www.anthropic.com/claude) - A conversational AI with strong reasoning and multi-turn conversation capabilities.
 
+<details> <summary><h4>What is Vibe Coding?</h4></summary> 
+  
+<strong>Definition:</strong> Vibe Coding is a style of writing code that emphasizes clarity, creativity, and personal expression. It combines best practices with a developer's unique touch.
+<strong>Key Principles:</strong>
+
+<strong>Readability:</strong> Code should be clean, well-organized, and easy to understand.
+
+<strong>Expressiveness:</strong> Variable and function names should convey their purpose clearly.
+
+<strong>Minimalism:</strong> Only include necessary code; avoid over-engineering.
+
+<strong>Personal Touch:</strong> Use a consistent style that reflects your personality (naming conventions, comments, formatting).
+
+<strong>Example:</strong> Writing a sorting function with clear variable names, concise logic, and well-commented sections.
+
+</details>
+
+<details> <summary><h4>What are System Prompts?</h4></summary> <strong>Definition:</strong> System prompts are predefined instructions given to an AI model to set its behavior and context for interaction.
+<strong>Purpose:</strong> To ensure the AI responds in a consistent, context-appropriate manner (e.g., polite assistant, technical expert).
+
+<strong>Types of System Prompts:</strong>
+
+<strong>Role Definition:</strong> "You are a helpful assistant."
+
+<strong>Behavior Guidelines:</strong> "Be concise and polite in your responses."
+
+<strong>User Instructions:</strong> "Wait for the user to complete their input before responding."
+
+<strong>Example Use:</strong> In a customer support chatbot, a system prompt might instruct the model to greet users first and ask how it can help.
+
+</details>
+
+<details> <summary><h4>What is Prompt Engineering?</h4></summary> <strong>Definition:</strong> The process of designing, testing, and refining input prompts to optimize the performance of an AI model.
+<strong>Importance:</strong> Well-crafted prompts lead to more accurate and contextually appropriate responses.
+
+<strong>Core Techniques:</strong>
+
+<strong>Instruction Clarity:</strong> Clearly specify the task (e.g., "Summarize this text in two sentences").
+
+<strong>Contextual Setup:</strong> Provide necessary background information for better responses.
+
+<strong>Controlled Output:</strong> Use format instructions (e.g., "Answer in bullet points").
+
+<strong>Iterative Testing:</strong> Experiment with different prompts to achieve the best results.
+
+<strong>Example:</strong> Instead of "Explain climate change," use "Explain climate change in simple terms for a 10-year-old."
+
+</details>
+
+<details> <summary><h4>What are Hyperparameters?</h4></summary> <strong>Definition:</strong> Configurable settings in a machine learning model that are set before training and directly impact model performance.
+<strong>Key Hyperparameters:</strong>
+
+<strong>Learning Rate:</strong> Controls how quickly the model adjusts weights during training.
+
+<strong>Batch Size:</strong> Determines the number of training examples processed at once.
+
+<strong>Number of Epochs:</strong> Specifies how many times the model will see the entire training data.
+
+<strong>Optimizer Type:</strong> Algorithm used to adjust weights (e.g., Adam, SGD).
+
+<strong>Dropout Rate:</strong> Prevents overfitting by randomly deactivating neurons during training.
+
+<strong>Tuning Methods:</strong>
+
+<strong>Manual Tuning:</strong> Experiment with different values.
+
+<strong>Grid Search:</strong> Test all combinations of specified values.
+
+<strong>Random Search:</strong> Test random combinations of values.
+
+<strong>Bayesian Optimization:</strong> Use probabilistic models to find the best values.
+
+</details>
 
 <!--
 <details><summary><h4>Large Language Models (LLMs)</h4></summary>
