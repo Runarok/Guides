@@ -539,6 +539,22 @@ LangChain was created to address some of the common challenges of working with L
 <strong>Applications:</strong> Semantic Search, Recommendation Systems, Image/Text Retrieval.
 </details>
 
+<details> <summary><h4>What are AI Agents?</h4></summary> <strong>Definition:</strong> AI Agents are autonomous or semi-autonomous systems that can perceive their environment, make decisions, and take actions to achieve specific goals. They can be as simple as rule-based bots or as complex as multi-modal systems using advanced machine learning techniques.
+<strong>Key Characteristics:</strong>
+
+<ul> <li><strong>Autonomy:</strong> Operate without direct human control.</li> <li><strong>Sensory Perception:</strong> Can sense their environment using sensors, data streams, or APIs.</li> <li><strong>Decision-Making:</strong> Use predefined rules, machine learning, or reinforcement learning to choose actions.</li> <li><strong>Action Execution:</strong> Perform tasks such as generating text, making API calls, or controlling hardware.</li> </ul>
+<strong>Types of AI Agents:</strong>
+
+<ul> <li><strong>Reactive Agents:</strong> Respond immediately to stimuli without memory (e.g., rule-based chatbots).</li> <li><strong>Proactive Agents:</strong> Plan and make decisions based on goals (e.g., personal assistants like Siri or Alexa).</li> <li><strong>Multi-Agent Systems:</strong> A collection of agents that communicate and collaborate to solve complex tasks (e.g., swarm robotics).</li> <li><strong>Tool-Using Agents:</strong> AI agents capable of interacting with external tools (e.g., search engines, APIs).</li> </ul>
+<strong>Components of an AI Agent:</strong>
+
+<ul> <li><strong>Perception:</strong> Collects data from the environment (user input, sensor data, APIs).</li> <li><strong>Reasoning:</strong> Analyzes data, makes decisions, or predicts outcomes (using rules or ML models).</li> <li><strong>Memory:</strong> Stores information for context-aware behavior (conversation history, user preferences).</li> <li><strong>Action:</strong> Executes tasks or generates responses.</li> </ul>
+<strong>Popular Frameworks for Building AI Agents:</strong>
+
+<ul> <li><strong>LangChain:</strong> For building complex language model-powered agents.</li> <li><strong>Ray:</strong> For scalable, distributed multi-agent systems.</li> <li><strong>Hugging Face Transformers:</strong> For NLP agents.</li> <li><strong>Gym (OpenAI):</strong> For reinforcement learning agents.</li> </ul>
+<strong>Common Use Cases:</strong>
+
+<ul> <li><strong>Customer Support Agents:</strong> Answer customer queries in real-time.</li> <li><strong>Recommendation Agents:</strong> Suggest products, movies, or content based on user preferences.</li> <li><strong>Automation Agents:</strong> Perform repetitive tasks like scheduling, data entry, or email management.</li> <li><strong>Personal Assistants:</strong> Manage user schedules, answer questions, and control smart devices.</li> </ul> </details>
 
 <!--
 <details><summary><h4>Large Language Models (LLMs)</h4></summary>
