@@ -96,9 +96,33 @@ An **FPGA** (Field-Programmable Gate Array) is an integrated circuit designed to
 
 Edition	License Needed	Supported Devices	Notes
 
-Lite	❌ No	Simple boards (e.g., MAX 10)	Free to use
-Standard	✅ Yes	Simple + mid-range devices	Requires paid license
-Pro	✅ Yes	High-end, complex devices	For large-scale, pro work
+<table border="1">
+  <tr>
+    <th>Edition</th>
+    <th>Device Support</th>
+    <th>Description</th>
+    <th>License</th>
+  </tr>
+  <tr>
+    <td>Lite</td>
+    <td>❌ No</td>
+    <td>Simple boards (e.g., MAX 10)</td>
+    <td>Free to use</td>
+  </tr>
+  <tr>
+    <td>Standard</td>
+    <td>✅ Yes</td>
+    <td>Simple + mid-range devices</td>
+    <td>Requires paid license</td>
+  </tr>
+  <tr>
+    <td>Pro</td>
+    <td>✅ Yes</td>
+    <td>High-end, complex devices</td>
+    <td>For large-scale, pro work</td>
+  </tr>
+</table>
+
 
 
 ➡️ We’ll use Quartus Lite for MAX 10 FPGA in this tutorial.
