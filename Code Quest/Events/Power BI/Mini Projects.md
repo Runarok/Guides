@@ -46,9 +46,11 @@ The primary objective of this project is to create a dynamic and interactive Pow
 - Total Unit Cost
 
 ### Dataset  
-[Click here to access the Sales Dataset](https://docs.google.com/spreadsheets/d/1vj_DSY2BWLwazhNU_62xl0CT3z1_RM0B/edit?usp=drive_link&ouid=106071436383892307069&rtpof=true&sd=true)
+[![Sales Dataset](https://img.shields.io/badge/Google_Drive-Sales%20Dataset-4285F4?style=for-the-badge&logo=google-drive&logoColor=white)](https://docs.google.com/spreadsheets/d/1vj_DSY2BWLwazhNU_62xl0CT3z1_RM0B/edit?usp=drive_link&ouid=106071436383892307069&rtpof=true&sd=true)
 
 [Back to Table of Contents](#table-of-contents)
+
+[![Click Me](https://img.shields.io/badge/Click%20Me-blue?style=for-the-badge)](https://example.com)
 
 ---
 
@@ -91,7 +93,7 @@ Develop a Power BI dashboard to compare income, life insurance share, market sha
    - Ensure consistency in colors, fonts, and layouts for a cohesive visual experience.
 
 ### Dataset  
-[Click here to access the Insurance Company’s Dataset](https://drive.google.com/drive/folders/1aut4O2py6NOnN6pdEVUYpMiaB0_KMer7?usp=sharing)
+[![Insurance Dataset](https://img.shields.io/badge/Google_Drive-Insurance%20Dataset-4285F4?style=for-the-badge&logo=google-drive&logoColor=white)](https://drive.google.com/drive/folders/1aut4O2py6NOnN6pdEVUYpMiaB0_KMer7?usp=sharing)
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -125,7 +127,7 @@ The provided dataset encapsulates Google's stock price dynamics from its public 
 5. **Comparative Analysis:** Assess how Google's stock performance aligns with market indices like S&P 500 and NASDAQ-100.
 
 ### Dataset  
-[Click here to access the Google Stock Price Dataset](https://drive.google.com/file/d/1OCaBhJKOkjHGigUnPhUIwavfJMs3EV0L/view?usp=drive_link)
+[![Google Stock Price Dataset](https://img.shields.io/badge/Google_Drive-Google%20Stock%20Price-4285F4?style=for-the-badge&logo=google-drive&logoColor=white)](https://drive.google.com/file/d/1OCaBhJKOkjHGigUnPhUIwavfJMs3EV0L/view?usp=drive_link)
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -159,7 +161,7 @@ As a Data Analyst at Netflix, your task is to create a Power BI dashboard that h
 5. **Viewer Engagement Assessment:** Analyze IMDb votes and scores to evaluate viewer engagement and the perceived quality of content.
 
 ### Dataset  
-[Click here to access the Netflix Movies and Shows Dataset](https://drive.google.com/file/d/1e-JWeapMYl6nQxWLwam_1ktRHw8VqNxb/view?usp=sharing)
+[![Netflix Movies and Shows Dataset](https://img.shields.io/badge/Google_Drive-Netflix%20Movies%20and%20Shows-4285F4?style=for-the-badge&logo=google-drive&logoColor=white)](https://drive.google.com/file/d/1e-JWeapMYl6nQxWLwam_1ktRHw8VqNxb/view?usp=sharing)
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -191,7 +193,7 @@ Suppose you are a Cricket Data Analyst. This dataset provides a comprehensive co
 5. **Player of the Match Insights:** Create a list or visual highlighting players with the most "Player of the Match" awards. Explore the correlation between player performance and overall team success.
 
 ### Dataset  
-[Click here to access the ICC T20 World Cup Analysis Dataset](https://drive.google.com/drive/folders/1PjhjUlmq4t7xZtV5M58FUAdjrQSS8JhM?usp=drive_link)
+[![ICC T20 World Cup Analysis Dataset](https://img.shields.io/badge/Google_Drive-ICC%20T20%20World%20Cup-4285F4?style=for-the-badge&logo=google-drive&logoColor=white)](https://drive.google.com/drive/folders/1PjhjUlmq4t7xZtV5M58FUAdjrQSS8JhM?usp=drive_link)
 
 [Back to Table of Contents](#table-of-contents)
 
