@@ -3,15 +3,15 @@
 A collection of 5 mini projects showcasing different Power BI skills and dashboards.
 
 ## Table of Contents
-- [Project 1: Project Title](#project-1-project-title)
-- [Project 2: Project Title](#project-2-project-title)
-- [Project 3: Project Title](#project-3-project-title)
-- [Project 4: Project Title](#project-4-project-title)
-- [Project 5: Project Title](#project-5-project-title)
+- [Project 1: Sales Analytics Dashboard](#project-1-sales-analytics-dashboard)
+- [Project 2: Insurance Company’s Dashboard](#project-2-insurance-companys-dashboard)
+- [Project 3: Google Stock Price Analysis](#project-3-google-stock-price-analysis)
+- [Project 4: Netflix Movies and Shows](#project-4-netflix-movies-and-shows)
+- [Project 5: ICC T20 World Cup Analysis (2007-2021)](#project-5-icc-t20-world-cup-analysis-2007-2021)
 
 ---
 
-## Project 1: Project Title
+## Project 1: Sales Analytics Dashboard
 
 ### Objective
 Briefly describe the goal of this project.
@@ -33,7 +33,7 @@ Briefly describe the goal of this project.
 
 ---
 
-## Project 2: Project Title
+## Project 2: Insurance Company’s Dashboard
 
 ### Objective
 ...
@@ -51,7 +51,7 @@ Briefly describe the goal of this project.
 
 ---
 
-## Project 3: Project Title
+## Project 3: Google Stock Price Analysis
 
 ### Objective
 ...
@@ -69,7 +69,7 @@ Briefly describe the goal of this project.
 
 ---
 
-## Project 4: Project Title
+## Project 4: Netflix Movies and Shows
 
 ### Objective
 ...
@@ -87,7 +87,7 @@ Briefly describe the goal of this project.
 
 ---
 
-## Project 5: Project Title
+## Project 5: ICC T20 World Cup Analysis (2007-2021)
 
 ### Objective
 ...
