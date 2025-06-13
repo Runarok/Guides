@@ -200,3 +200,5 @@ Suppose you are a Cricket Data Analyst. This dataset provides a comprehensive co
 ---
 
 *End of Projects*
+
+[Community credited](https://community.fabric.microsoft.com/t5/Themes-Gallery/Solar-PV-Generation-amp-Performance-Index/td-p/4705919)
