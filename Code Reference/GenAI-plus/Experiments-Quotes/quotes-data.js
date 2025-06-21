@@ -174,4 +174,5 @@ const quotes = [
         author: "Runarok Hrafn",
         source: "Own",
         url: "https://github.com/Runarok"
+    }       
 ];
