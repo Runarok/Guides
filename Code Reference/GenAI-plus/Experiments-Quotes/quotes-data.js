@@ -169,10 +169,10 @@ const quotes = [
         url: "https://www.instagram.com/p/DBr2nQqR5ms/?igsh=MWE0eDE3YzI2N3hibQ=="
     },
     {
-            id: 25,
+        id: 25,
         quote: "We are what we show—but only to those who don’t look deeper. A moment, a habit, a side of us… it’s never the whole story. Sometimes, we’re just revealing a part of the truth.",
         author: "Runarok Hrafn",
         source: "Own",
         url: "https://github.com/Runarok"
-    }       
+    }
 ];
