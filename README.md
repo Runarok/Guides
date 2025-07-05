@@ -12,7 +12,8 @@ Runarok-Guides/
 │   └── Code Folly/       # Various programming projects and experiments
 ├── Code Manual/          # Documentation and guides related to coding practices
 ├── Code Quest/           # Collection of personal progress, courses, and internship resources
-└── Code Reference/       # Archived files from projects kept for personal reference and future updates
+├── Code Reference/       # Archived files from projects kept for personal reference and future updates
+└── Thought Box/          # Spontaneous ideas, notes, or solutions inspired by social media or online content
 </pre>
 
 ### Directory Breakdown
@@ -33,7 +34,10 @@ Runarok-Guides/
 
 - **[`Code Reference/`](./Code%20Reference)**  
   This folder contains archived files from various projects, stored for personal reference and potential future updates, even though the original repositories are archived. Files are kept for reuse or learning when revisiting old code or working on new projects.
-  
+
+- **[`Thought Box/`](./Thought%20Box)**
+  A casual, catch-all space for posting thoughts, small problems, or curiosities sparked by YouTube Shorts, Reels, Tweets, or any other online source. Whether it's an interesting code snippet, an algorithmic puzzle, or a random "can I build this?" moment, it all lives here.
+
 ---
 
 ## Contributions
@@ -42,7 +46,7 @@ While this repository is mostly personal, contributions are welcome if they alig
 
 ## License
 
-This project is licensed under the **MIT License**. See the `LICENSE` file for full details.
+This project is licensed under the **MIT License**. See the [`LICENSE`](LICENSE) file for full details.
 
 ---
 
