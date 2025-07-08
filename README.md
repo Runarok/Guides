@@ -4,19 +4,7 @@ Welcome to **Runarok-Guides**! This repository is a curated collection of guides
 
 ## Repository Structure
 
-<pre>
-Runarok-Guides/
-├── LICENSE               # License file for the repository, outlining terms of use
-├── Code Library/         # Contains various programming examples and libraries
-│   ├── Academic/         # Code examples related to academic projects
-│   └── Code Folly/       # Various programming projects and experiments
-├── Code Manual/          # Documentation and guides related to coding practices
-├── Code Quest/           # Collection of personal progress, courses, and internship resources
-├── Code Reference/       # Archived files from projects kept for personal reference and future updates
-└── Thought Box/          # Spontaneous ideas, notes, or solutions inspired by social media or online content
-    ├── Programmatic/     # Prompts that result in code-based exploration or implementation
-    └── Conceptual/       # Logic-based or thought-only prompts without code
-</pre>
+![Folder Structure](Assets/Folder%20Structure.svg)
 
 ### Directory Breakdown
 
