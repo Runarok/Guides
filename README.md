@@ -4,7 +4,7 @@ Welcome to **Runarok-Guides**! This repository is a curated collection of guides
 
 ## Repository Structure
 
-![Folder Structure](Assets/Folder%20Structure.svg)
+![Folder Structure](Assets/Folder%20Structure-Light.png)
 
 ### Directory Breakdown
 
