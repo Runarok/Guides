@@ -14,6 +14,8 @@ Runarok-Guides/
 ├── Code Quest/           # Collection of personal progress, courses, and internship resources
 ├── Code Reference/       # Archived files from projects kept for personal reference and future updates
 └── Thought Box/          # Spontaneous ideas, notes, or solutions inspired by social media or online content
+    ├── Programmatic/     # Prompts that result in code-based exploration or implementation
+    └── Conceptual/       # Logic-based or thought-only prompts without code
 </pre>
 
 ### Directory Breakdown
@@ -37,6 +39,8 @@ Runarok-Guides/
 
 - **[`Thought Box/`](./Thought%20Box)**
   A casual, catch-all space for posting thoughts, small problems, or curiosities sparked by YouTube Shorts, Reels, Tweets, or any other online source. Whether it's an interesting code snippet, an algorithmic puzzle, or a random "can I build this?" moment, it all lives here.
+  * **[`Programmatic/`](./Thought%20Box/Programmatic)**: Code-oriented thoughts or challenges — YouTube Shorts, Reels, or tweets that lead to working implementations.
+  * **[`Conceptual/`](./Thought%20Box/Conceptual)**: Pure logic, reasoning, or puzzles that require thought but no code — like the Cheryl’s Birthday problem or paradox questions.
 
 ---
 
