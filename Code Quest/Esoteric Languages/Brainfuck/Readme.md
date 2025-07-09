@@ -25,6 +25,20 @@ It works on an **array of memory cells**, each initially zero, with a **single d
 
 ---
 
+## 🐍 Python Version
+
+Run Brainf\*ck code directly in your terminal.
+
+🔗 [View `run_bf.py`](./run_bf.py)
+
+---
+
+## 🧠 JavaScript Version
+
+Use in any browser or embed into your own tools.
+
+🔗 [View `runBF.js`](./runBF.js)
+
 ### 🧪 Example: Hello World
 
 ```brainfuck
@@ -35,6 +49,10 @@ That monstrosity prints:
 **`Hello World!`**
 
 ---
+
+ <!-- 
+🔗 [Launch Live Interpreter](https://your-username.github.io/your-repo/) - Sooner 
+ --> 
 
 ### Why use it?
 
