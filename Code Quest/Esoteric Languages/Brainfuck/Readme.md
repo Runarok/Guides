@@ -135,3 +135,6 @@ That monstrosity prints:
 * It’s used in **code golf**, obfuscation contests, or to troll friends 😈
 * Forces deep understanding of memory manipulation
 
+> The site [Esolang Park Brainfuck IDE](https://esolangpark.vercel.app/ide/brainfuck) has visualization features and was the best for understanding Brainfuck code.
+> 
+> On the other hand, [TIO Brainfuck](https://tio.run/#brainfuck) doesn’t have visualization but can show output very fast.
