@@ -29,7 +29,7 @@ It works on an **array of memory cells**, each initially zero, with a **single d
 
 Run Brainf\*ck code directly in your terminal.
 
-🔗 [View `runBF.py`](./runBF.py)
+🔗 [View `runBF.py`](./Interpreters/runBF.py)
 
 ---
 
@@ -37,7 +37,7 @@ Run Brainf\*ck code directly in your terminal.
 
 Use in any browser or embed into your own tools.
 
-🔗 [View `runBF.js`](./runBF.js)
+🔗 [View `runBF.js`](./Interpreters/runBF.js)
 
 ### 🧪 Example: Hello World
 

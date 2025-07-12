@@ -47,7 +47,18 @@ def brainfuck(code, input_str=""):
 
     return output  # Return output string
 
-# Example Usage — Uncomment to Run
-# if __name__ == "__main__":
-#    hello_world = "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."
-#    print(brainfuck(hello_world))
+
+"""
+# Example Usage
+
+if __name__ == "__main__":
+    Code = "++++++++++[>+++++++>++++++++++>+++>+<<<<-]>++.>+.+++++++..+++.>++.<<+++++++++++++++.>.+++.------.--------.>+.>."
+    print(brainfuck(Code))
+
+# NOTE:
+# This block is commented out to prevent auto-execution when importing this file as a module.
+# Remove the triple quotes to run directly.
+# If you want to use the `brainfuck` function from another script, simply:
+#     from runBF import brainfuck
+"""
+
