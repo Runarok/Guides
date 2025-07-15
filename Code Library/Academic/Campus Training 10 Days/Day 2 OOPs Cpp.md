@@ -248,5 +248,575 @@ int main() {
 
 ---
 
+##  10. `for` Loop – Basics
+
+**Objective:** Repeat a block of code a fixed number of times.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        cout << "Iteration " << i << "\n";
+    }
+    return 0;
+}
+````
+
+> **Flow:**
+
+* Initialization (`int i = 1`)
+* Condition (`i <= 5`)
+* Increment (`i++`) after each iteration
+
+---
+
+##  11. Procedural Programming
+
+**Definition:**
+A programming paradigm based on the concept of **procedure calls** — a sequence of instructions that operate on data.
+
+### 🔹 Characteristics:
+
+* Code organized into **functions** (also called procedures)
+* Data and functions are separate
+* Focus is on **how** things are done (step-by-step logic)
+
+###  Example (Procedural style):
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int x = 5, y = 10;
+    int result = add(x, y);
+    cout << "Sum is " << result << endl;
+    return 0;
+}
+```
+
+---
+
+##  12. Object-Oriented Programming (OOP) – Introduction
+
+**Definition:**
+OOP is a programming paradigm centered around **objects** that combine **data** and **functions**.
+
+### 🔹 Key Focus:
+
+* **What the object is** and **what it does**, rather than step-by-step instructions.
+
+---
+
+##  13. Four Pillars of OOP - Indepth at end 
+
+> *Briefed out by the teacher. In-depth explanations (self-study) are provided at the end.*
+
+---
+
+### 🔹 **Summary Table**
+
+| **Pillar**        | **Keyword**   | **Purpose**              | **Key Tool in C++**                         |
+| ----------------- | ------------- | ------------------------ | ------------------------------------------- |
+| **Encapsulation** | *Protect*     | Hide internal state      | `private`, `public`                         |
+| **Abstraction**   | *Simplify*    | Show only what’s needed  | `abstract class`, `interface`, `virtual`    |
+| **Inheritance**   | *Reuse*       | Reuse and extend code    | `class A : public B`                        |
+| **Polymorphism**  | *Flexibility* | One name, many behaviors | `virtual`, `override`, function overloading |
+
+
+### 🔹 **Brief Meanings of Each Pillar**
+
+| **Pillar**        | **Meaning**                                                                  |
+| ----------------- | ---------------------------------------------------------------------------- |
+| **Encapsulation** | Wrapping data and functions into one unit (class). Hides internal state.     |
+| **Abstraction**   | Hiding complex details and exposing only the essentials to the user.         |
+| **Inheritance**   | One class (child) inherits properties and methods of another (parent).       |
+| **Polymorphism**  | Same function name behaves differently based on context (e.g., overloading). |
+
+---
+
+##  14. Advantages of OOP
+
+* 🔐 **Modularity**: Code is divided into classes/objects
+* 🔄 **Reusability**: Inheritance allows use of existing logic
+* 🛠️ **Maintainability**: Easy to update/modify specific parts
+* 🧠 **Scalability**: Better structure for growing projects
+* 🔍 **Debugging Ease**: Encapsulated units isolate bugs quickly
+
+---
+
+##  15. Class and Object – Basics
+
+**Class:** Blueprint or template that defines variables and functions
+**Object:** Instance of a class — actual entity used in code
+
+---
+
+###  Example: Class with Function
+
+```cpp
+#include <iostream>
+using namespace std;
+
+// Class definition
+class Student {
+public:
+    string name;
+    int age;
+
+    void display() {
+        cout << "Name: " << name << ", Age: " << age << endl;
+    }
+};
+
+int main() {
+    Student s1;  // Object creation
+    s1.name = "Runarok";
+    s1.age = 21;
+    s1.display();  // Calling class method
+    return 0;
+}
+```
+
+> 💡 Here, `Student` is the class. `s1` is an object with its own `name` and `age`.
+
+---
+
+# The 4 Pillars of OOP – Deep Dive
+
+Object-Oriented Programming is built around 4 core principles. Each of them changes how we **think**, **structure**, and **extend** code.
+
+---
+
+## 1️⃣ Encapsulation – *“Protect what shouldn’t be touched”*
+
+### 🔹 What it means:
+Encapsulation is the **binding of data and related methods into a single unit (class)**, and **restricting direct access** to some of the object’s components.
+
+It lets you hide the internal state of an object and only expose what is **safe and necessary** via public functions (getters/setters).
+
+### 🔐 Real-life analogy:
+Think of a **capsule** — it contains medicine inside but exposes only the outer shell to the world. You consume it, but don’t touch what’s inside directly.
+
+### 🧠 Why it matters:
+- Prevents unwanted interference with internal object state
+- Improves **modularity** and makes code easier to debug or change
+- Allows validation before modifying data
+
+### ✅ C++ Example:
+
+```cpp
+class BankAccount {
+private:
+    double balance;  // hidden from outside
+
+public:
+    void deposit(double amount) {
+        if (amount > 0)
+            balance += amount;
+    }
+
+    double getBalance() {
+        return balance;
+    }
+};
+````
+
+Here, `balance` is private — you **can’t access or change it directly**, only through controlled methods.
+
+---
+
+## 2️) Abstraction – *“Expose only the essentials”*
+
+### 🔹 What it means:
+
+Abstraction is about **hiding complex implementation** and **only showing relevant details** to the user. You don’t need to know *how* it works inside — just *what* it does.
+
+Think of abstraction as **intentional ignorance**: we expose what’s needed, we hide what’s not.
+
+### 🔧 Real-life analogy:
+
+You use a TV remote without knowing the circuit behind it. You press a button → it works. That’s abstraction.
+
+### 🧠 Why it matters:
+
+* Keeps code **clean, readable, and focused**
+* Separates *what it does* from *how it works*
+* Encourages **interface-based design** in larger systems
+
+### ✅ C++ Example using Abstract Class:
+
+```cpp
+class Animal {
+public:
+    virtual void makeSound() = 0;  // pure virtual = abstraction
+};
+
+class Dog : public Animal {
+public:
+    void makeSound() override {
+        cout << "Bark!" << endl;
+    }
+};
+```
+
+The user can use `makeSound()` without knowing how `Dog` implements it.
+
+---
+
+## 3️) Inheritance – *“Get everything your parent had, and more”*
+
+### 🔹 What it means:
+
+Inheritance allows a **new class (child)** to **acquire properties and behaviors** of an **existing class (parent)**. The child can also override or extend functionality.
+
+It builds a **hierarchy** — from general to specific.
+
+### 👨‍👦 Real-life analogy:
+
+A child inherits traits from parents — eye color, height, etc. But they can also have traits of their own.
+
+### 🧠 Why it matters:
+
+* Promotes **code reusability** and avoids duplication
+* Supports **hierarchical design**
+* Enables polymorphism (next pillar)
+
+### ✅ C++ Example:
+
+```cpp
+class Vehicle {
+public:
+    void move() {
+        cout << "Moving..." << endl;
+    }
+};
+
+class Car : public Vehicle {
+public:
+    void honk() {
+        cout << "Beep beep!" << endl;
+    }
+};
+```
+
+`Car` can use both `move()` (inherited) and `honk()` (its own).
+
+---
+
+## 4️) Polymorphism – *“Same name, different behavior”*
+
+### 🔹 What it means:
+
+Polymorphism means **many forms**. A function or object can behave differently based on the **context** (data type, class, etc).
+
+Two main types:
+
+* **Compile-time (Static)** – function overloading, operator overloading
+* **Runtime (Dynamic)** – method overriding via virtual functions
+
+### 🎭 Real-life analogy:
+
+One word — “run” — can mean different things:
+
+* Run a program
+* Run in a race
+* Run your mouth 😅
+
+### 🧠 Why it matters:
+
+* Enables **flexible and scalable** code
+* Allows different classes to be treated as the same base type
+* Supports design patterns like Strategy, Factory, etc.
+
+### ✅ C++ Example: Runtime Polymorphism
+
+```cpp
+class Shape {
+public:
+    virtual void draw() {
+        cout << "Drawing shape" << endl;
+    }
+};
+
+class Circle : public Shape {
+public:
+    void draw() override {
+        cout << "Drawing circle" << endl;
+    }
+};
+
+void render(Shape* s) {
+    s->draw();  // Polymorphic call
+}
+```
+
+Calling `render(new Circle())` will call `Circle`’s version of `draw()`.
+
+---
+
+# 📝 OOP Assignment – C++ Practice (Q&A Style)
+
+Each question builds on key OOP principles: **inheritance, encapsulation, and multiple inheritance.**
+
+---
+
+## 📌 Q1.  
+**Create a class `Person` with a method `showName()`. Create a derived class `Student` that adds a method `showRollNo()`.  
+Show how a `Student` object can access both methods.**
+
+### ✅ Answer:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Person {
+public:
+    void showName() {
+        cout << "Name: Runarok" << endl;
+    }
+};
+
+class Student : public Person {
+public:
+    void showRollNo() {
+        cout << "Roll No: 12345" << endl;
+    }
+};
+
+int main() {
+    Student s;
+    s.showName();    // Inherited from Person
+    s.showRollNo();  // Own method
+    return 0;
+}
+````
+
+---
+
+## 📌 Q2.
+
+**Create a class `Vehicle`, derived class `Car`, and another derived class `ElectricCar`.
+Show how an `ElectricCar` object can access methods from all three classes.**
+
+### ✅ Answer:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+public:
+    void move() {
+        cout << "Vehicle is moving" << endl;
+    }
+};
+
+class Car : public Vehicle {
+public:
+    void fuelType() {
+        cout << "Fuel: Petrol/Diesel" << endl;
+    }
+};
+
+class ElectricCar : public Car {
+public:
+    void charge() {
+        cout << "Charging Electric Car" << endl;
+    }
+};
+
+int main() {
+    ElectricCar ec;
+    ec.move();      // From Vehicle
+    ec.fuelType();  // From Car
+    ec.charge();    // From ElectricCar
+    return 0;
+}
+```
+
+---
+
+## 📌 Q3.
+
+**Create a class `Keyboard` and class `Screen`.
+Derive a class `Laptop` from both.
+Show how `Laptop` can use both base class methods.**
+
+### ✅ Answer:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Keyboard {
+public:
+    void type() {
+        cout << "Typing on keyboard" << endl;
+    }
+};
+
+class Screen {
+public:
+    void display() {
+        cout << "Displaying on screen" << endl;
+    }
+};
+
+class Laptop : public Keyboard, public Screen {
+public:
+    void specs() {
+        cout << "Laptop with 16GB RAM and SSD" << endl;
+    }
+};
+
+int main() {
+    Laptop l;
+    l.type();     // From Keyboard
+    l.display();  // From Screen
+    l.specs();    // Own method
+    return 0;
+}
+```
+
+---
+
+## 📌 Q4.
+
+**Create a class `Shape` with a method `draw()`. Derive two classes `Circle` and `Rectangle`.
+Show how both derived classes can use the base method.**
+
+### ✅ Answer:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Shape {
+public:
+    void draw() {
+        cout << "Drawing a shape" << endl;
+    }
+};
+
+class Circle : public Shape {
+public:
+    void circleSpecific() {
+        cout << "Drawing a circle" << endl;
+    }
+};
+
+class Rectangle : public Shape {
+public:
+    void rectangleSpecific() {
+        cout << "Drawing a rectangle" << endl;
+    }
+};
+
+int main() {
+    Circle c;
+    Rectangle r;
+
+    c.draw();              // From Shape
+    c.circleSpecific();    // Own
+
+    r.draw();              // From Shape
+    r.rectangleSpecific(); // Own
+
+    return 0;
+}
+```
+
+---
+
+## 📌 Q5.
+
+\*\*Write a C++ class called `BankAccount` that uses encapsulation.
+
+* Set and get the account number
+* Deposit and withdraw money (with balance validation)
+* Display current balance\*\*
+
+### ✅ Answer:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class BankAccount {
+private:
+    int accountNumber;
+    double balance;
+
+public:
+    BankAccount() {
+        balance = 0;
+    }
+
+    void setAccountNumber(int accNo) {
+        accountNumber = accNo;
+    }
+
+    int getAccountNumber() {
+        return accountNumber;
+    }
+
+    void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            cout << "Deposited: " << amount << endl;
+        } else {
+            cout << "Invalid deposit amount" << endl;
+        }
+    }
+
+    void withdraw(double amount) {
+        if (amount <= balance && amount > 0) {
+            balance -= amount;
+            cout << "Withdrawn: " << amount << endl;
+        } else {
+            cout << "Insufficient balance or invalid amount" << endl;
+        }
+    }
+
+    void showBalance() {
+        cout << "Current Balance: " << balance << endl;
+    }
+};
+
+int main() {
+    BankAccount b;
+    b.setAccountNumber(98765);
+    cout << "Account No: " << b.getAccountNumber() << endl;
+
+    b.deposit(5000);
+    b.withdraw(2000);
+    b.showBalance();
+
+    return 0;
+}
+```
+
+---
+
+## 🧠 Concepts Used in Each Question:
+
+| Question | Concept(s) Practiced                       |
+| -------- | ------------------------------------------ |
+| Q1       | Single Inheritance                         |
+| Q2       | Multilevel Inheritance                     |
+| Q3       | Multiple Inheritance                       |
+| Q4       | Base Class Reuse                           |
+| Q5       | Encapsulation, Validation, Setters/Getters |
+
+---
+
 > **Note to Self:**
 > Even if some of this wasn’t taught in class, I took initiative to deepen my understanding of function usage and system-level time manipulation. Staying one step ahead.
