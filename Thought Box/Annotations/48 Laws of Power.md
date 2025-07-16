@@ -33,14 +33,14 @@
 ### **5. So Much Depends on Reputation — Guard It With Your Life**
 
 * **Original**: Reputation is armor and weapon.
-* **Mine**: *(Not added yet — ready when I am.)*
+* **Mine**: Be so useful, so consistent, that your flaws get ignored. Stay human, but make your value undeniable — no one betrays what they still benefit from.
 
 ---
 
 ### **6. Court Attention at All Costs**
 
 * **Original**: Obscurity kills influence.
-* **Mine**: *(Not added yet — ready when I am.)*
+* **Mine**: Let them know you help, not how much you hold. Show warmth, not your core. Stay the person they respect even if they don’t fully understand.
 
 ---
 
