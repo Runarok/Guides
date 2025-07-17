@@ -18,7 +18,7 @@
 
 ---
 
-### [OOP Assignment – C++ OLD Practice](#oop-assignment)
+### [OOP Assignment – C++ OLD Practice](#oop-assignment-practice)
 1. [Inheritance: Accessing Base and Derived Class Methods](#q1)
 2. [Multilevel Inheritance with ElectricCar](#q2)
 3. [Multiple Inheritance: Laptop Example](#q3)
