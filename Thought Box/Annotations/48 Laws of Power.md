@@ -1,6 +1,9 @@
 ## ⚔️ *The 48 Laws of Power — Original & Takeaway*
 
+> 📘 For a full summary of all 48 laws, refer to [Graham Mann’s book notes](https://www.grahammann.net/book-notes/48-laws-of-power-robert-greene).
+
 ---
+
 
 ### **1. Never Outshine the Master**
 
