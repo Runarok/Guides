@@ -18,6 +18,13 @@
 
 ---
 
+### 🔹 Short Answer Questions - OLD
+1. [Inheritance: Accessing Base and Derived Class Methods](#q1)
+2. [Multilevel Inheritance with ElectricCar](#q2)
+3. [Multiple Inheritance: Laptop Example](#q3)
+4. [Hierarchical Inheritance: Shape, Circle, Rectangle](#q4)
+5. [Encapsulation with BankAccount Class](#q5)
+
 ### **1. Inheritance: Accessing Base and Derived Class Methods**
 
 **Question:**
@@ -556,6 +563,250 @@ int main() {
 
 ---
 
+# 📝 OOP Assignment – C++ Practice (Q&A Style)
+
+Each question builds on key OOP principles: **inheritance, encapsulation, and multiple inheritance.**
+
+---
+
+## Q1.  
+**Create a class `Person` with a method `showName()`. Create a derived class `Student` that adds a method `showRollNo()`.  
+Show how a `Student` object can access both methods.**
+
+### ✅ Answer:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Person {
+public:
+    void showName() {
+        cout << "Name: Runarok" << endl;
+    }
+};
+
+class Student : public Person {
+public:
+    void showRollNo() {
+        cout << "Roll No: 12345" << endl;
+    }
+};
+
+int main() {
+    Student s;
+    s.showName();    // Inherited from Person
+    s.showRollNo();  // Own method
+    return 0;
+}
+````
+
+---
+
+## Q2.
+
+**Create a class `Vehicle`, derived class `Car`, and another derived class `ElectricCar`.
+Show how an `ElectricCar` object can access methods from all three classes.**
+
+### ✅ Answer:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+public:
+    void move() {
+        cout << "Vehicle is moving" << endl;
+    }
+};
+
+class Car : public Vehicle {
+public:
+    void fuelType() {
+        cout << "Fuel: Petrol/Diesel" << endl;
+    }
+};
+
+class ElectricCar : public Car {
+public:
+    void charge() {
+        cout << "Charging Electric Car" << endl;
+    }
+};
+
+int main() {
+    ElectricCar ec;
+    ec.move();      // From Vehicle
+    ec.fuelType();  // From Car
+    ec.charge();    // From ElectricCar
+    return 0;
+}
+```
+
+---
+
+## Q3.
+
+**Create a class `Keyboard` and class `Screen`.
+Derive a class `Laptop` from both.
+Show how `Laptop` can use both base class methods.**
+
+### ✅ Answer:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Keyboard {
+public:
+    void type() {
+        cout << "Typing on keyboard" << endl;
+    }
+};
+
+class Screen {
+public:
+    void display() {
+        cout << "Displaying on screen" << endl;
+    }
+};
+
+class Laptop : public Keyboard, public Screen {
+public:
+    void specs() {
+        cout << "Laptop with 16GB RAM and SSD" << endl;
+    }
+};
+
+int main() {
+    Laptop l;
+    l.type();     // From Keyboard
+    l.display();  // From Screen
+    l.specs();    // Own method
+    return 0;
+}
+```
+
+---
+
+## Q4.
+
+**Create a class `Shape` with a method `draw()`. Derive two classes `Circle` and `Rectangle`.
+Show how both derived classes can use the base method.**
+
+### ✅ Answer:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class Shape {
+public:
+    void draw() {
+        cout << "Drawing a shape" << endl;
+    }
+};
+
+class Circle : public Shape {
+public:
+    void circleSpecific() {
+        cout << "Drawing a circle" << endl;
+    }
+};
+
+class Rectangle : public Shape {
+public:
+    void rectangleSpecific() {
+        cout << "Drawing a rectangle" << endl;
+    }
+};
+
+int main() {
+    Circle c;
+    Rectangle r;
+
+    c.draw();              // From Shape
+    c.circleSpecific();    // Own
+
+    r.draw();              // From Shape
+    r.rectangleSpecific(); // Own
+
+    return 0;
+}
+```
+
+---
+
+## Q5.
+
+\*\*Write a C++ class called `BankAccount` that uses encapsulation.
+
+* Set and get the account number
+* Deposit and withdraw money (with balance validation)
+* Display current balance\*\*
+
+### ✅ Answer:
+
+```cpp
+#include <iostream>
+using namespace std;
+
+class BankAccount {
+private:
+    int accountNumber;
+    double balance;
+
+public:
+    BankAccount() {
+        balance = 0;
+    }
+
+    void setAccountNumber(int accNo) {
+        accountNumber = accNo;
+    }
+
+    int getAccountNumber() {
+        return accountNumber;
+    }
+
+    void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            cout << "Deposited: " << amount << endl;
+        } else {
+            cout << "Invalid deposit amount" << endl;
+        }
+    }
+
+    void withdraw(double amount) {
+        if (amount <= balance && amount > 0) {
+            balance -= amount;
+            cout << "Withdrawn: " << amount << endl;
+        } else {
+            cout << "Insufficient balance or invalid amount" << endl;
+        }
+    }
+
+    void showBalance() {
+        cout << "Current Balance: " << balance << endl;
+    }
+};
+
+int main() {
+    BankAccount b;
+    b.setAccountNumber(98765);
+    cout << "Account No: " << b.getAccountNumber() << endl;
+
+    b.deposit(5000);
+    b.withdraw(2000);
+    b.showBalance();
+
+    return 0;
+}
+```
+
+---
 
 
 
