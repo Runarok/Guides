@@ -18,7 +18,7 @@
 
 ---
 
-### [OOP Assignment – C++ Practice](#oop-assignment--c-practice)
+### [OOP Assignment – C++ OLD Practice](#oop-assignment)
 1. [Inheritance: Accessing Base and Derived Class Methods](#q1)
 2. [Multilevel Inheritance with ElectricCar](#q2)
 3. [Multiple Inheritance: Laptop Example](#q3)
@@ -572,7 +572,7 @@ int main() {
 
 ---
 
-# OOP Assignment – C++ Practice
+# OOP Assignment Practice
 
 Each question builds on key OOP principles: **inheritance, encapsulation, and multiple inheritance.**
 
