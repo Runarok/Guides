@@ -3,6 +3,7 @@
 ## 📌 Introduction
 This document summarizes **Day 1** of the C++ internship technical training, conducted on **14th July 2025**.
 
+> Day 1 of campus training was fully based on the [GeeksforGeeks C++ Cheatsheet](https://www.geeksforgeeks.org/cpp/cpp-cheatsheet/). 
 ---
 
 ## ✅ Header Files
