@@ -32,6 +32,7 @@ int main() {
     return 0;
 }
 ```
+View code in a file: [Inheritance1.cpp](assets/Q&A/Inheritance1.cpp)
 
 ---
 
@@ -75,6 +76,7 @@ int main() {
     return 0;
 }
 ```
+View code in a file: [MultilevelInheritance.cpp](assets/Q&A/MultilevelInheritance.cpp)
 
 ---
 
@@ -113,6 +115,7 @@ int main() {
     return 0;
 }
 ```
+View code in a file: [MultipleInheritance.cpp](assets/Q&A/MultipleInheritance.cpp)
 
 ---
 
@@ -148,6 +151,7 @@ int main() {
     return 0;
 }
 ```
+View code in a file: [HierarchicalInheritance.cpp](assets/Q&A/HierarchicalInheritance.cpp)
 
 ---
 
@@ -197,6 +201,7 @@ int main() {
     return 0;
 }
 ```
+View code in a file: [VirtualFunctions.cpp](assets/Q&A/VirtualFunctions.cpp)
 
 ---
 
@@ -232,6 +237,7 @@ int main() {
     return 0;
 }
 ```
+View code in a file: [FunctionOverloading.cpp](assets/Q&A/FunctionOverloading.cpp)
 
 ---
 
@@ -289,5 +295,5 @@ int main() {
     return 0;
 }
 ```
-
+View code in a file: [AbstractClass.cpp](assets/Q&A/AbstractClass.cpp)
 
