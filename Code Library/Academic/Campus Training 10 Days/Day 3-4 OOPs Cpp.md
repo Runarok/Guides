@@ -1,4 +1,4 @@
-# 📘 Campus Training – Day 2
+# 📘 Campus Training – Day 3-4
 
 This session covered basic C++ programming concepts such as I/O, conditional statements, `switch-case`, and loops (`for`, `while`, `do...while`).  
 Additionally, I **self-taught** and explored:
