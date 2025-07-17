@@ -1,6 +1,6 @@
 ## 📑 Table of Contents
 
-### 🔷 Q&A Section (OOP Concepts)
+### [Q&A Section (OOP Concepts)](#oops-concepts)
 1. [Inheritance: Accessing Base and Derived Class Methods](#1-inheritance-accessing-base-and-derived-class-methods)
 2. [Multilevel Inheritance](#2-multilevel-inheritance)
 3. [Multiple Inheritance](#3-multiple-inheritance)
@@ -11,20 +11,25 @@
 
 ---
 
-### 🧩 OOP Projects Section
+### [OOP Projects Section](#c-oop-projects)
 1. [Warm-Up: Student Report Card Generator](#1a-warm-up-student-report-card-generator)
 2. [Smart Payment System](#2-smart-payment-system)
 3. [Vehicle Rental System Simulator](#3-vehicle-rental-system-simulator)
 
 ---
 
-### 🔹 Short Answer Questions - OLD
+### [OOP Assignment – C++ Practice](#oop-assignment--c-practice)
 1. [Inheritance: Accessing Base and Derived Class Methods](#q1)
 2. [Multilevel Inheritance with ElectricCar](#q2)
 3. [Multiple Inheritance: Laptop Example](#q3)
 4. [Hierarchical Inheritance: Shape, Circle, Rectangle](#q4)
 5. [Encapsulation with BankAccount Class](#q5)
 
+---
+
+---
+
+# OOPs Concepts
 ### **1. Inheritance: Accessing Base and Derived Class Methods**
 
 **Question:**
@@ -324,6 +329,8 @@ View code in a file: [AbstractClass.cpp](assets/Q&A/AbstractClass.cpp)
 
 ---
 
+---
+
 # C++ OOP Projects
 
 This document contains 3 structured projects built using **Object-Oriented Programming** principles.
@@ -563,7 +570,9 @@ int main() {
 
 ---
 
-# 📝 OOP Assignment – C++ Practice (Q&A Style)
+---
+
+# OOP Assignment – C++ Practice
 
 Each question builds on key OOP principles: **inheritance, encapsulation, and multiple inheritance.**
 
