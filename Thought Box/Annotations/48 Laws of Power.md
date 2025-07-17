@@ -112,49 +112,49 @@
 ### **16. Use Absence to Increase Respect and Honor**
 
 * **Original**: Presence breeds familiarity; absence creates power.
-* **Takeaway**: *(Not added yet — ready when I am.)*
+* **Takeaway**: Be present for those who respect your time. For those who play with it — pull back. Silence isn't punishment, it's clarity. Being too available for the wrong ones only inflates their ego. Be loyal in need, not in noise.
 
 ---
 
 ### **17. Keep Others in Suspended Terror: Cultivate Unpredictability**
 
 * **Original**: Predictability invites attack.
-* **Takeaway**: *(Not added yet — ready when I am.)*
+* **Takeaway**: Predictability is a pattern — patterns get played. Be deep enough to have multiple codes, but sharp enough to follow just one at a time. Keep them guessing, not because you’re chaotic, but because you’re layered.
 
 ---
 
 ### **18. Do Not Build Fortresses to Protect Yourself — Isolation is Dangerous**
 
 * **Original**: Power requires presence and networks.
-* **Takeaway**: *(Not added yet — ready when I am.)*
+* **Takeaway**: Protect your space, not your insight. Let people in just enough to learn. Info — good or bad — sharpens you. Isolation from noise is peace. Isolation from truth is weakness.
 
 ---
 
 ### **19. Know Who You’re Dealing With — Do Not Offend the Wrong Person**
 
 * **Original**: Some people won't stop until you're ruined.
-* **Takeaway**: *(Not added yet — ready when I am.)*
+* **Takeaway**: Some people can't be messed with — not because they're strong, but because they’re reckless. Learn their type early. If they feel like chaos, stay away. Not every risk is worth testing — even unintentionally.
 
 ---
 
 ### **20. Do Not Commit to Anyone**
 
 * **Original**: Stay above the fray; loyalty limits maneuvering.
-* **Takeaway**: *(Not added yet — ready when I am.)*
+* **Takeaway**:  When conflict arises, no outsider knows who’s clean. Loyalty makes you a target of borrowed hate. Move with those who match your path, but stay unowned. Sovereignty over sentiment.
 
 ---
 
 ### **21. Play a Sucker to Catch a Sucker — Seem Dumber Than Your Mark**
 
 * **Original**: Feigned weakness invites overconfidence.
-* **Takeaway**: *(Not added yet — ready when I am.)*
+* **Takeaway**: Underplay your sharpness. Let them think they’re ahead. Ego makes people sloppy — and when they overreach, they reveal more than you ever asked for. Feigned weakness is controlled bait.
 
 ---
 
 ### **22. Use the Surrender Tactic: Transform Weakness Into Power**
 
 * **Original**: Yielding strategically preserves strength.
-* **Takeaway**: *(Not added yet — ready when I am.)*
+* **Takeaway**: Expose your flaw before it’s used against you — then it loses its edge. Surrender isn’t defeat; it’s redirection. What looks like giving in can become quiet control, if you choose when and how.
 
 ---
 
