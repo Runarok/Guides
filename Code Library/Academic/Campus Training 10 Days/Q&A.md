@@ -27,6 +27,8 @@
 
 ---
 
+### [Python Lab Questions & Solutions](#-python-lab-questions--solutions)
+
 ---
 
 # OOPs Concepts
