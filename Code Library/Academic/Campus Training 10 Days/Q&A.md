@@ -816,7 +816,163 @@ int main() {
 ```
 
 ---
+---
 
+# 🐍 Python Lab Questions & Solutions
+
+## 1. Find the Maximum Element in a List
+```python
+lst = [10, 20, 30, 5]
+print(max(lst))
+````
+
+---
+
+## 2. Print First 3 Elements of a List and Reverse the List
+
+```python
+lst = [1, 2, 3, 4, 5]
+print(lst[:3])    # First 3 elements
+print(lst[::-1])  # Reversed list
+```
+
+---
+
+## 3. Remove Duplicates from a List
+
+```python
+lst = [1, 2, 2, 3, 4, 4]
+lst = list(set(lst))
+print(lst)
+```
+
+---
+
+## 4. List Comprehension to Square Numbers
+
+```python
+lst = [1, 2, 3, 4]
+squares = [x * x for x in lst]
+print(squares)
+```
+
+---
+
+## 5. Use Tuple as a Dictionary Key
+
+```python
+d = {(1, 2): "tuple as key"}
+print(d)
+```
+
+---
+
+## 6. Pack and Unpack a Tuple
+
+```python
+tup = (1, 2, 3)
+a, b, c = tup
+print(a, b, c)
+```
+
+---
+
+## 7. Count Frequency of Words in a String
+
+```python
+s = "apple orange apple banana"
+d = {}
+for word in s.split():
+    d[word] = d.get(word, 0) + 1
+print(d)
+```
+
+---
+
+## 8. Invert a Dictionary
+
+```python
+d = {'a': 1, 'b': 2}
+inv = {v: k for k, v in d.items()}
+print(inv)
+```
+
+---
+
+## 9. Print Keys and Values from a Dictionary
+
+```python
+student_scores = {"Alex": 90, "Raj": 85}
+for name, score in student_scores.items():
+    print(name, score)
+```
+
+---
+
+## 10. Store Student Records as Tuples in a List and Use Dictionary for Lookup
+
+```python
+records = [("Alex", 20), ("Raj", 21)]
+lookup = {name: age for (name, age) in records}
+print(lookup["Alex"])  # Lookup example
+```
+
+# === Python List, Tuple, and Dictionary Operations ===
+
+```python
+# 1. Find the Maximum Element in a List
+lst = [10, 20, 30, 5]
+print(max(lst))
+
+# 2. Print First 3 Elements of a List and Reverse the List
+lst = [1, 2, 3, 4, 5]
+print(lst[:3])    # First 3 elements
+print(lst[::-1])  # Reversed list
+
+# 3. Remove Duplicates from a List
+lst = [1, 2, 2, 3, 4, 4]
+lst = list(set(lst))
+print(lst)
+
+# 4. List Comprehension to Square Numbers
+lst = [1, 2, 3, 4]
+squares = [x * x for x in lst]
+print(squares)
+
+# 5. Use Tuple as a Dictionary Key
+d = {(1, 2): "tuple as key"}
+print(d)
+
+# 6. Pack and Unpack a Tuple
+tup = (1, 2, 3)
+a, b, c = tup
+print(a, b, c)
+
+# 7. Count Frequency of Words in a String
+s = "apple orange apple banana"
+d = {}
+for word in s.split():
+    d[word] = d.get(word, 0) + 1
+print(d)
+
+# 8. Invert a Dictionary
+d = {'a': 1, 'b': 2}
+inv = {v: k for k, v in d.items()}
+print(inv)
+
+# 9. Print Keys and Values from a Dictionary
+student_scores = {"Alex": 90, "Raj": 85}
+for name, score in student_scores.items():
+    print(name, score)
+
+# 10. Store Student Records as Tuples in a List and Use Dictionary for Lookup
+records = [("Alex", 20), ("Raj", 21)]
+lookup = {name: age for (name, age) in records}
+print(lookup["Alex"])  # Lookup example
+```
+
+---
+---
 
 
 
