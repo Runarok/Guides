@@ -29,7 +29,7 @@ This isn't about polish — it's about momentum. Raw ideas, quick solutions, or 
 
 ## 🔗 Related Links
 
-- Back to main guides: **[`../README.md`](../README.md)**
+- Back to main guides: **[`Main README.md`](../README.md)**
 - All sections structured in the larger repo: **[`Runarok-Guides`](../)**
 
 ---
