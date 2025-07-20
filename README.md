@@ -16,9 +16,7 @@ Runarok-Guides/
 ├── Code Quest/           # Collection of personal progress, courses, and internship resources
 ├── Code Reference/       # Archived files from projects kept for personal reference and future updates
 └── Thought Box/          # Spontaneous ideas, notes, or solutions inspired by social media or online content
-    ├── Programmatic/     # Prompts that result in code-based exploration or implementation
-    ├── Conceptual/       # Logic-based or thought-only prompts without code
-    └── Annotations/      # Personalized thoughts and interpretations from books and reading material
+    └── README.md         # Consolidated breakdown of all Thought Box content
 </pre>
 
 ### Directory Breakdown
@@ -42,11 +40,9 @@ Runarok-Guides/
   This folder contains archived files from various projects, stored for personal reference and potential future updates, even though the original repositories are archived. Files are kept for reuse or learning when revisiting old code or working on new projects.
 
 * **[`Thought Box/`](./Thought%20Box)**
-  A casual, catch-all space for posting thoughts, small problems, or curiosities sparked by YouTube Shorts, Reels, Tweets, or any other online source. Whether it's an interesting code snippet, an algorithmic puzzle, or a random "can I build this?" moment, it all lives here.
+  A casual, catch-all space for posting thoughts, small problems, or curiosities sparked by YouTube Shorts, Reels, Tweets, or any other online source. Whether it's an interesting code snippet, an algorithmic puzzle, or a random "can I build this?" moment, it all lives here.  
+  - See: **[`Thought Box/README.md`](./Thought%20Box/README.md)** for detailed breakdown and sections.
 
-  * **[`Programmatic/`](./Thought%20Box/Programmatic)**: Code-oriented thoughts or challenges — YouTube Shorts, Reels, or tweets that lead to working implementations.
-  * **[`Conceptual/`](./Thought%20Box/Conceptual)**: Pure logic, reasoning, or puzzles that require thought but no code — like the Cheryl’s Birthday problem or paradox questions.
-  * **[`Annotations/`](./Thought%20Box/Annotations)**: Record personal takeaways, insights, or reinterpretations from books — like reflections on The 48 Laws of Power or deeper dives into key concepts.
 
 ---
 
