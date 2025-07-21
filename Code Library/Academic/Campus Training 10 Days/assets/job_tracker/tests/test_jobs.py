@@ -1,3 +1,8 @@
+"""
+test_jobs.py
+Basic tests for job tracker components.
+"""
+
 import sys
 sys.path.append("../")
 
@@ -9,6 +14,9 @@ from job_tracker.job_tree import JobTree
 from job_tracker.job_manager import JobManager
 
 def test_job_store():
+    """
+    Tests JobStore functions.
+    """
     store = JobStore()
     job1 = Job("1", "SWE", "Google", 100, 90)
     job2 = Job("2", "DevOps", "AWS", 110, 85)
@@ -20,6 +28,9 @@ def test_job_store():
     assert store.get_job("1") is None
 
 def test_application_queue():
+    """
+    Tests ApplicationQueue functions.
+    """
     queue = ApplicationQueue()
     queue.enqueue("1")
     queue.enqueue("2")
@@ -29,6 +40,9 @@ def test_application_queue():
     assert queue.dequeue() is None
 
 def test_undo_stack():
+    """
+    Tests UndoStack functions.
+    """
     stack = UndoStack()
     stack.push("1")
     stack.push("2")
@@ -38,6 +52,9 @@ def test_undo_stack():
     assert stack.pop() is None
 
 def test_job_tree():
+    """
+    Tests JobTree sorting by score.
+    """
     tree = JobTree()
     job1 = Job("1", "SWE", "Google", 100, 90)
     job2 = Job("2", "DevOps", "AWS", 110, 85)
@@ -49,6 +66,9 @@ def test_job_tree():
     assert [job.score for job in sorted_jobs] == [85, 90, 95]
 
 def test_job_manager():
+    """
+    Tests JobManager workflow.
+    """
     manager = JobManager()
     job1 = Job("1", "SWE", "Google", 100, 90)
     job2 = Job("2", "DevOps", "AWS", 110, 85)

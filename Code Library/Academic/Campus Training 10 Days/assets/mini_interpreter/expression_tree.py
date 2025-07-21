@@ -1,12 +1,22 @@
-# expression_tree.py - Expression tree classes and traversals
+# expression_tree.py
+# Defines the TreeNode for the binary expression tree and traversal methods.
 
 class TreeNode:
+    """
+    Node class for the binary expression tree.
+    Each node holds a value and optional left/right children.
+    """
     def __init__(self, value):
         self.value = value
         self.left = None
         self.right = None
 
 def inorder(node):
+    """
+    Returns the inorder (infix) traversal of the expression tree.
+    Used to verify the structure and correctness.
+    Parentheses are added for clarity.
+    """
     if node is None:
         return ""
     left = inorder(node.left)
@@ -16,15 +26,32 @@ def inorder(node):
     return f"{node.value}"
 
 def preorder(node):
+    """
+    Returns the preorder (prefix) traversal of the expression tree.
+    """
     if node is None:
         return ""
     left = preorder(node.left)
     right = preorder(node.right)
-    return f"{node.value} {left}{right}".strip()
+    result = node.value
+    if left:
+        result += " " + left
+    if right:
+        result += " " + right
+    return result
 
 def postorder(node):
+    """
+    Returns the postorder (postfix) traversal of the expression tree.
+    """
     if node is None:
         return ""
     left = postorder(node.left)
     right = postorder(node.right)
-    return f"{left}{right}{node.value} ".strip()
+    result = ""
+    if left:
+        result += left + " "
+    if right:
+        result += right + " "
+    result += node.value
+    return result.strip()
