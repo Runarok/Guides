@@ -33,7 +33,8 @@ Provided in [`SelectionSort.py`](./SelectionSort.py):
 ```python
 def selection_sort(arr):
     """
-    Selection Sort: Selects the smallest (or largest) element from the unsorted list and swaps it with the element at the beginning.
+    Selection Sort: Selects the smallest (or largest) element from the unsorted list
+    and swaps it with the element at the beginning.
     Time Complexity: O(n^2)
     Stable: No
     """
