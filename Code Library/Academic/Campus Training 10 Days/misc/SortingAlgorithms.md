@@ -1,6 +1,6 @@
 # Types of Sorting Algorithms
 
-Sorting algorithms are vital in computer science for organizing data. They can be classified based on their approach, stability, complexity, and the types of data they handle. Below is a comprehensive overview, with links to example implementations in the [`Examples`](./Examples) folder.
+Sorting algorithms are vital in computer science for organizing data. They can be classified based on their approach, stability, complexity, and the types of data they handle. Below is a comprehensive overview, with links to example implementations in the [`./Examples`](./Examples) folder.
 
 ---
 
@@ -8,28 +8,28 @@ Sorting algorithms are vital in computer science for organizing data. They can b
 
 These algorithms sort by comparing elements to one another.
 
-- [**Bubble Sort**](Examples/BubbleSort.md)  
+- [**Bubble Sort**](./Examples/BubbleSort.py)  
   Repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. Simple but inefficient for large lists.
 
-- [**Selection Sort**](Examples/SelectionSort.md)  
+- [**Selection Sort**](./Examples/SelectionSort.py)  
   Finds the minimum (or maximum) element from the unsorted section and moves it to the sorted section. Minimizes swaps, but still O(n²) time.
 
-- [**Insertion Sort**](Examples/InsertionSort.md)  
+- [**Insertion Sort**](./Examples/InsertionSort.py)  
   Builds the sorted array one item at a time by inserting each element into its correct position. Efficient for small or nearly sorted data.
 
-- [**Merge Sort**](Examples/MergeSort.md)  
+- [**Merge Sort**](./Examples/MergeSort.py)  
   Uses divide-and-conquer: splits the array into halves, sorts each recursively, and merges the results. Stable and efficient for large data sets.
 
-- [**Quick Sort**](Examples/QuickSort.md)  
+- [**Quick Sort**](./Examples/QuickSort.py)  
   Divide-and-conquer approach by selecting a 'pivot' and partitioning the array. Very fast in practice, but not stable.
 
-- [**Heap Sort**](Examples/HeapSort.md)  
+- [**Heap Sort**](./Examples/HeapSort.py)  
   Converts the array to a heap structure, and repeatedly extracts the max/min. Good for large data sets, but not stable.
 
-- [**Shell Sort**](Examples/ShellSort.md)  
+- [**Shell Sort**](./Examples/ShellSort.py)  
   Generalization of insertion sort that allows exchange of items far apart. Performance depends on gap sequence used.
 
-- [**Tim Sort**](Examples/TimSort.md)  
+- [**Tim Sort**](./Examples/TimSort.py)  
   Hybrid of merge and insertion sorts; stable and efficient. Used in Python and Java standard libraries.
 
 ---
@@ -38,13 +38,13 @@ These algorithms sort by comparing elements to one another.
 
 These do not rely on comparisons, often achieving better than O(n log n) time for specific data types.
 
-- [**Counting Sort**](Examples/CountingSort.md)  
+- [**Counting Sort**](./Examples/CountingSort.py)  
   Counts occurrences of each unique element. Only works for small integer ranges, but is very fast and stable.
 
-- [**Radix Sort**](Examples/RadixSort.md)  
+- [**Radix Sort**](./Examples/RadixSort.py)  
   Processes digits of numbers from least significant to most. Useful for integers and strings.
 
-- [**Bucket Sort**](Examples/BucketSort.md)  
+- [**Bucket Sort**](./Examples/BucketSort.py)  
   Distributes elements into buckets, sorts buckets individually (often with insertion sort), and concatenates the results.
 
 ---
@@ -53,33 +53,33 @@ These do not rely on comparisons, often achieving better than O(n log n) time fo
 
 These algorithms are tailored for specific key distributions.
 
-- [**Pigeonhole Sort**](Examples/PigeonholeSort.md)  
+- [**Pigeonhole Sort**](./Examples/PigeonholeSort.py)  
   Similar to counting sort, but uses a pigeonhole structure to place elements directly. Efficient when the range of keys is not significantly greater than the number of elements.
 
 ---
 
 ## 4. Other Specialized Algorithms
 
-- [**Comb Sort**](Examples/CombSort.md)  
+- [**Comb Sort**](./Examples/CombSort.py)  
   Improves on bubble sort by eliminating turtles (small values near the end), using a gap sequence.
 
-- [**Cocktail Shaker Sort**](Examples/CocktailShakerSort.md)  
+- [**Cocktail Shaker Sort**](./Examples/CocktailShakerSort.py)  
   Bidirectional bubble sort; passes through the list in both directions.
 
-- [**Gnome Sort**](Examples/GnomeSort.md)  
+- [**Gnome Sort**](./Examples/GnomeSort.py)  
   Similar to insertion sort but swaps elements until they are in order.
 
-- [**Cycle Sort**](Examples/CycleSort.md)  
+- [**Cycle Sort**](./Examples/CycleSort.py)  
   Minimizes the number of writes; ideal when memory writes are expensive.
 
 ---
 
 ## 5. Parallel and External Sorting
 
-- [**External Sort**](Examples/ExternalSort.md)  
+- [**External Sort**](./Examples/ExternalSort.py)  
   Designed for massive data sets that do not fit into memory. Often uses variations of merge sort.
 
-- [**Parallel Sort**](Examples/ParallelSort.md)  
+- [**Parallel Sort**](./Examples/ParallelSort.py)  
   Utilizes multiple processors or cores to perform sorting simultaneously for large-scale or real-time applications.
 
 ---
@@ -87,10 +87,10 @@ These algorithms are tailored for specific key distributions.
 ## 6. Stable vs. Unstable Sorting Algorithms
 
 - **Stable Sorting Algorithms**: Maintain relative order of equal elements.  
-  Examples: Merge Sort, Bubble Sort, Insertion Sort, Tim Sort, Counting Sort, Radix Sort, Bucket Sort.
+  ./Examples: Merge Sort, Bubble Sort, Insertion Sort, Tim Sort, Counting Sort, Radix Sort, Bucket Sort.
 
 - **Unstable Sorting Algorithms**: Do not guarantee relative order.  
-  Examples: Quick Sort, Heap Sort, Selection Sort, Shell Sort, Cycle Sort, Comb Sort.
+  ./Examples: Quick Sort, Heap Sort, Selection Sort, Shell Sort, Cycle Sort, Comb Sort.
 
 ---
 
@@ -131,4 +131,4 @@ These algorithms are tailored for specific key distributions.
 
 ---
 
-*For example code, see the linked files in the `Examples` folder. To add more algorithms, create a new file and add its link above.*
+*For example code, see the linked files in the `./Examples` folder. To add more algorithms, create a new file and add its link above.*
