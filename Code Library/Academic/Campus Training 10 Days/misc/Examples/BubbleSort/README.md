@@ -1,6 +1,6 @@
 # 🔁 Bubble Sort in Python
 
-This repository provides a Python implementation of the **Bubble Sort** algorithm. Bubble Sort is a simple, stable, and intuitive comparison-based sorting algorithm. While not efficient for large datasets, it is often used for educational purposes to demonstrate how sorting algorithms work internally.
+This File provides a Python implementation of the **Bubble Sort** algorithm. Bubble Sort is a simple, stable, and intuitive comparison-based sorting algorithm. While not efficient for large datasets, it is often used for educational purposes to demonstrate how sorting algorithms work internally.
 
 ---
 
@@ -20,8 +20,11 @@ With each pass through the list, the largest remaining unsorted element "bubbles
 
 ## 🔧 How It Works (Step-by-Step)
 
-- Let's walk through **all the passes** of **Bubble Sort** for the list:
-     - `arr = [64, 34, 25, 12, 22, 11, 90]`
+Let's walk through **all the passes** of **Bubble Sort** for the list:
+
+```python
+arr = [64, 34, 25, 12, 22, 11, 90]
+````
 
 ---
 
@@ -48,7 +51,7 @@ Compare and swap adjacent elements:
 * 34 > 11 → swap → `[25, 12, 22, 11, 34, 64, 90]`
 * 34 < 64 → no swap
 
-✅ `64` is now in its final position.
+✅ Next largest element `64` is in its final position.
 
 ---
 
@@ -59,7 +62,7 @@ Compare and swap adjacent elements:
 * 25 > 11 → swap → `[12, 22, 11, 25, 34, 64, 90]`
 * 25 < 34 → no swap
 
-✅ `34` is now in its final position.
+✅ Next largest element `34` is in its final position.
 
 ---
 
@@ -69,7 +72,7 @@ Compare and swap adjacent elements:
 * 22 > 11 → swap → `[12, 11, 22, 25, 34, 64, 90]`
 * 22 < 25 → no swap
 
-✅ `25` is now in its final position.
+✅ Next largest element `25` is in its final position.
 
 ---
 
@@ -78,7 +81,7 @@ Compare and swap adjacent elements:
 * 12 > 11 → swap → `[11, 12, 22, 25, 34, 64, 90]`
 * 12 < 22 → no swap
 
-✅ `22` is now in its final position.
+✅ Next largest element `22` is in its final position.
 
 ---
 
@@ -90,9 +93,11 @@ Compare and swap adjacent elements:
 
 ---
 
-### Final Sorted Array:
+### ✅ Final Sorted Array:
 
-`arr = [11, 12, 22, 25, 34, 64, 90]`
+```python
+arr = [11, 12, 22, 25, 34, 64, 90]
+```
 
 ---
 
@@ -126,9 +131,13 @@ def bubble_sort(arr):
     """
     n = len(arr)
     for i in range(n):
+        swapped = False  # Optimization: exit early if no swaps in a pass
         for j in range(0, n - i - 1):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+        if not swapped:
+            break  # No swaps → already sorted
 
 # Example usage:
 # data = [64, 34, 25, 12, 22, 11, 90]
