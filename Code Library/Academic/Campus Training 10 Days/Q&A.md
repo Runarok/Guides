@@ -25,10 +25,27 @@
 4. [Hierarchical Inheritance: Shape, Circle, Rectangle](#q4)
 5. [Encapsulation with BankAccount Class](#q5)
 
----
+
+--- 
 
 ### [Python Lab Questions & Solutions](#-python-lab-questions--solutions)
 
+---
+
+##  [📘 Interview Questions on Sorting – With Stack Overflow References](#interview-questions-on-sorting--with-stack-overflow-references)
+
+1. [Google | 2022 – Memory-Efficient Sorting for Large List](#q1-google--2022--round-2-technical)
+2. [Amazon | 2023 – Quick Sort with Partition Steps](#q2-amazon--2023--online-assessment-round)
+3. [Microsoft | 2021 – Insertion Sort on Employee Records](#q3-microsoft--2021--technical-phone-screen)
+4. [TCS Digital | 2023 – Bubble Sort with Swap Count](#q4-tcs-digital--2023--coding-round)
+5. [Infosys | 2022 – Selection Sort with Min Index Print](#q5-infosys--2022--system-engineer-role)
+6. [Capgemini | 2021 – Merge Sort with Recursive Call Count](#q6-capgemini--2021--tech-round)
+7. [Zoho | 2020 – Quick Sort Descending + Median](#q7-zoho--2020--onsite-coding-round)
+8. [Accenture | 2023 – Counting Sort with Mode](#q8-accenture--2023--final-round)
+9. [IBM | 2022 – Radix Sort with Digit-wise Output](#q9-ibm--2022--coding-round)
+10. [Wipro | 2023 – Alphabetical Selection Sort on Words](#q10-wipro--2023--campus-placement-round-1)
+
+---
 ---
 
 # OOPs Concepts
@@ -976,5 +993,107 @@ print(lookup["Alex"])  # Lookup example
 ---
 ---
 
+### 📘 **Interview Questions on Sorting – With Stack Overflow References**
+
+---
+
+#### **Q1. Google | 2022 | Round 2 (Technical)**
+
+**Problem:**
+Given a large list of 1 million integers, some repeated, design and implement a sorting function that is memory-efficient and fast.
+
+> 🔗 [Stack Overflow Reference](https://stackoverflow.com/questions/12748246/sorting-1-million-8-decimal-digit-numbers-with-1-mb-of-ram)
+
+---
+
+#### **Q2. Amazon | 2023 | Online Assessment Round**
+
+**Problem:**
+You are given a list of product prices. Implement **Quick Sort** to sort them in ascending order.
+Also, print the list after **each partition** step.
+
+> 🔗 [Stack Overflow Reference](https://stackoverflow.com/questions/18262306/quicksort-with-python)
+
+---
+
+#### **Q3. Microsoft | 2021 | Technical Phone Screen**
+
+**Problem:**
+Sort a list of employee records (name and ID) by **name** using **Insertion Sort**.
+If names are equal, use **ID as a tie-breaker**.
+
+> 🔗 [Stack Overflow Reference](https://stackoverflow.com/questions/29288367/how-to-count-number-of-swaps-in-a-bubble-sort)
+
+---
+
+#### **Q4. TCS Digital | 2023 | Coding Round**
+
+**Problem:**
+Write a program to sort **N integers using Bubble Sort** and count the **number of swaps** done.
+Print the sorted list and total swap count.
+
+> 🔗 [Stack Overflow Reference](https://stackoverflow.com/questions/29288367/how-to-count-number-of-swaps-in-a-bubble-sort)
+
+---
+
+#### **Q5. Infosys | 2022 | System Engineer Role**
+
+**Problem:**
+Write a function that sorts an array using **Selection Sort**.
+Print the **index of the minimum value** found in each iteration.
+
+> 🔗 [Stack Overflow Reference](https://stackoverflow.com/questions/69057837/sorting-an-array-using-selection-sort)
+
+---
+
+#### **Q6. Capgemini | 2021 | Tech Round**
+
+**Problem:**
+Implement **Merge Sort** to sort a list of floating-point numbers.
+Also return how many total **recursive calls** were made.
+
+> 🔗 [Stack Overflow Reference](https://stackoverflow.com/questions/46775181/mergesort-maximum-number-of-recursive-calls)
+
+---
+
+#### **Q7. Zoho | 2020 | Onsite Coding Round**
+
+**Problem:**
+Given a list of student marks, **sort them in descending order** using **Quick Sort**.
+Also, **calculate the median** of the sorted list.
+
+> 🔗 [Stack Overflow Reference](https://stackoverflow.com/questions/708698/how-can-i-sort-a-list-alphabetically)
+
+---
+
+#### **Q8. Accenture | 2023 | Final Round**
+
+**Problem:**
+Using **Counting Sort**, sort a list of 0–99 scores and find the **most frequently occurring score**.
+Return the **sorted list and the mode**.
+
+> 🔗 [Stack Overflow Reference](https://stackoverflow.com/questions/6987285/find-the-item-with-maximum-occurrences-in-a-list)
+
+---
+
+#### **Q9. IBM | 2022 | Coding Round**
+
+**Problem:**
+Implement **Radix Sort** on a list of **6-digit zip codes**.
+Print the list after sorting by **each digit place**.
+
+> 🔗 [Stack Overflow Reference](https://stackoverflow.com/questions/67750089/radix-sort-using-array-of-linked-list-as-bin-in-c)
+
+---
+
+#### **Q10. Wipro | 2023 | Campus Placement (Round 1)**
+
+**Problem:**
+You’re given a string of lowercase words. **Sort them alphabetically** using **Selection Sort**.
+Do **not** use Python's built-in `sort()` or `sorted()` functions.
+
+> 🔗 [Stack Overflow Reference](https://stackoverflow.com/questions/28136374/python-sort-strings-alphabetically-lowercase-first)
+
+---
 
 
