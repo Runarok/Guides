@@ -20,27 +20,79 @@ With each pass through the list, the largest remaining unsorted element "bubbles
 
 ## 🔧 How It Works (Step-by-Step)
 
-Let’s take a look at how Bubble Sort works on the list:
+- Let's walk through **all the passes** of **Bubble Sort** for the list:
+     - `arr = [64, 34, 25, 12, 22, 11, 90]`
 
-```python
-arr = [64, 34, 25, 12, 22, 11, 90]
-````
+---
 
-### Pass 1:
+### 🔁 Pass 1:
 
-* Compare 64 and 34 → swap → `[34, 64, 25, 12, 22, 11, 90]`
-* Compare 64 and 25 → swap → `[34, 25, 64, 12, 22, 11, 90]`
-* Compare 64 and 12 → swap → `[34, 25, 12, 64, 22, 11, 90]`
-* Compare 64 and 22 → swap → `[34, 25, 12, 22, 64, 11, 90]`
-* Compare 64 and 11 → swap → `[34, 25, 12, 22, 11, 64, 90]`
-* Compare 64 and 90 → no swap
+Compare and swap adjacent elements:
 
-After Pass 1, 90 is in its correct position.
+* 64 > 34 → swap → `[34, 64, 25, 12, 22, 11, 90]`
+* 64 > 25 → swap → `[34, 25, 64, 12, 22, 11, 90]`
+* 64 > 12 → swap → `[34, 25, 12, 64, 22, 11, 90]`
+* 64 > 22 → swap → `[34, 25, 12, 22, 64, 11, 90]`
+* 64 > 11 → swap → `[34, 25, 12, 22, 11, 64, 90]`
+* 64 < 90 → no swap
 
-### Pass 2:
+✅ Largest element `90` is in its final position.
 
-* Similar comparisons continue, reducing the range each time.
-* Eventually, the array becomes sorted after n-1 passes.
+---
+
+### 🔁 Pass 2:
+
+* 34 > 25 → swap → `[25, 34, 12, 22, 11, 64, 90]`
+* 34 > 12 → swap → `[25, 12, 34, 22, 11, 64, 90]`
+* 34 > 22 → swap → `[25, 12, 22, 34, 11, 64, 90]`
+* 34 > 11 → swap → `[25, 12, 22, 11, 34, 64, 90]`
+* 34 < 64 → no swap
+
+✅ `64` is now in its final position.
+
+---
+
+### 🔁 Pass 3:
+
+* 25 > 12 → swap → `[12, 25, 22, 11, 34, 64, 90]`
+* 25 > 22 → swap → `[12, 22, 25, 11, 34, 64, 90]`
+* 25 > 11 → swap → `[12, 22, 11, 25, 34, 64, 90]`
+* 25 < 34 → no swap
+
+✅ `34` is now in its final position.
+
+---
+
+### 🔁 Pass 4:
+
+* 12 < 22 → no swap
+* 22 > 11 → swap → `[12, 11, 22, 25, 34, 64, 90]`
+* 22 < 25 → no swap
+
+✅ `25` is now in its final position.
+
+---
+
+### 🔁 Pass 5:
+
+* 12 > 11 → swap → `[11, 12, 22, 25, 34, 64, 90]`
+* 12 < 22 → no swap
+
+✅ `22` is now in its final position.
+
+---
+
+### 🔁 Pass 6:
+
+* 11 < 12 → no swap
+
+✅ The array is now **completely sorted**.
+
+---
+
+### Final Sorted Array:
+
+`arr = [11, 12, 22, 25, 34, 64, 90]`
 
 ---
 
