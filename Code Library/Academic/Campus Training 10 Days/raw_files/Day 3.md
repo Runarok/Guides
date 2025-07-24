@@ -1,646 +1,472 @@
-## Day 2-3 Python OOPs
+# Day 2-3: Python OOPs & Data Structures
+
+🔗 **[Resource Links](https://github.com/Runarok/Guides/blob/main/Code%20Library/Academic/Campus%20Training%2010%20Days/Crash_Campus_Training_Resources.md)**
+
+---
+
+## 1. **What is OOP?**
+
+OOP (**Object-Oriented Programming**) is a paradigm that organizes code using **classes** and **objects**.  
+Python is an OOP language, enabling you to build reusable and organized code.
+
+---
+
+## 2. **Built-in Data Types**
+
+| Type Category   | Python Types                        |
+| --------------- | ----------------------------------- |
+| Text Type       | `str`                               |
+| Numeric Types   | `int`, `float`, `complex`           |
+| Sequence Types  | `list`, `tuple`, `range`            |
+| Mapping Type    | `dict`                              |
+| Set Types       | `set`, `frozenset`                  |
+| Boolean Type    | `bool`                              |
+| Binary Types    | `bytes`, `bytearray`, `memoryview`  |
+| None Type       | `NoneType`                          |
+
+**Example: Creating a Class & Object**
+```python
+class MyClass:
+    x = 5
+
+p1 = MyClass()
+print(p1.x)
+```
 
-Click of [Resource Links](https://github.com/Runarok/Guides/blob/main/Code%20Library/Academic/Campus%20Training%2010%20Days/Crash_Campus_Training_Resources.md)
+---
 
-1. ## **What is OOP?**
+## 3. **The `__init__()` Function**
 
-**OOP** stands for **Object-Oriented Programming**.
+`__init__()` is the constructor method, called automatically when a class is instantiated.
 
-Python is an object-oriented language, allowing you to structure your code using classes and objects for better organization and reusability.
+**Example:**
+```python
+class Student:
+    def __init__(self, name, age, grade):
+        self.name = name
+        self.age = age
+        self.grade = grade
 
-Virtual Environment
+    def display_details(self):
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Grade:", self.grade)
 
-2. ## **Built-in Data Types**
+s1 = Student("Ravi", 18, "A")
+s1.display_details()
+```
 
-In programming, data type is an important concept.
+**Rectangle Area Example:**
+```python
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
 
-Variables can store data of different types, and different types can do different things.
+    def area(self):
+        return self.length * self.width
 
-Python has the following data types built-in by default, in these categories:
+rect1 = Rectangle(10, 5)
+rect2 = Rectangle(8, 7)
 
-| Text Type: | `str` |
-| :---- | :---- |
-| Numeric Types: | `int`, `float`, `complex` |
-| Sequence Types: | `list`, `tuple`, `range` |
-| Mapping Type: | `dict` |
-| Set Types: | `set`, `frozenset` |
-| Boolean Type: | `bool` |
-| Binary Types: | `bytes`, `bytearray`, `memoryview` |
-| None Type: | `NoneType` |
+area1 = rect1.area()
+area2 = rect2.area()
 
-Create Class  
-class MyClass:  
-  x \= 5
+print("Area of Rectangle 1:", area1)
+print("Area of Rectangle 2:", area2)
 
-Create Object
+if area1 > area2:
+    print("Rectangle 1 has a larger area.")
+elif area2 > area1:
+    print("Rectangle 2 has a larger area.")
+else:
+    print("Both rectangles have the same area.")
+```
 
-p1 \= MyClass()  
-print(p1.x) 
+**Bank Account Example:**
+```python
+class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
 
-3. ## **The \_\_init\_\_() Function**
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposited ₹{amount}")
 
-The examples above are classes and objects in their simplest form, and are not really useful in real life applications.
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Insufficient balance.")
+        else:
+            self.balance -= amount
+            print(f"Withdrew ₹{amount}")
 
-To understand the meaning of classes we have to understand the built-in `__init__()` function.
+    def show_balance(self):
+        print(f"{self.owner}'s current balance: ₹{self.balance}")
 
-All classes have a function called `__init__()`, which is always executed when the class is being initiated.
+acc = BankAccount("Aditi", 1000)
+acc.deposit(500)
+acc.withdraw(300)
+acc.show_balance()
+```
 
-### 
+---
 
-### **Program**
+## 4. **The `__str__()` Function**
 
-### 1\. Write a program to create a class Student with attributes name, age, and grade. Create an object and display its details.
+Defines the string representation of an object.
 
-Solution:
+```python
+class Car:
+    def __init__(self, brand, model, year):
+        self.brand = brand
+        self.model = model
+        self.year = year
 
-| class Student:    def \_\_init\_\_(self, name, age, grade):        self.name \= name        self.age \= age        self.grade \= grade    def display\_details(self):        print("Name:", self.name)        print("Age:", self.age)        print("Grade:", self.grade)\# Create objects1 \= Student("Ravi", 18, "A")s1.display\_details() |
-| :---- |
+    def __str__(self):
+        return f"{self.brand} {self.model} ({self.year})"
 
-### 2\. Write a class Rectangle with attributes length and width. Create two objects and print which has a larger area.
+my_car = Car("Toyota", "Corolla", 2020)
+print(my_car)
+```
 
-Solution:
+---
 
-| class Rectangle:    def \_\_init\_\_(self, length, width):        self.length \= length        self.width \= width    def area(self):        return self.length \* self.width\# Create two rectangle objectsrect1 \= Rectangle(10, 5)rect2 \= Rectangle(8, 7)\# Compare areasarea1 \= rect1.area()area2 \= rect2.area()print("Area of Rectangle 1:", area1)print("Area of Rectangle 2:", area2)if area1 \> area2:    print("Rectangle 1 has a larger area.")elif area2 \> area1:    print("Rectangle 2 has a larger area.")else:    print("Both rectangles have the same area.") |
-| :---- |
+## 5. **Object Methods**
 
-### 3\. Write a class BankAccount with methods to deposit and withdraw money, and show balance.
+Objects can have methods (functions inside class).
 
-Solution: 
+```python
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
-| class BankAccount:    def \_\_init\_\_(self, owner, balance=0):        self.owner \= owner        self.balance \= balance    def deposit(self, amount):        self.balance \+= amount        print(f"Deposited ₹{amount}")    def withdraw(self, amount):        if amount \> self.balance:            print("Insufficient balance.")        else:            self.balance \-= amount            print(f"Withdrew ₹{amount}")    def show\_balance(self):        print(f"{self.owner}'s current balance: ₹{self.balance}")\# Create account and perform operationsacc \= BankAccount("Aditi", 1000)acc.deposit(500)acc.withdraw(300)acc.show\_balance() |
-| :---- |
+    def myfunc(self):
+        print("Hello my name is " + self.name)
 
-4. ## **The \_\_str\_\_() Function**
+p1 = Person("John", 36)
+p1.myfunc()
+```
 
-The `__str__()` function controls what should be returned when the class object is represented as a string.
+**Question**:  
+Write a class `Circle` with attribute `radius` and method `area()`. Create an object and call `area()`.
 
-If the `__str__()` function is not set, the string representation of the object is returned:
+---
 
-Program 1:  
-Create a class `Car` with the attributes: `brand`, `model`, and `year`.  
-Write a method `__str__()` that returns a user-friendly string like:  
-**"Toyota Corolla (2020)"**  
-Then, create an object of the class and print it.
+## 6. **The `self` Parameter**
 
-Solution:
+`self` refers to the current instance of the class (can be named anything, but convention is `self`).
 
-| class Car:    def \_\_init\_\_(self, brand, model, year):        self.brand \= brand        self.model \= model        self.year \= year    def \_\_str\_\_(self):        return f"{self.brand} {self.model} ({self.year})"\# Create an objectmy\_car \= Car("Toyota", "Corolla", 2020)\# Print the objectprint(my\_car) |
-| :---- |
+```python
+class Person:
+    def __init__(mysillyobject, name, age):
+        mysillyobject.name = name
+        mysillyobject.age = age
 
-5. ## **Object Methods**
+    def myfunc(abc):
+        print("Hello my name is " + abc.name)
 
-Objects can also contain methods. Methods in objects are functions that belong to the object.
+p1 = Person("John", 36)
+p1.myfunc()
+```
 
-Let us create a method in the Person class:
+---
 
-| class Person:  def \_\_init\_\_(self, name, age):	 self.name \= name	self.age \= age  def myfunc(self):	 print("Hello my name is " \+ self.name)p1 \= Person("John", 36)p1.myfunc()  |
-| :---- |
+## 7. **Modify, Delete Properties & Objects**
 
-**Question:**  
-**Write a Python program to define a class `Circle` with an attribute `radius`. Include a method `area()` that calculates and prints the area of the circle. Create an object and call the method using it.**
+- Modify: `p1.age = 40`
+- Delete property: `del p1.age`
+- Delete object: `del p1`
+- Empty class:  
+  ```python
+  class Person:
+      pass
+  ```
 
-6. ## **The self Parameter**
+---
 
-The `self` parameter is a reference to the current instance of the class, and is used to access variables that belong to the class.
+## 8. **Inheritance**
 
-It does not have to be named `self`, you can call it whatever you like, but it has to be the first parameter of any function in the class:
+**Parent Class:**
+```python
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
 
-7. ## **Use the words *mysillyobject* and *abc* instead of *self*:**
+    def printname(self):
+        print(self.firstname, self.lastname)
 
-| class Person:  def \_\_init\_\_(mysillyobject, name, age):	 mysillyobject.name \= name	mysillyobject.age \= age  def myfunc(abc):	 print("Hello my name is " \+ abc.name)p1 \= Person("John", 36)p1.myfunc() |
-| :---- |
-
-**Question: Write a Python program with a class `Person` having attributes `name` and `age`. Use the `self` parameter to initialize and print the values.**
-
-8. ## **Modify Object Properties**
-
-You can modify properties on objects like this:
-
-p1.age \= 40
-
-9. ## **Delete Object Properties**
-
-You can delete properties on objects by using the `del` keyword:
-
-del p1.age 
-
-10. ## **Delete Objects**
-
-You can delete objects by using the `del` keyword:
-
-del p1 
-
-11. ## **The pass Statement**
-
-`class` definitions cannot be empty, but if you for some reason have a `class` definition with no content, put in the `pass` statement to avoid getting an error.
-
-class Person:  
-  pass
-
-12. ## **Python Inheritance**
-
-Inheritance allows us to define a class that inherits all the methods and properties from another class.
-
-**Parent class** is the class being inherited from, also called base class.
-
-**Child class** is the class that inherits from another class, also called derived class.
-
-Create a Parent Class
-
-Any class can be a parent class, so the syntax is the same as creating any other class:
-
-[Get your own Python Server](https://www.w3schools.com/python/python_server.asp)
-
-Create a class named `Person`, with `firstname` and `lastname` properties, and a `printname` method:
-
-| class Person:  def \_\_init\_\_(self, fname, lname):	 self.firstname \= fname	self.lastname \= lname  def printname(self):	print(self.firstname, self.lastname)\#Use the Person class to create an object, and then execute the printname method:x \= Person("John", "Doe")x.printname()  |
-| :---- |
-
-13. ## **Create a Child Class**
-
-To create a class that inherits the functionality from another class, send the parent class as a parameter when creating the child class:
-
-Create a class named `Student`, which will inherit the properties and methods from the `Person` class:
-
-| class Student(Person):  pass |
-| :---- |
-
-**Child Parent class Example**
-
-[https://www.w3schools.com/](https://www.w3schools.com/)
-
-| class Person:    def \_\_init\_\_(self)        self.a \= "This is Person"    print("Inside class Person")class Student(Person):    def show\_inherited\_value(self,obj):        print("Inside Student class")        print("Accessing inherited value from obj",obj.a)p1 \= Person()s1 \= Student()s1.show\_inherited\_value(p1) |
-| :---- |
-
-14. ## **Use the super() Function**
-
-Python also has a `super()` function that will make the child class inherit all the methods and properties from its parent:
-
-| class Student(Person):  def \_\_init\_\_(self, fname, lname):	 super().\_\_init\_\_(fname, lname)  |
-| :---- |
-
-15. ## **Add Properties**
-
-dd a property called `graduationyear` to the `Student` class:
-
-| class Student(Person):  def \_\_init\_\_(self, fname, lname):	 super().\_\_init\_\_(fname, lname)	self.graduationyear \= 2019 |
-| :---- |
-
-16. ## **Add Methods**
-
-Add a method called `welcome` to the `Student` class:
-
-| class Student(Person):  def \_\_init\_\_(self, fname, lname, year):	 super().\_\_init\_\_(fname, lname)	self.graduationyear \= year  def welcome(self):	print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear) |
-| :---- |
-
-17. # **Python Polymorphism**
-
-The word "polymorphism" means "many forms", and in programming it refers to methods/functions/operators with the same name that can be executed on many objects or classes.
-
-## **Function Polymorphism**
-
-An example of a Python function that can be used on different objects is the `len()` function.
-
-String
-
-For strings `len()` returns the number of characters:
-
-| x \= "Hello World\!"print(len(x))  |
-| :---- |
-
-## 
-
-## **Class Polymorphism**
-
-Polymorphism is often used in Class methods, where we can have multiple classes with the same method name.
-
-For example, say we have three classes: `Car`, `Boat`, and `Plane`, and they all have a method called `move()`:
-
-## Different classes with the same method:
-
-| class Car:  def \_\_init\_\_(self, brand, model):    self.brand \= brand    self.model \= model  def move(self):	print("Drive\!")class Boat:  def \_\_init\_\_(self, brand, model):    self.brand \= brand    self.model \= model  def move(self):    print("Sail\!")class Plane:  def \_\_init\_\_(self, brand, model):    self.brand \= brand    self.model \= model  def move(self):    print("Fly\!")car1 \= Car("Ford", "Mustang")       \#Create a Car objectboat1 \= Boat("Ibiza", "Touring 20") \#Create a Boat objectplane1 \= Plane("Boeing", "747")     \#Create a Plane objectfor x in (car1, boat1, plane1):  x.move() |
-| :---- |
-
-## 
-
-18. # **Python Data Structures**
-
-**Data Structures** are a way of organizing data so that it can be accessed more efficiently depending upon the situation. Data Structures are fundamentals of any programming language around which a program is built. Python helps to learn the fundamental of these data structures in a simpler way as compared to other programming languages.
-
-1. ## **Lists**
-
-[Python Lists](https://www.geeksforgeeks.org/python-list/) are just like the arrays, declared in other languages which is an ordered collection of data. It is very flexible as the items in a list do not need to be of the same type.
-
-**List items are ordered, changeable, and allow duplicate values.**
-
-The implementation of Python List is similar to Vectors in C++ or ArrayList in JAVA. The costly operation is inserting or deleting the element from the beginning of the List as all the elements are needed to be shifted. Insertion and deletion at the end of the list can also become costly in the case where the preallocated memory becomes full.
-
-We can create a list in python as shown below.
-
-| List \= \[1, 2,  3, "GFG", 2.3\]print(List) |
-| :---- |
-
-![][image1]
-
-2. # **Tuple**
-
-Tuples are used to store multiple items in a single variable.
-
-Tuple is one of 4 built-in data types in Python used to store collections of data, the other 3 are [List](https://www.w3schools.com/python/python_lists.asp), [Set](https://www.w3schools.com/python/python_sets.asp), and [Dictionary](https://www.w3schools.com/python/python_dictionaries.asp), all with different qualities and usage.
-
-**Tuple items are ordered, un-changeable, and allow duplicate values.**
-
-Tuples are written with round brackets.
-
-| mytuple \= ("apple", "banana", "cherry") |
-| :---- |
-
-**Length of tuple**
-
-| print(len(myttuple)) |
-| :---- |
-
-**Tuple with one item**
-
-| thistuple \= ("apple",)print(type(thistuple)) |
-| :---- |
-
-**Tuple items can be of any data type:**
-
-| tuple1 \= ("apple", "banana", "cherry")tuple2 \= (1, 5, 7, 9, 3)tuple3 \= (True, False, False) |
-| :---- |
-
-## **The tuple() Constructor**
-
-It is also possible to use the tuple() constructor to make a tuple.
-
-| thistuple \= tuple(("apple", "banana", "cherry")) \# note the double round-bracketsprint(thistuple) |
-| :---- |
-
-## **Range of Indexes**
-
-You can specify a range of indexes by specifying where to start and where to end the range.
-
-| thistuple \= ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")print(thistuple\[2:5\]) |
-| :---- |
-
-## **Check if Item Exists**
-
-To determine if a specified item is present in a tuple use the `in` keyword:
-
-| tuple1 \= ("apple", "banana", "cherry")if "apple" in tuple1:  print("Yes, 'apple' is in the fruits tuple")  |
-| :---- |
-
-## **Change Tuple Values**
-
-Once a tuple is created, you cannot change its values. Tuples are **unchangeable**, or **immutable** as it also is called.
-
-But there is a workaround. You can convert the tuple into a list, change the list, and convert the list back into a tuple.
-
-| x \= ("apple", "banana", "cherry")y \= list(x)y\[1\] \= "kiwi"x \= tuple(y)print(x)  |
-| :---- |
-
-## **Add Items**
-
-Since tuples are immutable, they do not have a built-in `append()` method, but there are other ways to add items to a tuple.
-
-1\. **Convert into a list**: Just like the workaround for *changing* a tuple, you can convert it into a list, add your item(s), and convert it back into a tuple.
-
-| x \= ("apple", "banana", "cherry")y \= list(x)y.append("orange")x \= tuple(y) print(x)  |
-| :---- |
-
-## **Remove Items**
-
-Tuples are **unchangeable**, so you cannot remove items from it, but you can use the same workaround as we used for changing and adding tuple items:
-
-| thistuple \= ("apple", "banana", "cherry")y \= list(thistuple)y.remove("apple")thistuple \= tuple(y) |
-| :---- |
-
-## **Unpacking a Tuple**
-
-When we create a tuple, we normally assign values to it. This is called "packing" a tuple:
-
-Packing a tuple:
-
-| fruits \= ("apple", "banana", "cherry") |
-| :---- |
-
-Unpacking a tuple:
-
-| fruits \= ("apple", "banana", "cherry")(green, yellow, red) \= fruitsprint(green)print(yellow)print(red) |
-| :---- |
-
-## **Using Asterisk`*`**
-
-If the number of variables is less than the number of values, you can add an `*` to the variable name and the values will be assigned to the variable as a list:
-
-| fruits \= ("apple", "banana", "cherry", "strawberry", "raspberry")(green, yellow, \*red) \= fruitsprint(green)print(yellow)print(red) |
-| :---- |
-
-## **Loop Through a Tuple**
-
-You can loop through the tuple items by using a `for` loop.
-
-| tuple1 \= ("apple", "banana", "cherry")for x in tuple1:  print(x)  |
-| :---- |
-
-## **Loop Through the Index Numbers**
-
-You can also loop through the tuple items by referring to their index number.
-
-Use the `range()` and `len()` functions to create a suitable iterable.
-
-Print all items by referring to their index number:
-
-| thistuple \= ("apple", "banana", "cherry")for i in range(len(thistuple)):  print(thistuple\[i\]) |
-| :---- |
-
-## **Join Two Tuples**
-
-To join two or more tuples you can use the `+` operator:
-
-Join two tuples:
-
-| tuple1 \= ("a", "b" , "c")tuple2 \= (1, 2, 3)tuple3 \= tuple1 \+ tuple2print(tuple3) |
-| :---- |
-
-## **Multiply Tuples**
-
-If you want to multiply the content of a tuple a given number of times, you can use the `*` operator:
-
-| fruits \= ("apple", "banana", "cherry")mytuple \= fruits \* 2print(mytuple)  |
-| :---- |
-
-## **Tuple Methods**
-
-Python has two built-in methods that you can use on tuples.
-
-| Method | Description |
-| ----- | ----- |
-| [count()](https://www.w3schools.com/python/ref_tuple_count.asp) | Returns the number of times a specified value occurs in a tuple |
-| [index()](https://www.w3schools.com/python/ref_tuple_index.asp) | Searches the tuple for a specified value and returns the position of where it was found |
-
-3. # **Dictionary**
-
-Dictionaries are used to store data values in key:value pairs.
-
-A dictionary is a collection which is ordered\*, changeable and do not allow duplicates.
-
-As of Python version 3.7, dictionaries are *ordered*. In Python 3.6 and earlier, dictionaries are *unordered*.
-
-Dictionaries are written with curly brackets, and have keys and values:
-
-Create and print a dictionary:
-
-| thisdict \=	{  "brand": "Ford",  "model": "Mustang",  "year": 1964}print(thisdict) |
-| :---- |
-
-## **Dictionary Items**
-
-Dictionary items are ordered, changeable, and do not allow duplicates.
-
-Dictionary items are presented in key:value pairs, and can be referred to by using the key name.
-
-Print the "brand" value of the dictionary:
-
-| thisdict \=	{  "brand": "Ford",  "model": "Mustang",  "year": 1964}print(thisdict\["brand"\]) |
-| :---- |
-
-## **Duplicates Not Allowed**
-
-Dictionaries cannot have two items with the same key:
-
-Duplicate values will overwrite existing values:
-
-| thisdict \=	{  "brand": "Ford",  "model": "Mustang",  "year": 1964,  "year": 2020}print(thisdict) |
-| :---- |
-
-## **Accessing Items**
-
-You can access the items of a dictionary by referring to its key name, inside square brackets:
-
-Get the value of the "model" key:
-
-| thisdict \=	{  "brand": "Ford",  "model": "Mustang",  "year": 1964}x \= thisdict\["model"\] |
-| :---- |
-
-There is also a method called `get()` that will give you the same result:
-
-Get the value of the "model" key:
-
-| x \= dict1.get("model") → key print(x) → Ford |
-| :---- |
-
-## **Get Keys**
-
-The `keys()` method will return a list of all the keys in the dictionary.
-
-Get a list of the keys:
-
-| x \= thisdict.keys() |
-| :---- |
-
-The list of the keys is a *view* of the dictionary, meaning that any changes done to the dictionary will be reflected in the keys list.
-
-Add a new item to the original dictionary, and see that the keys list gets updated as well:
-
-| car \= {"brand": "Ford","model": "Mustang","year": 1964}x \= car.keys()print(x) \#before the changecar\["color"\] \= "white"print(x) \#after the change |
-| :---- |
-
-## **Get Values**
-
-The `values()` method will return a list of all the values in the dictionary.
-
-Get a list of the values:
-
-| x \= thisdict.values() |
-| :---- |
-
-The list of the values is a *view* of the dictionary, meaning that any changes done to the dictionary will be reflected in the values list.
-
-| car \= {"brand": "Ford","model": "Mustang","year": 1964}x \= car.values()print(x) \#before the changecar\["year"\] \= 2020print(x) \#after the change  |
-| :---- |
-
-## **Get Items**
-
-The `items()` method will return each item in a dictionary, as tuples in a list.
-
-Get a list of the key:value pairs
-
-| x \= thisdict.items() |
-| :---- |
-
-## **Check if Key Exists**
-
-To determine if a specified key is present in a dictionary use the `in` keyword:
-
-Check if "model" is present in the dictionary:
-
-| thisdict \=	{  "brand": "Ford",  "model": "Mustang",  "year": 1964}if "model" in thisdict:  print("Yes, 'model' is one of the keys in the thisdict dictionary") |
-| :---- |
-
-## **Change Values**
-
-You can change the value of a specific item by referring to its key name:
-
-Change the "year" to 2018:
-
-| thisdict \=	{  "brand": "Ford",  "model": "Mustang",  "year": 1964}thisdict\["year"\] \= 2018 |
-| :---- |
-
-## **Update Dictionary**
-
-The `update()` method will update the dictionary with the items from the given argument.
-
-The argument must be a dictionary, or an iterable object with key:value pairs.
-
-Update the "year" of the car by using the `update()` method:
-
-| thisdict \=	{  "brand": "Ford",  "model": "Mustang",  "year": 1964}thisdict.update({"year": 2020}) |
-| :---- |
-
-## **Adding Items**
-
-Adding an item to the dictionary is done by using a new index key and assigning a value to it:
-
-| thisdict \=	{  "brand": "Ford",  "model": "Mustang",  "year": 1964}thisdict\["color"\] \= "red"print(thisdict) |
-| :---- |
-
-## **Update Dictionary**
-
-The `update()` method will update the dictionary with the items from a given argument. If the item does not exist, the item will be added.
-
-The argument must be a dictionary, or an iterable object with key:value pairs.
-
-Add a color item to the dictionary by using the `update()` method:
-
-| thisdict \=	{  "brand": "Ford",  "model": "Mustang",  "year": 1964}thisdict.update({"color": "red"}) |
-| :---- |
-
-## **Removing Items**
-
-There are several methods to remove items from a dictionary:
-
-The `pop()` method removes the item with the specified key name:
-
-| thisdict \=	{  "brand": "Ford",  "model": "Mustang",  "year": 1964}thisdict.pop("model")print(thisdict) |
-| :---- |
-
-The `popitem()` method removes the last inserted item (in versions before 3.7, a random item is removed instead):
-
-| thisdict \=	{  "brand": "Ford",  "model": "Mustang",  "year": 1964}thisdict.popitem()print(thisdict) |
-| :---- |
-
-The `del` keyword removes the item with the specified key name:
-
-| thisdict \=	{  "brand": "Ford",  "model": "Mustang",  "year": 1964}del thisdict\["model"\]print(thisdict) |
-| :---- |
-
-The `clear()` method empties the dictionary:
-
-| thisdict \=	{  "brand": "Ford",  "model": "Mustang",  "year": 1964}thisdict.clear()print(thisdict) |
-| :---- |
-
-## **Loop Through a Dictionary**
-
-You can loop through a dictionary by using a `for` loop.
-
-When looping through a dictionary, the return value are the *keys* of the dictionary, but there are methods to return the *values* as well.
-
-Print all key names in the dictionary, one by one:
-
-| for x in thisdict:  print(x) |
-| :---- |
-
-Print all *values* in the dictionary, one by one:
-
-| for x in thisdict:  print(thisdict\[x\]) |
-| :---- |
-
-You can also use the `values()` method to return values of a dictionary:
-
-| for x in thisdict.values():  print(x) |
-| :---- |
-
-You can use the `keys()` method to return the keys of a dictionary:
-
-| for x in thisdict.keys():  print(x) |
-| :---- |
-
-Loop through both *keys* and *values*, by using the `items()` method:
-
-| for x, y in thisdict.items():  print(x, y) |
-| :---- |
-
-# 3\. **DSA with Python**
-
-**Data Structures** is about how data can be stored in different structures.
-
-**Algorithms** is about how to solve different problems, often by searching through and manipulating data structures.
-
-Understanding **DSA** helps you to find the best combination of **Data Structures** and **Algorithms** to create more efficient code
-
-* Lists and Arrays  
-* Stacks  
-* Queues  
-* Linked Lists  
-* Hash Tables  
-* Trees  
-  * Binary Trees  
-  * Binary Search Trees  
-  * AVL Trees  
-* Graphs
-
-1. ## **Algorithms**
-
-## Algorithms are a way of working with data in a computer and solving problems like sorting, searching, etc.
-
-## In this tutorial we will concentrate on these search and sort Algorithms:
-
-* Linear Search  
-* Binary Search  
-* Bubble Sort  
-* Selection Sort  
-* Insertion Sort  
-* Quick Sort  
-* Counting Sort  
-* Radix Sort  
-* Merge Sort
-
-## **Why Learn DSA with Python**
-
-* Python has a clean readable syntax  
-* DSA allows you to improve problem-solving skills  
-* DSA and Python helps you write more efficient code  
-* DSA gives you a better understanding of memory storage  
-* DSA helps you handle complex programming challenges  
-* Python is widely used in Data Science and Machine Learning
-
-## **Create Algorithms**
-
-Sometimes we want to perform actions that are not built into Python.
-
-Then we can create our own algorithms.
-
-For example, an algorithm can be used to find the lowest value in a list, like in the example below:
-
-Create an algorithm to find the lowest value in a list:
-
-| my\_array \= \[7, 12, 9, 4, 11, 8\]minVal \= my\_array\[0\]for i in my\_array:  if i \< minVal:    minVal \= iprint('Lowest value:', minVal) |
-| :---- |
-
-# Programs List Tuple and Dictionary.
-
-1\. Find the Maximum Element in a List  
-2\. Print first 3 elements of a list and print reverse of the list  
-3\. Remove duplicates from a list  
-4\. List Comprehension to Square Numbers. Loop through a list squaring each number and print squares.  
-5\. Write a program to use tuple as a dictionary key  
-6\. Write a program to pack and unpack a tuple  
-7\. Count Frequency of Words in a dictionary  
-8\. Invert a Dictionary  
-9\. Write a Python program that prints each key and its corresponding value from a dictionary called `student_scores` using a loop. The dictionary contains the names of students as keys and their scores as values.  
-10\. Store Student Records as Tuples in a List, then Use Dictionary for Lookup
+x = Person("John", "Doe")
+x.printname()
+```
+
+**Child Class:**
+```python
+class Student(Person):
+    pass
+```
+
+**Child Inheriting and Adding Methods:**
+```python
+class Student(Person):
+    def __init__(self, fname, lname, year):
+        super().__init__(fname, lname)
+        self.graduationyear = year
+
+    def welcome(self):
+        print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+```
+
+---
+
+## 9. **Polymorphism**
+
+**Function Polymorphism:**
+```python
+x = "Hello World!"
+print(len(x))
+```
+
+**Class Polymorphism Example:**
+```python
+class Car:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def move(self):
+        print("Drive!")
+
+class Boat:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def move(self):
+        print("Sail!")
+
+class Plane:
+    def __init__(self, brand, model):
+        self.brand = brand
+        self.model = model
+
+    def move(self):
+        print("Fly!")
+
+car1 = Car("Ford", "Mustang")
+boat1 = Boat("Ibiza", "Touring 20")
+plane1 = Plane("Boeing", "747")
+
+for x in (car1, boat1, plane1):
+    x.move()
+```
+
+---
+
+# Python Data Structures
+
+## 1. **Lists**
+
+- Ordered, changeable, allow duplicates.
+```python
+List = [1, 2,  3, "GFG", 2.3]
+print(List)
+```
+
+---
+
+## 2. **Tuple**
+
+- Ordered, unchangeable, allow duplicates.
+```python
+mytuple = ("apple", "banana", "cherry")
+print(len(mytuple))
+thistuple = ("apple",)
+print(type(thistuple))
+tuple1 = ("apple", "banana", "cherry")
+tuple2 = (1, 5, 7, 9, 3)
+tuple3 = (True, False, False)
+thistuple = tuple(("apple", "banana", "cherry"))
+print(thistuple)
+thistuple = ("apple", "banana", "cherry", "orange", "kiwi", "melon", "mango")
+print(thistuple[2:5])
+tuple1 = ("apple", "banana", "cherry")
+if "apple" in tuple1:
+    print("Yes, 'apple' is in the fruits tuple")
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+print(x)
+x = ("apple", "banana", "cherry")
+y = list(x)
+y.append("orange")
+x = tuple(y)
+print(x)
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("apple")
+thistuple = tuple(y)
+print(thistuple)
+fruits = ("apple", "banana", "cherry")
+(green, yellow, red) = fruits
+print(green)
+print(yellow)
+print(red)
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+(green, yellow, *red) = fruits
+print(green)
+print(yellow)
+print(red)
+tuple1 = ("a", "b" , "c")
+tuple2 = (1, 2, 3)
+tuple3 = tuple1 + tuple2
+print(tuple3)
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+print(mytuple)
+print(tuple1.count("apple"))
+print(tuple1.index("banana"))
+```
+
+---
+
+## 3. **Dictionary**
+
+- Key-value pairs, ordered (3.7+), changeable, no duplicates.
+
+```python
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+print(thisdict)
+print(thisdict["brand"])
+thisdict = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964,
+    "year": 2020
+}
+print(thisdict)
+x = thisdict.get("model")
+print(x)
+x = thisdict.keys()
+print(x)
+car = {
+    "brand": "Ford",
+    "model": "Mustang",
+    "year": 1964
+}
+x = car.keys()
+print(x)
+car["color"] = "white"
+print(x)
+x = thisdict.values()
+print(x)
+car["year"] = 2020
+print(x)
+x = thisdict.items()
+print(x)
+if "model" in thisdict:
+    print("Yes, 'model' is one of the keys in the thisdict dictionary")
+thisdict["year"] = 2018
+thisdict.update({"year": 2020})
+thisdict["color"] = "red"
+print(thisdict)
+thisdict.update({"color": "red"})
+thisdict.pop("model")
+print(thisdict)
+thisdict.popitem()
+print(thisdict)
+del thisdict["model"]
+print(thisdict)
+thisdict.clear()
+print(thisdict)
+for x in thisdict:
+    print(x)
+for x in thisdict:
+    print(thisdict[x])
+for x in thisdict.values():
+    print(x)
+for x in thisdict.keys():
+    print(x)
+for x, y in thisdict.items():
+    print(x, y)
+```
+
+---
+
+# 3. **DSA with Python**
+
+- **Data Structures**: How data is stored.
+- **Algorithms**: How to process/search/sort data efficiently.
+
+## Common DS & Algorithms:
+- Lists & Arrays
+- Stacks
+- Queues
+- Linked Lists
+- Hash Tables
+- Trees (Binary, BST, AVL)
+- Graphs
+
+### Algorithms for Searching & Sorting:
+- Linear Search
+- Binary Search
+- Bubble Sort
+- Selection Sort
+- Insertion Sort
+- Quick Sort
+- Counting Sort
+- Radix Sort
+- Merge Sort
+
+---
+
+## **Why Learn DSA with Python?**
+
+- Clean, readable syntax
+- Improves problem-solving skills
+- Enables more efficient code
+- Understands memory/storage better
+- Helps handle complex challenges
+- Used in Data Science and Machine Learning
+
+---
+
+## **Create Algorithms Example**
+
+Find the lowest value in a list:
+
+```python
+my_array = [7, 12, 9, 4, 11, 8]
+minVal = my_array[0]
+
+for i in my_array:
+    if i < minVal:
+        minVal = i
+
+print('Lowest value:', minVal)
+```
+
+---
+
+# **Programs: List, Tuple, and Dictionary**
+
+1. **Find the Maximum Element in a List**
+2. **Print first 3 elements of a list and print reverse of the list**
+3. **Remove duplicates from a list**
+4. **List Comprehension to Square Numbers. Loop through a list squaring each number and print squares.**
+5. **Write a program to use tuple as a dictionary key**
+6. **Write a program to pack and unpack a tuple**
+7. **Count Frequency of Words in a dictionary**
+8. **Invert a Dictionary**
+9. **Write a Python program that prints each key and its corresponding value from a dictionary called `student_scores` using a loop. The dictionary contains the names of students as keys and their scores as values.**
+10. **Store Student Records as Tuples in a List, then Use Dictionary for Lookup**
 
 ---
 

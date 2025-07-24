@@ -1,356 +1,533 @@
-# **DSA With Python**
+# DSA With Python
 
-* a way of organizing and storing data in a computer so that it can be accessed and changed efficiently.
+Data Structures and Algorithms (DSA) are the backbone of efficient programming.
 
-* Algorithms is about how to solve different problems, often by searching through and manipulating data structures.
-
-* Understanding DSA helps you to find the best combination of Data Structures and Algorithms to create more efficient code.
-
-* The algorithm above is very simple, and fast enough for small data sets, but if the data is big enough, any algorithm will take time to run.
-
-* This is where optimization comes in.
-
-* Optimization is an important part of algorithm development, and of course, an important part of DSA programming.
-
-![][image1]
-
-## **Stacks with Python**
-
-A stack is a linear data structure that follows the Last-In-First-Out (LIFO) principle.
-
-Think of it like a stack of pancakes \- you can only add or remove pancakes from the top.
-
-Stacks  
-A stack is a data structure that can hold many elements, and the last element added is the first one to be removed.
-
-Like a pile of pancakes, the pancakes are both added and removed from the top. So when removing a pancake, it will always be the last pancake you added. This way of organizing elements is called LIFO: Last In First Out.
-
-Basic operations we can do on a stack are:
-
-* Push: Adds a new element on the stack.  
-* Pop: Removes and returns the top element from the stack.  
-* Peek: Returns the top (last) element on the stack.  
-* isEmpty: Checks if the stack is empty.  
-* Size: Finds the number of elements in the stack.  
-    
-  Stacks can be implemented by using arrays or linked lists.
-
-Stacks can be used to implement undo mechanisms, to revert to previous states, to create algorithms for depth-first search in graphs, or for backtracking.
-
-Stacks are often mentioned together with Queues, which is a similar data structure described on the next page.
-
-Stack Implementation using Python Lists
-
-Since Python lists has good support for functionality needed to implement stacks, we start with creating a stack and do stack operations with just a few lines like this:
-
-| stack \= \[\]\# Pushstack.append('A')stack.append('B')stack.append('C')print("Stack: ", stack)\# PeektopElement \= stack\[\-1\]print("Peek: ", topElement)\# PoppoppedElement \= stack.pop()print("Pop: ", poppedElement)\# Stack after Popprint("Stack after Pop: ", stack)\# isEmptyisEmpty \= not bool(stack)print("isEmpty: ", isEmpty)\# Sizeprint("Size: ",len(stack))While Python lists can be used as stacks, creating a dedicated Stack class provides better encapsulation and additional functionality:class Stack:  def \_\_init\_\_(self):    self.stack \= \[\]  def push(self, element):    self.stack.append(element)  def pop(self):    if self.isEmpty():      return "Stack is empty"    return self.stack.pop()  def peek(self):    if self.isEmpty():      return "Stack is empty"    return self.stack\[\-1\]  def isEmpty(self):    return len(self.stack) \== 0  def size(self):    return len(self.stack)\# Create a stackmyStack \= Stack()myStack.push('A')myStack.push('B')myStack.push('C')print("Stack: ", myStack.stack)print("Pop: ", myStack.pop())print("Stack after Pop: ", myStack.stack)print("Peek: ", myStack.peek())print("isEmpty: ", myStack.isEmpty())print("Size: ", myStack.size()) |
-| :---- |
-
-**More Basic Stack program:**
-
-stack \= \[\]  \# Step 1: Create an empty stack (list)
-
-\# Step 2: Push (add) elements to the stack  
-stack.append(10)  
-stack.append(20)  
-stack.append(30)
-
-print("Stack after pushing:", stack)
-
-\# Step 3: Pop (remove) the top element  
-top \= stack.pop()  
-print("Popped element:", top)
-
-\# Step 4: Show final stack  
-print("Stack after popping:", stack)
-
-**Create a Stack using a class**
-
-class Stack:  
-    def \_\_init\_\_(self):  
-        self.items \= \[\]  \# Create an empty list to store stack items
-
-    def push(self, item):  
-        self.items.append(item)  \# Add item to the top
-
-    def pop(self):  
-        return self.items.pop()  \# Remove and return the top item
-
-    def show(self):  
-        print("Current Stack:", self.items)  \# Print current stack
-
-\# Using the Stack class  
-stack \= Stack()       \# Create a new stack  
-stack.push(10)        \# Push 10  
-stack.push(20)        \# Push 20  
-stack.push(30)        \# Push 30
-
-stack.show()          \# Show stack: \[10, 20, 30\]
-
-print("Popped:", stack.pop())  \# Pop the top (30)
-
-stack.show()          \# Show stack: \[10, 20\]
-
-Reasons to implement stacks using lists/arrays:
-
-Memory Efficient: Array elements do not hold the next elements address like linked list nodes do.  
-Easier to implement and understand: Using arrays to implement stacks require less code than using linked lists, and for this reason it is typically easier to understand as well.
-
-A reason for not using arrays to implement stacks:
-
-Fixed size: An array occupies a fixed part of the memory. This means that it could take up more memory than needed, or if the array fills up, it cannot hold more elements.
-
-## **Stack Implementation using Linked Lists**
-
-A linked list consists of nodes with some sort of data, and a pointer to the next node.
-
-![][image2]
-
-A big benefit with using linked lists is that nodes are stored wherever there is free space in memory, the nodes do not have to be stored contiguously right after each other like elements are stored in arrays. Another nice thing with linked lists is that when adding or removing nodes, the rest of the nodes in the list do not have to be shifted.
-
-To better understand the benefits with using arrays or linked lists to implement stacks, you should check out this page that explains how arrays and linked lists are stored in memory.
-
-Creating a Stack using a Linked List:
-
-| class Node:  def \_\_init\_\_(self, value):    self.value \= value    self.next \= Noneclass Stack:  def \_\_init\_\_(self):    self.head \= None    self.size \= 0  def push(self, value):    new\_node \= Node(value)    if self.head:      new\_node.next \= self.head    self.head \= new\_node    self.size \+= 1  def pop(self):    if self.isEmpty():      return "Stack is empty"    popped\_node \= self.head    self.head \= self.head.next    self.size \-= 1    return popped\_node.value  def peek(self):    if self.isEmpty():      return "Stack is empty"    return self.head.value  def isEmpty(self):    return self.size \== 0  def stackSize(self):    return self.size  def traverseAndPrint(self):    currentNode \= self.head    while currentNode:      print(currentNode.value, end=" \-\> ")      currentNode \= currentNode.next    print()myStack \= Stack()myStack.push('A')myStack.push('B')myStack.push('C')print("LinkedList: ", end="")myStack.traverseAndPrint()print("Peek: ", myStack.peek())print("Pop: ", myStack.pop())print("LinkedList after Pop: ", end="")myStack.traverseAndPrint()print("isEmpty: ", myStack.isEmpty())print("Size: ", myStack.stackSize()) |
-| :---- |
-
-**Simple Stack with Linked List**
-
-| \# Node class for each item in the stackclass Node:    def \_\_init\_\_(self, data):        self.data \= data  \# Value stored in the node        self.next \= None  \# Pointer to the next node\# Stack class using linked listclass Stack:    def \_\_init\_\_(self):        self.top \= None  \# Top of the stack is initially empty    def push(self, item):        new\_node \= Node(item)     \# Create a new node        new\_node.next \= self.top  \# Point it to the current top        self.top \= new\_node       \# Update the top to the new node    def pop(self):        if self.top is None:            return "Stack is empty\!"  \# Underflow condition        popped \= self.top.data        self.top \= self.top.next      \# Move top to the next node        return popped    def show(self):        current \= self.top        print("Current Stack: ", end="")        while current:            print(current.data, end=" \-\> ")            current \= current.next        print("None")  \# End of stack\# Using the Stack classstack \= Stack()       \# Create a new stackstack.push(10)        \# Push 10stack.push(20)        \# Push 20stack.push(30)        \# Push 30stack.show()          \# Show stack: 30 \-\> 20 \-\> 10 \-\> Noneprint("Popped:", stack.pop())  \# Pop the top (30)stack.show()          \# Show stack: 20 \-\> 10 \-\> None |
-| :---- |
-
-A reason for using linked lists to implement stacks:
-
-Dynamic size: The stack can grow and shrink dynamically, unlike with arrays.
-
-Reasons for not using linked lists to implement stacks:
-
-Extra memory: Each stack element must contain the address to the next element (the next linked list node).  
-Readability: The code might be harder to read and write for some because it is longer and more complex.  
-Common Stack Applications  
-Stacks are used in many real-world scenarios:
-
-Undo/Redo operations in text editors  
-Browser history (back/forward)  
-Function call stack in programming  
-Expression evaluation
-
-## **Queues with Python**
-
-A queue is a linear data structure that follows the First-In-First-Out (FIFO) principle.
-
-Queues  
-Think of a queue as people standing in line in a supermarket.
-
-The first person to stand in line is also the first who can pay and leave the supermarket.
-
-Basic operations we can do on a queue are:
-
-* Enqueue: Adds a new element to the queue.  
-* Dequeue: Removes and returns the first (front) element from the queue.  
-* Peek: Returns the first element in the queue.  
-* isEmpty: Checks if the queue is empty.  
-* Size: Finds the number of elements in the queue.
-
-Queues can be implemented by using arrays or linked lists.
-
-Queues can be used to implement job scheduling for an office printer, order processing for e-tickets, or to create algorithms for breadth-first search in graphs.
-
-Using a Python list as a queue:
-
-| queue \= \[\]\# Enqueuequeue.append('A')queue.append('B')queue.append('C')print("Queue: ", queue)\# PeekfrontElement \= queue\[0\]print("Peek: ", frontElement)\# DequeuepoppedElement \= queue.pop(0)print("Dequeue: ", poppedElement)print("Queue after Dequeue: ", queue)\# isEmptyisEmpty \= not bool(queue)print("isEmpty: ", isEmpty)\# Sizeprint("Size: ", len(queue))class Queue:  def \_\_init\_\_(self):    self.queue \= \[\]      def enqueue(self, element):    self.queue.append(element)  def dequeue(self):    if self.isEmpty():      return "Queue is empty"    return self.queue.pop(0)  def peek(self):    if self.isEmpty():      return "Queue is empty"    return self.queue\[0\]  def isEmpty(self):    return len(self.queue) \== 0  def size(self):    return len(self.queue)\# Create a queuemyQueue \= Queue()myQueue.enqueue('A')myQueue.enqueue('B')myQueue.enqueue('C')print("Queue: ", myQueue.queue)print("Peek: ", myQueue.peek())print("Dequeue: ", myQueue.dequeue())print("Queue after Dequeue: ", myQueue.queue)print("isEmpty: ", myQueue.isEmpty())print("Size: ", myQueue.size()) |
-| :---- |
-
-**Simple Python Queue**
-
-| \# Simple Queue implementation using listqueue \= \[\]\# Enqueue elements (add to the end)queue.append("A")queue.append("B")queue.append("C")print("Initial Queue:", queue)\# Dequeue elements (remove from the front)print("Dequeued:", queue.pop(0))print("Queue after dequeue:", queue)\# Add another elementqueue.append("D")print("Queue after enqueue D:", queue)\# Dequeue againprint("Dequeued:", queue.pop(0))print("Final Queue:", queue) |
-| :---- |
-
-**Queue with a Class**
-
-| class Queue:    def \_\_init\_\_(self):        self.items \= \[\]    def enqueue(self, item):        self.items.append(item)  \# Add to the end    def dequeue(self):        if not self.is\_empty():            return self.items.pop(0)  \# Remove from the front        return None    def is\_empty(self):        return len(self.items) \== 0    def display(self):        print("Queue:", self.items)\# Example usageq \= Queue()q.enqueue("A")q.enqueue("B")q.enqueue("C")q.display()print("Dequeued:", q.dequeue())q.display()q.enqueue("D")q.display()print("Dequeued:", q.dequeue())q.display() |
-| :---- |
-
-## **Queue Implementation using Linked Lists**
-
-A linked list consists of nodes with some sort of data, and a pointer to the next node.
-
-![][image3]
-
-A big benefit with using linked lists is that nodes are stored wherever there is free space in memory, the nodes do not have to be stored contiguously right after each other like elements are stored in arrays. Another nice thing with linked lists is that when adding or removing nodes, the rest of the nodes in the list do not have to be shifted.
-
-Creating a Queue using a Linked List:
-
-Creating a Queue using a Linked List:
-
-| class Node:  def \_\_init\_\_(self, data):    self.data \= data    self.next \= Noneclass Queue:  def \_\_init\_\_(self):    self.front \= None    self.rear \= None    self.length \= 0  def enqueue(self, element):    new\_node \= Node(element)    if self.rear is None:      self.front \= self.rear \= new\_node      self.length \+= 1      return    self.rear.next \= new\_node    self.rear \= new\_node    self.length \+= 1  def dequeue(self):    if self.isEmpty():      return "Queue is empty"  def isEmpty(self):    return self.length \== 0  def size(self):    return self.length  def printQueue(self):    temp \= self.front    while temp:      print(temp.data, end=" ")      temp \= temp.next    print()  def dequeue(self):    if self.isEmpty():      return "Queue is empty"    temp \= self.front    self.front \= temp.next    self.length \-= 1    if self.front is None:      self.rear \= None    return temp.data  def peek(self):    if self.isEmpty():      return "Queue is empty"    return self.front.data  def isEmpty(self):    return self.length \== 0  def size(self):    return self.length  def printQueue(self):    temp \= self.front    while temp:      print(temp.data, end=" \-\> ")      temp \= temp.next    print()\# Create a queuemyQueue \= Queue()myQueue.enqueue('A')myQueue.enqueue('B')myQueue.enqueue('C')print("Queue: ", end="")myQueue.printQueue()print("Peek: ", myQueue.peek())print("Dequeue: ", myQueue.dequeue())print("Queue after Dequeue: ", end="")myQueue.printQueue()print("isEmpty: ", myQueue.isEmpty())print("Size: ", myQueue.size()) |
-| :---- |
-
-**Simple Queue in Linked List**
-
-| class Node:    def \_\_init\_\_(self, data):        self.data \= data        self.next \= Noneclass Queue:    def \_\_init\_\_(self):        self.front \= None        self.rear \= None    def enqueue(self, item):        new\_node \= Node(item)        if self.rear is None:  \# Empty queue            self.front \= self.rear \= new\_node        else:            self.rear.next \= new\_node            self.rear \= new\_node    def dequeue(self):        if self.front is None:  \# Empty queue            return None        data \= self.front.data        self.front \= self.front.next        if self.front is None:  \# Queue became empty            self.rear \= None        return data    def is\_empty(self):        return self.front is None    def display(self):        current \= self.front        print("Queue:", end=" ")        while current:            print(current.data, end=" ")            current \= current.next        print()\# Example usageq \= Queue()q.enqueue("A")q.enqueue("B")q.enqueue("C")q.display()print("Dequeued:", q.dequeue())q.display()q.enqueue("D")q.display()print("Dequeued:", q.dequeue())q.display() |
-| :---- |
-
-Reasons for using linked lists to implement queues:
-
-* **Dynamic size:** The queue can grow and shrink dynamically, unlike with arrays.  
-* **No shifting:** The front element of the queue can be removed (enqueue) without having to shift other elements in the memory.
-
-Reasons for **not** using linked lists to implement queues:
-
-* **Extra memory:** Each queue element must contain the address to the next element (the next linked list node).  
-* **Readability:** The code might be harder to read and write for some because it is longer and more complex.
-
-**Queues are used in many real-world scenarios:**
-
-* Task scheduling in operating systems  
-* Breadth-first search in graphs  
-* Message queues in distributed systems
-
-# **Linked Lists with Python**
-
-A **Linked List** is, as the word implies, a list where the nodes are linked together. Each node contains data and a pointer. The way they are linked together is that each node points to where in the memory the next node is placed.
-
-## **Linked Lists vs Arrays**
-
-The easiest way to understand linked lists is perhaps by comparing linked lists with arrays.
-
-Linked lists consist of nodes, and is a linear data structure we make ourselves, unlike arrays which is an existing data structure in the programming language that we can use.
-
-Nodes in a linked list store links to other nodes, but array elements do not need to store links to other elements.
-
-The table below compares linked lists with arrays to give a better understanding of what linked lists are.
-
-|  | Arrays | Linked Lists |
-| ----- | ----- | ----- |
-| *An existing data structure in the programming language* | Yes | No |
-| *Fixed size in memory* | Yes | No |
-| *Elements, or nodes, are stored right after each other in memory (contiguously)* | Yes | No |
-| *Memory usage is low (each node only contains data, no links to other nodes)* | Yes | No |
-| *Elements, or nodes, can be accessed directly (random access)* | Yes | No |
-| *Elements, or nodes, can be inserted or deleted in constant time, no shifting operations in memory needed .* | No | Yes |
-
-These are some key linked list properties, compared to arrays:
-
-* Linked lists are not allocated to a fixed size in memory like arrays are, so linked lists do not require to move the whole list into a larger memory space when the fixed memory space fills up, like arrays must.  
-* Linked list nodes are not laid out one right after the other in memory (contiguously), so linked list nodes do not have to be shifted up or down in memory when nodes are inserted or deleted.  
-* Linked list nodes require more memory to store one or more links to other nodes. Array elements do not require that much memory, because array elements do not contain links to other elements.  
-* Linked list operations are usually harder to program and require more lines than similar array operations, because programming languages have better built in support for arrays.  
-* We must traverse a linked list to find a node at a specific position, but with arrays we can access an element directly by writing myArray\[5\].
-
-## **Types of Linked Lists**
-
-There are three basic forms of linked lists:
-
-1. Singly linked lists  
-2. Doubly linked lists  
-3. Circular linked lists
-
-A **singly linked list** is the simplest kind of linked lists. It takes up less space in memory because each node has only one address to the next node, like in the image below.
-
-![][image4]
+- **Data Structures:** Ways to organize and store data in a computer for efficient access and modification.
+- **Algorithms:** Step-by-step procedures for solving problems, often by manipulating data structures.
+- **Optimization:** Making your solutions faster and more efficient, especially for large datasets.
 
 ---
 
-A **doubly linked list** has nodes with addresses to both the previous and the next node, like in the image below, and therefore takes up more memory. But doubly linked lists are good if you want to be able to move both up and down in the list.
+## Stacks in Python
 
-![][image5]
+A **stack** is a linear data structure that uses the **Last-In-First-Out (LIFO)** principle.
 
-A **circular linked list** is like a singly or doubly linked list with the first node, the "head", and the last node, the "tail", connected.
+- Imagine a stack of plates: you add and remove plates only from the top.
+- Common operations:
+  - `push`: Add an element on top
+  - `pop`: Remove (and return) the top element
+  - `peek`: View the top element
+  - `isEmpty`: Check if stack is empty
+  - `size`: Number of elements
 
-In singly or doubly linked lists, we can find the start and end of a list by just checking if the links are null. But for circular linked lists, more complex code is needed to explicitly check for start and end nodes in certain applications.
+**Applications:** Undo operations, browser history, function call stack, depth-first search, backtracking.
 
-Circular linked lists are good for lists you need to cycle through continuously.
+### Stack using Python List
 
-The image below is an example of a singly circular linked list:
+```python
+stack = []
 
-![][image6]  
-The image below is an example of a doubly circular linked list:
+# Push
+stack.append('A')
+stack.append('B')
+stack.append('C')
+print("Stack:", stack)
 
-![][image7]
+# Peek
+print("Peek:", stack[-1])
 
-## **Linked List Operations**
+# Pop
+print("Pop:", stack.pop())
 
-Basic things we can do with linked lists are:
+print("Stack after Pop:", stack)
+print("isEmpty:", not bool(stack))
+print("Size:", len(stack))
+```
 
-1. Traversal  
-2. Remove a node  
-3. Insert a node  
-4. Sort
+### Stack using a Class
 
-For simplicity, singly linked lists will be used to explain these operations below.
+```python
+class Stack:
+    def __init__(self):
+        self.stack = []
 
-## **Traversal of a Linked List**
+    def push(self, element):
+        self.stack.append(element)
 
-Traversing a linked list means to go through the linked list by following the links from one node to the next.
+    def pop(self):
+        if self.isEmpty():
+            return "Stack is empty"
+        return self.stack.pop()
 
-Traversal of linked lists is typically done to search for a specific node, and read or modify the node's content, remove the node, or insert a node right before or after that node.
+    def peek(self):
+        if self.isEmpty():
+            return "Stack is empty"
+        return self.stack[-1]
 
-To traverse a singly linked list, we start with the first node in the list, the head node, and follow that node's next link, and the next node's next link and so on, until the next address is null.
+    def isEmpty(self):
+        return len(self.stack) == 0
 
-Traversal of a singly linked list in Python:
+    def size(self):
+        return len(self.stack)
 
-| class Node:  def \_\_init\_\_(self, data):    self.data \= data    self.next \= Nonedef traverseAndPrint(head):  currentNode \= head  while currentNode:    print(currentNode.data, end=" \-\> ")    currentNode \= currentNode.next  print("null")node1 \= Node(7)node2 \= Node(11)node3 \= Node(3)node4 \= Node(2)node5 \= Node(9)node1.next \= node2node2.next \= node3node3.next \= node4node4.next \= node5traverseAndPrint(node1) |
-| :---- |
+# Usage
+myStack = Stack()
+myStack.push('A')
+myStack.push('B')
+myStack.push('C')
 
-## **Find The Lowest Value in a Linked List**
+print("Stack:", myStack.stack)
+print("Pop:", myStack.pop())
+print("Stack after Pop:", myStack.stack)
+print("Peek:", myStack.peek())
+print("isEmpty:", myStack.isEmpty())
+print("Size:", myStack.size())
+```
 
-Let's find the lowest value in a singly linked list by traversing it and checking each value.
+#### Pros of List-Based Stack:
+- Memory efficient
+- Simple code
 
-Finding the lowest value in a linked list is very similar to how we [found the lowest value in an array](https://www.w3schools.com/dsa/dsa_data_arrays.php#findLowest), except that we need to follow the next link to get to the next node.
+#### Cons:
+- Fixed size (if implemented with static arrays)
 
-To find the lowest value we need to traverse the list like in the previous code. But in addition to traversing the list, we must also update the current lowest value when we find a node with a lower value.
+---
 
-In the code below, the algorithm to find the lowest value is moved into a function called findLowestValue.
+## Stack with Linked List
 
-Finding the lowest value in a singly linked list in Python:
+A **linked list** stores nodes with `data` and a pointer to the next node.
 
-| class Node:  def \_\_init\_\_(self, data):    self.data \= data    self.next \= Nonedef findLowestValue(head):  minValue \= head.data  currentNode \= head.next  while currentNode:    if currentNode.data \< minValue:      minValue \= currentNode.data    currentNode \= currentNode.next  return minValuenode1 \= Node(7)node2 \= Node(11)node3 \= Node(3)node4 \= Node(2)node5 \= Node(9)node1.next \= node2node2.next \= node3node3.next \= node4node4.next \= node5print("The lowest value in the linked list is:", findLowestValue(node1)) |
-| :---- |
+- **Pros:** Dynamic size, nodes stored anywhere in memory
+- **Cons:** More memory needed (each node stores a pointer), more complex code
 
-## **Delete a Node in a Linked List**
+### Stack Implementation (Linked List)
 
-If you want to delete a node in a linked list, it is important to connect the nodes on each side of the node before deleting it, so that the linked list is not broken.
+```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
 
-So before deleting the node, we need to get the next pointer from the previous node, and connect the previous node to the new next node before deleting the node in between.
+class Stack:
+    def __init__(self):
+        self.head = None
+        self.size = 0
 
-Also, it is a good idea to first connect next pointer to the node after the node we want to delete, before we delete it. This is to avoid a 'dangling' pointer, a pointer that points to nothing, even if it is just for a brief moment.
+    def push(self, value):
+        new_node = Node(value)
+        new_node.next = self.head
+        self.head = new_node
+        self.size += 1
 
-**Deleting a specific node in a singly linked list in Python:**
+    def pop(self):
+        if self.isEmpty():
+            return "Stack is empty"
+        popped = self.head
+        self.head = self.head.next
+        self.size -= 1
+        return popped.value
 
-| class Node:  def \_\_init\_\_(self, data):    self.data \= data    self.next \= Nonedef traverseAndPrint(head):  currentNode \= head  while currentNode:    print(currentNode.data, end=" \-\> ")    currentNode \= currentNode.next  print("null")def deleteSpecificNode(head, nodeToDelete):  if head \== nodeToDelete:    return head.next  currentNode \= head  while currentNode.next and currentNode.next \!= nodeToDelete:    currentNode \= currentNode.next  if currentNode.next is None:    return head  currentNode.next \= currentNode.next.next  return headnode1 \= Node(7)node2 \= Node(11)node3 \= Node(3)node4 \= Node(2)node5 \= Node(9)node1.next \= node2node2.next \= node3node3.next \= node4node4.next \= node5print("Before deletion:")traverseAndPrint(node1)\# Delete node4node1 \= deleteSpecificNode(node1, node4)print("\\nAfter deletion:")traverseAndPrint(node1) |
-| :---- |
+    def peek(self):
+        if self.isEmpty():
+            return "Stack is empty"
+        return self.head.value
 
-In the deleteSpecificNode function above, the return value is the new head of the linked list. So for example, if the node to be deleted is the first node, the new head returned will be the next node.
+    def isEmpty(self):
+        return self.size == 0
 
-## **Insert a Node in a Linked List**
+    def stackSize(self):
+        return self.size
 
-Inserting a node into a linked list is very similar to deleting a node, because in both cases we need to take care of the next pointers to make sure we do not break the linked list.
+    def traverseAndPrint(self):
+        current = self.head
+        while current:
+            print(current.value, end=" -> ")
+            current = current.next
+        print("None")
 
-To insert a node in a linked list we first need to create the node, and then at the position where we insert it, we need to adjust the pointers so that the previous node points to the new node, and the new node points to the correct next node.
+# Usage
+myStack = Stack()
+myStack.push('A')
+myStack.push('B')
+myStack.push('C')
+print("LinkedList: ", end="")
+myStack.traverseAndPrint()
+print("Peek:", myStack.peek())
+print("Pop:", myStack.pop())
+print("LinkedList after Pop:", end="")
+myStack.traverseAndPrint()
+print("isEmpty:", myStack.isEmpty())
+print("Size:", myStack.stackSize())
+```
 
-1. New node is created  
-2. Node 1 is linked to new node  
-3. New node is linked to next node
+---
 
-Inserting a node in a singly linked list in Python:
+## Queues in Python
 
-| class Node:  def \_\_init\_\_(self, data):    self.data \= data    self.next \= Nonedef traverseAndPrint(head):  currentNode \= head  while currentNode:    print(currentNode.data, end=" \-\> ")    currentNode \= currentNode.next  print("null")def insertNodeAtPosition(head, newNode, position):  if position \== 1:    newNode.next \= head    return newNode  currentNode \= head  for \_ in range(position \- 2):    if currentNode is None:      break    currentNode \= currentNode.next  newNode.next \= currentNode.next  currentNode.next \= newNode  return headnode1 \= Node(7)node2 \= Node(3)node3 \= Node(2)node4 \= Node(9)node1.next \= node2node2.next \= node3node3.next \= node4print("Original list:")traverseAndPrint(node1)\# Insert a new node with value 97 at position 2newNode \= Node(97)node1 \= insertNodeAtPosition(node1, newNode, 2)print("\\nAfter insertion:")traverseAndPrint(node1) |
-| :---- |
+A **queue** is a linear data structure following **First-In-First-Out (FIFO)** principle.
 
-In the insertNodeAtPosition function above, the return value is the new head of the linked list. So for example, if the node is inserted at the start of the linked list, the new head returned will be the new node.
+- Think of a line in a supermarket: first in, first out.
+- Core operations:
+  - `enqueue`: Add to end
+  - `dequeue`: Remove from front
+  - `peek`: View the front element
+  - `isEmpty`: Check if queue is empty
+  - `size`: Number of elements
 
-## **Time Complexity of Linked Lists Operations**
+**Applications:** Task scheduling, order processing, breadth-first search (BFS).
 
-Time complexity describes the approximate number of steps or operations an algorithm needs in relation to the size of its input (n), rather than the exact time it will take to run on a computer. This explains why two algorithms with the same time complexity, like linear search for arrays and linked lists (both are O(n)), can still have different actual runtimes. The real time depends on factors like the programming language, hardware, and how operations differ between arrays and linked lists
+### Queue using Python List
 
-Linear search works similarly for arrays and linked lists: you check each value in order until you find the one you need, which gives a time complexity of O(n). However, binary search isn't practical for linked lists since it relies on quickly jumping to any element in the list, which isn't possible in linked structures.
+```python
+queue = []
 
-**Triply Linked list example**
+# Enqueue
+queue.append('A')
+queue.append('B')
+queue.append('C')
+print("Queue:", queue)
 
-| class Node:    def \_\_init\_\_(self, data):        self.data \= data        self.next \= None     \# points to the next node (below in stack)        self.prev \= None     \# points to the previous node (above in stack)        self.random \= None   \# special pointer (used to point to middle node)class Stack:    def \_\_init\_\_(self):        self.top \= None        self.size \= 0    def push(self, data):        new\_node \= Node(data)        new\_node.next \= self.top        if self.top:            self.top.prev \= new\_node        self.top \= new\_node        self.size \+= 1    def pop(self):        if not self.top:            return None        data \= self.top.data        self.top \= self.top.next        if self.top:            self.top.prev \= None        self.size \-= 1        return data    def insert\_middle(self, data):        if self.size \< 2:            print("Not enough elements to insert in the middle.")            return        mid\_index \= self.size // 2        current \= self.top        for \_ in range(mid\_index \- 1):            current \= current.next        \# Insert new node after 'current'        new\_node \= Node(data)        new\_node.next \= current.next        new\_node.prev \= current        if current.next:            current.next.prev \= new\_node        current.next \= new\_node        \# Set the random pointer of top to this new middle node        self.top.random \= new\_node        self.size \+= 1    def show(self):        print("Stack top \-\>", end=" ")        curr \= self.top        while curr:            print(f"\[{curr.data}\]", end=" ")            curr \= curr.next        print()    def show\_random\_from\_top(self):        if self.top and self.top.random:            print("Top's random points to:", self.top.random.data)        else:            print("Top's random is None")\# ✅ Example usageif \_\_name\_\_ \== "\_\_main\_\_":    s \= Stack()    s.push("A")    s.push("B")    s.push("C")    s.push("D")    s.push("E")    print("Before inserting in middle:")    s.show()    s.insert\_middle("X")    print("\\nAfter inserting 'X' in middle:")    s.show()    s.show\_random\_from\_top() |
-| :---- |
+# Peek
+print("Peek:", queue[0])
+
+# Dequeue
+print("Dequeue:", queue.pop(0))
+
+print("Queue after Dequeue:", queue)
+print("isEmpty:", not bool(queue))
+print("Size:", len(queue))
+```
+
+### Queue using a Class
+
+```python
+class Queue:
+    def __init__(self):
+        self.queue = []
+
+    def enqueue(self, element):
+        self.queue.append(element)
+
+    def dequeue(self):
+        if self.isEmpty():
+            return "Queue is empty"
+        return self.queue.pop(0)
+
+    def peek(self):
+        if self.isEmpty():
+            return "Queue is empty"
+        return self.queue[0]
+
+    def isEmpty(self):
+        return len(self.queue) == 0
+
+    def size(self):
+        return len(self.queue)
+
+# Usage
+myQueue = Queue()
+myQueue.enqueue('A')
+myQueue.enqueue('B')
+myQueue.enqueue('C')
+print("Queue:", myQueue.queue)
+print("Peek:", myQueue.peek())
+print("Dequeue:", myQueue.dequeue())
+print("Queue after Dequeue:", myQueue.queue)
+print("isEmpty:", myQueue.isEmpty())
+print("Size:", myQueue.size())
+```
+
+---
+
+## Queue with Linked List
+
+**Advantages:** Dynamic size, no shifting required for dequeue.
+
+### Queue Implementation (Linked List)
+
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class Queue:
+    def __init__(self):
+        self.front = None
+        self.rear = None
+        self.length = 0
+
+    def enqueue(self, element):
+        new_node = Node(element)
+        if self.rear is None:
+            self.front = self.rear = new_node
+        else:
+            self.rear.next = new_node
+            self.rear = new_node
+        self.length += 1
+
+    def dequeue(self):
+        if self.isEmpty():
+            return "Queue is empty"
+        temp = self.front
+        self.front = temp.next
+        self.length -= 1
+        if self.front is None:
+            self.rear = None
+        return temp.data
+
+    def peek(self):
+        if self.isEmpty():
+            return "Queue is empty"
+        return self.front.data
+
+    def isEmpty(self):
+        return self.length == 0
+
+    def size(self):
+        return self.length
+
+    def printQueue(self):
+        temp = self.front
+        while temp:
+            print(temp.data, end=" -> ")
+            temp = temp.next
+        print("None")
+
+# Usage
+myQueue = Queue()
+myQueue.enqueue('A')
+myQueue.enqueue('B')
+myQueue.enqueue('C')
+print("Queue:", end="")
+myQueue.printQueue()
+print("Peek:", myQueue.peek())
+print("Dequeue:", myQueue.dequeue())
+print("Queue after Dequeue:", end="")
+myQueue.printQueue()
+print("isEmpty:", myQueue.isEmpty())
+print("Size:", myQueue.size())
+```
+
+---
+
+## Linked Lists in Python
+
+A **linked list** is a linear data structure where each element (node) contains data and a pointer to the next node.
+
+### Arrays vs Linked Lists
+
+| Feature          | Arrays               | Linked Lists        |
+|------------------|---------------------|--------------------|
+| Built-in         | Yes                  | No                 |
+| Fixed size       | Yes                  | No                 |
+| Contiguous       | Yes                  | No                 |
+| Random access    | Yes                  | No                 |
+| Insert/Delete    | Slow (shifting)      | Fast (no shifting) |
+| Memory usage     | Lower                | Higher (pointers)  |
+
+### Types of Linked Lists
+
+1. **Singly Linked List:** Each node points to the next node only.
+2. **Doubly Linked List:** Each node points to both the next and previous node.
+3. **Circular Linked List:** Head and tail are connected to form a circle.
+
+---
+
+## Linked List Operations
+
+- **Traversal:** Move through nodes from head to tail.
+- **Insert:** Add a node at a specific position.
+- **Delete:** Remove a node and connect its neighbors.
+- **Sort:** Rearrange nodes by value.
+
+### Traversal Example
+
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+def traverseAndPrint(head):
+    current = head
+    while current:
+        print(current.data, end=" -> ")
+        current = current.next
+    print("null")
+
+node1 = Node(7)
+node2 = Node(11)
+node3 = Node(3)
+node4 = Node(2)
+node5 = Node(9)
+
+node1.next = node2
+node2.next = node3
+node3.next = node4
+node4.next = node5
+
+traverseAndPrint(node1)
+```
+
+### Find Lowest Value
+
+```python
+def findLowestValue(head):
+    minValue = head.data
+    current = head.next
+    while current:
+        if current.data < minValue:
+            minValue = current.data
+        current = current.next
+    return minValue
+
+print("The lowest value:", findLowestValue(node1))
+```
+
+### Delete a Node
+
+```python
+def deleteSpecificNode(head, nodeToDelete):
+    if head == nodeToDelete:
+        return head.next
+    current = head
+    while current.next and current.next != nodeToDelete:
+        current = current.next
+    if current.next is None:
+        return head
+    current.next = current.next.next
+    return head
+```
+
+### Insert a Node
+
+```python
+def insertNodeAtPosition(head, newNode, position):
+    if position == 1:
+        newNode.next = head
+        return newNode
+    current = head
+    for _ in range(position - 2):
+        if current is None:
+            break
+        current = current.next
+    newNode.next = current.next
+    current.next = newNode
+    return head
+```
+
+---
+
+## Time Complexity
+
+- **Traversal & Search:** O(n)
+- **Insert/Delete:** O(1) if position known (O(n) to find position)
+- **Sort:** O(n log n) or O(n^2) depending on algorithm
+
+---
+
+## Triply Linked List Example (Uncommon)
+
+A triply linked list node might have pointers to next, previous, and a special pointer (e.g., random pointer).
+
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
+        self.random = None
+
+class Stack:
+    def __init__(self):
+        self.top = None
+        self.size = 0
+
+    def push(self, data):
+        new_node = Node(data)
+        new_node.next = self.top
+        if self.top:
+            self.top.prev = new_node
+        self.top = new_node
+        self.size += 1
+
+    def pop(self):
+        if not self.top:
+            return None
+        data = self.top.data
+        self.top = self.top.next
+        if self.top:
+            self.top.prev = None
+        self.size -= 1
+        return data
+
+    def insert_middle(self, data):
+        if self.size < 2:
+            print("Not enough elements to insert in the middle.")
+            return
+
+        mid_index = self.size // 2
+        current = self.top
+        for _ in range(mid_index - 1):
+            current = current.next
+
+        new_node = Node(data)
+        new_node.next = current.next
+        new_node.prev = current
+        if current.next:
+            current.next.prev = new_node
+        current.next = new_node
+
+        self.top.random = new_node
+        self.size += 1
+
+    def show(self):
+        print("Stack top ->", end=" ")
+        curr = self.top
+        while curr:
+            print(f"[{curr.data}]", end=" ")
+            curr = curr.next
+        print()
+
+    def show_random_from_top(self):
+        if self.top and self.top.random:
+            print("Top's random points to:", self.top.random.data)
+        else:
+            print("Top's random is None")
+
+# Example usage
+if __name__ == "__main__":
+    s = Stack()
+    s.push("A")
+    s.push("B")
+    s.push("C")
+    s.push("D")
+    s.push("E")
+
+    print("Before inserting in middle:")
+    s.show()
+
+    s.insert_middle("X")
+
+    print("\nAfter inserting 'X' in middle:")
+    s.show()
+    s.show_random_from_top()
+```
+
+---
+
+## Summary
+
+- **Stacks and Queues:** Fundamental linear data structures, used everywhere.
+- **Linked Lists:** Flexible, dynamic, but more complex than arrays.
+- **DSA:** Helps you write efficient, optimized code for real world problems.
+
+> **Mastering DSA with Python means mastering the art of choosing the right data structure and algorithm for every problem!**
+
+---
+
+### images
 
 [image1]: <data:image/png;base64,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>
 
