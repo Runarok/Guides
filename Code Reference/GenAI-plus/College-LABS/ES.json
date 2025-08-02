@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Multiply Two 16‑bit Numbers",
+    "code": "AREA    Mul16, CODE, READONLY\n        EXPORT  __main\n\n__main\n        ; R0 = first operand\n        ; R1 = second operand\n        LDR     R0, =0x1234            ; example value\n        LDR     R1, =0x00AB            ; example value\n        MUL     R2, R0, R1            ; R2 = R0 * R1\n        ; result in R2 (32‑bit)\nSTOP    B       STOP\n        END"
+  },
+  {
+    "title": "Add Two 16‑bit Numbers",
+    "code": "AREA    Add16, CODE, READONLY\n        EXPORT  __main\n\n__main\n        ; R0 = first operand\n        ; R1 = second operand\n        LDR     R0, =0x1000            ; example value\n        LDR     R1, =0x00FF            ; example value\n        ADD     R2, R0, R1            ; R2 = R0 + R1\n        ; result in R2 (may overflow 16‑bit)\nSTOP    B       STOP\n        END"
+  },
+  {
+    "title": "Sum of First N Integers",
+    "code": "AREA    SumFirstN, CODE, READONLY\n        EXPORT  __main\n\n__main\n        MOV     R0, #10               ; N = 10 (change to 5, etc.)\n        MOV     R1, #0                ; sum = 0\n        MOV     R2, #1                ; i = 1\n\nLOOP\n        ADD     R1, R1, R2            ; sum += i\n        ADD     R2, R2, #1            ; i++\n        CMP     R2, R0                ; while i <= N\n        BLE     LOOP\n        ; R1 holds sum\nSTOP    B       STOP\n        END"
+  },
+  {
+    "title": "Factorial of a Number",
+    "code": "AREA    Factorial, CODE, READONLY\n        EXPORT  __main\n\n__main\n        MOV     R0, #5                ; N = 5 (change as needed)\n        MOV     R1, #1                ; result = 1\n\nFACT\n        MUL     R1, R1, R0            ; result *= N\n        SUBS    R0, R0, #1            ; N--\n        CMP     R0, #1                ; stop when N == 1\n        BGT     FACT\n        ; R1 holds factorial(N)\nSTOP    B       STOP\n        END"
+  },
+  {
+    "title": "Square Using Lookup Table (LUT)",
+    "code": "AREA    LUTSquare, CODE, READONLY\n        EXPORT  __main\n\n__main\n        ; Precomputed table of squares from 0–15\n        LDR     R0, =TABLE           ; base of LUT\n        MOV     R1, #7               ; e.g., compute 7² (change value)\n        LSL     R1, R1, #2           ; index * 4 bytes each\n        ADD     R0, R0, R1\n        LDR     R2, [R0]            ; R2 = square\nSTOP    B       STOP\n\nAREA    DATA, DATA, READONLY\nTABLE   DCD    0,1,4,9,16,25,36,49,64,81,100,121,144,169,196,225\n        END"
+  },
+  {
+    "title": "Find Largest in 32‑bit Array",
+    "code": "AREA    Largest32, CODE, READONLY\n        EXPORT  __main\n\n__main\n        MOV     R5, #6                ; length of array (change as needed)\n        LDR     R0, =ARRAY\n        LDR     R1, [R0], #4          ; R1 = first element\n\nLOOP\n        LDR     R2, [R0], #4          ; next element\n        CMP     R2, R1\n        MOVGT   R1, R2                ; R1 = max(R1,R2)\n        SUBS    R5, R5, #1\n        BNE     LOOP\n        ; R1 contains largest\nSTOP    B       STOP\n\nAREA    DATA, DATA, READONLY\nARRAY   DCD    0x1,0xA,0x5,0xFF,0x123,0x7\n        END"
+  },
+  {
+    "title": "Find Smallest in 32‑bit Array",
+    "code": "AREA    Smallest32, CODE, READONLY\n        EXPORT  __main\n\n__main\n        MOV     R5, #6                ; length of array\n        LDR     R0, =ARRAY\n        LDR     R1, [R0], #4          ; R1 = first\n\nLOOP\n        LDR     R2, [R0], #4          ; next\n        CMPLT   R2, R1\n        MOVLT   R1, R2                ; R1 = min(R1,R2)\n        SUBS    R5, R5, #1\n        BNE     LOOP\n        ; R1 contains smallest\nSTOP    B       STOP\n\nAREA    DATA, DATA, READONLY\nARRAY   DCD    0x1,0xA,0x5,0xFF,0x123,0x7\n        END"
+  },
+  {
+    "title": "Sum of 16‑bit Array into 32‑bit RAM",
+    "code": "AREA    SumArray16, CODE, READONLY\n        EXPORT  __main\n\n__main\n        LDR     R0, =ARRAY            ; base of 16‑bit array\n        MOV     R5, #10               ; number of elements\n        MOV     R1, #0                ; sum = 0\n\nLOOP\n        LDRH    R2, [R0], #2          ; load half‑word, advance pointer\n        ADD     R1, R1, R2            ; accumulate\n        SUBS    R5, R5, #1\n        BNE     LOOP\n        ; store 32‑bit sum at address 0x1000000\n        LDR     R0, =0x01000000\n        STR     R1, [R0]\nSTOP    B       STOP\n\nAREA    DATA, DATA, READONLY\nARRAY   DCW    1,2,3,4,5,6,7,8,9,10      ; example\n        END"
+  },
+  {
+    "title": "Ascending Sort of 32‑bit Array",
+    "code": "AREA    SortAsc32, CODE, READONLY\n        EXPORT  __main\n\n__main\n        ; Bubble sort in ascending order\n        LDR     R6, =ARRAY\n        MOV     R7, #6                ; elements count\n        SUBS    R7, R7, #1            ; counter for passes\nOUT\n        MOV     R5, R7                ; inner loop count\n        MOV     R0, R6                ; reset pointer\nIN\n        LDR     R2, [R0]\n        LDR     R3, [R0, #4]\n        CMP     R3, R2\n        BCS     NOSWAP\n        STR     R3, [R0]\n        STR     R2, [R0, #4]\nNOSWAP\n        ADD     R0, R0, #4\n        SUBS    R5, R5, #1\n        BNE     IN\n        SUBS    R7, R7, #1\n        BNE     OUT\nSTOP    B       STOP\n\nAREA    DATA, DATA, READONLY\nARRAY   DCD    5,4,3,2,1,0\n        END"
+  },
+  {
+    "title": "Descending Sort of 32‑bit Array",
+    "code": "AREA    SortDesc32, CODE, READONLY\n        EXPORT  __main\n\n__main\n        ; Bubble sort in descending order\n        LDR     R6, =ARRAY\n        MOV     R7, #6\n        SUBS    R7, R7, #1\nOUT\n        MOV     R5, R7\n        MOV     R0, R6\nIN\n        LDR     R2, [R0]\n        LDR     R3, [R0, #4]\n        CMP     R2, R3\n        BCS     NOSWAP2\n        STR     R3, [R0]\n        STR     R2, [R0, #4]\nNOSWAP2\n        ADD     R0, R0, #4\n        SUBS    R5, R5, #1\n        BNE     IN\n        SUBS    R7, R7, #1\n        BNE     OUT\nSTOP    B       STOP\n\nAREA    DATA, DATA, READONLY\nARRAY   DCD    0,1,2,3,4,5\n        END"
+  },
+  {
+    "title": "Count Ones & Zeros in 32‑bit Words",
+    "code": "AREA    OnesZeros, CODE, READONLY\n        EXPORT  __main\n\n__main\n        MOV     R2, #0                ; ones count\n        MOV     R3, #0                ; zeros count\n        MOV     R7, #2                ; number of words\n        LDR     R6, =VALUE\n\nLOOP\n        MOV     R1, #32               ; bits per word\n        LDR     R0, [R6], #4\nBITLOOP\n        LSLS    R0, R0, #1\n        BCS     INC_ONE\n        ADD     R3, R3, #1\n        B       NEXTBIT\nINC_ONE\n        ADD     R2, R2, #1\nNEXTBIT\n        SUBS    R1, R1, #1\n        BNE     BITLOOP\n        SUBS    R7, R7, #1\n        BNE     LOOP\n        ; results in mem\n        LDR     R8, =ONECOUNT\n        STR     R2, [R8]\n        LDR     R9, =ZEROCOUNT\n        STR     R3, [R9]\nSTOP    B       STOP\n\nAREA    DATA, DATA, READONLY\nVALUE   DCD    0xF0F0F0F0,0xAAAAAAAA\nAREA    RESULT, DATA, READWRITE\nONECOUNT  DCD   0\nZEROCOUNT DCD   0\n        END"
+  }
+]
