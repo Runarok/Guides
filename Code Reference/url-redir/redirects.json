@@ -3,16 +3,12 @@
         "url": "https://github.com/TempestAethel/Design-and-implementation-of-Antenna",
         "showPopup": false
     },
-    "Iot": {
-        "url": "https://runarok.github.io/ArbitraryWorks/Files/Iot/Iot.html",
+    "Majorproject": {
+        "url": "https://github.com/Runarok/Prosthetic-Arm",
         "showPopup": false
     },
-    "redir": {
-        "url": "https://github.com/Runarok/Guides/edit/main/Code%20Reference/url-redir/redirects.json",
-        "showPopup": false
-    },
-    "LabCodes": {
-        "url": "https://github.com/Runarok/Guides/tree/main/Code%20Library/Academic",
+    "Books": {
+        "url": "https://github.com/Runarok/books",
         "showPopup": false
     },
     "GitHub": {
@@ -20,6 +16,6 @@
                 "https://chatgpt.com/",
                 "https://tempestaethel.github.io",
                 "https://runarok.github.io"],
-        "showPopup": false
+        "showPopup": true
     }
 }
