@@ -11,6 +11,10 @@
         "url": "https://github.com/Runarok/books",
         "showPopup": false
     },
+    "SE": {
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLScQ1sp7XMG9dsaC4O_tWKEVQx61ZePYoeN_gYpoqWjiwSMjWw/viewform?usp=sharing&ouid=117441485698612458384",
+    "showPopup": false
+    },
     "GitHub": {
         "url": ["https://onecompiler.com/html/",
                 "https://chatgpt.com/",
