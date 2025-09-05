@@ -38,7 +38,7 @@ Runarok-Guides/
 * **[`Code Reference/`](./Code%20Reference)**  
   This folder contains archived files from various projects, stored for personal reference and potential future updates, even though the original repositories are archived. Files are kept for reuse or learning when revisiting old code or working on new projects.
 
-* **Thought Box**  
+* **[`Thought Box`](https://github.com/Runarok/logbox/tree/main/Thought%20Box)**  
   The original **Thought Box** content has been moved to a new, more fitting home in a dedicated repository called [**Logbox**](https://github.com/Runarok/logbox). This new space better suits the spontaneous, informal, and exploratory nature of the ideas collected there.
 
   - You can find the Thought Box content here:  
