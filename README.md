@@ -15,34 +15,36 @@ Runarok-Guides/
 ├── Code Manual/          # Documentation and guides related to coding practices
 ├── Code Quest/           # Collection of personal progress, courses, and internship resources
 ├── Code Reference/       # Archived files from projects kept for personal reference and future updates
-└── Thought Box/          # Spontaneous ideas, notes, or solutions inspired by social media or online content
-    └── README.md         # Consolidated breakdown of all Thought Box content
+└── Thought Box/          # [Moved to a new repository - see below]
 </pre>
 
 ### Directory Breakdown
 
-* **[`LICENSE`](LICENSE)**
+* **[`LICENSE`](LICENSE)**  
   The repository is licensed under the **MIT License**. Please see the `LICENSE` file for full terms and conditions.
 
-* **[`Code Library/`](./Code%20Library)**
+* **[`Code Library/`](./Code%20Library)**  
   This folder contains code resources divided into:
 
-  * **[`Academic/`](./Code%20Library/Academic)**: Projects and examples related to coursework and academic research.
+  * **[`Academic/`](./Code%20Library/Academic)**: Projects and examples related to coursework and academic research.  
   * **[`Code Folly/`](./Code%20Library/Code%20Folly)**: Experimental projects and fun programming exercises.
 
-* **[`Code Manual/`](./Code%20Manual)**
+* **[`Code Manual/`](./Code%20Manual)**  
   A set of guides and documentation to improve coding practices, enhance productivity, and explore advanced techniques.
 
-* **[`Code Quest/`](./Code%20Quest)**
+* **[`Code Quest/`](./Code%20Quest)**  
   A collection of resources for tracking personal growth, working through courses, and preparing for internships or professional roles.
 
-* **[`Code Reference/`](./Code%20Reference)**
+* **[`Code Reference/`](./Code%20Reference)**  
   This folder contains archived files from various projects, stored for personal reference and potential future updates, even though the original repositories are archived. Files are kept for reuse or learning when revisiting old code or working on new projects.
 
-* **[`Thought Box/`](./Thought%20Box)**
-  A casual, catch-all space for posting thoughts, small problems, or curiosities sparked by YouTube Shorts, Reels, Tweets, or any other online source. Whether it's an interesting code snippet, an algorithmic puzzle, or a random "can I build this?" moment, it all lives here.  
-  - See: **[`Thought Box/README.md`](./Thought%20Box/README.md)** for detailed breakdown and sections.
+* **Thought Box**  
+  The original **Thought Box** content has been moved to a new, more fitting home in a dedicated repository called [**Logbox**](https://github.com/Runarok/logbox). This new space better suits the spontaneous, informal, and exploratory nature of the ideas collected there.
 
+  - You can find the Thought Box content here:  
+  [https://github.com/Runarok/logbox/tree/main/Thought%20Box](https://github.com/Runarok/logbox/tree/main/Thought%20Box)
+
+> While Thought Box is no longer part of this repository’s structure, the link is included here for continuity and easy access.
 
 ---
 
