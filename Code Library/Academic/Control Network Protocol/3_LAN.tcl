@@ -12,26 +12,35 @@
 # Software Tool:
 # -------------------------------
 # NS2 (Network Simulator 2)
+# Tool Used :: TCL (Tool Command Language)
 
 # -------------------------------
 # Theory:
 # -------------------------------
-# Ethernet LANs are simulated in NS2 using the "make-lan" feature. 
+# Ethernet LANs are simulated in NS2 using the "make-lan" feature.
 # Ten nodes are divided into two LAN segments connected via a duplex link.
-# TCP and UDP traffic are generated over the LAN, and throughput is analyzed 
-# by varying error rates and data rates. An AWK script calculates throughput 
+# TCP and UDP traffic are generated over the LAN, and throughput is analyzed
+# by varying error rates and data rates. An AWK script calculates throughput
 # for both TCP and UDP.
 
 # -------------------------------
 # Procedure:
 # -------------------------------
-# 1. Create 10 nodes and configure two Ethernet LAN segments.
-# 2. Connect the two LANs using a duplex link.
-# 3. Attach TCP and UDP agents with FTP and CBR applications.
-# 4. Configure error model to simulate packet loss.
-# 5. Set packet sizes and intervals for TCP and UDP flows.
-# 6. Run the simulation and generate NAM trace.
-# 7. Use an AWK script to calculate TCP and UDP throughput.
+# Step 1: Open VMware Workstation.
+# Step 2: Open the terminal window.
+# Step 3: Enter the following commands in sequence:
+#         $ cd Desktop
+#         $ cd USN
+#         $ gedit p3.tcl            # Create/Edit the TCL program
+# Step 4: Paste the below TCL program into p3.tcl and save.
+# Step 5: Run the TCL program:
+#         $ ns p3.tcl
+# Step 6: Visualize the animation (optional):
+#         $ nam p3.nam
+# Step 7: Create the AWK file:
+#         $ gedit p3.awk
+# Step 8: Execute the AWK program to compute throughput:
+#         $ awk -f p3.awk p3.tr
 
 # -------------------------------
 # Main Program:
@@ -124,7 +133,7 @@ BEGIN {
 }
 {
     # TCP throughput calculation for packets received at node 9
-    if ($1=="r" && $5=="tcp" && $4=="9") {
+    if ($1=="r" && $5=="tcp" && $4=="6") {
         rpacketsize_tcp += $6;
         rtimeinterval_tcp = $2;
     }
@@ -145,7 +154,36 @@ END {
 # awk -f p3.awk p3.tr
 
 # -------------------------------
+# Terminal Window (Command Flow):
+# -------------------------------
+# user@ubuntu:~$ cd Desktop
+# user@ubuntu:~/Desktop$ cd USN
+# user@ubuntu:~/Desktop/USN$ gedit p3.tcl
+# user@ubuntu:~/Desktop/USN$ ns p3.tcl
+# user@ubuntu:~/Desktop/USN$ nam p3.nam
+# user@ubuntu:~/Desktop/USN$ gedit p3.awk
+# user@ubuntu:~/Desktop/USN$ awk -f p3.awk p3.tr
+# Output appears as:
+# Throughput for UDP = <value> Mbps
+# Throughput for TCP = <value> Mbps
+
+# -------------------------------
+# Observation:
+# -------------------------------
+# • Bottleneck: The 1Mb link between n(4)-n(5) limits end-to-end throughput; both flows contend here.
+# • Error Rate: Increasing $err rate_ reduces effective throughput for both flows.
+#   - TCP backs off due to congestion control/ACK loss; measured TCP throughput at sink drops.
+#   - UDP keeps sending (no control), but received throughput falls because more packets are lost.
+# • Data Rate: Raising LAN/data rates helps only until the 1Mb bottleneck saturates; after that, queues build and loss increases.
+# • Measurement Points (per AWK): UDP throughput is computed at node 6; TCP throughput is computed at its respective sink node.
+# • Practical note: Lower error rate and/or higher bottleneck capacity → higher measured throughput; aggressive CBR intervals on a narrow link → more loss.
+
+# -------------------------------
 # Result:
 # -------------------------------
-# The simulation successfully implemented an Ethernet LAN topology 
-# and calculated TCP and UDP throughput using AWK.
+# The simulation successfully implemented an Ethernet LAN topology and
+# calculated TCP and UDP throughput using AWK.
+
+# ======================================================
+# End of File
+# ======================================================
