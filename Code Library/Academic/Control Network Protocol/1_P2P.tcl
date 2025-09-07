@@ -1,38 +1,29 @@
 # ------------------------------------------------------
 # Title: Point-to-Point Network Performance Analysis
 # ------------------------------------------------------
-
-# ------------------------------------------------------
 # Aim:
-# ------------------------------------------------------
 # To implement a point-to-point network with four nodes 
 # and duplex links between them, and analyze the network 
 # performance by setting the queue size and varying the 
 # bandwidth.
-
 # ------------------------------------------------------
 # Tool Used    :: TCL (Tool Command Language)
 # Software     :: NS2 (Network Simulator 2)
 # ------------------------------------------------------
-
-# ------------------------------------------------------
 # Theory:
-# ------------------------------------------------------
-# Network performance is analyzed by creating a four-node topology using NS2.  
-# Duplex links are set with different bandwidths and queue limits.  
-# UDP agents and CBR traffic generators are used to simulate packet transmission.  
-# NAM (Network Animator) is used for visualization,  
+# Network performance is analyzed by creating a four-node topology using NS2.
+# Duplex links are set with different bandwidths and queue limits.
+# UDP agents and CBR traffic generators are used to simulate packet transmission.
+# NAM (Network Animator) is used for visualization,
 # and an AWK script calculates the number of packets dropped.
-
 # ------------------------------------------------------
 # Procedure:
-# ------------------------------------------------------
 # Step 1: Open VMware Workstation.
 # Step 2: Open the terminal window.
 # Step 3: Enter the following commands in sequence:
 #         $ cd Desktop
 #         $ cd USN
-#         $ gedit p1.tcl          # To open the TCL program for editing
+#         $ gedit p1.tcl      # Open the TCL program for editing
 # Step 4: Type the below TCL program and save it.
 # Step 5: Run the TCL program using:
 #         $ ns p1.tcl
@@ -42,7 +33,6 @@
 #         $ gedit p1.awk
 # Step 8: Save and execute the AWK program:
 #         $ awk -f p1.awk p1.tr
-
 # ------------------------------------------------------
 # Main TCL Program Starts Here
 # ------------------------------------------------------
@@ -120,56 +110,61 @@ $ns at 13.0 "finish"
 $ns run
 
 # ------------------------------------------------------
-# AWK Program (p1.awk)
+# AWK Program File: p1.awk
 # ------------------------------------------------------
 # Purpose: To calculate the number of dropped packets
-# Type the following code into p1.awk:
-
-# BEGIN {
-#     count=0;
-# }
-# {
-#     if ($1=="d")    # Checks if the event is packet drop
-#         count++;
-# }
-# END {
-#     printf("Number of packets dropped: %d\n", count);
-# }
-
+# ------------------------------------------------------
+BEGIN {
+    count=0;
+}
+{
+    if ($1=="d")    # Checks if the event is packet drop
+        count++;
+}
+END {
+    printf("Number of packets dropped: %d\n", count);
+}
 # ------------------------------------------------------
 # Execute the AWK program with:
 # $ awk -f p1.awk p1.tr
 # ------------------------------------------------------
 
 # ------------------------------------------------------
-# Terminal Window Example:
+# Terminal Window Commands
 # ------------------------------------------------------
 # nicks@ubuntu:~$ cd Desktop
 # nicks@ubuntu:~/Desktop$ cd USN
 # nicks@ubuntu:~/Desktop/USN$ gedit p1.tcl
-# [Type & Save Program]
 # nicks@ubuntu:~/Desktop/USN$ ns p1.tcl
 # nicks@ubuntu:~/Desktop/USN$ nam p1.nam
 # nicks@ubuntu:~/Desktop/USN$ gedit p1.awk
-# [Type & Save AWK Code]
 # nicks@ubuntu:~/Desktop/USN$ awk -f p1.awk p1.tr
+# Output:
 # Number of packets dropped: 33553
 
 # ------------------------------------------------------
 # Observation:
 # ------------------------------------------------------
-# The number of packets dropped depends on:
-#  - Link bandwidth
-#  - Queue size
-#  - Traffic load
-# Packet drops are successfully calculated using the AWK program.
+# Packet Drops:
+# - Packets from nodes 2 and 3 and other unspecified nodes experienced packet drops.
+#
+# Queue Size:
+# - Queue size significantly affected packet drops.
+# - Smaller queues caused higher packet losses.
+#
+# Bandwidth:
+# - Higher bandwidth links had minimal delays and fewer packet drops.
+#
+# Throughput:
+# - Throughput was directly influenced by bandwidth and CBR intervals.
+# - Smaller intervals on low-bandwidth links caused more packet drops.
 
 # ------------------------------------------------------
 # Result:
 # ------------------------------------------------------
-# The simulation successfully analyzed network performance using NS2.  
-# Packet drops are calculated using the AWK program and displayed as output.
+# The simulation successfully analyzed network performance using NS2.
+# Packet drops were calculated using the AWK program and displayed as output.
 
-# ------------------------------------------------------
+# ======================================================
 # End of File
-# ------------------------------------------------------
+# ======================================================
