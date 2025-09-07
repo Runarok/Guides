@@ -1,42 +1,45 @@
 # ------------------------------------------------------
 # Title: TCP & UDP Packet Transmission Analysis in NS2
 # ------------------------------------------------------
-
-# -------------------------------
 # Aim:
-# -------------------------------
 # To implement a four-node point-to-point network and analyze the number of 
 # packets sent by TCP and UDP by applying TCP between n0-n3 and UDP between n1-n3.
-
-# -------------------------------
-# Software Tool:
-# -------------------------------
-# NS2 (Network Simulator 2)
-
-# -------------------------------
+# ------------------------------------------------------
+# Tool Used    :: TCL (Tool Command Language)
+# Software     :: NS2 (Network Simulator 2)
+# ------------------------------------------------------
 # Theory:
-# -------------------------------
-# A four-node topology is created using NS2 with duplex links. TCP and UDP agents 
-# are attached to simulate two different types of traffic: FTP over TCP and CBR 
-# over UDP. The simulation collects trace data to calculate the number of TCP and 
-# UDP packets sent using an AWK script.
-
-# -------------------------------
+# A four-node topology is created using NS2 with duplex links.
+# TCP and UDP agents are attached to simulate two different types of traffic:
+#   • FTP over TCP
+#   • CBR over UDP
+# The simulation collects trace data and an AWK script is used to calculate 
+# the number of TCP and UDP packets sent.
+# ------------------------------------------------------
 # Procedure:
-# -------------------------------
-# 1. Create four nodes and connect them with duplex links.
-# 2. Configure queue limits and link bandwidths.
-# 3. Attach TCP, UDP agents, sinks, and null agents.
-# 4. Attach FTP application over TCP and CBR over UDP.
-# 5. Set packet sizes and intervals.
-# 6. Run simulation and generate NAM visualization.
-# 7. Use AWK script to calculate total packets sent by TCP and UDP.
+# Step 1: Open VMware Workstation.
+# Step 2: Open the terminal window.
+# Step 3: Enter the following commands in sequence:
+#         $ cd Desktop
+#         $ cd USN
+#         $ gedit p2.tcl      # Open the TCL program for editing
+# Step 4: Type the below TCL program and save it.
+# Step 5: Run the TCL program using:
+#         $ ns p2.tcl
+# Step 6: To visualize network animation:
+#         $ nam p2.nam
+# Step 7: Type the AWK program in a new file:
+#         $ gedit p2.awk
+# Step 8: Save and execute the AWK program:
+#         $ awk -f p2.awk p2.tr
+# ------------------------------------------------------
+# Main TCL Program Starts Here
+# ------------------------------------------------------
 
-# -------------------------------
-# Main Program:
-# -------------------------------
-
+# Create simulator instance
 set ns [new Simulator]
+
+# Create trace and NAM files
 set tf [open p2.tr w]
 $ns trace-all $tf
 set nf [open p2.nam w]
@@ -104,12 +107,11 @@ $ns at 13.0 "finish"
 # Run the simulation
 $ns run
 
-# -------------------------------
-# AWK Program:
-# -------------------------------
-# File: p2.awk
+# ------------------------------------------------------
+# AWK Program File: p2.awk
+# ------------------------------------------------------
 # Purpose: To calculate the number of TCP and UDP packets sent
-
+# ------------------------------------------------------
 BEGIN {
     tcp=0;
     cbr=0;
@@ -127,12 +129,50 @@ END {
     printf("Number of TCP packets sent: %d\n", tcp);
     printf("Number of UDP packets sent: %d\n", cbr);
 }
+# ------------------------------------------------------
+# Execute the AWK program with:
+# $ awk -f p2.awk p2.tr
+# ------------------------------------------------------
 
-# Output Command:
-# awk -f p2.awk p2.tr
+# ------------------------------------------------------
+# Terminal Window Commands
+# ------------------------------------------------------
+# nicks@ubuntu:~$ cd Desktop
+# nicks@ubuntu:~/Desktop$ cd USN
+# nicks@ubuntu:~/Desktop/USN$ gedit p2.tcl
+# nicks@ubuntu:~/Desktop/USN$ ns p2.tcl
+# nicks@ubuntu:~/Desktop/USN$ nam p2.nam
+# nicks@ubuntu:~/Desktop/USN$ gedit p2.awk
+# nicks@ubuntu:~/Desktop/USN$ awk -f p2.awk p2.tr
+#
+# Output Example:
+# Number of TCP packets sent: 20589
+# Number of UDP packets sent: 16842
 
-# -------------------------------
+# ------------------------------------------------------
+# Observation:
+# ------------------------------------------------------
+# TCP Traffic:
+# • TCP packets were transmitted reliably.
+# • Fewer packet losses due to acknowledgments and congestion control.
+#
+# UDP Traffic:
+# • UDP sent packets continuously without flow control.
+# • Higher packet loss observed on congested, low-bandwidth links.
+#
+# Bandwidth Impact:
+# • Higher bandwidth links had fewer drops and better throughput.
+# • Low bandwidth on the n2-n3 link caused higher UDP losses.
+#
+# Queue Size Effect:
+# • Smaller queues increased packet loss on high-load paths.
+
+# ------------------------------------------------------
 # Result:
-# -------------------------------
-# The simulation successfully analyzed TCP and UDP packet transmission. 
+# ------------------------------------------------------
+# The simulation successfully analyzed TCP and UDP packet transmission.
 # The AWK script outputs the total number of TCP and UDP packets sent.
+
+# ======================================================
+# End of File
+# ======================================================
