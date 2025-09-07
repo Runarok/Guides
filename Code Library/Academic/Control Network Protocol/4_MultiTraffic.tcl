@@ -9,30 +9,46 @@
 # and analyze the congestion window variations for different TCP sources and destinations.
 
 # -------------------------------
-# Software Tool:
+# Tool Used:
 # -------------------------------
-# NS2 (Network Simulator 2)
+# TCL (Tool Command Language)
+# Software: NS2 (Network Simulator 2)
 
 # -------------------------------
 # Theory:
 # -------------------------------
-# In Ethernet LAN simulations, TCP connections experience dynamic congestion windows (cwnd)
-# based on network load, data rate, and competing flows. Multiple FTP applications over TCP
-# are configured to generate traffic, and congestion window data is collected from trace files.
-# These cwnd variations are later plotted using **xgraph** for visualization.
+# In Ethernet LAN simulations, TCP connections dynamically adjust their congestion window (cwnd)
+# size based on network load, available bandwidth, and competing flows.
+# Using NS2, multiple FTP applications are configured over TCP to generate traffic.
+# Congestion window data is collected using trace files and later visualized using **xgraph**
+# to understand how cwnd evolves for different TCP flows under varying load conditions.
 
 # -------------------------------
 # Procedure:
 # -------------------------------
-# 1. Create 4 LAN nodes using the `make-lan` command.
-# 2. Configure TCP agents, FTP applications, and TCP sinks.
-# 3. Attach FTP applications to TCP agents and connect sources to sinks.
-# 4. Enable congestion window tracing for each TCP source.
-# 5. Run FTP traffic with different start/stop times to simulate congestion.
-# 6. Extract congestion window data using AWK and visualize using xgraph.
+# Step 1: Open VMware Workstation.
+# Step 2: Open the terminal window.
+# Step 3: Navigate to your project folder:
+#         $ cd Desktop
+#         $ cd USN
+# Step 4: Create/Edit the TCL program:
+#         $ gedit p4.tcl
+# Step 5: Paste the TCL code below and save.
+# Step 6: Run the TCL program:
+#         $ ns p4.tcl
+# Step 7: Visualize the simulation animation (optional):
+#         $ nam p4.nam
+# Step 8: Create and open the AWK file:
+#         $ gedit p4.awk
+# Step 9: Paste the AWK code (given below) and save.
+# Step 10: Extract congestion window data for each TCP flow:
+#         $ awk -f p4.awk file0.tr > file0
+#         $ awk -f p4.awk file1.tr > file1
+# Step 11: Plot the cwnd graph using xgraph:
+#         $ xgraph -x "time" -y "congestion_window" file0 file1
 
 # -------------------------------
-# Main Program:
+# Main TCL Program:
 # -------------------------------
 
 set ns [new Simulator]
@@ -129,14 +145,45 @@ BEGIN {
 END {
 }
 
+# -------------------------------
 # Output Commands:
-# awk -f p4.awk file0.tr > file0
-# awk -f p4.awk file1.tr > file1
-# xgraph -x "time" -y "congestion_window" file0 file1
+# -------------------------------
+# Extract cwnd data for TCP0:
+#   $ awk -f p4.awk file0.tr > file0
+# Extract cwnd data for TCP1:
+#   $ awk -f p4.awk file1.tr > file1
+# Plot the congestion window variations using xgraph:
+#   $ xgraph -x "time" -y "congestion_window" file0 file1
+
+# -------------------------------
+# Terminal Window (Command Flow):
+# -------------------------------
+# user@ubuntu:~$ cd Desktop
+# user@ubuntu:~/Desktop$ cd USN
+# user@ubuntu:~/Desktop/USN$ gedit p4.tcl
+# user@ubuntu:~/Desktop/USN$ ns p4.tcl
+# user@ubuntu:~/Desktop/USN$ nam p4.nam
+# user@ubuntu:~/Desktop/USN$ gedit p4.awk
+# user@ubuntu:~/Desktop/USN$ awk -f p4.awk file0.tr > file0
+# user@ubuntu:~/Desktop/USN$ awk -f p4.awk file1.tr > file1
+# user@ubuntu:~/Desktop/USN$ xgraph -x "time" -y "congestion_window" file0 file1
+
+# -------------------------------
+# Observation:
+# -------------------------------
+# • TCP0 vs TCP1: TCP0 had a higher maximum cwnd (10) than TCP1 (5), giving it an advantage.
+# • Multiple Flows: Competing FTP flows lead to congestion in the shared Ethernet LAN.
+# • cwnd Dynamics: During periods of simultaneous traffic, congestion windows fluctuated rapidly.
+# • Staggered Starts: Starting/stopping FTP flows at different times helped visualize cwnd recovery.
+# • Visualization: xgraph clearly shows how TCP congestion control affects throughput and fairness.
 
 # -------------------------------
 # Result:
 # -------------------------------
-# The Ethernet LAN simulation successfully generated multiple TCP flows.
-# The congestion window variations for different sources were traced and visualized
-# using xgraph for performance comparison.
+# The Ethernet LAN simulation successfully implemented multiple TCP flows.
+# Congestion window variations were extracted and visualized using **xgraph**,
+# enabling performance comparison between TCP sources.
+
+# ======================================================
+# End of File
+# ======================================================
