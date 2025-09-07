@@ -1,46 +1,64 @@
 # ===============================================================
-# TITLE : Implementation of Link State Routing Algorithm
+# TITLE: Implementation of Link State Routing Algorithm
 # ===============================================================
 
-# ===============================================================
-# 1. AIM:
+# -------------------------------
+# AIM:
+# -------------------------------
 # To implement and analyze the Link State Routing Algorithm using NS2.
-# ===============================================================
 
-# ===============================================================
-# 2. SOFTWARE TOOL:
-# Network Simulator 2 (NS2)
-# ===============================================================
+# -------------------------------
+# TOOL USED:
+# -------------------------------
+# TCL (Tool Command Language)
+# Simulator: NS2 (Network Simulator 2)
 
-# ===============================================================
-# 3. THEORY:
-# Link State Routing is a dynamic routing protocol in which each node
-# maintains a full topology of the network. Nodes periodically flood
-# link-state information to all other nodes, and each router uses
-# Dijkstra's algorithm to compute the shortest path tree.
-# ===============================================================
+# -------------------------------
+# THEORY:
+# -------------------------------
+# Link State Routing (LSR) is a dynamic routing protocol where each router
+# maintains a complete topology map of the network.  
+# Each node periodically floods link-state information to all other nodes.
+# Using this data, every router independently computes the shortest path
+# tree using **Dijkstra’s algorithm**.  
+#
+# Advantages:
+# • Faster convergence than Distance Vector routing  
+# • Lower chances of routing loops  
+# • Dynamically adapts to link failures and recoveries
 
-# ===============================================================
-# 4. PROCEDURE:
-# 1. Create a simulator instance.
-# 2. Define nodes and links.
-# 3. Attach UDP, NULL, and CBR agents.
-# 4. Enable Link State routing protocol.
-# 5. Schedule events and run simulation.
-# 6. Analyze NAM and AWK outputs.
-# ===============================================================
+# -------------------------------
+# PROCEDURE:
+# -------------------------------
+# Step 1: Open VMware / Ubuntu terminal.
+# Step 2: Navigate to your NS2 working directory:
+#         $ cd Desktop
+#         $ cd USN
+# Step 3: Create/Edit the TCL program:
+#         $ gedit p5.tcl
+# Step 4: Paste the TCL code (given below) and save.
+# Step 5: Run the TCL simulation:
+#         $ ns p5.tcl
+# Step 6: Open the NAM animation to visualize routing behavior:
+#         $ nam p5.nam
+# Step 7: Create/Edit the AWK program:
+#         $ gedit p5.awk
+# Step 8: Paste the AWK code (given below) and save.
+# Step 9: Run the AWK program to analyze simulation results:
+#         $ awk -f p5.awk p5.tr
+# Step 10: Observe Packet Delivery Ratio (PDR), Dropped Packets,
+#          Routing Overhead, and Normalized Overhead.
 
-# ===============================================================
-# 5. PROGRAM:
-# (a) MAIN TCL PROGRAM
-# ===============================================================
+# -------------------------------
+# MAIN TCL PROGRAM: p5.tcl
+# -------------------------------
 
 # Create simulator instance
 set ns [new Simulator]
 
 # Open trace files
 set tr [open p5.tr w]
-$ns trace-all $nr
+$ns trace-all $tr
 set nf [open p5.nam w]
 $ns namtrace-all $nf
 
@@ -48,7 +66,7 @@ $ns namtrace-all $nf
 $ns rtproto LS
 
 # Create 12 nodes
-for {set i 0} {$i< 12} {incr i} {
+for {set i 0} {$i<12} {incr i} {
     set n($i) [$ns node]
 }
 
@@ -105,9 +123,9 @@ $ns rtmodel-at 20.0 up $n(7) $n(6)
 proc finish { } {
     global ns tr nf
     $ns flush-trace
+    close $tr
     close $nf
-    close $nr
-    exec nam p5.nam
+    exec nam p5.nam &
     exit 0
 }
 
@@ -121,10 +139,9 @@ $ns at 50.0 "finish"
 # Run simulation
 $ns run
 
-# ===============================================================
-# (b) AWK PROGRAM
-# ===============================================================
-# Save this as p5.awk
+# -------------------------------
+# AWK PROGRAM: p5.awk
+# -------------------------------
 
 BEGIN {
     pksend = 0
@@ -133,20 +150,16 @@ BEGIN {
     pkrouting = 0
 }
 {
-    if ( $1=="-" && ($3=="0" || $3=="1") && $5=="cbr" )
-    {
+    if ( $1=="-" && ($3=="0" || $3=="1") && $5=="cbr" ) {
         pksend += 1
     }
-    if ( $1=="r" && $4=="5" && $5=="cbr" )
-    {
+    if ( $1=="r" && $4=="5" && $5=="cbr" ) {
         pkreceive += 1
     }
-    if ( $1=="d" )
-    {
+    if ( $1=="d" ) {
         pkdrop += 1
     }
-    if ( $1=="r" && ($5=="rtProtoDV" || $5=="rtProtoLS") )
-    {
+    if ( $1=="r" && ($5=="rtProtoDV" || $5=="rtProtoLS") ) {
         pkrouting += 1
     }
 }
@@ -155,29 +168,49 @@ END {
     print "No of received packets = " pkreceive
     print "No of dropped packets = " pkdrop
     print "No of routing packets = " pkrouting
-    print "Normalized Overhead (routing/received), NOH = " pkrouting/pkreceive
-    print "Packet Delivery Ratio (received/send), PDR = " pkreceive/pksend
+    print "Normalized Overhead (routing/received) = " pkrouting/pkreceive
+    print "Packet Delivery Ratio (received/sent) = " pkreceive/pksend
 }
 
-# ===============================================================
-# 6. RESULT:
-# The implementation of Link State Routing Protocol was successfully
-# simulated, and packet delivery ratio, drops, and routing overhead
-# were analyzed using AWK script.
-# ===============================================================
+# -------------------------------
+# OUTPUT COMMANDS:
+# -------------------------------
+# To run the TCL simulation:
+#   $ ns p5.tcl
+#
+# To view NAM animation:
+#   $ nam p5.nam
+#
+# To analyze trace file using AWK:
+#   $ awk -f p5.awk p5.tr
+
+# -------------------------------
+# TERMINAL COMMAND FLOW:
+# -------------------------------
+# user@ubuntu:~$ cd Desktop
+# user@ubuntu:~/Desktop$ cd USN
+# user@ubuntu:~/Desktop/USN$ gedit p5.tcl
+# user@ubuntu:~/Desktop/USN$ ns p5.tcl
+# user@ubuntu:~/Desktop/USN$ nam p5.nam
+# user@ubuntu:~/Desktop/USN$ gedit p5.awk
+# user@ubuntu:~/Desktop/USN$ awk -f p5.awk p5.tr
+
+# -------------------------------
+# OBSERVATION:
+# -------------------------------
+# • Link State Routing dynamically adapts to network topology changes.  
+# • When link failures occur, routers recalculate shortest paths using Dijkstra’s algorithm.  
+# • Packet delivery improves after the affected links recover.  
+# • Routing overhead temporarily spikes during topology changes due to flooding of LSAs.  
+# • The AWK script calculates PDR, dropped packets, and routing efficiency.
+
+# -------------------------------
+# RESULT:
+# -------------------------------
+# The implementation of the Link State Routing Protocol was successfully
+# simulated. Packet Delivery Ratio (PDR), dropped packets, and routing
+# overhead were analyzed using an AWK script.
 
 # ===============================================================
-# 7. NAM OUTPUT:
-# (Attach the NAM screenshot here in printed form)
-# ===============================================================
-
-# ===============================================================
-# 8. AWK OUTPUT:
-# (Attach AWK result output here in written form)
-# ===============================================================
-
-# ===============================================================
-# 9. OBSERVATION:
-# Link State Routing provides efficient path selection and adapts to
-# network changes by recalculating routes dynamically.
+# END OF FILE
 # ===============================================================
