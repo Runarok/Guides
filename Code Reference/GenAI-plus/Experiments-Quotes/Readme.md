@@ -6,6 +6,6 @@ Used For the **quote page**, it's structured and linked the way it is:
 
 > [Quotes Source Code on GitHub](https://github.com/Runarok/GenAI-plus/tree/main/Experiments/Quotes)
 
-### ✅ In short:
+**In short:**
 
 > The quote page is kept separate and self-contained to avoid affecting the original `Quotes` source, ensuring quote-specific changes remain isolated.
