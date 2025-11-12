@@ -1,0 +1,12 @@
+clc;
+clear all;
+Z1=0.1*50+1j*(0:2:50);
+Z2=(0:2:50)-0.6*50j;
+Z0=50;
+gamma1=z2gamma(Z1, Z0);
+gamma2=z2gamma(Z2, Z0);
+s1=smithplot(gamma1,'Color',[0.2, 0 1],'GridType',"Z");
+hold on;
+s2=smithplot(gamma2,'Color','g','lineStyle','--','linewidth',1.5);
+s1.marker='+';
+s2.marker='s';
