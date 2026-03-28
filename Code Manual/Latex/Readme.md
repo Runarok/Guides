@@ -186,9 +186,10 @@
 - [01_test_errror.tex](#file-chapter_13_-_troubleshooting01_test_errrortex)
 - [02_warning.tex](#file-chapter_13_-_troubleshooting02_warningtex)
 
-================================================  
-FILE: README.md  
-================================================  
+  
+```
+## FILE: README.md  
+   
 
 # LaTeX-Beginner-s-Guide-Second-Edition
 LaTeX-Beginner-s-Guide-Second-Edition, published by Packt
@@ -249,20 +250,19 @@ With the following software and hardware list you can run all code files present
  <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
 <p align="center"> <a href="https://packt.link/free-ebook/9781801078658">https://packt.link/free-ebook/9781801078658 </a> </p>
 
+```
+## FILE: Chapter_01_-_Getting_started_with_LaTeX/01_first_document.tex
 
-================================================
-FILE: Chapter_01_-_Getting_started_with_LaTeX/01_first_document.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 This is our first document.
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/01_example_document.tex
 
-
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/01_example_document.tex
-================================================
+```tex
 \documentclass[a4paper,11pt]{article}
 \title{Example 2}
 \author{My name}
@@ -273,11 +273,10 @@ FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/01_example_document.tex
 This is our second document. It contains a title and a section with text.
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/02_special_symbols.tex
 
-
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/02_special_symbols.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 Statement \#1:
@@ -286,11 +285,10 @@ Statement \#1:
 More special symbols are \&, \_, \{ and \}.
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/03_adjusting_font_shape.tex
 
-
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/03_adjusting_font_shape.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 Text can be \emph{emphasized}.
@@ -303,11 +301,10 @@ Such commands can be \textit{\textbf{nested}}.
 \emph{See how \emph{emphasizing} looks when nested.}
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/04_choosing_font.tex
 
-
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/04_choosing_font.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \textsf{\textbf{Get help on the Internet}}
@@ -315,11 +312,10 @@ FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/04_choosing_font.tex
 \texttt{https://latex.org} is a support forum for \LaTeX.
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/05_font_declarations.tex
 
-
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/05_font_declarations.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \sffamily\bfseries Get help on the Internet
@@ -328,10 +324,10 @@ FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/05_font_declarations.tex
 a support forum for \LaTeX.
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/06_font_commands.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/06_font_commands.tex
-================================================
+```tex
 % Used for Figure 2.6: Font commands
 \documentclass{article}
 \usepackage{booktabs}
@@ -356,21 +352,20 @@ FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/06_font_commands.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/07_grouping_braces.tex
 
-
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/07_grouping_braces.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 Besides from {\itshape italics}, words can be {\bfseries bold},
 {\slshape slanted}, or typeset in {\scshape Small Caps}.
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/08_font_sizes.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/08_font_sizes.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \tiny We \scriptsize start \footnotesize very \small small,
@@ -378,10 +373,10 @@ FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/08_font_sizes.tex
 \huge huge, \Huge gigantic!
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/09_simple_macros.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/09_simple_macros.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\TUG}{\TeX\ Users Group}
 \begin{document}
@@ -389,10 +384,10 @@ FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/09_simple_macros.tex
 The \TUG\ is an organization for people who use \TeX\ or \LaTeX.
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/10_proper_spacing.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/10_proper_spacing.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{xspace}
 \newcommand{\TUG}{\TeX\ Users Group\xspace}
@@ -401,11 +396,10 @@ FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/10_proper_spacing.tex
 The \TUG\ is an organization for people who use \TeX\ or \LaTeX.
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/11_macro_arguments.tex
 
-
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/11_macro_arguments.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\keyword}[1]{\textbf{#1}}
 \begin{document}
@@ -413,10 +407,10 @@ FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/11_macro_arguments.tex
 \keyword{scope} of \keyword{declarations}.
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/12_optional_arguments.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/12_optional_arguments.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\keyword}[2][\bfseries]{{#1#2}}
 \begin{document}
@@ -424,19 +418,19 @@ FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/12_optional_arguments.tex
 \keyword{scope} of \keyword[\itshape]{declarations}.
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/13_text_box.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/13_text_box.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \parbox{3cm}{TUG is an acronym. It means \TeX\ Users Group.}
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/14_aligning_boxes.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/14_aligning_boxes.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 Text line
@@ -445,10 +439,10 @@ Text line
 \quad\parbox[t]{2cm}{another parbox aligned at its top line}
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/15_minipages.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/15_minipages.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \begin{minipage}{3cm}
@@ -456,10 +450,10 @@ TUG is an acronym. It means \TeX\ Users Group.
 \end{minipage}
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/16_hyphenation.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/16_hyphenation.tex
-================================================
+```tex
 \documentclass{article}
 \hyphenation{acro-nym}
 \begin{document}
@@ -468,10 +462,10 @@ TUG is an acronym. It means \TeX\ Users Group.
 \end{minipage}
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/17_justification.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/17_justification.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{microtype}
 \begin{document}
@@ -480,10 +474,10 @@ TUG is an acronym. It means \TeX\ Users Group.
 \end{minipage}
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/18_line_breaks.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/18_line_breaks.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \noindent\emph{Annabel Lee}\\
@@ -493,30 +487,30 @@ That a maiden there lived whom you may know\\
 By the name of Annabel Lee
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/19_ragged_right.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/19_ragged_right.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \parbox{3cm}{\raggedright
 TUG is an acronym. It means \TeX\ Users Group.}
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/20_ragged_left.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/20_ragged_left.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \parbox{3cm}{\raggedleft
 TUG is an acronym. It means \TeX\ Users Group.}
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/21_centering.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/21_centering.tex
-================================================
+```tex
 \documentclass{article}
 \pagestyle{empty}
 \begin{document}
@@ -528,10 +522,10 @@ FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/21_centering.tex
 }
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/22_center_environment.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/22_center_environment.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{url}
 \begin{document}
@@ -550,10 +544,10 @@ The complete poem can be read on
 \url{http://www.online-literature.com/poe/576/}.
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/23_quote.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/23_quote.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \noindent Niels Bohr said: ``An expert is a person who has made
@@ -565,10 +559,10 @@ Anyone who has never made a mistake has never tried anything new.
 Errors are inevitable. So, let’s be brave trying something new.
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/24_quotation.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/24_quotation.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{url}
 \begin{document}
@@ -595,10 +589,10 @@ The original text can be found on
 \url{https://www.ctan.org/what_is_tex.html}.
 \end{document}
 
+```
+## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/25_paragraph_skip.tex
 
-================================================
-FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/25_paragraph_skip.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{parskip}
 \usepackage{url}
@@ -614,10 +608,10 @@ The original text can be found on
 \url{https://www.ctan.org/what_is_tex.html}.
 \end{document}
 
+```
+## FILE: Chapter_03_-_Designing_Pages/01_book_chapter.tex
 
-================================================
-FILE: Chapter_03_-_Designing_Pages/01_book_chapter.tex
-================================================
+```tex
 \documentclass[a4paper,12pt]{book}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -632,10 +626,10 @@ More dummy text will follow.
 \blindtext[10]
 \end{document}
 
+```
+## FILE: Chapter_03_-_Designing_Pages/02_margins.tex
 
-================================================
-FILE: Chapter_03_-_Designing_Pages/02_margins.tex
-================================================
+```tex
 \documentclass[a4paper,12pt]{book}
 \usepackage[a4paper, inner=1.5cm, outer=3cm, top=2cm, bottom=3cm, bindingoffset=0.5cm]{geometry}
 \usepackage[english]{babel}
@@ -651,11 +645,10 @@ More dummy text will follow.
 \blindtext[10]
 \end{document}
 
+```
+## FILE: Chapter_03_-_Designing_Pages/03_class_options.tex
 
-
-================================================
-FILE: Chapter_03_-_Designing_Pages/03_class_options.tex
-================================================
+```tex
 \documentclass[a4paper,12pt,landscape,twocolumn]{book}
 \usepackage{geometry}
 \usepackage[english]{babel}
@@ -671,11 +664,10 @@ More dummy text will follow.
 \blindtext[10]
 \end{document}
 
+```
+## FILE: Chapter_03_-_Designing_Pages/04_header_footer.tex
 
-
-================================================
-FILE: Chapter_03_-_Designing_Pages/04_header_footer.tex
-================================================
+```tex
 \documentclass[a4paper,12pt]{book}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -696,10 +688,10 @@ More dummy text will follow.
 \blindtext[10]
 \end{document}
 
+```
+## FILE: Chapter_03_-_Designing_Pages/05_footnotes.tex
 
-================================================
-FILE: Chapter_03_-_Designing_Pages/05_footnotes.tex
-================================================
+```tex
 \documentclass[a4paper,12pt]{book}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -715,10 +707,10 @@ will follow.
 \blindtext[10]
 \end{document}
 
+```
+## FILE: Chapter_03_-_Designing_Pages/06_footnote_line.tex
 
-================================================
-FILE: Chapter_03_-_Designing_Pages/06_footnote_line.tex
-================================================
+```tex
 \documentclass[a4paper,12pt]{book}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -736,10 +728,10 @@ will follow.
 \blindtext[10]
 \end{document}
 
+```
+## FILE: Chapter_03_-_Designing_Pages/07_page_break.tex
 
-================================================
-FILE: Chapter_03_-_Designing_Pages/07_page_break.tex
-================================================
+```tex
 \documentclass[a4paper,12pt]{book}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -755,10 +747,10 @@ More dummy text will follow.
 \blindtext[10]
 \end{document}
 
+```
+## FILE: Chapter_03_-_Designing_Pages/08_new_page.tex
 
-================================================
-FILE: Chapter_03_-_Designing_Pages/08_new_page.tex
-================================================
+```tex
 \documentclass[a4paper,12pt]{book}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -774,10 +766,10 @@ More dummy text will follow.
 \blindtext[10]
 \end{document}
 
+```
+## FILE: Chapter_03_-_Designing_Pages/09_overfull_page.tex
 
-================================================
-FILE: Chapter_03_-_Designing_Pages/09_overfull_page.tex
-================================================
+```tex
 \documentclass[a4paper,11pt]{book}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -794,10 +786,10 @@ More dummy text will follow.
 \blindtext[3]
 \end{document}
 
+```
+## FILE: Chapter_03_-_Designing_Pages/10_enlarge_page.tex
 
-================================================
-FILE: Chapter_03_-_Designing_Pages/10_enlarge_page.tex
-================================================
+```tex
 \documentclass[a4paper,11pt]{book}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -815,10 +807,10 @@ More dummy text will follow.
 \blindtext[3]
 \end{document}
 
+```
+## FILE: Chapter_03_-_Designing_Pages/11_line_spacing.tex
 
-================================================
-FILE: Chapter_03_-_Designing_Pages/11_line_spacing.tex
-================================================
+```tex
 \documentclass[a4paper,11pt]{book}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -837,10 +829,10 @@ More dummy text will follow.
 \blindtext[3]
 \end{document}
 
+```
+## FILE: Chapter_03_-_Designing_Pages/12_contents.tex
 
-================================================
-FILE: Chapter_03_-_Designing_Pages/12_contents.tex
-================================================
+```tex
 \documentclass[a4paper,12pt]{book}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -858,10 +850,10 @@ More dummy text will follow.
 \blindtext[10]
 \end{document}
 
+```
+## FILE: Chapter_03_-_Designing_Pages/13_shorten_contents.tex
 
-================================================
-FILE: Chapter_03_-_Designing_Pages/13_shorten_contents.tex
-================================================
+```tex
 \documentclass[a4paper,12pt]{book}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -879,10 +871,10 @@ More dummy text will follow.
 \blindtext[10]
 \end{document}
 
+```
+## FILE: Chapter_04_-_Creating_Lists/01_bullet_list.tex
 
-================================================
-FILE: Chapter_04_-_Creating_Lists/01_bullet_list.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \section*{Useful packages}
@@ -896,10 +888,10 @@ LaTeX provides several packages for designing the layout:
 \end{itemize}
 \end{document}
 
+```
+## FILE: Chapter_04_-_Creating_Lists/02_list_level.tex
 
-================================================
-FILE: Chapter_04_-_Creating_Lists/02_list_level.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \section*{Useful packages}
@@ -922,10 +914,10 @@ LaTeX provides several packages for designing the layout:
 \end{itemize}
 \end{document}
 
+```
+## FILE: Chapter_04_-_Creating_Lists/03_enumerate_list.tex
 
-================================================
-FILE: Chapter_04_-_Creating_Lists/03_enumerate_list.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \begin{enumerate}
@@ -952,10 +944,10 @@ FILE: Chapter_04_-_Creating_Lists/03_enumerate_list.tex
 \end{enumerate}
 \end{document}
 
+```
+## FILE: Chapter_04_-_Creating_Lists/04_definition_list.tex
 
-================================================
-FILE: Chapter_04_-_Creating_Lists/04_definition_list.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \begin{description}
@@ -975,11 +967,10 @@ FILE: Chapter_04_-_Creating_Lists/04_definition_list.tex
 \end{description}
 \end{document}
 
+```
+## FILE: Chapter_04_-_Creating_Lists/05_compact_list.tex
 
-
-================================================
-FILE: Chapter_04_-_Creating_Lists/05_compact_list.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{paralist}
 \begin{document}
@@ -1006,10 +997,10 @@ FILE: Chapter_04_-_Creating_Lists/05_compact_list.tex
 \end{compactenum}
 \end{document}
 
+```
+## FILE: Chapter_04_-_Creating_Lists/06_in_paragraph_list.tex
 
-================================================
-FILE: Chapter_04_-_Creating_Lists/06_in_paragraph_list.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{paralist}
 \begin{document}
@@ -1042,10 +1033,10 @@ FILE: Chapter_04_-_Creating_Lists/06_in_paragraph_list.tex
 \end{compactenum}
 \end{document}
 
+```
+## FILE: Chapter_04_-_Creating_Lists/07_customized_list.tex
 
-================================================
-FILE: Chapter_04_-_Creating_Lists/07_customized_list.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{enumitem}
 \setlist{nosep}
@@ -1076,10 +1067,10 @@ FILE: Chapter_04_-_Creating_Lists/07_customized_list.tex
 \end{enumerate}
 \end{document}
 
+```
+## FILE: Chapter_04_-_Creating_Lists/08_resume_list.tex
 
-================================================
-FILE: Chapter_04_-_Creating_Lists/08_resume_list.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{enumitem}
 \setlist{nosep}
@@ -1113,20 +1104,20 @@ FILE: Chapter_04_-_Creating_Lists/08_resume_list.tex
 \end{enumerate}
 \end{document}
 
+```
+## FILE: Chapter_04_-_Creating_Lists/09_list_layout.tex
 
-================================================
-FILE: Chapter_04_-_Creating_Lists/09_list_layout.tex
-================================================
+```tex
 \documentclass[12pt]{article}
 \usepackage{layouts}
 \begin{document}
 \listdiagram
 \end{document}
 
+```
+## FILE: Chapter_05_-_Including_Images/01_include_image.tex
 
-================================================
-FILE: Chapter_05_-_Including_Images/01_include_image.tex
-================================================
+```tex
 \documentclass[a5paper]{article}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -1143,10 +1134,10 @@ FILE: Chapter_05_-_Including_Images/01_include_image.tex
 \blindtext
 \end{document}
 
+```
+## FILE: Chapter_05_-_Including_Images/02_position_image.tex
 
-================================================
-FILE: Chapter_05_-_Including_Images/02_position_image.tex
-================================================
+```tex
 \documentclass[a5paper]{article}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -1163,10 +1154,10 @@ FILE: Chapter_05_-_Including_Images/02_position_image.tex
 \blindtext
 \end{document}
 
+```
+## FILE: Chapter_05_-_Including_Images/03_bottom_image.tex
 
-================================================
-FILE: Chapter_05_-_Including_Images/03_bottom_image.tex
-================================================
+```tex
 \documentclass[a5paper]{article}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -1183,10 +1174,10 @@ FILE: Chapter_05_-_Including_Images/03_bottom_image.tex
 \blindtext
 \end{document}
 
+```
+## FILE: Chapter_05_-_Including_Images/04_text_around_image.tex
 
-================================================
-FILE: Chapter_05_-_Including_Images/04_text_around_image.tex
-================================================
+```tex
 \documentclass[a5paper]{article}
 \usepackage[english]{babel}
 \usepackage{blindtext}
@@ -1203,10 +1194,10 @@ FILE: Chapter_05_-_Including_Images/04_text_around_image.tex
 \blindtext
 \end{document}
 
+```
+## FILE: Chapter_05_-_Including_Images/05_no_floating.tex
 
-================================================
-FILE: Chapter_05_-_Including_Images/05_no_floating.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{graphicx}
 \usepackage{capt-of}
@@ -1224,10 +1215,10 @@ Text before
 text after
 \end{document}
 
+```
+## FILE: Chapter_06_-_Creating_Tables/01_tab_stops.tex
 
-================================================
-FILE: Chapter_06_-_Creating_Tables/01_tab_stops.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \begin{tabbing}
@@ -1237,10 +1228,10 @@ FILE: Chapter_06_-_Creating_Tables/01_tab_stops.tex
 \end{tabbing}
 \end{document}
 
+```
+## FILE: Chapter_06_-_Creating_Tables/02_overlapping.tex
 
-================================================
-FILE: Chapter_06_-_Creating_Tables/02_overlapping.tex
-================================================
+```tex
 \documentclass{article} 
 \newcommand{\head}[1]{\textbf{#1}} 
 \begin{document} 
@@ -1252,10 +1243,10 @@ FILE: Chapter_06_-_Creating_Tables/02_overlapping.tex
 \end{tabbing}
 \end{document}
 
+```
+## FILE: Chapter_06_-_Creating_Tables/03_alignment.tex
 
-================================================
-FILE: Chapter_06_-_Creating_Tables/03_alignment.tex
-================================================
+```tex
 \documentclass{article} 
 \newcommand{\head}[1]{\textbf{#1}} 
 \begin{document} 
@@ -1269,10 +1260,10 @@ FILE: Chapter_06_-_Creating_Tables/03_alignment.tex
 \end{tabbing}
 \end{document}
 
+```
+## FILE: Chapter_06_-_Creating_Tables/04_tabular.tex
 
-================================================
-FILE: Chapter_06_-_Creating_Tables/04_tabular.tex
-================================================
+```tex
 \documentclass{article} 
 \newcommand{\head}[1]{\textnormal{\textbf{#1}}} 
 \begin{document}
@@ -1286,10 +1277,10 @@ FILE: Chapter_06_-_Creating_Tables/04_tabular.tex
 \end{tabular} 
 \end{document}
 
+```
+## FILE: Chapter_06_-_Creating_Tables/05_formatting_args.tex
 
-================================================
-FILE: Chapter_06_-_Creating_Tables/05_formatting_args.tex
-================================================
+```tex
 \documentclass{article} 
 \newcommand{\head}[1]{\textnormal{\textbf{#1}}} 
 \begin{document}
@@ -1302,10 +1293,10 @@ FILE: Chapter_06_-_Creating_Tables/05_formatting_args.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_06_-_Creating_Tables/06_vertical_alignment.tex
 
-================================================
-FILE: Chapter_06_-_Creating_Tables/06_vertical_alignment.tex
-================================================
+```tex
 \documentclass{article} 
 \usepackage{array}
 \begin{document}
@@ -1317,10 +1308,10 @@ FILE: Chapter_06_-_Creating_Tables/06_vertical_alignment.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_06_-_Creating_Tables/07_row_height.tex
 
-================================================
-FILE: Chapter_06_-_Creating_Tables/07_row_height.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{array}
 \setlength{\extrarowheight}{4pt}
@@ -1334,10 +1325,10 @@ FILE: Chapter_06_-_Creating_Tables/07_row_height.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_06_-_Creating_Tables/08_beautifying.tex
 
-================================================
-FILE: Chapter_06_-_Creating_Tables/08_beautifying.tex
-================================================
+```tex
 \documentclass{article} 
 \usepackage{booktabs}
 \newcommand{\head}[1]{\textnormal{\textbf{#1}}} 
@@ -1353,10 +1344,10 @@ FILE: Chapter_06_-_Creating_Tables/08_beautifying.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_06_-_Creating_Tables/09_multicolumn.tex
 
-================================================
-FILE: Chapter_06_-_Creating_Tables/09_multicolumn.tex
-================================================
+```tex
 \documentclass{article} 
 \usepackage{booktabs}
 \newcommand{\head}[1]{\textnormal{\textbf{#1}}} 
@@ -1374,10 +1365,10 @@ FILE: Chapter_06_-_Creating_Tables/09_multicolumn.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_06_-_Creating_Tables/10_insert_code.tex
 
-================================================
-FILE: Chapter_06_-_Creating_Tables/10_insert_code.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{array}
 \usepackage{booktabs}
@@ -1399,10 +1390,10 @@ FILE: Chapter_06_-_Creating_Tables/10_insert_code.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_06_-_Creating_Tables/11_multirow.tex
 
-================================================
-FILE: Chapter_06_-_Creating_Tables/11_multirow.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{array}
 \usepackage{booktabs}
@@ -1425,10 +1416,10 @@ FILE: Chapter_06_-_Creating_Tables/11_multirow.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_06_-_Creating_Tables/12_caption.tex
 
-================================================
-FILE: Chapter_06_-_Creating_Tables/12_caption.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{array}
 \usepackage{booktabs}
@@ -1469,10 +1460,10 @@ FILE: Chapter_06_-_Creating_Tables/12_caption.tex
 \end{table}
 \end{document}
 
+```
+## FILE: Chapter_07_-_Using_Cross-References/01_label_ref.tex
 
-================================================
-FILE: Chapter_07_-_Using_Cross-References/01_label_ref.tex
-================================================
+```tex
 \documentclass{book}
 \begin{document}
 \chapter{Statistics}
@@ -1498,11 +1489,10 @@ is for including images. See also the footnote
 \ref{fn:project} on page~\pageref{fn:project}.
 \end{document}
 
+```
+## FILE: Chapter_07_-_Using_Cross-References/02_page_reference.tex
 
-
-================================================
-FILE: Chapter_07_-_Using_Cross-References/02_page_reference.tex
-================================================
+```tex
 \documentclass{book}
 \begin{document}
 \chapter{Statistics}
@@ -1529,10 +1519,10 @@ is for including images. See also the footnote \ref{fn:project}
 on page~\pageref{fn:project}.
 \end{document}
 
+```
+## FILE: Chapter_07_-_Using_Cross-References/03_varioref.tex
 
-================================================
-FILE: Chapter_07_-_Using_Cross-References/03_varioref.tex
-================================================
+```tex
 \documentclass{book}
 \usepackage[nospace]{varioref}
 \begin{document}
@@ -1561,11 +1551,10 @@ See also the footnote \vref{fn:project}, that is,
 \vpageref{fn:project}.
 \end{document}
 
+```
+## FILE: Chapter_07_-_Using_Cross-References/04_varioref_figure.tex
 
-
-================================================
-FILE: Chapter_07_-_Using_Cross-References/04_varioref_figure.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{parskip}
 \usepackage{graphicx}
@@ -1594,10 +1583,10 @@ See the \vpageref[above figure][figure]{fig:other} and
 the \vpageref[above figure][figure]{fig:example}.
 \end{document}
 
+```
+## FILE: Chapter_07_-_Using_Cross-References/05_varioref_range.tex
 
-================================================
-FILE: Chapter_07_-_Using_Cross-References/05_varioref_range.tex
-================================================
+```tex
 \documentclass{book}
 \usepackage{parskip}
 \usepackage{graphicx}
@@ -1628,10 +1617,10 @@ See the figures \textcolor{red}{\vpagerefrange{fig:example}{fig:last}}
 and figures \textcolor{blue}{\vrefrange{fig:example}{fig:last}}.
 \end{document}
 
+```
+## FILE: Chapter_07_-_Using_Cross-References/06_cleveref.tex
 
-================================================
-FILE: Chapter_07_-_Using_Cross-References/06_cleveref.tex
-================================================
+```tex
 \documentclass{book}
 \usepackage{cleveref}
 \crefname{enumi}{position}{positions}
@@ -1660,11 +1649,10 @@ including images.
 See also the \cref{project} on \cpageref{project}.
 \end{document}
 
+```
+## FILE: Chapter_07_-_Using_Cross-References/07_cleveref_ranges.tex
 
-
-================================================
-FILE: Chapter_07_-_Using_Cross-References/07_cleveref_ranges.tex
-================================================
+```tex
 \documentclass{book}
 \usepackage{cleveref}
 \crefname{enumi}{position}{positions}
@@ -1688,10 +1676,10 @@ LaTeX.org\label{project}}:
 See \crefrange{graphicx}{amsmath} and \cpagerefrange{stats}{maths}.
 \end{document}
 
+```
+## FILE: Chapter_08_-_Listing_Contents_and_References/01_contents.tex
 
-================================================
-FILE: Chapter_08_-_Listing_Contents_and_References/01_contents.tex
-================================================
+```tex
 \documentclass{book}
 \setcounter{tocdepth}{3}
 \begin{document}
@@ -1716,10 +1704,10 @@ level}
 \chapter{Symbols}
 \end{document}
 
+```
+## FILE: Chapter_08_-_Listing_Contents_and_References/02_list_figures.tex
 
-================================================
-FILE: Chapter_08_-_Listing_Contents_and_References/02_list_figures.tex
-================================================
+```tex
 \documentclass{book}
 \setcounter{tocdepth}{3}
 \renewcommand{\figurename}{Diagram}
@@ -1763,10 +1751,10 @@ level}
 \chapter{Symbols}
 \end{document}
 
+```
+## FILE: Chapter_08_-_Listing_Contents_and_References/03_index.tex
 
-================================================
-FILE: Chapter_08_-_Listing_Contents_and_References/03_index.tex
-================================================
+```tex
 \documentclass{book}
 \usepackage{index}
 \makeindex
@@ -1816,81 +1804,10 @@ level}
 \printindex
 \end{document}
 
+```
+## FILE: Chapter_08_-_Listing_Contents_and_References/04_index_advanced.tex
 
-================================================
-FILE: Chapter_08_-_Listing_Contents_and_References/04_index_advanced.tex
-================================================
-\documentclass{book}
-\usepackage{index}
-\makeindex
-\setcounter{tocdepth}{3}
-\renewcommand{\figurename}{Diagram}
-\renewcommand{\listfigurename}{List of Diagrams}
-\newcommand{\group}{\TeX\ Users Group}
-\begin{document}
-\tableofcontents
-\listoffigures
-\part{First Part}
-\chapter*{Preface}
-\addcontentsline{toc}{chapter}{Preface}
-\chapter{First main chapter}
-\section{A section}
-\begin{figure}
-\centering
-\fbox{Diagram placeholder}
-\caption{\index{enterprise}Enterprise Organizational Chart}
-\end{figure}
-\index{enterprise!organization}
-\index{enterprise!organization!sales}
-\index{enterprise!organization!controlling}
-\index{enterprise!organization!operation}
-\section{Another section}
-\subsection{A smaller section}
-\subsubsection[Deeper level]{This section has an even deeper
-level}
-\chapter{Second main chapter}
-\part{Second part}
-\chapter{Third main chapter}
-\index{network|(}
-\addtocontents{lof}{Network Diagrams:}
-\index{network}
-\index{network!overview}
-\begin{figure}
-\centering
-\fbox{Diagram placeholder}
-\caption{Network overview}
-\end{figure}
-\begin{figure}
-\centering
-\fbox{Diagram placeholder}
-\caption{WLAN Design}
-\end{figure}
-\clearpage
-% index commands for testing
-\index{wireless|see{WLAN}}
-\index{WLAN|emph}
-\index{Gamma@$\Gamma$}
-\index{\group\ sorted wrong}
-\index{TeX@\group\ sorted correctly}
-\index{schon@sch\"{o}n}
-\index{exclamation ("!)!loud}
-End of network chapter.
-\index{network|)}
-\appendix
-\cleardoublepage
-\addtocontents{toc}{\bigskip}
-\addcontentsline{toc}{part}{Appendix}
-\chapter{Glossary}
-\chapter{Symbols}
-\clearpage
-\addcontentsline{toc}{chapter}{Index}
-\printindex
-\end{document}
-
-
-================================================
-FILE: Chapter_08_-_Listing_Contents_and_References/05_index_iso_style.tex
-================================================
+```tex
 \documentclass{book}
 \usepackage{index}
 \makeindex
@@ -1958,10 +1875,81 @@ End of network chapter.
 \printindex
 \end{document}
 
+```
+## FILE: Chapter_08_-_Listing_Contents_and_References/05_index_iso_style.tex
 
-================================================
-FILE: Chapter_08_-_Listing_Contents_and_References/06_bibliography.tex
-================================================
+```tex
+\documentclass{book}
+\usepackage{index}
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\figurename}{Diagram}
+\renewcommand{\listfigurename}{List of Diagrams}
+\newcommand{\group}{\TeX\ Users Group}
+\begin{document}
+\tableofcontents
+\listoffigures
+\part{First Part}
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+\chapter{First main chapter}
+\section{A section}
+\begin{figure}
+\centering
+\fbox{Diagram placeholder}
+\caption{\index{enterprise}Enterprise Organizational Chart}
+\end{figure}
+\index{enterprise!organization}
+\index{enterprise!organization!sales}
+\index{enterprise!organization!controlling}
+\index{enterprise!organization!operation}
+\section{Another section}
+\subsection{A smaller section}
+\subsubsection[Deeper level]{This section has an even deeper
+level}
+\chapter{Second main chapter}
+\part{Second part}
+\chapter{Third main chapter}
+\index{network|(}
+\addtocontents{lof}{Network Diagrams:}
+\index{network}
+\index{network!overview}
+\begin{figure}
+\centering
+\fbox{Diagram placeholder}
+\caption{Network overview}
+\end{figure}
+\begin{figure}
+\centering
+\fbox{Diagram placeholder}
+\caption{WLAN Design}
+\end{figure}
+\clearpage
+% index commands for testing
+\index{wireless|see{WLAN}}
+\index{WLAN|emph}
+\index{Gamma@$\Gamma$}
+\index{\group\ sorted wrong}
+\index{TeX@\group\ sorted correctly}
+\index{schon@sch\"{o}n}
+\index{exclamation ("!)!loud}
+End of network chapter.
+\index{network|)}
+\appendix
+\cleardoublepage
+\addtocontents{toc}{\bigskip}
+\addcontentsline{toc}{part}{Appendix}
+\chapter{Glossary}
+\chapter{Symbols}
+\clearpage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+\end{document}
+
+```
+## FILE: Chapter_08_-_Listing_Contents_and_References/06_bibliography.tex
+
+```tex
 \documentclass{article}
 \begin{document}
 \section*{Recommended texts}
@@ -1974,10 +1962,10 @@ Mathematics}, 1989
 \end{thebibliography}
 \end{document}
 
+```
+## FILE: Chapter_08_-_Listing_Contents_and_References/07_bibliography_labels.tex
 
-================================================
-FILE: Chapter_08_-_Listing_Contents_and_References/07_bibliography_labels.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \section*{Recommended texts}
@@ -1990,10 +1978,10 @@ Mathematics}, 1989
 \end{thebibliography}
 \end{document}
 
+```
+## FILE: Chapter_08_-_Listing_Contents_and_References/08_bibtex.tex
 
-================================================
-FILE: Chapter_08_-_Listing_Contents_and_References/08_bibtex.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \section*{Recommended texts}
@@ -2003,10 +1991,9 @@ see \cite{DK89}.
 \bibliography{example}
 \end{document}
 
+```
+## FILE: Chapter_08_-_Listing_Contents_and_References/example.bib
 
-================================================
-FILE: Chapter_08_-_Listing_Contents_and_References/example.bib
-================================================
 @book{DK86,
 author = "D.E. Knuth",
 title = "The {\TeX}book",
@@ -2024,11 +2011,10 @@ month = apr,
 year = 1989
 }
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/01_equations.tex
 
-
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/01_equations.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \section*{Quadratic equations}
@@ -2054,10 +2040,10 @@ is zero, then the equation (\ref{quad}) has a double solution:
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/02_subscripts_superscripts.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/02_subscripts_superscripts.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \[
@@ -2065,10 +2051,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/02_subscripts_superscripts.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/03_operators.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/03_operators.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \[
@@ -2076,21 +2062,20 @@ FILE: Chapter_09_-_Writing_Math_Formulas/03_operators.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/04_operators_inline.tex
 
-
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/04_operators_inline.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 Within text, we have \( \lim_{n=1, 2, \ldots} a_n \)
 and \( \max_{x<X} x \).
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/05_roots.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/05_roots.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \[
@@ -2098,10 +2083,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/05_roots.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/06_fractions.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/06_fractions.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \[
@@ -2109,10 +2094,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/06_fractions.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/07_greek.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/07_greek.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{$#1$&\texttt{\string#1}}
 \setlength{\tabcolsep}{2ex}
@@ -2126,10 +2111,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/07_greek.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/08_greek_variants.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/08_greek_variants.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{$#1$&\texttt{\string#1}}
 \setlength{\tabcolsep}{2ex}
@@ -2140,10 +2125,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/08_greek_variants.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/09_uppercase_greek.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/09_uppercase_greek.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{$#1$&\texttt{\string#1}}
 \setlength{\tabcolsep}{2ex}
@@ -2155,10 +2140,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/09_uppercase_greek.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/10_upright_greek.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/10_upright_greek.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{upgreek}
 \newcommand*\s[1]{$#1$&\texttt{\string#1}}
@@ -2174,10 +2159,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/10_upright_greek.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/11_upright_greek_variants.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/11_upright_greek_variants.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{upgreek}
 \newcommand*\s[1]{$#1$&\texttt{\string#1}}
@@ -2189,10 +2174,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/11_upright_greek_variants.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/12_script.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/12_script.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \[
@@ -2200,10 +2185,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/12_script.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/13_ellipsis.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/13_ellipsis.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{\(#1\)&\texttt{\string#1}}
 \setlength{\tabcolsep}{1.8ex}
@@ -2215,10 +2200,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/13_ellipsis.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/14_math_font_styles.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/14_math_font_styles.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{booktabs}
 \usepackage{amsfonts}
@@ -2244,19 +2229,19 @@ FILE: Chapter_09_-_Writing_Math_Formulas/14_math_font_styles.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/15_italic.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/15_italic.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 \(Definition\) and \textit{Definition}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/16_multiline.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/16_multiline.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{amsmath}
 \begin{document}
@@ -2275,10 +2260,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/16_multiline.tex
 \end{align}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/17_tagging.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/17_tagging.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{amsmath}
 \begin{document}
@@ -2288,10 +2273,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/17_tagging.tex
 \end{align}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/18_binary_operation.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/18_binary_operation.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{\(#1\)&\texttt{\string#1}}
 \setlength{\tabcolsep}{1ex}
@@ -2318,10 +2303,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/18_binary_operation.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/19_binary_relation.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/19_binary_relation.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{\(#1\)&\texttt{\string#1}}
 \setlength{\tabcolsep}{1.8ex}
@@ -2344,10 +2329,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/19_binary_relation.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/20_inequality.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/20_inequality.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{\(#1\)&\texttt{\string#1}}
 \setlength{\tabcolsep}{1.8ex}
@@ -2362,10 +2347,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/20_inequality.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/21_subset_superset.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/21_subset_superset.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{\(#1\)&\texttt{\string#1}}
 \setlength{\tabcolsep}{1.8ex}
@@ -2387,10 +2372,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/21_subset_superset.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/22_arrows.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/22_arrows.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{\(#1\)&\texttt{\string#1}}
 \setlength{\tabcolsep}{1.8ex}
@@ -2418,10 +2403,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/22_arrows.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/23_harpoons.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/23_harpoons.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{\(#1\)&\texttt{\string#1}}
 \setlength{\tabcolsep}{1.8ex}
@@ -2437,10 +2422,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/23_harpoons.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/24_letter_symbols.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/24_letter_symbols.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{\(#1\)&\texttt{\string#1}}
 \setlength{\tabcolsep}{1.8ex}
@@ -2462,10 +2447,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/24_letter_symbols.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/25_misc_symbols.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/25_misc_symbols.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{\(#1\)&\texttt{\string#1}}
 \setlength{\tabcolsep}{1.8ex}
@@ -2489,10 +2474,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/25_misc_symbols.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/26_variable_operators.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/26_variable_operators.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{$\displaystyle#1$&\texttt{\string#1}}
 \renewcommand*\arraystretch{1.8}
@@ -2506,10 +2491,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/26_variable_operators.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/27_variable_delimiters.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/27_variable_delimiters.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand*\s[1]{$\displaystyle\Big#1$&\texttt{\string#1}}
 \renewcommand*\arraystretch{1.8}
@@ -2532,10 +2517,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/27_variable_delimiters.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/28_inline_equation.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/28_inline_equation.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{amsmath}
 \begin{document}
@@ -2545,10 +2530,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/28_inline_equation.tex
 \)
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/29_displayed_equation.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/29_displayed_equation.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{amsmath}
 \begin{document}
@@ -2558,10 +2543,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/29_displayed_equation.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/30_array.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/30_array.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{amsmath}
 \begin{document}
@@ -2575,10 +2560,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/30_array.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/31_matrix.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/31_matrix.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{amsmath}
 \begin{document}
@@ -2590,10 +2575,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/31_matrix.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/32_binomial.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/32_binomial.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{amsmath}
 \begin{document}
@@ -2602,10 +2587,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/32_binomial.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/33_overline.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/33_overline.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{amsmath}
 \begin{document}
@@ -2614,10 +2599,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/33_overline.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/34_underbrace.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/34_underbrace.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{amsmath}
 \begin{document}
@@ -2626,11 +2611,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/35_accents.tex
 
-
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/35_accents.tex
-================================================
+```tex
 \documentclass{article}
 \setlength{\tabcolsep}{1.8ex}
 \usepackage{array}
@@ -2650,10 +2634,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/35_accents.tex
 \end{tabular}
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/36_stack_symbols.tex
 
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/36_stack_symbols.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{amsmath}
 \begin{document}
@@ -2662,11 +2646,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/36_stack_symbols.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/37_stack_relation.tex
 
-
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/37_stack_relation.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{amsmath}
 \begin{document}
@@ -2675,11 +2658,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/37_stack_relation.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_09_-_Writing_Math_Formulas/38_theorem.tex
 
-
-================================================
-FILE: Chapter_09_-_Writing_Math_Formulas/38_theorem.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{amsmath}
 \newtheorem{thm}{Theorem}
@@ -2703,10 +2685,10 @@ FILE: Chapter_09_-_Writing_Math_Formulas/38_theorem.tex
 \end{thm}
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/01_lmodern.tex
 
-================================================
-FILE: Chapter_10_-_Using_Fonts/01_lmodern.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2725,10 +2707,10 @@ FILE: Chapter_10_-_Using_Fonts/01_lmodern.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/02_kpfonts.tex
 
-================================================
-FILE: Chapter_10_-_Using_Fonts/02_kpfonts.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2747,10 +2729,10 @@ FILE: Chapter_10_-_Using_Fonts/02_kpfonts.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/03_kpfonts_light.tex
 
-================================================
-FILE: Chapter_10_-_Using_Fonts/03_kpfonts_light.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2769,10 +2751,10 @@ FILE: Chapter_10_-_Using_Fonts/03_kpfonts_light.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/04_times_roman.tex
 
-================================================
-FILE: Chapter_10_-_Using_Fonts/04_times_roman.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2788,10 +2770,10 @@ FILE: Chapter_10_-_Using_Fonts/04_times_roman.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/05_palatino.tex
 
-================================================
-FILE: Chapter_10_-_Using_Fonts/05_palatino.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2807,10 +2789,10 @@ FILE: Chapter_10_-_Using_Fonts/05_palatino.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/06_charter.tex
 
-================================================
-FILE: Chapter_10_-_Using_Fonts/06_charter.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2825,10 +2807,10 @@ FILE: Chapter_10_-_Using_Fonts/06_charter.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/07_new_century.tex
 
-================================================
-FILE: Chapter_10_-_Using_Fonts/07_new_century.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2844,10 +2826,10 @@ FILE: Chapter_10_-_Using_Fonts/07_new_century.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/08_concrete.tex
 
-================================================
-FILE: Chapter_10_-_Using_Fonts/08_concrete.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2863,10 +2845,10 @@ FILE: Chapter_10_-_Using_Fonts/08_concrete.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/09_kerkis.tex
 
-================================================
-FILE: Chapter_10_-_Using_Fonts/09_kerkis.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2882,10 +2864,10 @@ FILE: Chapter_10_-_Using_Fonts/09_kerkis.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/10_arev.tex
 
-================================================
-FILE: Chapter_10_-_Using_Fonts/10_arev.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2900,11 +2882,10 @@ FILE: Chapter_10_-_Using_Fonts/10_arev.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/11_cmbright.tex
 
-
-================================================
-FILE: Chapter_10_-_Using_Fonts/11_cmbright.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2919,11 +2900,10 @@ FILE: Chapter_10_-_Using_Fonts/11_cmbright.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/12_kurier.tex
 
-
-================================================
-FILE: Chapter_10_-_Using_Fonts/12_kurier.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2938,11 +2918,10 @@ FILE: Chapter_10_-_Using_Fonts/12_kurier.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/13_helvetica.tex
 
-
-================================================
-FILE: Chapter_10_-_Using_Fonts/13_helvetica.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2958,11 +2937,10 @@ FILE: Chapter_10_-_Using_Fonts/13_helvetica.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/14_courier.tex
 
-
-================================================
-FILE: Chapter_10_-_Using_Fonts/14_courier.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2973,11 +2951,10 @@ FILE: Chapter_10_-_Using_Fonts/14_courier.tex
 \pangram{\ttfamily}
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/15_inconsolata.tex
 
-
-================================================
-FILE: Chapter_10_-_Using_Fonts/15_inconsolata.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -2988,11 +2965,10 @@ FILE: Chapter_10_-_Using_Fonts/15_inconsolata.tex
 \pangram{\ttfamily}
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/16_bera_mono.tex
 
-
-================================================
-FILE: Chapter_10_-_Using_Fonts/16_bera_mono.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -3003,11 +2979,10 @@ FILE: Chapter_10_-_Using_Fonts/16_bera_mono.tex
 \pangram{\ttfamily}
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/17_calligra.tex
 
-
-================================================
-FILE: Chapter_10_-_Using_Fonts/17_calligra.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -3018,10 +2993,10 @@ FILE: Chapter_10_-_Using_Fonts/17_calligra.tex
 \pangram{\calligra}
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/18_miama.tex
 
-================================================
-FILE: Chapter_10_-_Using_Fonts/18_miama.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -3032,10 +3007,10 @@ FILE: Chapter_10_-_Using_Fonts/18_miama.tex
 \pangram{\fmmfamily}
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/19_segoe.tex
 
-================================================
-FILE: Chapter_10_-_Using_Fonts/19_segoe.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{fontspec}
 \setmainfont{Segoe UI Semilight}
@@ -3044,10 +3019,10 @@ FILE: Chapter_10_-_Using_Fonts/19_segoe.tex
 The quick brown fox jumps over the lazy dog. 1234567890
 \end{document}
 
+```
+## FILE: Chapter_10_-_Using_Fonts/20_multiple_fonts.tex
 
-================================================
-FILE: Chapter_10_-_Using_Fonts/20_multiple_fonts.tex
-================================================
+```tex
 \documentclass{article}
 \newcommand{\pangram}[1]{{#1 The quick brown fox jumps over
   the lazy dog. 1234567890\par}}
@@ -3069,10 +3044,10 @@ FILE: Chapter_10_-_Using_Fonts/20_multiple_fonts.tex
 \]
 \end{document}
 
+```
+## FILE: Chapter_11_-_Developing_Large_Documents/01_big_document.tex
 
-================================================
-FILE: Chapter_11_-_Developing_Large_Documents/01_big_document.tex
-================================================
+```tex
 \documentclass{book}
 \input{preamble}
 \begin{document}
@@ -3091,11 +3066,10 @@ FILE: Chapter_11_-_Developing_Large_Documents/01_big_document.tex
 \bibliography{example}
 \end{document}
 
+```
+## FILE: Chapter_11_-_Developing_Large_Documents/02_titlepage.tex
 
-
-================================================
-FILE: Chapter_11_-_Developing_Large_Documents/02_titlepage.tex
-================================================
+```tex
 \documentclass{book}
 \usepackage[a5paper]{geometry}% could go to the preamble instead
 \input{preamble}
@@ -3116,11 +3090,10 @@ FILE: Chapter_11_-_Developing_Large_Documents/02_titlepage.tex
 \bibliography{example}
 \end{document}
 
+```
+## FILE: Chapter_11_-_Developing_Large_Documents/03_letter.tex
 
-
-================================================
-FILE: Chapter_11_-_Developing_Large_Documents/03_letter.tex
-================================================
+```tex
 \documentclass[fontsize=12pt, paper=a4]{scrlttr2}
 \usepackage[utf8]{inputenc}
 \setkomavar{fromname}{My name} % your name
@@ -3138,11 +3111,10 @@ FILE: Chapter_11_-_Developing_Large_Documents/03_letter.tex
 \end{letter}
 \end{document}
 
+```
+## FILE: Chapter_11_-_Developing_Large_Documents/chapter1.tex
 
-
-================================================
-FILE: Chapter_11_-_Developing_Large_Documents/chapter1.tex
-================================================
+```tex
 \chapter{Equations}
 \section{Quadratic equations}
 \begin{dfn}
@@ -3154,32 +3126,29 @@ FILE: Chapter_11_-_Developing_Large_Documents/chapter1.tex
   where \( a, b \) and \( c \) are constants and \( a \neq 0 \).
 \end{dfn}
 
+```
+## FILE: Chapter_11_-_Developing_Large_Documents/chapter2.tex
 
-
-================================================
-FILE: Chapter_11_-_Developing_Large_Documents/chapter2.tex
-================================================
+```tex
 \chapter{Equation Systems}
 \section{Linear Systems}
 ...
 \section{Non-linear Systems}
 ...
 
+```
+## FILE: Chapter_11_-_Developing_Large_Documents/dedication.tex
 
-
-================================================
-FILE: Chapter_11_-_Developing_Large_Documents/dedication.tex
-================================================
+```tex
 \chapter{Dedication}
 This book is dedicated to one of the greatest mathematicians of
 all time: Carl Friedrich Gauss. Without him, this book wouldn't
 have been possible.
 
+```
+## FILE: Chapter_11_-_Developing_Large_Documents/equations.tex
 
-
-================================================
-FILE: Chapter_11_-_Developing_Large_Documents/equations.tex
-================================================
+```tex
 \documentclass{book}
 \input{preamble}
 \begin{document}
@@ -3188,11 +3157,10 @@ FILE: Chapter_11_-_Developing_Large_Documents/equations.tex
 \include{chapter2}
 \end{document}
 
+```
+## FILE: Chapter_11_-_Developing_Large_Documents/preamble.tex
 
-
-================================================
-FILE: Chapter_11_-_Developing_Large_Documents/preamble.tex
-================================================
+```tex
 \usepackage[english]{babel} 
 \usepackage[T1]{fontenc}
 \usepackage{lmodern} 
@@ -3206,19 +3174,17 @@ FILE: Chapter_11_-_Developing_Large_Documents/preamble.tex
 \theoremstyle{definition} 
 \newtheorem{dfn}[thm]{Definition}
 
+```
+## FILE: Chapter_11_-_Developing_Large_Documents/proofs.tex
 
-
-================================================
-FILE: Chapter_11_-_Developing_Large_Documents/proofs.tex
-================================================
+```tex
 \chapter{Proofs}
 ...
 
+```
+## FILE: Chapter_11_-_Developing_Large_Documents/title.tex
 
-
-================================================
-FILE: Chapter_11_-_Developing_Large_Documents/title.tex
-================================================
+```tex
 \begin{titlepage}
   \raggedleft
   {\Large The Author\\[1in]}
@@ -3229,11 +3195,10 @@ FILE: Chapter_11_-_Developing_Large_Documents/title.tex
   {\itshape 2011, Publishing company}
 \end{titlepage}
 
+```
+## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/01_equation.tex
 
-
-================================================
-FILE: Chapter_12_-_Enhancing_Your_Documents_Further/01_equation.tex
-================================================
+```tex
 \documentclass{book}
 \input{preamble}
 \begin{document}
@@ -3242,11 +3207,10 @@ FILE: Chapter_12_-_Enhancing_Your_Documents_Further/01_equation.tex
 \include{chapter2}
 \end{document}
 
+```
+## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/02_big_document.tex
 
-
-================================================
-FILE: Chapter_12_-_Enhancing_Your_Documents_Further/02_big_document.tex
-================================================
+```tex
 \documentclass{book}
 \input{preamble}
 \begin{document}
@@ -3265,11 +3229,10 @@ FILE: Chapter_12_-_Enhancing_Your_Documents_Further/02_big_document.tex
 \bibliography{example}
 \end{document}
 
+```
+## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/02_bookmarks.tex
 
-
-================================================
-FILE: Chapter_12_-_Enhancing_Your_Documents_Further/02_bookmarks.tex
-================================================
+```tex
 \documentclass{article}
 \usepackage{bm}
 \usepackage[colorlinks=true,psdextra,unicode]{hyperref}
@@ -3289,11 +3252,10 @@ Sample sections follow.
   {Let $\bm{\int\sim\sum}$ for $\bm{n\rightarrow\infty}$}
 \end{document}
 
+```
+## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/chapter1.tex
 
-
-================================================
-FILE: Chapter_12_-_Enhancing_Your_Documents_Further/chapter1.tex
-================================================
+```tex
 \chapter{Equations}
 \section{Quadratic equations}
 \begin{dfn}
@@ -3305,32 +3267,29 @@ FILE: Chapter_12_-_Enhancing_Your_Documents_Further/chapter1.tex
   where \( a, b \) and \( c \) are constants and \( a \neq 0 \).
 \end{dfn}
 
+```
+## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/chapter2.tex
 
-
-================================================
-FILE: Chapter_12_-_Enhancing_Your_Documents_Further/chapter2.tex
-================================================
+```tex
 \chapter{Equation Systems}
 \section{Linear Systems}
 ...
 \section{Non-linear Systems}
 ...
 
+```
+## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/dedication.tex
 
-
-================================================
-FILE: Chapter_12_-_Enhancing_Your_Documents_Further/dedication.tex
-================================================
+```tex
 \chapter{Dedication}
 This book is dedicated to one of the greatest mathematicians of
 all time: Carl Friedrich Gauss. Without him, this book wouldn't
 have been possible.
 
+```
+## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/preamble.tex
 
-
-================================================
-FILE: Chapter_12_-_Enhancing_Your_Documents_Further/preamble.tex
-================================================
+```tex
 \usepackage{lmodern} 
 \usepackage{microtype} 
 \usepackage{natbib} 
@@ -3361,19 +3320,17 @@ FILE: Chapter_12_-_Enhancing_Your_Documents_Further/preamble.tex
   {\thesection}{1em}{}
 \titlespacing*{\chapter}{0pt}{30pt}{20pt}
 
+```
+## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/proofs.tex
 
-
-================================================
-FILE: Chapter_12_-_Enhancing_Your_Documents_Further/proofs.tex
-================================================
+```tex
 \chapter{Proofs}
 ...
 
+```
+## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/title.tex
 
-
-================================================
-FILE: Chapter_12_-_Enhancing_Your_Documents_Further/title.tex
-================================================
+```tex
 \begin{titlepage}
   \raggedleft
   {\Large The Author\\[1in]}
@@ -3384,11 +3341,10 @@ FILE: Chapter_12_-_Enhancing_Your_Documents_Further/title.tex
   {\itshape 2011, Publishing company}
 \end{titlepage}
 
+```
+## FILE: Chapter_13_-_Troubleshooting/01_test_errror.tex
 
-
-================================================
-FILE: Chapter_13_-_Troubleshooting/01_test_errror.tex
-================================================
+```tex
 \documentclass{article}
 \begin{document}
 % wrong:
@@ -3397,10 +3353,10 @@ FILE: Chapter_13_-_Troubleshooting/01_test_errror.tex
 \LaTeX\ says: Hello world!
 \end{document}
 
+```
+## FILE: Chapter_13_-_Troubleshooting/02_warning.tex
 
-================================================
-FILE: Chapter_13_-_Troubleshooting/02_warning.tex
-================================================
+```tex
 \documentclass{article}
 \renewcommand{\familydefault}{\sfdefault}
 \begin{document}
