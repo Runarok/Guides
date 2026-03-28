@@ -187,7 +187,7 @@
 - [02_warning.tex](#file-chapter_13_-_troubleshooting02_warningtex)
 
   
-```
+
 ## FILE: README.md  
    
 
@@ -218,13 +218,12 @@ If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1801
 All of the code is organized into folders.
 
 The code will look like the following:
-```
+```tex
 \documentclass{article}
 \begin{document}
 Besides from {\itshape italics}, words can be {\bfseries bold},
 {\slshape slanted}, or typeset in {\scshape Small Caps}.
 \end{document}
-
 ```
 **Following is what you need for this book:**
 
@@ -250,7 +249,7 @@ With the following software and hardware list you can run all code files present
  <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
 <p align="center"> <a href="https://packt.link/free-ebook/9781801078658">https://packt.link/free-ebook/9781801078658 </a> </p>
 
-```
+
 ## FILE: Chapter_01_-_Getting_started_with_LaTeX/01_first_document.tex
 
 ```tex
@@ -258,8 +257,8 @@ With the following software and hardware list you can run all code files present
 \begin{document}
 This is our first document.
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/01_example_document.tex
 
 ```tex
@@ -272,8 +271,8 @@ This is our first document.
 \section{What's this?}
 This is our second document. It contains a title and a section with text.
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/02_special_symbols.tex
 
 ```tex
@@ -284,8 +283,8 @@ Statement \#1:
 
 More special symbols are \&, \_, \{ and \}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/03_adjusting_font_shape.tex
 
 ```tex
@@ -300,8 +299,8 @@ Such commands can be \textit{\textbf{nested}}.
 
 \emph{See how \emph{emphasizing} looks when nested.}
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/04_choosing_font.tex
 
 ```tex
@@ -311,8 +310,8 @@ Such commands can be \textit{\textbf{nested}}.
 
 \texttt{https://latex.org} is a support forum for \LaTeX.
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/05_font_declarations.tex
 
 ```tex
@@ -323,8 +322,8 @@ Such commands can be \textit{\textbf{nested}}.
 \normalfont\ttfamily https://latex.org\normalfont\ is
 a support forum for \LaTeX.
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/06_font_commands.tex
 
 ```tex
@@ -351,8 +350,8 @@ a support forum for \LaTeX.
 \bottomrule
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/07_grouping_braces.tex
 
 ```tex
@@ -361,8 +360,8 @@ a support forum for \LaTeX.
 Besides from {\itshape italics}, words can be {\bfseries bold},
 {\slshape slanted}, or typeset in {\scshape Small Caps}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/08_font_sizes.tex
 
 ```tex
@@ -372,8 +371,8 @@ Besides from {\itshape italics}, words can be {\bfseries bold},
 \normalsize get \large big \Large and \LARGE bigger,
 \huge huge, \Huge gigantic!
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/09_simple_macros.tex
 
 ```tex
@@ -383,8 +382,8 @@ Besides from {\itshape italics}, words can be {\bfseries bold},
 \section{The \TUG}
 The \TUG\ is an organization for people who use \TeX\ or \LaTeX.
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/10_proper_spacing.tex
 
 ```tex
@@ -395,8 +394,8 @@ The \TUG\ is an organization for people who use \TeX\ or \LaTeX.
 \section{The \TUG}
 The \TUG\ is an organization for people who use \TeX\ or \LaTeX.
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/11_macro_arguments.tex
 
 ```tex
@@ -406,8 +405,8 @@ The \TUG\ is an organization for people who use \TeX\ or \LaTeX.
 \keyword{Grouping} by curly braces limits the
 \keyword{scope} of \keyword{declarations}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/12_optional_arguments.tex
 
 ```tex
@@ -417,8 +416,8 @@ The \TUG\ is an organization for people who use \TeX\ or \LaTeX.
 \keyword{Grouping} by curly braces limits the
 \keyword{scope} of \keyword[\itshape]{declarations}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/13_text_box.tex
 
 ```tex
@@ -426,8 +425,8 @@ The \TUG\ is an organization for people who use \TeX\ or \LaTeX.
 \begin{document}
 \parbox{3cm}{TUG is an acronym. It means \TeX\ Users Group.}
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/14_aligning_boxes.tex
 
 ```tex
@@ -438,8 +437,8 @@ Text line
 \quad\parbox{1.5cm}{center-aligned parbox}
 \quad\parbox[t]{2cm}{another parbox aligned at its top line}
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/15_minipages.tex
 
 ```tex
@@ -449,8 +448,8 @@ Text line
 TUG is an acronym. It means \TeX\ Users Group.
 \end{minipage}
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/16_hyphenation.tex
 
 ```tex
@@ -461,8 +460,8 @@ TUG is an acronym. It means \TeX\ Users Group.
 TUG is an acronym. It means \TeX\ Users Group.
 \end{minipage}
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/17_justification.tex
 
 ```tex
@@ -473,8 +472,8 @@ TUG is an acronym. It means \TeX\ Users Group.
 TUG is an acronym. It means \TeX\ Users Group.
 \end{minipage}
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/18_line_breaks.tex
 
 ```tex
@@ -486,8 +485,8 @@ In a kingdom by the sea,\\
 That a maiden there lived whom you may know\\
 By the name of Annabel Lee
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/19_ragged_right.tex
 
 ```tex
@@ -496,8 +495,8 @@ By the name of Annabel Lee
 \parbox{3cm}{\raggedright
 TUG is an acronym. It means \TeX\ Users Group.}
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/20_ragged_left.tex
 
 ```tex
@@ -506,8 +505,8 @@ TUG is an acronym. It means \TeX\ Users Group.}
 \parbox{3cm}{\raggedleft
 TUG is an acronym. It means \TeX\ Users Group.}
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/21_centering.tex
 
 ```tex
@@ -521,8 +520,8 @@ TUG is an acronym. It means \TeX\ Users Group.}
 
 }
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/22_center_environment.tex
 
 ```tex
@@ -543,8 +542,8 @@ By the name of Annabel Lee
 The complete poem can be read on
 \url{http://www.online-literature.com/poe/576/}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/23_quote.tex
 
 ```tex
@@ -558,8 +557,8 @@ Anyone who has never made a mistake has never tried anything new.
 \end{quote}
 Errors are inevitable. So, let’s be brave trying something new.
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/24_quotation.tex
 
 ```tex
@@ -588,8 +587,8 @@ It will never eat your document. Never.
 The original text can be found on
 \url{https://www.ctan.org/what_is_tex.html}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/25_paragraph_skip.tex
 
 ```tex
@@ -607,8 +606,8 @@ as a non-professional can produce\ldots
 The original text can be found on
 \url{https://www.ctan.org/what_is_tex.html}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_03_-_Designing_Pages/01_book_chapter.tex
 
 ```tex
@@ -625,8 +624,8 @@ More dummy text will follow.
 \subsection{Plenty of filler text}
 \blindtext[10]
 \end{document}
-
 ```
+
 ## FILE: Chapter_03_-_Designing_Pages/02_margins.tex
 
 ```tex
@@ -644,8 +643,8 @@ More dummy text will follow.
 \subsection{Plenty of filler text}
 \blindtext[10]
 \end{document}
-
 ```
+
 ## FILE: Chapter_03_-_Designing_Pages/03_class_options.tex
 
 ```tex
@@ -663,8 +662,8 @@ More dummy text will follow.
 \subsection{Plenty of filler text}
 \blindtext[10]
 \end{document}
-
 ```
+
 ## FILE: Chapter_03_-_Designing_Pages/04_header_footer.tex
 
 ```tex
@@ -687,8 +686,8 @@ More dummy text will follow.
 \subsection{Plenty of filler text}
 \blindtext[10]
 \end{document}
-
 ```
+
 ## FILE: Chapter_03_-_Designing_Pages/05_footnotes.tex
 
 ```tex
@@ -706,8 +705,8 @@ will follow.
 \subsection{Plenty of filler text}
 \blindtext[10]
 \end{document}
-
 ```
+
 ## FILE: Chapter_03_-_Designing_Pages/06_footnote_line.tex
 
 ```tex
@@ -727,8 +726,8 @@ will follow.
 \subsection{Plenty of filler text}
 \blindtext[10]
 \end{document}
-
 ```
+
 ## FILE: Chapter_03_-_Designing_Pages/07_page_break.tex
 
 ```tex
@@ -746,8 +745,8 @@ More dummy text will follow.
 \subsection{Plenty of filler text}
 \blindtext[10]
 \end{document}
-
 ```
+
 ## FILE: Chapter_03_-_Designing_Pages/08_new_page.tex
 
 ```tex
@@ -765,8 +764,8 @@ More dummy text will follow.
 \subsection{Plenty of filler text}
 \blindtext[10]
 \end{document}
-
 ```
+
 ## FILE: Chapter_03_-_Designing_Pages/09_overfull_page.tex
 
 ```tex
@@ -785,8 +784,8 @@ More dummy text will follow.
 \subsection{Plenty of filler text}
 \blindtext[3]
 \end{document}
-
 ```
+
 ## FILE: Chapter_03_-_Designing_Pages/10_enlarge_page.tex
 
 ```tex
@@ -806,8 +805,8 @@ More dummy text will follow.
 \enlargethispage{\baselineskip}
 \blindtext[3]
 \end{document}
-
 ```
+
 ## FILE: Chapter_03_-_Designing_Pages/11_line_spacing.tex
 
 ```tex
@@ -828,8 +827,8 @@ More dummy text will follow.
 \enlargethispage{\baselineskip}
 \blindtext[3]
 \end{document}
-
 ```
+
 ## FILE: Chapter_03_-_Designing_Pages/12_contents.tex
 
 ```tex
@@ -849,8 +848,8 @@ More dummy text will follow.
 \subsection{Plenty of filler text}
 \blindtext[10]
 \end{document}
-
 ```
+
 ## FILE: Chapter_03_-_Designing_Pages/13_shorten_contents.tex
 
 ```tex
@@ -870,8 +869,8 @@ More dummy text will follow.
 \subsection[Plenty]{Plenty of filler text}
 \blindtext[10]
 \end{document}
-
 ```
+
 ## FILE: Chapter_04_-_Creating_Lists/01_bullet_list.tex
 
 ```tex
@@ -887,8 +886,8 @@ LaTeX provides several packages for designing the layout:
   \item setspace
 \end{itemize}
 \end{document}
-
 ```
+
 ## FILE: Chapter_04_-_Creating_Lists/02_list_level.tex
 
 ```tex
@@ -913,8 +912,8 @@ LaTeX provides several packages for designing the layout:
     \end{itemize}
 \end{itemize}
 \end{document}
-
 ```
+
 ## FILE: Chapter_04_-_Creating_Lists/03_enumerate_list.tex
 
 ```tex
@@ -943,8 +942,8 @@ LaTeX provides several packages for designing the layout:
   \end{itemize}
 \end{enumerate}
 \end{document}
-
 ```
+
 ## FILE: Chapter_04_-_Creating_Lists/04_definition_list.tex
 
 ```tex
@@ -966,8 +965,8 @@ LaTeX provides several packages for designing the layout:
     multiple columns.
 \end{description}
 \end{document}
-
 ```
+
 ## FILE: Chapter_04_-_Creating_Lists/05_compact_list.tex
 
 ```tex
@@ -996,8 +995,8 @@ LaTeX provides several packages for designing the layout:
   \end{compactitem}
 \end{compactenum}
 \end{document}
-
 ```
+
 ## FILE: Chapter_04_-_Creating_Lists/06_in_paragraph_list.tex
 
 ```tex
@@ -1032,8 +1031,8 @@ LaTeX provides several packages for designing the layout:
   \end{compactitem}
 \end{compactenum}
 \end{document}
-
 ```
+
 ## FILE: Chapter_04_-_Creating_Lists/07_customized_list.tex
 
 ```tex
@@ -1066,8 +1065,8 @@ LaTeX provides several packages for designing the layout:
   \end{itemize}
 \end{enumerate}
 \end{document}
-
 ```
+
 ## FILE: Chapter_04_-_Creating_Lists/08_resume_list.tex
 
 ```tex
@@ -1103,8 +1102,8 @@ LaTeX provides several packages for designing the layout:
   \end{itemize}
 \end{enumerate}
 \end{document}
-
 ```
+
 ## FILE: Chapter_04_-_Creating_Lists/09_list_layout.tex
 
 ```tex
@@ -1113,8 +1112,8 @@ LaTeX provides several packages for designing the layout:
 \begin{document}
 \listdiagram
 \end{document}
-
 ```
+
 ## FILE: Chapter_05_-_Including_Images/01_include_image.tex
 
 ```tex
@@ -1133,8 +1132,8 @@ LaTeX provides several packages for designing the layout:
 \end{figure}
 \blindtext
 \end{document}
-
 ```
+
 ## FILE: Chapter_05_-_Including_Images/02_position_image.tex
 
 ```tex
@@ -1153,8 +1152,8 @@ LaTeX provides several packages for designing the layout:
 \end{figure}
 \blindtext
 \end{document}
-
 ```
+
 ## FILE: Chapter_05_-_Including_Images/03_bottom_image.tex
 
 ```tex
@@ -1173,8 +1172,8 @@ LaTeX provides several packages for designing the layout:
 \end{figure}
 \blindtext
 \end{document}
-
 ```
+
 ## FILE: Chapter_05_-_Including_Images/04_text_around_image.tex
 
 ```tex
@@ -1193,8 +1192,8 @@ LaTeX provides several packages for designing the layout:
 \end{wrapfigure}
 \blindtext
 \end{document}
-
 ```
+
 ## FILE: Chapter_05_-_Including_Images/05_no_floating.tex
 
 ```tex
@@ -1214,8 +1213,8 @@ Text before
 \bigskip
 text after
 \end{document}
-
 ```
+
 ## FILE: Chapter_06_-_Creating_Tables/01_tab_stops.tex
 
 ```tex
@@ -1227,8 +1226,8 @@ text after
   \> Website   \> : \> www.latex-project.org
 \end{tabbing}
 \end{document}
-
 ```
+
 ## FILE: Chapter_06_-_Creating_Tables/02_overlapping.tex
 
 ```tex
@@ -1242,8 +1241,8 @@ text after
   \> \verb|\texttt{...}| \> \verb|\ttfamily| \> \ttfamily text
 \end{tabbing}
 \end{document}
-
 ```
+
 ## FILE: Chapter_06_-_Creating_Tables/03_alignment.tex
 
 ```tex
@@ -1259,8 +1258,8 @@ text after
 \> \verb|\texttt{...}| \> \verb|\ttfamily| \> \ttfamily text
 \end{tabbing}
 \end{document}
-
 ```
+
 ## FILE: Chapter_06_-_Creating_Tables/04_tabular.tex
 
 ```tex
@@ -1276,8 +1275,8 @@ text after
   \hline 
 \end{tabular} 
 \end{document}
-
 ```
+
 ## FILE: Chapter_06_-_Creating_Tables/05_formatting_args.tex
 
 ```tex
@@ -1292,8 +1291,8 @@ text after
   \hline
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_06_-_Creating_Tables/06_vertical_alignment.tex
 
 ```tex
@@ -1307,8 +1306,8 @@ text after
   \hline
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_06_-_Creating_Tables/07_row_height.tex
 
 ```tex
@@ -1324,8 +1323,8 @@ text after
   \hline
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_06_-_Creating_Tables/08_beautifying.tex
 
 ```tex
@@ -1343,8 +1342,8 @@ text after
   \bottomrule[1.5pt]
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_06_-_Creating_Tables/09_multicolumn.tex
 
 ```tex
@@ -1364,8 +1363,8 @@ text after
   \bottomrule[1.5pt]
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_06_-_Creating_Tables/10_insert_code.tex
 
 ```tex
@@ -1389,8 +1388,8 @@ text after
   \bottomrule[1.5pt]
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_06_-_Creating_Tables/11_multirow.tex
 
 ```tex
@@ -1415,8 +1414,8 @@ text after
   \bottomrule[1.5pt]
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_06_-_Creating_Tables/12_caption.tex
 
 ```tex
@@ -1459,8 +1458,8 @@ text after
   \caption{\LaTeX\ font selection}
 \end{table}
 \end{document}
-
 ```
+
 ## FILE: Chapter_07_-_Using_Cross-References/01_label_ref.tex
 
 ```tex
@@ -1488,8 +1487,8 @@ high-quality mathematical typesetting in \LaTeX.
 is for including images. See also the footnote
 \ref{fn:project} on page~\pageref{fn:project}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_07_-_Using_Cross-References/02_page_reference.tex
 
 ```tex
@@ -1518,8 +1517,8 @@ is indispensable to high-quality mathematical typesetting in
 is for including images. See also the footnote \ref{fn:project}
 on page~\pageref{fn:project}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_07_-_Using_Cross-References/03_varioref.tex
 
 ```tex
@@ -1550,8 +1549,8 @@ typesetting in \LaTeX. \emph{graphicx}, on position
 See also the footnote \vref{fn:project}, that is,
 \vpageref{fn:project}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_07_-_Using_Cross-References/04_varioref_figure.tex
 
 ```tex
@@ -1582,8 +1581,8 @@ the \vpageref[above figure][figure]{fig:example}.
 See the \vpageref[above figure][figure]{fig:other} and
 the \vpageref[above figure][figure]{fig:example}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_07_-_Using_Cross-References/05_varioref_range.tex
 
 ```tex
@@ -1616,8 +1615,8 @@ the \vpageref[above figure][figure]{fig:example}.
 See the figures \textcolor{red}{\vpagerefrange{fig:example}{fig:last}}
 and figures \textcolor{blue}{\vrefrange{fig:example}{fig:last}}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_07_-_Using_Cross-References/06_cleveref.tex
 
 ```tex
@@ -1648,8 +1647,8 @@ high-quality mathematical typesetting in \LaTeX.
 including images.
 See also the \cref{project} on \cpageref{project}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_07_-_Using_Cross-References/07_cleveref_ranges.tex
 
 ```tex
@@ -1675,8 +1674,8 @@ LaTeX.org\label{project}}:
 \label{maths}
 See \crefrange{graphicx}{amsmath} and \cpagerefrange{stats}{maths}.
 \end{document}
-
 ```
+
 ## FILE: Chapter_08_-_Listing_Contents_and_References/01_contents.tex
 
 ```tex
@@ -1703,8 +1702,8 @@ level}
 \chapter{Glossary}
 \chapter{Symbols}
 \end{document}
-
 ```
+
 ## FILE: Chapter_08_-_Listing_Contents_and_References/02_list_figures.tex
 
 ```tex
@@ -1750,8 +1749,8 @@ level}
 \chapter{Glossary}
 \chapter{Symbols}
 \end{document}
-
 ```
+
 ## FILE: Chapter_08_-_Listing_Contents_and_References/03_index.tex
 
 ```tex
@@ -1803,8 +1802,8 @@ level}
 \addcontentsline{toc}{chapter}{Index}
 \printindex
 \end{document}
-
 ```
+
 ## FILE: Chapter_08_-_Listing_Contents_and_References/04_index_advanced.tex
 
 ```tex
@@ -1874,8 +1873,8 @@ End of network chapter.
 \addcontentsline{toc}{chapter}{Index}
 \printindex
 \end{document}
-
 ```
+
 ## FILE: Chapter_08_-_Listing_Contents_and_References/05_index_iso_style.tex
 
 ```tex
@@ -1945,8 +1944,8 @@ End of network chapter.
 \addcontentsline{toc}{chapter}{Index}
 \printindex
 \end{document}
-
 ```
+
 ## FILE: Chapter_08_-_Listing_Contents_and_References/06_bibliography.tex
 
 ```tex
@@ -1961,8 +1960,8 @@ see \cite{DK89}.
 Mathematics}, 1989
 \end{thebibliography}
 \end{document}
-
 ```
+
 ## FILE: Chapter_08_-_Listing_Contents_and_References/07_bibliography_labels.tex
 
 ```tex
@@ -1977,8 +1976,8 @@ see \cite{DK89}.
 Mathematics}, 1989
 \end{thebibliography}
 \end{document}
-
 ```
+
 ## FILE: Chapter_08_-_Listing_Contents_and_References/08_bibtex.tex
 
 ```tex
@@ -1990,8 +1989,8 @@ see \cite{DK89}.
 \bibliographystyle{alpha}
 \bibliography{example}
 \end{document}
-
 ```
+
 ## FILE: Chapter_08_-_Listing_Contents_and_References/example.bib
 
 @book{DK86,
@@ -2010,8 +2009,8 @@ pages = "31--36",
 month = apr,
 year = 1989
 }
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/01_equations.tex
 
 ```tex
@@ -2039,8 +2038,8 @@ is zero, then the equation (\ref{quad}) has a double solution:
   x = - \frac{b}{2a}.
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/02_subscripts_superscripts.tex
 
 ```tex
@@ -2050,8 +2049,8 @@ is zero, then the equation (\ref{quad}) has a double solution:
   x_1^2 + x_2^2 = 1, \quad 2^{2^x} = 64
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/03_operators.tex
 
 ```tex
@@ -2061,8 +2060,8 @@ is zero, then the equation (\ref{quad}) has a double solution:
   \lim_{n=1, 2, \ldots} a_n \qquad \max_{x<X} x
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/04_operators_inline.tex
 
 ```tex
@@ -2071,8 +2070,8 @@ is zero, then the equation (\ref{quad}) has a double solution:
 Within text, we have \( \lim_{n=1, 2, \ldots} a_n \)
 and \( \max_{x<X} x \).
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/05_roots.tex
 
 ```tex
@@ -2082,8 +2081,8 @@ and \( \max_{x<X} x \).
   \sqrt[64]{x} = \sqrt{\sqrt{\sqrt{\sqrt{\sqrt{\sqrt{x}}}}}}
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/06_fractions.tex
 
 ```tex
@@ -2093,8 +2092,8 @@ and \( \max_{x<X} x \).
   \frac{n(n+1)}{2} \quad \frac{\frac{\sqrt{x}+1}{2}-x}{y^2} 
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/07_greek.tex
 
 ```tex
@@ -2110,8 +2109,8 @@ and \( \max_{x<X} x \).
 \s\epsilon    & \s\kappa  &   \s o       & \s\upsilon&
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/08_greek_variants.tex
 
 ```tex
@@ -2124,8 +2123,8 @@ and \( \max_{x<X} x \).
 \s\vartheta   & \s\varrho  & \s\varphi
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/09_uppercase_greek.tex
 
 ```tex
@@ -2139,8 +2138,8 @@ and \( \max_{x<X} x \).
 \s\Theta &\s\Pi     &\s\Phi
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/10_upright_greek.tex
 
 ```tex
@@ -2158,8 +2157,8 @@ and \( \max_{x<X} x \).
 \s\upepsilon    & \s\upkappa  &   $\mathrm{o}$&\texttt{\string\mathrm\{o\}} & \s\upupsilon&
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/11_upright_greek_variants.tex
 
 ```tex
@@ -2173,8 +2172,8 @@ and \( \max_{x<X} x \).
 \s\upvartheta   &  \s\upvarrho  & \s\upvarphi
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/12_script.tex
 
 ```tex
@@ -2184,8 +2183,8 @@ and \( \max_{x<X} x \).
   \mathcal{A}, \mathcal{B}, \mathcal{C}, \ldots, \mathcal{Z}
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/13_ellipsis.tex
 
 ```tex
@@ -2199,8 +2198,8 @@ and \( \max_{x<X} x \).
 \s\cdots & \s\vdots \\
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/14_math_font_styles.tex
 
 ```tex
@@ -2228,8 +2227,8 @@ and \( \max_{x<X} x \).
 \bottomrule
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/15_italic.tex
 
 ```tex
@@ -2237,8 +2236,8 @@ and \( \max_{x<X} x \).
 \begin{document}
 \(Definition\) and \textit{Definition}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/16_multiline.tex
 
 ```tex
@@ -2259,8 +2258,8 @@ and \( \max_{x<X} x \).
       y - z &= 1
 \end{align}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/17_tagging.tex
 
 ```tex
@@ -2272,8 +2271,8 @@ and \( \max_{x<X} x \).
   y - z &= 1 \tag{$\star\star$}
 \end{align}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/18_binary_operation.tex
 
 ```tex
@@ -2302,8 +2301,8 @@ and \( \max_{x<X} x \).
 \bottomrule
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/19_binary_relation.tex
 
 ```tex
@@ -2328,8 +2327,8 @@ and \( \max_{x<X} x \).
 \bottomrule
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/20_inequality.tex
 
 ```tex
@@ -2346,8 +2345,8 @@ and \( \max_{x<X} x \).
 \bottomrule
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/21_subset_superset.tex
 
 ```tex
@@ -2371,8 +2370,8 @@ and \( \max_{x<X} x \).
 \bottomrule
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/22_arrows.tex
 
 ```tex
@@ -2402,8 +2401,8 @@ and \( \max_{x<X} x \).
 \bottomrule
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/23_harpoons.tex
 
 ```tex
@@ -2421,8 +2420,8 @@ and \( \max_{x<X} x \).
 %\bottomrule
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/24_letter_symbols.tex
 
 ```tex
@@ -2446,8 +2445,8 @@ and \( \max_{x<X} x \).
 \bottomrule
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/25_misc_symbols.tex
 
 ```tex
@@ -2473,8 +2472,8 @@ and \( \max_{x<X} x \).
 \bottomrule
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/26_variable_operators.tex
 
 ```tex
@@ -2490,8 +2489,8 @@ and \( \max_{x<X} x \).
 \s\bigoplus  & \s\bigvee    & \s\oint      \\
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/27_variable_delimiters.tex
 
 ```tex
@@ -2516,8 +2515,8 @@ and \( \max_{x<X} x \).
 \bottomrule
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/28_inline_equation.tex
 
 ```tex
@@ -2529,8 +2528,8 @@ and \( \max_{x<X} x \).
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \)
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/29_displayed_equation.tex
 
 ```tex
@@ -2542,8 +2541,8 @@ and \( \max_{x<X} x \).
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/30_array.tex
 
 ```tex
@@ -2559,8 +2558,8 @@ and \( \max_{x<X} x \).
   \right)
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/31_matrix.tex
 
 ```tex
@@ -2574,8 +2573,8 @@ and \( \max_{x<X} x \).
   \end{pmatrix}
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/32_binomial.tex
 
 ```tex
@@ -2586,8 +2585,8 @@ and \( \max_{x<X} x \).
 \binom{n}{k} = \frac{n!}{k!(n-k)!}
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/33_overline.tex
 
 ```tex
@@ -2598,8 +2597,8 @@ and \( \max_{x<X} x \).
 \overline{\Omega}
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/34_underbrace.tex
 
 ```tex
@@ -2610,8 +2609,8 @@ and \( \max_{x<X} x \).
 N = \underbrace{1 + 1 + \cdots + 1}_n
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/35_accents.tex
 
 ```tex
@@ -2633,8 +2632,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \bottomrule
 \end{tabular}
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/36_stack_symbols.tex
 
 ```tex
@@ -2645,8 +2644,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \underset{\circ}{\cap} \neq \overset{\circ}{\cup}
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/37_stack_relation.tex
 
 ```tex
@@ -2657,8 +2656,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   X \stackrel{\text{def}}{=} 0
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/38_theorem.tex
 
 ```tex
@@ -2684,8 +2683,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \end{equation}
 \end{thm}
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/01_lmodern.tex
 
 ```tex
@@ -2706,8 +2705,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/02_kpfonts.tex
 
 ```tex
@@ -2728,8 +2727,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/03_kpfonts_light.tex
 
 ```tex
@@ -2750,8 +2749,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/04_times_roman.tex
 
 ```tex
@@ -2769,8 +2768,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/05_palatino.tex
 
 ```tex
@@ -2788,8 +2787,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/06_charter.tex
 
 ```tex
@@ -2806,8 +2805,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/07_new_century.tex
 
 ```tex
@@ -2825,8 +2824,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/08_concrete.tex
 
 ```tex
@@ -2844,8 +2843,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/09_kerkis.tex
 
 ```tex
@@ -2863,8 +2862,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/10_arev.tex
 
 ```tex
@@ -2881,8 +2880,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/11_cmbright.tex
 
 ```tex
@@ -2899,8 +2898,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/12_kurier.tex
 
 ```tex
@@ -2917,8 +2916,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/13_helvetica.tex
 
 ```tex
@@ -2936,8 +2935,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/14_courier.tex
 
 ```tex
@@ -2950,8 +2949,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \large
 \pangram{\ttfamily}
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/15_inconsolata.tex
 
 ```tex
@@ -2964,8 +2963,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \large
 \pangram{\ttfamily}
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/16_bera_mono.tex
 
 ```tex
@@ -2978,8 +2977,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \large
 \pangram{\ttfamily}
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/17_calligra.tex
 
 ```tex
@@ -2992,8 +2991,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \large
 \pangram{\calligra}
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/18_miama.tex
 
 ```tex
@@ -3006,8 +3005,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \large
 \pangram{\fmmfamily}
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/19_segoe.tex
 
 ```tex
@@ -3018,8 +3017,8 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \large
 The quick brown fox jumps over the lazy dog. 1234567890
 \end{document}
-
 ```
+
 ## FILE: Chapter_10_-_Using_Fonts/20_multiple_fonts.tex
 
 ```tex
@@ -3043,8 +3042,8 @@ The quick brown fox jumps over the lazy dog. 1234567890
   \sum_{i=1}^{n} f(x_i) \,\Delta x_i
 \]
 \end{document}
-
 ```
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/01_big_document.tex
 
 ```tex
@@ -3065,8 +3064,8 @@ The quick brown fox jumps over the lazy dog. 1234567890
 \bibliographystyle{plainnat}
 \bibliography{example}
 \end{document}
-
 ```
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/02_titlepage.tex
 
 ```tex
@@ -3089,8 +3088,8 @@ The quick brown fox jumps over the lazy dog. 1234567890
 \bibliographystyle{plainnat}
 \bibliography{example}
 \end{document}
-
 ```
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/03_letter.tex
 
 ```tex
@@ -3110,8 +3109,8 @@ The quick brown fox jumps over the lazy dog. 1234567890
   \closing{With kind regards} %eg. Regards
 \end{letter}
 \end{document}
-
 ```
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/chapter1.tex
 
 ```tex
@@ -3125,8 +3124,8 @@ The quick brown fox jumps over the lazy dog. 1234567890
   \end{equation}
   where \( a, b \) and \( c \) are constants and \( a \neq 0 \).
 \end{dfn}
-
 ```
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/chapter2.tex
 
 ```tex
@@ -3135,8 +3134,8 @@ The quick brown fox jumps over the lazy dog. 1234567890
 ...
 \section{Non-linear Systems}
 ...
-
 ```
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/dedication.tex
 
 ```tex
@@ -3144,8 +3143,8 @@ The quick brown fox jumps over the lazy dog. 1234567890
 This book is dedicated to one of the greatest mathematicians of
 all time: Carl Friedrich Gauss. Without him, this book wouldn't
 have been possible.
-
 ```
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/equations.tex
 
 ```tex
@@ -3156,8 +3155,8 @@ have been possible.
 \include{chapter1}
 \include{chapter2}
 \end{document}
-
 ```
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/preamble.tex
 
 ```tex
@@ -3173,15 +3172,15 @@ have been possible.
 \newtheorem{lem}[thm]{Lemma} 
 \theoremstyle{definition} 
 \newtheorem{dfn}[thm]{Definition}
-
 ```
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/proofs.tex
 
 ```tex
 \chapter{Proofs}
 ...
-
 ```
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/title.tex
 
 ```tex
@@ -3194,8 +3193,8 @@ have been possible.
   \vfill
   {\itshape 2011, Publishing company}
 \end{titlepage}
-
 ```
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/01_equation.tex
 
 ```tex
@@ -3206,8 +3205,8 @@ have been possible.
 \include{chapter1}
 \include{chapter2}
 \end{document}
-
 ```
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/02_big_document.tex
 
 ```tex
@@ -3228,8 +3227,8 @@ have been possible.
 \bibliographystyle{plainnat}
 \bibliography{example}
 \end{document}
-
 ```
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/02_bookmarks.tex
 
 ```tex
@@ -3251,8 +3250,8 @@ Sample sections follow.
   {Let \int\sim\sum\ for n\rightarrow\infty}]
   {Let $\bm{\int\sim\sum}$ for $\bm{n\rightarrow\infty}$}
 \end{document}
-
 ```
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/chapter1.tex
 
 ```tex
@@ -3266,8 +3265,8 @@ Sample sections follow.
   \end{equation}
   where \( a, b \) and \( c \) are constants and \( a \neq 0 \).
 \end{dfn}
-
 ```
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/chapter2.tex
 
 ```tex
@@ -3276,8 +3275,8 @@ Sample sections follow.
 ...
 \section{Non-linear Systems}
 ...
-
 ```
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/dedication.tex
 
 ```tex
@@ -3285,8 +3284,8 @@ Sample sections follow.
 This book is dedicated to one of the greatest mathematicians of
 all time: Carl Friedrich Gauss. Without him, this book wouldn't
 have been possible.
-
 ```
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/preamble.tex
 
 ```tex
@@ -3319,15 +3318,15 @@ have been possible.
   {\normalfont\sffamily\large\bfseries\centering}
   {\thesection}{1em}{}
 \titlespacing*{\chapter}{0pt}{30pt}{20pt}
-
 ```
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/proofs.tex
 
 ```tex
 \chapter{Proofs}
 ...
-
 ```
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/title.tex
 
 ```tex
@@ -3340,8 +3339,8 @@ have been possible.
   \vfill
   {\itshape 2011, Publishing company}
 \end{titlepage}
-
 ```
+
 ## FILE: Chapter_13_-_Troubleshooting/01_test_errror.tex
 
 ```tex
@@ -3352,8 +3351,8 @@ have been possible.
 % correct:
 \LaTeX\ says: Hello world!
 \end{document}
-
 ```
+
 ## FILE: Chapter_13_-_Troubleshooting/02_warning.tex
 
 ```tex
