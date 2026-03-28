@@ -1,5 +1,7 @@
 # [Repository: packtpublishing/latex-beginner-s-guide-second-edition](https://github.com/PacktPublishing/LaTeX-Beginner-s-Guide-Second-Edition)
 
+# Table of Contents
+
 ## Chapter 01 - Getting started with LaTeX
 - [01_first_document.tex](#file-chapter_01_-_getting_started_with_latex01_first_documenttex)
 
@@ -186,7 +188,10 @@
 - [01_test_errror.tex](#file-chapter_13_-_troubleshooting01_test_errrortex)
 - [02_warning.tex](#file-chapter_13_-_troubleshooting02_warningtex)
 
-  
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: README.md  
    
@@ -250,6 +255,10 @@ With the following software and hardware list you can run all code files present
 <p align="center"> <a href="https://packt.link/free-ebook/9781801078658">https://packt.link/free-ebook/9781801078658 </a> </p>
 
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_01_-_Getting_started_with_LaTeX/01_first_document.tex
 
 ```tex
@@ -258,6 +267,10 @@ With the following software and hardware list you can run all code files present
 This is our first document.
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/01_example_document.tex
 
@@ -273,6 +286,10 @@ This is our second document. It contains a title and a section with text.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/02_special_symbols.tex
 
 ```tex
@@ -284,6 +301,10 @@ Statement \#1:
 More special symbols are \&, \_, \{ and \}.
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/03_adjusting_font_shape.tex
 
@@ -301,6 +322,10 @@ Such commands can be \textit{\textbf{nested}}.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/04_choosing_font.tex
 
 ```tex
@@ -311,6 +336,10 @@ Such commands can be \textit{\textbf{nested}}.
 \texttt{https://latex.org} is a support forum for \LaTeX.
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/05_font_declarations.tex
 
@@ -323,6 +352,10 @@ Such commands can be \textit{\textbf{nested}}.
 a support forum for \LaTeX.
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/06_font_commands.tex
 
@@ -352,6 +385,10 @@ a support forum for \LaTeX.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/07_grouping_braces.tex
 
 ```tex
@@ -361,6 +398,10 @@ Besides from {\itshape italics}, words can be {\bfseries bold},
 {\slshape slanted}, or typeset in {\scshape Small Caps}.
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/08_font_sizes.tex
 
@@ -373,6 +414,10 @@ Besides from {\itshape italics}, words can be {\bfseries bold},
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/09_simple_macros.tex
 
 ```tex
@@ -383,6 +428,10 @@ Besides from {\itshape italics}, words can be {\bfseries bold},
 The \TUG\ is an organization for people who use \TeX\ or \LaTeX.
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/10_proper_spacing.tex
 
@@ -396,6 +445,10 @@ The \TUG\ is an organization for people who use \TeX\ or \LaTeX.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/11_macro_arguments.tex
 
 ```tex
@@ -406,6 +459,10 @@ The \TUG\ is an organization for people who use \TeX\ or \LaTeX.
 \keyword{scope} of \keyword{declarations}.
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/12_optional_arguments.tex
 
@@ -418,6 +475,10 @@ The \TUG\ is an organization for people who use \TeX\ or \LaTeX.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/13_text_box.tex
 
 ```tex
@@ -426,6 +487,10 @@ The \TUG\ is an organization for people who use \TeX\ or \LaTeX.
 \parbox{3cm}{TUG is an acronym. It means \TeX\ Users Group.}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/14_aligning_boxes.tex
 
@@ -439,6 +504,10 @@ Text line
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/15_minipages.tex
 
 ```tex
@@ -449,6 +518,10 @@ TUG is an acronym. It means \TeX\ Users Group.
 \end{minipage}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/16_hyphenation.tex
 
@@ -462,6 +535,10 @@ TUG is an acronym. It means \TeX\ Users Group.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/17_justification.tex
 
 ```tex
@@ -473,6 +550,10 @@ TUG is an acronym. It means \TeX\ Users Group.
 \end{minipage}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/18_line_breaks.tex
 
@@ -487,6 +568,10 @@ By the name of Annabel Lee
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/19_ragged_right.tex
 
 ```tex
@@ -497,6 +582,10 @@ TUG is an acronym. It means \TeX\ Users Group.}
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/20_ragged_left.tex
 
 ```tex
@@ -506,6 +595,10 @@ TUG is an acronym. It means \TeX\ Users Group.}
 TUG is an acronym. It means \TeX\ Users Group.}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/21_centering.tex
 
@@ -521,6 +614,10 @@ TUG is an acronym. It means \TeX\ Users Group.}
 }
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/22_center_environment.tex
 
@@ -544,6 +641,10 @@ The complete poem can be read on
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/23_quote.tex
 
 ```tex
@@ -558,6 +659,10 @@ Anyone who has never made a mistake has never tried anything new.
 Errors are inevitable. So, let’s be brave trying something new.
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/24_quotation.tex
 
@@ -589,6 +694,10 @@ The original text can be found on
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_02_-_Formatting_Text_and_Creating_Macros/25_paragraph_skip.tex
 
 ```tex
@@ -608,6 +717,10 @@ The original text can be found on
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_03_-_Designing_Pages/01_book_chapter.tex
 
 ```tex
@@ -625,6 +738,10 @@ More dummy text will follow.
 \blindtext[10]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_03_-_Designing_Pages/02_margins.tex
 
@@ -645,6 +762,10 @@ More dummy text will follow.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_03_-_Designing_Pages/03_class_options.tex
 
 ```tex
@@ -663,6 +784,10 @@ More dummy text will follow.
 \blindtext[10]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_03_-_Designing_Pages/04_header_footer.tex
 
@@ -688,6 +813,10 @@ More dummy text will follow.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_03_-_Designing_Pages/05_footnotes.tex
 
 ```tex
@@ -706,6 +835,10 @@ will follow.
 \blindtext[10]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_03_-_Designing_Pages/06_footnote_line.tex
 
@@ -728,6 +861,10 @@ will follow.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_03_-_Designing_Pages/07_page_break.tex
 
 ```tex
@@ -747,6 +884,10 @@ More dummy text will follow.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_03_-_Designing_Pages/08_new_page.tex
 
 ```tex
@@ -765,6 +906,10 @@ More dummy text will follow.
 \blindtext[10]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_03_-_Designing_Pages/09_overfull_page.tex
 
@@ -786,6 +931,10 @@ More dummy text will follow.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_03_-_Designing_Pages/10_enlarge_page.tex
 
 ```tex
@@ -806,6 +955,10 @@ More dummy text will follow.
 \blindtext[3]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_03_-_Designing_Pages/11_line_spacing.tex
 
@@ -829,6 +982,10 @@ More dummy text will follow.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_03_-_Designing_Pages/12_contents.tex
 
 ```tex
@@ -849,6 +1006,10 @@ More dummy text will follow.
 \blindtext[10]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_03_-_Designing_Pages/13_shorten_contents.tex
 
@@ -871,6 +1032,10 @@ More dummy text will follow.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_04_-_Creating_Lists/01_bullet_list.tex
 
 ```tex
@@ -887,6 +1052,10 @@ LaTeX provides several packages for designing the layout:
 \end{itemize}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_04_-_Creating_Lists/02_list_level.tex
 
@@ -913,6 +1082,10 @@ LaTeX provides several packages for designing the layout:
 \end{itemize}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_04_-_Creating_Lists/03_enumerate_list.tex
 
@@ -944,6 +1117,10 @@ LaTeX provides several packages for designing the layout:
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_04_-_Creating_Lists/04_definition_list.tex
 
 ```tex
@@ -966,6 +1143,10 @@ LaTeX provides several packages for designing the layout:
 \end{description}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_04_-_Creating_Lists/05_compact_list.tex
 
@@ -996,6 +1177,10 @@ LaTeX provides several packages for designing the layout:
 \end{compactenum}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_04_-_Creating_Lists/06_in_paragraph_list.tex
 
@@ -1033,6 +1218,10 @@ LaTeX provides several packages for designing the layout:
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_04_-_Creating_Lists/07_customized_list.tex
 
 ```tex
@@ -1066,6 +1255,10 @@ LaTeX provides several packages for designing the layout:
 \end{enumerate}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_04_-_Creating_Lists/08_resume_list.tex
 
@@ -1104,6 +1297,10 @@ LaTeX provides several packages for designing the layout:
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_04_-_Creating_Lists/09_list_layout.tex
 
 ```tex
@@ -1113,6 +1310,10 @@ LaTeX provides several packages for designing the layout:
 \listdiagram
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_05_-_Including_Images/01_include_image.tex
 
@@ -1134,6 +1335,10 @@ LaTeX provides several packages for designing the layout:
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_05_-_Including_Images/02_position_image.tex
 
 ```tex
@@ -1153,6 +1358,10 @@ LaTeX provides several packages for designing the layout:
 \blindtext
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_05_-_Including_Images/03_bottom_image.tex
 
@@ -1174,6 +1383,10 @@ LaTeX provides several packages for designing the layout:
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_05_-_Including_Images/04_text_around_image.tex
 
 ```tex
@@ -1193,6 +1406,10 @@ LaTeX provides several packages for designing the layout:
 \blindtext
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_05_-_Including_Images/05_no_floating.tex
 
@@ -1215,6 +1432,10 @@ text after
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_06_-_Creating_Tables/01_tab_stops.tex
 
 ```tex
@@ -1227,6 +1448,10 @@ text after
 \end{tabbing}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_06_-_Creating_Tables/02_overlapping.tex
 
@@ -1242,6 +1467,10 @@ text after
 \end{tabbing}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_06_-_Creating_Tables/03_alignment.tex
 
@@ -1260,6 +1489,10 @@ text after
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_06_-_Creating_Tables/04_tabular.tex
 
 ```tex
@@ -1277,6 +1510,10 @@ text after
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_06_-_Creating_Tables/05_formatting_args.tex
 
 ```tex
@@ -1293,6 +1530,10 @@ text after
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_06_-_Creating_Tables/06_vertical_alignment.tex
 
 ```tex
@@ -1307,6 +1548,10 @@ text after
 \end{tabular}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_06_-_Creating_Tables/07_row_height.tex
 
@@ -1324,6 +1569,10 @@ text after
 \end{tabular}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_06_-_Creating_Tables/08_beautifying.tex
 
@@ -1343,6 +1592,10 @@ text after
 \end{tabular}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_06_-_Creating_Tables/09_multicolumn.tex
 
@@ -1364,6 +1617,10 @@ text after
 \end{tabular}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_06_-_Creating_Tables/10_insert_code.tex
 
@@ -1390,6 +1647,10 @@ text after
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_06_-_Creating_Tables/11_multirow.tex
 
 ```tex
@@ -1415,6 +1676,10 @@ text after
 \end{tabular}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_06_-_Creating_Tables/12_caption.tex
 
@@ -1460,6 +1725,10 @@ text after
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_07_-_Using_Cross-References/01_label_ref.tex
 
 ```tex
@@ -1488,6 +1757,10 @@ is for including images. See also the footnote
 \ref{fn:project} on page~\pageref{fn:project}.
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_07_-_Using_Cross-References/02_page_reference.tex
 
@@ -1518,6 +1791,10 @@ is for including images. See also the footnote \ref{fn:project}
 on page~\pageref{fn:project}.
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_07_-_Using_Cross-References/03_varioref.tex
 
@@ -1551,6 +1828,10 @@ See also the footnote \vref{fn:project}, that is,
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_07_-_Using_Cross-References/04_varioref_figure.tex
 
 ```tex
@@ -1582,6 +1863,10 @@ See the \vpageref[above figure][figure]{fig:other} and
 the \vpageref[above figure][figure]{fig:example}.
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_07_-_Using_Cross-References/05_varioref_range.tex
 
@@ -1617,6 +1902,10 @@ and figures \textcolor{blue}{\vrefrange{fig:example}{fig:last}}.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_07_-_Using_Cross-References/06_cleveref.tex
 
 ```tex
@@ -1649,6 +1938,10 @@ See also the \cref{project} on \cpageref{project}.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_07_-_Using_Cross-References/07_cleveref_ranges.tex
 
 ```tex
@@ -1675,6 +1968,10 @@ LaTeX.org\label{project}}:
 See \crefrange{graphicx}{amsmath} and \cpagerefrange{stats}{maths}.
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_08_-_Listing_Contents_and_References/01_contents.tex
 
@@ -1703,6 +2000,10 @@ level}
 \chapter{Symbols}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_08_-_Listing_Contents_and_References/02_list_figures.tex
 
@@ -1750,6 +2051,10 @@ level}
 \chapter{Symbols}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_08_-_Listing_Contents_and_References/03_index.tex
 
@@ -1803,6 +2108,10 @@ level}
 \printindex
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_08_-_Listing_Contents_and_References/04_index_advanced.tex
 
@@ -1875,6 +2184,10 @@ End of network chapter.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_08_-_Listing_Contents_and_References/05_index_iso_style.tex
 
 ```tex
@@ -1946,6 +2259,10 @@ End of network chapter.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_08_-_Listing_Contents_and_References/06_bibliography.tex
 
 ```tex
@@ -1961,6 +2278,10 @@ Mathematics}, 1989
 \end{thebibliography}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_08_-_Listing_Contents_and_References/07_bibliography_labels.tex
 
@@ -1978,6 +2299,10 @@ Mathematics}, 1989
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_08_-_Listing_Contents_and_References/08_bibtex.tex
 
 ```tex
@@ -1990,6 +2315,10 @@ see \cite{DK89}.
 \bibliography{example}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_08_-_Listing_Contents_and_References/example.bib
 
@@ -2010,6 +2339,10 @@ month = apr,
 year = 1989
 }
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/01_equations.tex
 
@@ -2040,6 +2373,10 @@ is zero, then the equation (\ref{quad}) has a double solution:
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/02_subscripts_superscripts.tex
 
 ```tex
@@ -2050,6 +2387,10 @@ is zero, then the equation (\ref{quad}) has a double solution:
 \]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/03_operators.tex
 
@@ -2062,6 +2403,10 @@ is zero, then the equation (\ref{quad}) has a double solution:
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/04_operators_inline.tex
 
 ```tex
@@ -2071,6 +2416,10 @@ Within text, we have \( \lim_{n=1, 2, \ldots} a_n \)
 and \( \max_{x<X} x \).
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/05_roots.tex
 
@@ -2083,6 +2432,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/06_fractions.tex
 
 ```tex
@@ -2093,6 +2446,10 @@ and \( \max_{x<X} x \).
 \]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/07_greek.tex
 
@@ -2111,6 +2468,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/08_greek_variants.tex
 
 ```tex
@@ -2124,6 +2485,10 @@ and \( \max_{x<X} x \).
 \end{tabular}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/09_uppercase_greek.tex
 
@@ -2139,6 +2504,10 @@ and \( \max_{x<X} x \).
 \end{tabular}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/10_upright_greek.tex
 
@@ -2159,6 +2528,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/11_upright_greek_variants.tex
 
 ```tex
@@ -2174,6 +2547,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/12_script.tex
 
 ```tex
@@ -2184,6 +2561,10 @@ and \( \max_{x<X} x \).
 \]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/13_ellipsis.tex
 
@@ -2199,6 +2580,10 @@ and \( \max_{x<X} x \).
 \end{tabular}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/14_math_font_styles.tex
 
@@ -2229,6 +2614,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/15_italic.tex
 
 ```tex
@@ -2237,6 +2626,10 @@ and \( \max_{x<X} x \).
 \(Definition\) and \textit{Definition}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/16_multiline.tex
 
@@ -2260,6 +2653,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/17_tagging.tex
 
 ```tex
@@ -2272,6 +2669,10 @@ and \( \max_{x<X} x \).
 \end{align}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/18_binary_operation.tex
 
@@ -2303,6 +2704,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/19_binary_relation.tex
 
 ```tex
@@ -2329,6 +2734,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/20_inequality.tex
 
 ```tex
@@ -2346,6 +2755,10 @@ and \( \max_{x<X} x \).
 \end{tabular}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/21_subset_superset.tex
 
@@ -2371,6 +2784,10 @@ and \( \max_{x<X} x \).
 \end{tabular}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/22_arrows.tex
 
@@ -2403,6 +2820,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/23_harpoons.tex
 
 ```tex
@@ -2421,6 +2842,10 @@ and \( \max_{x<X} x \).
 \end{tabular}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/24_letter_symbols.tex
 
@@ -2446,6 +2871,10 @@ and \( \max_{x<X} x \).
 \end{tabular}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/25_misc_symbols.tex
 
@@ -2474,6 +2903,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/26_variable_operators.tex
 
 ```tex
@@ -2490,6 +2923,10 @@ and \( \max_{x<X} x \).
 \end{tabular}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/27_variable_delimiters.tex
 
@@ -2517,6 +2954,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/28_inline_equation.tex
 
 ```tex
@@ -2530,6 +2971,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/29_displayed_equation.tex
 
 ```tex
@@ -2542,6 +2987,10 @@ and \( \max_{x<X} x \).
 \]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/30_array.tex
 
@@ -2560,6 +3009,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/31_matrix.tex
 
 ```tex
@@ -2575,6 +3028,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/32_binomial.tex
 
 ```tex
@@ -2586,6 +3043,10 @@ and \( \max_{x<X} x \).
 \]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/33_overline.tex
 
@@ -2599,6 +3060,10 @@ and \( \max_{x<X} x \).
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/34_underbrace.tex
 
 ```tex
@@ -2610,6 +3075,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/35_accents.tex
 
@@ -2634,6 +3103,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/36_stack_symbols.tex
 
 ```tex
@@ -2646,6 +3119,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_09_-_Writing_Math_Formulas/37_stack_relation.tex
 
 ```tex
@@ -2657,6 +3134,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_09_-_Writing_Math_Formulas/38_theorem.tex
 
@@ -2685,6 +3166,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_10_-_Using_Fonts/01_lmodern.tex
 
 ```tex
@@ -2706,6 +3191,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_10_-_Using_Fonts/02_kpfonts.tex
 
@@ -2729,6 +3218,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_10_-_Using_Fonts/03_kpfonts_light.tex
 
 ```tex
@@ -2751,6 +3244,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_10_-_Using_Fonts/04_times_roman.tex
 
 ```tex
@@ -2769,6 +3266,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_10_-_Using_Fonts/05_palatino.tex
 
@@ -2789,6 +3290,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_10_-_Using_Fonts/06_charter.tex
 
 ```tex
@@ -2806,6 +3311,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_10_-_Using_Fonts/07_new_century.tex
 
@@ -2826,6 +3335,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_10_-_Using_Fonts/08_concrete.tex
 
 ```tex
@@ -2844,6 +3357,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_10_-_Using_Fonts/09_kerkis.tex
 
@@ -2864,6 +3381,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_10_-_Using_Fonts/10_arev.tex
 
 ```tex
@@ -2881,6 +3402,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_10_-_Using_Fonts/11_cmbright.tex
 
@@ -2900,6 +3425,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_10_-_Using_Fonts/12_kurier.tex
 
 ```tex
@@ -2917,6 +3446,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \]
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_10_-_Using_Fonts/13_helvetica.tex
 
@@ -2937,6 +3470,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_10_-_Using_Fonts/14_courier.tex
 
 ```tex
@@ -2950,6 +3487,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \pangram{\ttfamily}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_10_-_Using_Fonts/15_inconsolata.tex
 
@@ -2965,6 +3506,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_10_-_Using_Fonts/16_bera_mono.tex
 
 ```tex
@@ -2978,6 +3523,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \pangram{\ttfamily}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_10_-_Using_Fonts/17_calligra.tex
 
@@ -2993,6 +3542,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_10_-_Using_Fonts/18_miama.tex
 
 ```tex
@@ -3007,6 +3560,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_10_-_Using_Fonts/19_segoe.tex
 
 ```tex
@@ -3018,6 +3575,10 @@ N = \underbrace{1 + 1 + \cdots + 1}_n
 The quick brown fox jumps over the lazy dog. 1234567890
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_10_-_Using_Fonts/20_multiple_fonts.tex
 
@@ -3044,6 +3605,10 @@ The quick brown fox jumps over the lazy dog. 1234567890
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/01_big_document.tex
 
 ```tex
@@ -3065,6 +3630,10 @@ The quick brown fox jumps over the lazy dog. 1234567890
 \bibliography{example}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_11_-_Developing_Large_Documents/02_titlepage.tex
 
@@ -3090,6 +3659,10 @@ The quick brown fox jumps over the lazy dog. 1234567890
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/03_letter.tex
 
 ```tex
@@ -3111,6 +3684,10 @@ The quick brown fox jumps over the lazy dog. 1234567890
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/chapter1.tex
 
 ```tex
@@ -3126,6 +3703,10 @@ The quick brown fox jumps over the lazy dog. 1234567890
 \end{dfn}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/chapter2.tex
 
 ```tex
@@ -3136,6 +3717,10 @@ The quick brown fox jumps over the lazy dog. 1234567890
 ...
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/dedication.tex
 
 ```tex
@@ -3144,6 +3729,10 @@ This book is dedicated to one of the greatest mathematicians of
 all time: Carl Friedrich Gauss. Without him, this book wouldn't
 have been possible.
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_11_-_Developing_Large_Documents/equations.tex
 
@@ -3156,6 +3745,10 @@ have been possible.
 \include{chapter2}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_11_-_Developing_Large_Documents/preamble.tex
 
@@ -3174,12 +3767,20 @@ have been possible.
 \newtheorem{dfn}[thm]{Definition}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_11_-_Developing_Large_Documents/proofs.tex
 
 ```tex
 \chapter{Proofs}
 ...
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_11_-_Developing_Large_Documents/title.tex
 
@@ -3195,6 +3796,10 @@ have been possible.
 \end{titlepage}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/01_equation.tex
 
 ```tex
@@ -3206,6 +3811,10 @@ have been possible.
 \include{chapter2}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/02_big_document.tex
 
@@ -3228,6 +3837,10 @@ have been possible.
 \bibliography{example}
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/02_bookmarks.tex
 
@@ -3252,6 +3865,10 @@ Sample sections follow.
 \end{document}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/chapter1.tex
 
 ```tex
@@ -3267,6 +3884,10 @@ Sample sections follow.
 \end{dfn}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/chapter2.tex
 
 ```tex
@@ -3277,6 +3898,10 @@ Sample sections follow.
 ...
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/dedication.tex
 
 ```tex
@@ -3285,6 +3910,10 @@ This book is dedicated to one of the greatest mathematicians of
 all time: Carl Friedrich Gauss. Without him, this book wouldn't
 have been possible.
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/preamble.tex
 
@@ -3320,12 +3949,20 @@ have been possible.
 \titlespacing*{\chapter}{0pt}{30pt}{20pt}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/proofs.tex
 
 ```tex
 \chapter{Proofs}
 ...
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_12_-_Enhancing_Your_Documents_Further/title.tex
 
@@ -3341,6 +3978,10 @@ have been possible.
 \end{titlepage}
 ```
 
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
+
 ## FILE: Chapter_13_-_Troubleshooting/01_test_errror.tex
 
 ```tex
@@ -3352,6 +3993,10 @@ have been possible.
 \LaTeX\ says: Hello world!
 \end{document}
 ```
+
+<p align="right">
+  <a href="#table-of-contents">↑ Back to Table of Contents</a>
+</p>
 
 ## FILE: Chapter_13_-_Troubleshooting/02_warning.tex
 
