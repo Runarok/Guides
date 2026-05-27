@@ -11,14 +11,8 @@
         "url": "https://github.com/Runarok/books",
         "showPopup": false
     },
-    "SE": {
-    "url": "https://docs.google.com/forms/d/e/1FAIpQLScQ1sp7XMG9dsaC4O_tWKEVQx61ZePYoeN_gYpoqWjiwSMjWw/viewform?usp=sharing&ouid=117441485698612458384",
-    "showPopup": false
-    },
     "DW": {
-    "url": ["https://www.internship.edutainer.in/login",
-                "https://vtu.internyet.in/sign-in",
-                "https://github.com/Runarok/LeetSolutions",
+    "url": ["https://github.com/Runarok/LeetSolutions",
                 "https://leetcode.com/problemset/",
                 "https://chatgpt.com/"],
     "showPopup": false
